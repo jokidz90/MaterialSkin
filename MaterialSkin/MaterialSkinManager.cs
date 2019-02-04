@@ -48,11 +48,11 @@ namespace MaterialSkin
         }
 
         //Constant color values
-        private static readonly Color PRIMARY_TEXT_BLACK = Color.FromArgb(222, 0, 0, 0);
+        private static readonly Color PRIMARY_TEXT_BLACK = Color.FromArgb(255, 5, 5, 5);
         private static readonly Brush PRIMARY_TEXT_BLACK_BRUSH = new SolidBrush(PRIMARY_TEXT_BLACK);
-        public static Color SECONDARY_TEXT_BLACK = Color.FromArgb(138, 0, 0, 0);
+        public static Color SECONDARY_TEXT_BLACK = Color.FromArgb(255, 130, 130, 130);
         public static Brush SECONDARY_TEXT_BLACK_BRUSH = new SolidBrush(SECONDARY_TEXT_BLACK);
-        private static readonly Color DISABLED_OR_HINT_TEXT_BLACK = Color.FromArgb(66, 0, 0, 0);
+        private static readonly Color DISABLED_OR_HINT_TEXT_BLACK = Color.FromArgb(255, 150, 150, 150);
         private static readonly Brush DISABLED_OR_HINT_TEXT_BLACK_BRUSH = new SolidBrush(DISABLED_OR_HINT_TEXT_BLACK);
         private static readonly Color DIVIDERS_BLACK = Color.FromArgb(31, 0, 0, 0);
         private static readonly Brush DIVIDERS_BLACK_BRUSH = new SolidBrush(DIVIDERS_BLACK);
@@ -230,6 +230,7 @@ namespace MaterialSkin
         public Font ROBOTO_REGULAR_11;
         public Font ROBOTO_MEDIUM_11;
         public Font ROBOTO_MEDIUM_10;
+        public Font ROBOTO_BOLD_10;
 
         //Other constants
         public int FORM_PADDING = 14;
@@ -241,10 +242,11 @@ namespace MaterialSkin
         {
             ROBOTO_MEDIUM_12 = new Font(LoadFont(Resources.Roboto_Medium), 12f);
             ROBOTO_MEDIUM_10 = new Font(LoadFont(Resources.Roboto_Medium), 10f);
+            ROBOTO_BOLD_10 = new Font(LoadFont(Resources.Roboto_Regular), 10f, FontStyle.Bold);
             ROBOTO_REGULAR_11 = new Font(LoadFont(Resources.Roboto_Regular), 11f);
             ROBOTO_MEDIUM_11 = new Font(LoadFont(Resources.Roboto_Medium), 11f);
             Theme = Themes.LIGHT;
-            ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+            ColorScheme = ColorScheme.ColorSwatches[ColorType.DEFAULT];
         }
 
         public static MaterialSkinManager Instance => _instance ?? (_instance = new MaterialSkinManager());

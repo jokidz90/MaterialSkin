@@ -18,6 +18,8 @@ namespace MaterialSkin.Controls
         public MouseState MouseState { get; set; }
         [Browsable(false)]
         public Point MouseLocation { get; set; }
+        private ColorType _colorStyle = ColorType.DEFAULT;
+        public ColorType ColorStyle { get => _colorStyle; set => _colorStyle = value; }
 
         private bool _ripple;
         [Category("Behavior")]
@@ -91,6 +93,8 @@ namespace MaterialSkin.Controls
         private const int TEXT_OFFSET = 22;
         protected override void OnPaint(PaintEventArgs pevent)
         {
+            var backBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.AccentColor : ColorScheme.ColorSwatches[_colorStyle].AccentColor;
+
             var g = pevent.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.TextRenderingHint = TextRenderingHint.AntiAlias;
@@ -105,8 +109,8 @@ namespace MaterialSkin.Controls
             var colorAlpha = Enabled ? (int)(animationProgress * 255.0) : SkinManager.GetCheckBoxOffDisabledColor().A;
             var backgroundAlpha = Enabled ? (int)(SkinManager.GetCheckboxOffColor().A * (1.0 - animationProgress)) : SkinManager.GetCheckBoxOffDisabledColor().A;
 
-            var brush = new SolidBrush(Color.FromArgb(colorAlpha, Enabled ? SkinManager.ColorScheme.AccentColor : SkinManager.GetCheckBoxOffDisabledColor()));
-            var brush3 = new SolidBrush(Enabled ? SkinManager.ColorScheme.AccentColor : SkinManager.GetCheckBoxOffDisabledColor());
+            var brush = new SolidBrush(Color.FromArgb(colorAlpha, Enabled ? backBrush : SkinManager.GetCheckBoxOffDisabledColor()));
+            var brush3 = new SolidBrush(Enabled ? backBrush : SkinManager.GetCheckBoxOffDisabledColor());
             var pen = new Pen(brush.Color);
 
             // draw ripple animation

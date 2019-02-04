@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Collections.Generic;
+using System.Drawing;
 
 namespace MaterialSkin
 {
@@ -38,6 +39,54 @@ namespace MaterialSkin
             LightPrimaryBrush = new SolidBrush(LightPrimaryColor);
             AccentBrush = new SolidBrush(AccentColor);
             TextBrush = new SolidBrush(TextColor);
+        }
+
+        public ColorScheme(Primary primary, Primary darkPrimary, Primary lightPrimary, Accent accent)
+        {
+            //Color
+            PrimaryColor = ((int)primary).ToColor();
+            DarkPrimaryColor = ((int)darkPrimary).ToColor();
+            LightPrimaryColor = ((int)lightPrimary).ToColor();
+            AccentColor = ((int)accent).ToColor();
+            TextColor = ((int)TextShade.WHITE).ToColor();
+
+            //Pen
+            PrimaryPen = new Pen(PrimaryColor);
+            DarkPrimaryPen = new Pen(DarkPrimaryColor);
+            LightPrimaryPen = new Pen(LightPrimaryColor);
+            AccentPen = new Pen(AccentColor);
+            TextPen = new Pen(TextColor);
+
+            //Brush
+            PrimaryBrush = new SolidBrush(PrimaryColor);
+            DarkPrimaryBrush = new SolidBrush(DarkPrimaryColor);
+            LightPrimaryBrush = new SolidBrush(LightPrimaryColor);
+            AccentBrush = new SolidBrush(AccentColor);
+            TextBrush = new SolidBrush(TextColor);
+        }
+
+        private static Dictionary<ColorType, ColorScheme> _swatches = new Dictionary<ColorType, ColorScheme>();
+        public static Dictionary<ColorType, ColorScheme> ColorSwatches
+        {
+            get
+            {
+                if (_swatches.Count == 0)
+                {
+                    _swatches.Add(ColorType.DEFAULT, new ColorScheme(Primary.PRIMARYNormal, Primary.PRIMARYDark, Primary.PRIMARYLight, Accent.PRIMARY));
+                    _swatches.Add(ColorType.PRIMARY, new ColorScheme(Primary.PRIMARYNormal, Primary.PRIMARYDark, Primary.PRIMARYLight, Accent.PRIMARY));
+                    _swatches.Add(ColorType.SUCCESS, new ColorScheme(Primary.SUCCESSNormal, Primary.SUCCESSDark, Primary.SUCCESSLight, Accent.SUCCESS));
+                    _swatches.Add(ColorType.INFO, new ColorScheme(Primary.INFONormal, Primary.INFODark, Primary.INFOLight, Accent.INFO));
+                    _swatches.Add(ColorType.WARNING, new ColorScheme(Primary.WARNINGNormal, Primary.WARNINGDark, Primary.WARNINGLight, Accent.WARNING));
+                    _swatches.Add(ColorType.DANGER, new ColorScheme(Primary.DANGERNormal, Primary.DANGERDark, Primary.DANGERLight, Accent.DANGER));
+                    _swatches.Add(ColorType.INVERSE, new ColorScheme(Primary.INVERSENormal, Primary.INVERSEDark, Primary.INVERSELight, Accent.INVERSE));
+                    _swatches.Add(ColorType.GREEN, new ColorScheme(Primary.GREENNormal, Primary.GREENDark, Primary.GREENLight, Accent.GREEN));
+                    _swatches.Add(ColorType.PINK, new ColorScheme(Primary.PINKNormal, Primary.PINKDark, Primary.PINKLight, Accent.PINK));
+                    _swatches.Add(ColorType.PURPLE, new ColorScheme(Primary.PURPLENormal, Primary.PURPLEDark, Primary.PURPLELight, Accent.PURPLE));
+                    _swatches.Add(ColorType.YELLOW, new ColorScheme(Primary.YELLOWNormal, Primary.YELLOWDark, Primary.YELLOWLight, Accent.YELLOW, TextShade.BLACK));
+                }
+
+                return _swatches;
+            }
         }
     }
 
@@ -274,7 +323,37 @@ namespace MaterialSkin
         BlueGrey600 = 0x546E7A,
         BlueGrey700 = 0x455A64,
         BlueGrey800 = 0x37474F,
-        BlueGrey900 = 0x263238
+        BlueGrey900 = 0x263238,
+        DANGERDark = 0xEC2121,
+        DANGERLight = 0xF47F7F,
+        DANGERNormal = 0xF05050,
+        GREENDark = 0x2B957A,
+        GREENLight = 0x58CEB1,
+        GREENNormal = 0x37BC9B,
+        INFODark = 0x1797BE,
+        INFOLight = 0x51C6EA,
+        INFONormal = 0x23B7E5,
+        INVERSEDark = 0x020304,
+        INVERSELight = 0x243948,
+        INVERSENormal = 0x131E26,
+        PINKDark = 0xE90BD6,
+        PINKLight = 0xF763EB,
+        PINKNormal = 0xF532E5,
+        PRIMARYDark = 0x2F80E7,
+        PRIMARYLight = 0x8BB8F1,
+        PRIMARYNormal = 0x5D9CEC,
+        PURPLEDark = 0x564AA3,
+        PURPLELight = 0x9289CA,
+        PURPLENormal = 0x7266BA,
+        SUCCESSDark = 0x1E983B,
+        SUCCESSLight = 0x43D967,
+        SUCCESSNormal = 0x27C24C,
+        WARNINGDark = 0xF77600,
+        WARNINGLight = 0xFFAB5E,
+        WARNINGNormal = 0xFF902B,
+        YELLOWDark = 0xF3CA06,
+        YELLOWLight = 0xFBE164,
+        YELLOWNormal = 0xFAD732,
     }
 
     public enum Accent
@@ -342,6 +421,33 @@ namespace MaterialSkin
         DeepOrange100 = 0xFF9E80,
         DeepOrange200 = 0xFF6E40,
         DeepOrange400 = 0xFF3D00,
-        DeepOrange700 = 0xDD2C00
+        DeepOrange700 = 0xDD2C00,
+
+        PRIMARY = 0x2F80E7,
+        SUCCESS = 0x1E983B,
+        INFO = 0x1797BE,
+        WARNING = 0xF77600,
+        DANGER = 0xEC2121,
+        INVERSE = 0x020304,
+        GREEN = 0x2B957A,
+        PINK = 0xE90BD6,
+        PURPLE = 0x564AA3,
+        YELLOW = 0xF3CA06,
+    }
+
+    public enum ColorType
+    {
+        DEFAULT = 0,
+        PRIMARY = 1,
+        SUCCESS = 2,
+        INFO = 3,
+        WARNING = 4,
+        DANGER = 5,
+        INVERSE = 6,
+        GREEN = 7,
+        PINK = 8,
+        PURPLE = 9,
+        YELLOW = 10,
+        GREY = 11
     }
 }

@@ -16,6 +16,8 @@ namespace MaterialSkin.Controls
         public MaterialSkinManager SkinManager => MaterialSkinManager.Instance;
         [Browsable(false)]
         public MouseState MouseState { get; set; }
+        private ColorType _colorStyle = ColorType.DEFAULT;
+        public ColorType ColorStyle { get => _colorStyle; set => _colorStyle = value; }
 
         private readonly BaseTextBox _baseTextBox;
         private readonly AnimationManager _animationManager;
@@ -984,6 +986,7 @@ namespace MaterialSkin.Controls
 
         protected override void OnPaint(PaintEventArgs pevent)
         {
+            var backBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush;
             var g = pevent.Graphics;
             g.Clear(Parent.BackColor);
 
@@ -992,7 +995,7 @@ namespace MaterialSkin.Controls
             if (!_animationManager.IsAnimating())
             {
                 //No animation
-                g.FillRectangle(_baseTextBox.Focused ? SkinManager.ColorScheme.PrimaryBrush : SkinManager.GetDividersBrush(), _baseTextBox.Location.X, lineY, _baseTextBox.Width, _baseTextBox.Focused ? 2 : 1);
+                g.FillRectangle(_baseTextBox.Focused ? backBrush : SkinManager.GetDividersBrush(), _baseTextBox.Location.X, lineY, _baseTextBox.Width, _baseTextBox.Focused ? 2 : 1);
             }
             else
             {
@@ -1005,7 +1008,7 @@ namespace MaterialSkin.Controls
                 g.FillRectangle(SkinManager.GetDividersBrush(), _baseTextBox.Location.X, lineY, _baseTextBox.Width, 1);
 
                 //Animated focus transition
-                g.FillRectangle(SkinManager.ColorScheme.PrimaryBrush, animationStart - halfAnimationWidth, lineY, animationWidth, 2);
+                g.FillRectangle(backBrush, animationStart - halfAnimationWidth, lineY, animationWidth, 2);
             }
         }
 

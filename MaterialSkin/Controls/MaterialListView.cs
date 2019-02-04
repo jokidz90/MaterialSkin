@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -18,6 +19,26 @@ namespace MaterialSkin.Controls
         public Point MouseLocation { get; set; }
         [Browsable(false)]
         private ListViewItem HoveredItem { get; set; }
+
+        private ColorType _colorStyle = ColorType.DEFAULT;
+        public ColorType ColorStyle { get => _colorStyle; set => _colorStyle = value; }
+
+        private Dictionary<int, ColorType> _rowColorStyle = new Dictionary<int, ColorType>();
+        public void SetRowColorStyle(int rowIndex, ColorType colorType)
+        {
+            if (_rowColorStyle.ContainsKey(rowIndex))
+                _rowColorStyle.Add(rowIndex, colorType);
+            else
+                _rowColorStyle[rowIndex] = colorType;
+        }
+
+        public ColorType GetRowColorStyle(int rowIndex)
+        {
+            if (_rowColorStyle.ContainsKey(rowIndex))
+                return _rowColorStyle[rowIndex];
+            else
+                return _colorStyle;
+        }
 
         public MaterialListView()
         {
@@ -59,6 +80,12 @@ namespace MaterialSkin.Controls
             };
         }
 
+        protected override void OnBindingContextChanged(EventArgs e)
+        {
+            _rowColorStyle = new Dictionary<int, ColorType>();
+            base.OnBindingContextChanged(e);
+        }
+
         protected override void OnDrawColumnHeader(DrawListViewColumnHeaderEventArgs e)
         {
             e.Graphics.FillRectangle(new SolidBrush(SkinManager.GetApplicationBackgroundColor()), new Rectangle(e.Bounds.X, e.Bounds.Y, Width, e.Bounds.Height));
@@ -72,27 +99,39 @@ namespace MaterialSkin.Controls
         private const int ITEM_PADDING = 12;
         protected override void OnDrawItem(DrawListViewItemEventArgs e)
         {
+            var colStyle = GetRowColorStyle(e.ItemIndex);
+            Brush backBrush = new SolidBrush(SkinManager.GetApplicationBackgroundColor());
+            Pen linePen = new Pen(SkinManager.GetDividersColor());
+
+            if (colStyle == ColorType.DEFAULT)
+            {
+                if (e.State.HasFlag(ListViewItemStates.Selected))
+                    backBrush = SkinManager.GetFlatButtonPressedBackgroundBrush();
+                else if (e.Bounds.Contains(MouseLocation) && MouseState == MouseState.HOVER)
+                    backBrush = SkinManager.GetFlatButtonHoverBackgroundBrush();
+            }
+            else
+            {
+                linePen = ColorScheme.ColorSwatches[colStyle].LightPrimaryPen;
+                if (e.State.HasFlag(ListViewItemStates.Selected))
+                {
+                    linePen = ColorScheme.ColorSwatches[colStyle].DarkPrimaryPen;
+                    backBrush = ColorScheme.ColorSwatches[colStyle].PrimaryBrush;
+                }
+                else if (e.Bounds.Contains(MouseLocation) && MouseState == MouseState.HOVER)
+                {
+                    linePen = ColorScheme.ColorSwatches[colStyle].PrimaryPen;
+                    backBrush = ColorScheme.ColorSwatches[colStyle].LightPrimaryBrush;
+                }
+            }
+
             //We draw the current line of items (= item with subitems) on a temp bitmap, then draw the bitmap at once. This is to reduce flickering.
             var b = new Bitmap(e.Item.Bounds.Width, e.Item.Bounds.Height);
             var g = Graphics.FromImage(b);
 
-            //always draw default background
-            g.FillRectangle(new SolidBrush(SkinManager.GetApplicationBackgroundColor()), new Rectangle(new Point(e.Bounds.X, 0), e.Bounds.Size));
+            g.FillRectangle(backBrush, new Rectangle(new Point(e.Bounds.X, 0), e.Bounds.Size));
 
-            if (e.State.HasFlag(ListViewItemStates.Selected))
-            {
-                //selected background
-                g.FillRectangle(SkinManager.GetFlatButtonPressedBackgroundBrush(), new Rectangle(new Point(e.Bounds.X, 0), e.Bounds.Size));
-            }
-            else if (e.Bounds.Contains(MouseLocation) && MouseState == MouseState.HOVER)
-            {
-                //hover background
-                g.FillRectangle(SkinManager.GetFlatButtonHoverBackgroundBrush(), new Rectangle(new Point(e.Bounds.X, 0), e.Bounds.Size));
-            }
-
-
-            //Draw separator
-            g.DrawLine(new Pen(SkinManager.GetDividersColor()), e.Bounds.Left, 0, e.Bounds.Right, 0);
+            g.DrawLine(linePen, e.Bounds.Left, 0, e.Bounds.Right, 0);
 
             foreach (ListViewItem.ListViewSubItem subItem in e.Item.SubItems)
             {

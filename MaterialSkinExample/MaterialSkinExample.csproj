@@ -74,16 +74,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MaterialSkin\MaterialSkin.csproj">
-      <Project>{8eb7611b-68cd-4b8b-987a-11717e2b250c}</Project>
-      <Name>MaterialSkin</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\plus.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MaterialSkin\MaterialSkin.csproj">
+      <Project>{8eb7611b-68cd-4b8b-987a-11717e2b250c}</Project>
+      <Name>MaterialSkin</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

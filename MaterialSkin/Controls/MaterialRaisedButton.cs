@@ -17,6 +17,8 @@ namespace MaterialSkin.Controls
         [Browsable(false)]
         public MouseState MouseState { get; set; }
         public bool Primary { get; set; }
+        private ColorType _colorStyle = ColorType.DEFAULT;
+        public ColorType ColorStyle { get => _colorStyle; set => _colorStyle = value; }
 
         private readonly AnimationManager _animationManager;
 
@@ -72,6 +74,16 @@ namespace MaterialSkin.Controls
 
         protected override void OnPaint(PaintEventArgs pevent)
         {
+            var backBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush;
+            var frontBrush = SkinManager.GetRaisedButtonTextBrush(Primary);
+
+            if (!Enabled)
+            {
+                backBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.LightPrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].LightPrimaryBrush;
+                frontBrush = SkinManager.GetFlatButtonDisabledTextBrush();
+            }
+
+
             var g = pevent.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.TextRenderingHint = TextRenderingHint.AntiAlias;
@@ -84,7 +96,7 @@ namespace MaterialSkin.Controls
                 ClientRectangle.Height - 1,
                 1f))
             {
-                g.FillPath(Primary ? SkinManager.ColorScheme.PrimaryBrush : SkinManager.GetRaisedButtonBackgroundBrush(), backgroundPath);
+                g.FillPath(Primary ? backBrush : SkinManager.GetRaisedButtonBackgroundBrush(), backgroundPath);
             }
 
             if (_animationManager.IsAnimating())
@@ -133,7 +145,7 @@ namespace MaterialSkin.Controls
             g.DrawString(
                 Text.ToUpper(),
                 SkinManager.ROBOTO_MEDIUM_10,
-                SkinManager.GetRaisedButtonTextBrush(Primary),
+                frontBrush,
                 textRect,
                 new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
         }
