@@ -20,13 +20,12 @@ namespace MaterialSkin.Controls
         public MaterialFormGroup()
         {
             InitializeComponent();
-            this.Height = 70;
         }
 
         protected override void OnCreateControl()
         {
             base.OnCreateControl();
-            Padding = new Padding(3, 10, 3, 3);
+            Padding = new Padding(3, 6, 3, 3);
             ForeColor = SkinManager.GetSecondaryTextColor();
             Font = SkinManager.ROBOTO_BOLD_10;
             BackColor = SkinManager.GetApplicationBackgroundColor();

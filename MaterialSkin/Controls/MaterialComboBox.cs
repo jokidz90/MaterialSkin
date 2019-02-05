@@ -64,9 +64,9 @@
         /// </summary>
         internal void ResetColors()
         {
-            Brush br = new SolidBrush(SkinManager.GetControlBackgroundColor());
+            Brush br = new SolidBrush(SkinManager.GetApplicationBackgroundColor());
             Font = SkinManager.ROBOTO_REGULAR_11;
-            BackColor = SkinManager.GetControlBackgroundColor();
+            BackColor = SkinManager.GetApplicationBackgroundColor();
             ForeColor = SkinManager.GetPrimaryTextColor();
 
             DropButtonBrush = br;

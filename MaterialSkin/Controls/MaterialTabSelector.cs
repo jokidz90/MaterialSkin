@@ -51,7 +51,7 @@ namespace MaterialSkin.Controls
 
         private List<Rectangle> _tabRects;
         private const int TAB_HEADER_PADDING = 24;
-        private const int TAB_INDICATOR_HEIGHT = 2;
+        private const int TAB_INDICATOR_HEIGHT = 3;
 
         public MaterialTabSelector()
         {
@@ -107,7 +107,7 @@ namespace MaterialSkin.Controls
             var previousActiveTabRect = _tabRects[previousSelectedTabIndexIfHasOne];
             var activeTabPageRect = _tabRects[_baseTabControl.SelectedIndex];
 
-            var y = activeTabPageRect.Bottom - 2;
+            var y = activeTabPageRect.Bottom - TAB_INDICATOR_HEIGHT;
             var x = previousActiveTabRect.X + (int)((activeTabPageRect.X - previousActiveTabRect.X) * animationProgress);
             var width = previousActiveTabRect.Width + (int)((activeTabPageRect.Width - previousActiveTabRect.Width) * animationProgress);
 

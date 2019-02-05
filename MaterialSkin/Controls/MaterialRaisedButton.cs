@@ -144,7 +144,7 @@ namespace MaterialSkin.Controls
 
             g.DrawString(
                 Text.ToUpper(),
-                SkinManager.ROBOTO_MEDIUM_10,
+                SkinManager.ROBOTO_MEDIUM_11,
                 frontBrush,
                 textRect,
                 new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
@@ -158,14 +158,14 @@ namespace MaterialSkin.Controls
         public override Size GetPreferredSize(Size proposedSize)
         {
             // Provides extra space for proper padding for content
-            var extra = 16;
+            var extra = 50;
 
             if (Icon != null)
                 // 24 is for icon size
                 // 4 is for the space between icon & text
                 extra += 24 + 4;
 
-            return new Size((int)Math.Ceiling(_textSize.Width) + extra, 36);
+            return new Size((int)Math.Ceiling(_textSize.Width) + extra, 50);
         }
     }
 }

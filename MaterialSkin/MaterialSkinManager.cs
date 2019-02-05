@@ -54,7 +54,7 @@ namespace MaterialSkin
         public static Brush SECONDARY_TEXT_BLACK_BRUSH = new SolidBrush(SECONDARY_TEXT_BLACK);
         private static readonly Color DISABLED_OR_HINT_TEXT_BLACK = Color.FromArgb(255, 150, 150, 150);
         private static readonly Brush DISABLED_OR_HINT_TEXT_BLACK_BRUSH = new SolidBrush(DISABLED_OR_HINT_TEXT_BLACK);
-        private static readonly Color DIVIDERS_BLACK = Color.FromArgb(31, 0, 0, 0);
+        private static readonly Color DIVIDERS_BLACK = Color.FromArgb(75, 0, 0, 0);
         private static readonly Brush DIVIDERS_BLACK_BRUSH = new SolidBrush(DIVIDERS_BLACK);
 
         private static readonly Color PRIMARY_TEXT_WHITE = Color.FromArgb(255, 255, 255, 255);
@@ -226,6 +226,7 @@ namespace MaterialSkin
         }
 
         //Roboto font
+        public Font ROBOTO_MEDIUM_14;
         public Font ROBOTO_MEDIUM_12;
         public Font ROBOTO_REGULAR_11;
         public Font ROBOTO_MEDIUM_11;
@@ -233,13 +234,14 @@ namespace MaterialSkin
         public Font ROBOTO_BOLD_10;
 
         //Other constants
-        public int FORM_PADDING = 14;
+        public int FORM_PADDING = 16;
 
         [DllImport("gdi32.dll")]
         private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pvd, [In] ref uint pcFonts);
 
         private MaterialSkinManager()
         {
+            ROBOTO_MEDIUM_14 = new Font(LoadFont(Resources.Roboto_Medium), 14f);
             ROBOTO_MEDIUM_12 = new Font(LoadFont(Resources.Roboto_Medium), 12f);
             ROBOTO_MEDIUM_10 = new Font(LoadFont(Resources.Roboto_Medium), 10f);
             ROBOTO_BOLD_10 = new Font(LoadFont(Resources.Roboto_Regular), 10f, FontStyle.Bold);
@@ -329,7 +331,11 @@ namespace MaterialSkin
             if (controlToUpdate is MaterialListView)
             {
                 controlToUpdate.BackColor = newBackColor;
+            }
 
+            if (controlToUpdate is MaterialPanel)
+            {
+                controlToUpdate.BackColor = newBackColor;
             }
 
             //recursive call

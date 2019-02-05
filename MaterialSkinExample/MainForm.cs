@@ -20,6 +20,9 @@ namespace MaterialSkinExample
 
             // Add dummy data to the listview
             seedListView();
+
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.WindowState = FormWindowState.Maximized;
         }
 
 	    private void seedListView()
@@ -38,7 +41,6 @@ namespace MaterialSkinExample
 			foreach (string[] version in data)
 			{
 				var item = new ListViewItem(version);
-				materialListView1.Items.Add(item);
 			}
 	    }
 
@@ -54,21 +56,6 @@ namespace MaterialSkinExample
 	        if (colorSchemeIndex >= ColorScheme.ColorSwatches.Count)
                 colorSchemeIndex = 0;
             materialSkinManager.ColorScheme = ColorScheme.ColorSwatches[((ColorType)colorSchemeIndex)];
-        }
-
-        private void materialRaisedButton2_Click(object sender, EventArgs e)
-        {
-            materialProgressBar1.Value = Math.Min(materialProgressBar1.Value + 10, 100);
-        }
-
-        private void materialFlatButton4_Click(object sender, EventArgs e)
-        {
-            materialProgressBar1.Value = Math.Max(materialProgressBar1.Value - 10, 0);
-        }
-
-        private void MainForm_Shown(object sender, EventArgs e)
-        {
-
         }
     }
 }

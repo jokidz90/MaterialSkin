@@ -468,6 +468,7 @@ namespace MaterialSkin.Controls
             _xButtonBounds = new Rectangle((Width - SkinManager.FORM_PADDING / 2) - STATUS_BAR_BUTTON_WIDTH, 0, STATUS_BAR_BUTTON_WIDTH, STATUS_BAR_HEIGHT);
             _statusBarBounds = new Rectangle(0, 0, Width, STATUS_BAR_HEIGHT);
             _actionBarBounds = new Rectangle(0, STATUS_BAR_HEIGHT, Width, ACTION_BAR_HEIGHT);
+            this.Padding = new Padding(0, ACTION_BAR_HEIGHT + STATUS_BAR_HEIGHT, 0, 0);
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -562,7 +563,7 @@ namespace MaterialSkin.Controls
             }
 
             //Form title
-            g.DrawString(Text, SkinManager.ROBOTO_MEDIUM_12, SkinManager.ColorScheme.TextBrush, new Rectangle(SkinManager.FORM_PADDING, STATUS_BAR_HEIGHT, Width, ACTION_BAR_HEIGHT), new StringFormat { LineAlignment = StringAlignment.Center });
+            g.DrawString(Text, SkinManager.ROBOTO_MEDIUM_14, SkinManager.ColorScheme.TextBrush, new Rectangle(SkinManager.FORM_PADDING, STATUS_BAR_HEIGHT, Width, ACTION_BAR_HEIGHT), new StringFormat { LineAlignment = StringAlignment.Center });
         }
     }
 
