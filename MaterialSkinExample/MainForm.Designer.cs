@@ -51,7 +51,7 @@ namespace MaterialSkinExample
             this.materialCheckBox8 = new MaterialSkin.Controls.MaterialCheckBox();
             this.materialFormGroup2 = new MaterialSkin.Controls.MaterialFormGroup();
             this.materialCheckBox7 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.materialFormGroup3 = new MaterialSkin.Controls.MaterialFormGroup();
+            this.grpDisabled = new MaterialSkin.Controls.MaterialFormGroup();
             this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialFormGroup1 = new MaterialSkin.Controls.MaterialFormGroup();
             this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -74,7 +74,7 @@ namespace MaterialSkinExample
             this.materialFormGroup5.SuspendLayout();
             this.materialFormGroup4.SuspendLayout();
             this.materialFormGroup2.SuspendLayout();
-            this.materialFormGroup3.SuspendLayout();
+            this.grpDisabled.SuspendLayout();
             this.materialFormGroup1.SuspendLayout();
             this.materialContextMenuStrip1.SuspendLayout();
             this.materialPanel1.SuspendLayout();
@@ -196,7 +196,7 @@ namespace MaterialSkinExample
             this.panel1.Controls.Add(this.materialFormGroup5);
             this.panel1.Controls.Add(this.materialFormGroup4);
             this.panel1.Controls.Add(this.materialFormGroup2);
-            this.panel1.Controls.Add(this.materialFormGroup3);
+            this.panel1.Controls.Add(this.grpDisabled);
             this.panel1.Controls.Add(this.materialFormGroup1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -379,24 +379,25 @@ namespace MaterialSkinExample
             this.materialCheckBox7.TabIndex = 5;
             this.materialCheckBox7.Text = "Check Box";
             this.materialCheckBox7.UseVisualStyleBackColor = true;
+            this.materialCheckBox7.Click += new System.EventHandler(this.materialCheckBox7_Click);
             // 
-            // materialFormGroup3
+            // grpDisabled
             // 
-            this.materialFormGroup3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialFormGroup3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
-            this.materialFormGroup3.Controls.Add(this.materialSingleLineTextField1);
-            this.materialFormGroup3.Depth = 0;
-            this.materialFormGroup3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.materialFormGroup3.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
-            this.materialFormGroup3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.materialFormGroup3.Location = new System.Drawing.Point(0, 65);
-            this.materialFormGroup3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFormGroup3.Name = "materialFormGroup3";
-            this.materialFormGroup3.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.materialFormGroup3.Size = new System.Drawing.Size(505, 65);
-            this.materialFormGroup3.TabIndex = 2;
-            this.materialFormGroup3.TabStop = false;
-            this.materialFormGroup3.Text = "Disabled Text Box";
+            this.grpDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grpDisabled.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.grpDisabled.Controls.Add(this.materialSingleLineTextField1);
+            this.grpDisabled.Depth = 0;
+            this.grpDisabled.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpDisabled.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.grpDisabled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.grpDisabled.Location = new System.Drawing.Point(0, 65);
+            this.grpDisabled.MouseState = MaterialSkin.MouseState.HOVER;
+            this.grpDisabled.Name = "grpDisabled";
+            this.grpDisabled.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.grpDisabled.Size = new System.Drawing.Size(505, 65);
+            this.grpDisabled.TabIndex = 2;
+            this.grpDisabled.TabStop = false;
+            this.grpDisabled.Text = "Disabled Text Box";
             // 
             // materialSingleLineTextField1
             // 
@@ -597,7 +598,7 @@ namespace MaterialSkinExample
             this.materialFormGroup4.PerformLayout();
             this.materialFormGroup2.ResumeLayout(false);
             this.materialFormGroup2.PerformLayout();
-            this.materialFormGroup3.ResumeLayout(false);
+            this.grpDisabled.ResumeLayout(false);
             this.materialFormGroup1.ResumeLayout(false);
             this.materialContextMenuStrip1.ResumeLayout(false);
             this.materialPanel1.ResumeLayout(false);
@@ -628,7 +629,7 @@ namespace MaterialSkinExample
         private Panel panel2;
         private MaterialFormGroup materialFormGroup1;
         private MaterialSingleLineTextField materialSingleLineTextField4;
-        private MaterialFormGroup materialFormGroup3;
+        private MaterialFormGroup grpDisabled;
         private MaterialPanel materialPanel1;
         private FlowLayoutPanel flowLayoutPanel1;
         private MaterialFormGroup materialFormGroup2;

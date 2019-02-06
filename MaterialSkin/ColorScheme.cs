@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
+using System;
 
 namespace MaterialSkin
 {
@@ -92,6 +93,11 @@ namespace MaterialSkin
 
     public static class ColorExtension
     {
+        public static Color AddAlpha(this Color color, decimal percentage)
+        {
+            var col = Color.FromArgb( Convert.ToInt32(((percentage / 100m) * color.A)), color.R, color.G, color.B);
+            return col;
+        }
         /// <summary>
         /// Convert an integer number to a Color.
         /// </summary>

@@ -52,7 +52,9 @@ namespace MaterialSkin.Controls
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.TextRenderingHint = TextRenderingHint.AntiAlias;
             Brush frontBrush = new SolidBrush(ForeColor);
-            if (_isEntered)
+            if (!Enabled)
+                frontBrush = SkinManager.GetDisabledOrHintBrush();
+            else if (_isEntered)
                 frontBrush = backBrush;
 
             g.DrawString(Text, Font, frontBrush, rect, new StringFormat { Alignment = StringAlignment.Near, LineAlignment = StringAlignment.Near });

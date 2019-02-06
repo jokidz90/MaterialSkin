@@ -21,8 +21,8 @@ namespace MaterialSkinExample
             // Add dummy data to the listview
             seedListView();
 
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            this.WindowState = FormWindowState.Maximized;
+            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            //this.WindowState = FormWindowState.Maximized;
         }
 
 	    private void seedListView()
@@ -56,6 +56,11 @@ namespace MaterialSkinExample
 	        if (colorSchemeIndex >= ColorScheme.ColorSwatches.Count)
                 colorSchemeIndex = 0;
             materialSkinManager.ColorScheme = ColorScheme.ColorSwatches[((ColorType)colorSchemeIndex)];
+        }
+
+        private void materialCheckBox7_Click(object sender, EventArgs e)
+        {
+            grpDisabled.Enabled = !grpDisabled.Enabled;
         }
     }
 }

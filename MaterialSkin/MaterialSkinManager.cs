@@ -52,7 +52,7 @@ namespace MaterialSkin
         private static readonly Brush PRIMARY_TEXT_BLACK_BRUSH = new SolidBrush(PRIMARY_TEXT_BLACK);
         public static Color SECONDARY_TEXT_BLACK = Color.FromArgb(255, 130, 130, 130);
         public static Brush SECONDARY_TEXT_BLACK_BRUSH = new SolidBrush(SECONDARY_TEXT_BLACK);
-        private static readonly Color DISABLED_OR_HINT_TEXT_BLACK = Color.FromArgb(255, 150, 150, 150);
+        private static readonly Color DISABLED_OR_HINT_TEXT_BLACK = Color.FromArgb(255, 200, 200, 200);
         private static readonly Brush DISABLED_OR_HINT_TEXT_BLACK_BRUSH = new SolidBrush(DISABLED_OR_HINT_TEXT_BLACK);
         private static readonly Color DIVIDERS_BLACK = Color.FromArgb(75, 0, 0, 0);
         private static readonly Brush DIVIDERS_BLACK_BRUSH = new SolidBrush(DIVIDERS_BLACK);
@@ -61,7 +61,7 @@ namespace MaterialSkin
         private static readonly Brush PRIMARY_TEXT_WHITE_BRUSH = new SolidBrush(PRIMARY_TEXT_WHITE);
         public static Color SECONDARY_TEXT_WHITE = Color.FromArgb(179, 255, 255, 255);
         public static Brush SECONDARY_TEXT_WHITE_BRUSH = new SolidBrush(SECONDARY_TEXT_WHITE);
-        private static readonly Color DISABLED_OR_HINT_TEXT_WHITE = Color.FromArgb(77, 255, 255, 255);
+        private static readonly Color DISABLED_OR_HINT_TEXT_WHITE = Color.FromArgb(255, 80, 80, 80);
         private static readonly Brush DISABLED_OR_HINT_TEXT_WHITE_BRUSH = new SolidBrush(DISABLED_OR_HINT_TEXT_WHITE);
         private static readonly Color DIVIDERS_WHITE = Color.FromArgb(31, 255, 255, 255);
         private static readonly Brush DIVIDERS_WHITE_BRUSH = new SolidBrush(DIVIDERS_WHITE);

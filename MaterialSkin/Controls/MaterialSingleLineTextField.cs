@@ -27,7 +27,19 @@ namespace MaterialSkin.Controls
         public new int MaxLength { get { return _baseTextBox.MaxLength; } set { _baseTextBox.MaxLength = value; } }
 
         public string SelectedText { get { return _baseTextBox.SelectedText; } set { _baseTextBox.SelectedText = value; } }
-        public string Hint { get { return _baseTextBox.Hint; } set { _baseTextBox.Hint = value; } }
+        private string _hint;
+        public string Hint
+        {
+            get
+            {
+                return _hint;
+            }
+            set
+            {
+                _hint = value;
+                _baseTextBox.Hint = value;
+            }
+        }
 
         public int SelectionStart { get { return _baseTextBox.SelectionStart; } set { _baseTextBox.SelectionStart = value; } }
         public int SelectionLength { get { return _baseTextBox.SelectionLength; } set { _baseTextBox.SelectionLength = value; } }
@@ -976,7 +988,7 @@ namespace MaterialSkin.Controls
             BackColorChanged += (sender, args) =>
             {
                 _baseTextBox.BackColor = BackColor;
-                _baseTextBox.ForeColor = SkinManager.GetPrimaryTextColor();
+                _baseTextBox.ForeColor = Enabled ? SkinManager.GetPrimaryTextColor() : SkinManager.GetDisabledOrHintColor();
             };
 
             //Fix for tabstop
@@ -986,16 +998,18 @@ namespace MaterialSkin.Controls
 
         protected override void OnPaint(PaintEventArgs pevent)
         {
-            var backBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush;
+            var backBrushColored = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush;
+            var backBrushNormal = Enabled ? SkinManager.GetDividersBrush() : SkinManager.GetDisabledOrHintBrush();
             var g = pevent.Graphics;
             g.Clear(Parent.BackColor);
 
-            var lineY = _baseTextBox.Bottom + 3;
-
+            var lineY = _baseTextBox.Bottom + 2;
+            var lineHeightFocused = 3f;
+            var lineHeightNormal = 2f;
             if (!_animationManager.IsAnimating())
             {
                 //No animation
-                g.FillRectangle(_baseTextBox.Focused ? backBrush : SkinManager.GetDividersBrush(), _baseTextBox.Location.X, lineY, _baseTextBox.Width, _baseTextBox.Focused ? 2 : 1);
+                g.FillRectangle(_baseTextBox.Focused ? backBrushColored : backBrushNormal, _baseTextBox.Location.X, lineY, _baseTextBox.Width, _baseTextBox.Focused ? lineHeightFocused : lineHeightNormal);
             }
             else
             {
@@ -1005,11 +1019,30 @@ namespace MaterialSkin.Controls
                 int animationStart = _baseTextBox.Location.X + _baseTextBox.Width / 2;
 
                 //Unfocused background
-                g.FillRectangle(SkinManager.GetDividersBrush(), _baseTextBox.Location.X, lineY, _baseTextBox.Width, 1);
+                g.FillRectangle(backBrushNormal, _baseTextBox.Location.X, lineY, _baseTextBox.Width, lineHeightNormal);
 
                 //Animated focus transition
-                g.FillRectangle(backBrush, animationStart - halfAnimationWidth, lineY, animationWidth, 2);
+                g.FillRectangle(backBrushColored, animationStart - halfAnimationWidth, lineY, animationWidth, lineHeightFocused);
             }
+        }
+
+        protected override void OnEnabledChanged(EventArgs e)
+        {
+            if (!Enabled)
+            {
+                _baseTextBox.Hint = "";
+                if (Text == _hint || string.IsNullOrEmpty(Text))
+                    Text = _hint;
+            }
+            else
+            {
+                _baseTextBox.Hint = _hint;
+                if (Text == _hint)
+                    Text = "";
+            }
+
+            ForeColor = Enabled ? SkinManager.GetPrimaryTextColor() : SkinManager.GetDisabledOrHintColor();
+            _baseTextBox.ForeColor = Enabled ? SkinManager.GetPrimaryTextColor() : SkinManager.GetDisabledOrHintColor();
         }
 
         protected override void OnResize(EventArgs e)
@@ -1027,7 +1060,7 @@ namespace MaterialSkin.Controls
             base.OnCreateControl();
 
             _baseTextBox.BackColor = Parent.BackColor;
-            _baseTextBox.ForeColor = SkinManager.GetPrimaryTextColor();
+            _baseTextBox.ForeColor = Enabled ? SkinManager.GetPrimaryTextColor() : SkinManager.GetDisabledOrHintColor();
         }
 
         private class BaseTextBox : TextBox
