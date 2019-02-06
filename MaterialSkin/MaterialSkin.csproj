@@ -33,8 +33,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animations\AnimationDirection.cs" />
@@ -47,16 +49,31 @@
     <Compile Include="Controls\MaterialComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\MaterialComboBoxDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialComboBoxDialog.Designer.cs">
+      <DependentUpon>MaterialComboBoxDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MaterialContextMenuStrip.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\MaterialDivider.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\MaterialDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialDropDown.Designer.cs">
+      <DependentUpon>MaterialDropDown.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MaterialFlatButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\MaterialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialFormDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controls\MaterialFormGroup.cs">
@@ -106,6 +123,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controls\MaterialComboBoxDialog.resx">
+      <DependentUpon>MaterialComboBoxDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -7,7 +8,7 @@ using MaterialSkin.Animations;
 
 namespace MaterialSkin.Controls
 {
-    public class MaterialSingleLineTextField : Control, IMaterialControl
+    public partial class MaterialDropDown : Control, IMaterialControl
     {
         //Properties for managing the material design properties
         [Browsable(false)]
@@ -41,6 +42,9 @@ namespace MaterialSkin.Controls
             }
         }
 
+        private bool _isMultiSelect = false;
+        public bool IsMultiSelect { get => _isMultiSelect; set => _isMultiSelect = value; }
+
         public int SelectionStart { get { return _baseTextBox.SelectionStart; } set { _baseTextBox.SelectionStart = value; } }
         public int SelectionLength { get { return _baseTextBox.SelectionLength; } set { _baseTextBox.SelectionLength = value; } }
         public int TextLength => _baseTextBox.TextLength;
@@ -52,6 +56,8 @@ namespace MaterialSkin.Controls
         public void Clear() { _baseTextBox.Clear(); }
         public void Focus() { _baseTextBox.Focus(); }
 
+        private int _dropDownArrowWidth = 25;
+        private MaterialComboBoxDialog _frmItemSelector = null;
 
         # region Forwarding events to baseTextBox
         public event EventHandler AcceptsTabChanged
@@ -956,7 +962,7 @@ namespace MaterialSkin.Controls
         #endregion
 
 
-        public MaterialSingleLineTextField()
+        public MaterialDropDown()
         {
             SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.DoubleBuffer, true);
 
@@ -974,7 +980,7 @@ namespace MaterialSkin.Controls
                 Font = SkinManager.ROBOTO_REGULAR_11,
                 ForeColor = SkinManager.GetPrimaryTextColor(),
                 Location = new Point(0, 0),
-                Width = Width,
+                Width = Width - _dropDownArrowWidth,
                 Height = Height - 5
             };
 
@@ -990,10 +996,16 @@ namespace MaterialSkin.Controls
                 _baseTextBox.BackColor = BackColor;
                 _baseTextBox.ForeColor = Enabled ? SkinManager.GetPrimaryTextColor() : SkinManager.GetDisabledOrHintColor();
             };
-
             //Fix for tabstop
-            _baseTextBox.TabStop = true;
+            this.Cursor = Cursors.Hand;
             this.TabStop = false;
+            _baseTextBox.TabStop = true;
+            _baseTextBox.ReadOnly = true;
+            _baseTextBox.Cursor = Cursors.Hand;
+            _baseTextBox.Click += (sender, args) => { ShowItemSelector(); };
+            _baseTextBox.GotFocus += (sender, args) => { ShowItemSelector(); };
+            _baseTextBox.Enter += (sender, args) => { ShowItemSelector(); };
+            _baseTextBox.Leave += (sender, args) => { HideItemSelector(); };
         }
 
         protected override void OnPaint(PaintEventArgs pevent)
@@ -1006,20 +1018,23 @@ namespace MaterialSkin.Controls
             var lineY = _baseTextBox.Bottom + 2;
             var lineHeightFocused = 3f;
             var lineHeightNormal = 2f;
+            bool isFocused = _baseTextBox.Focused || _isSelectorShown;
+
+            g.DrawString("▼", Font, isFocused ? backBrushColored : backBrushNormal, new Point(_baseTextBox.Width, _baseTextBox.Top));
             if (!_animationManager.IsAnimating())
             {
                 //No animation
-                g.FillRectangle(_baseTextBox.Focused ? backBrushColored : backBrushNormal, _baseTextBox.Location.X, lineY, _baseTextBox.Width, _baseTextBox.Focused ? lineHeightFocused : lineHeightNormal);
+                g.FillRectangle(isFocused ? backBrushColored : backBrushNormal, _baseTextBox.Location.X, lineY, this.Width, _baseTextBox.Focused ? lineHeightFocused : lineHeightNormal);
             }
             else
             {
                 //Animate
-                int animationWidth = (int)(_baseTextBox.Width * _animationManager.GetProgress());
+                int animationWidth = (int)(this.Width * _animationManager.GetProgress());
                 int halfAnimationWidth = animationWidth / 2;
-                int animationStart = _baseTextBox.Location.X + _baseTextBox.Width / 2;
+                int animationStart = _baseTextBox.Location.X + this.Width / 2;
 
                 //Unfocused background
-                g.FillRectangle(backBrushNormal, _baseTextBox.Location.X, lineY, _baseTextBox.Width, lineHeightNormal);
+                g.FillRectangle(backBrushNormal, _baseTextBox.Location.X, lineY, this.Width, lineHeightNormal);
 
                 //Animated focus transition
                 g.FillRectangle(backBrushColored, animationStart - halfAnimationWidth, lineY, animationWidth, lineHeightFocused);
@@ -1050,7 +1065,7 @@ namespace MaterialSkin.Controls
             base.OnResize(e);
 
             _baseTextBox.Location = new Point(0, 0);
-            _baseTextBox.Width = Width;
+            _baseTextBox.Width = Width- _dropDownArrowWidth;
 
             Height = _baseTextBox.Height + 5;
         }
@@ -1059,8 +1074,72 @@ namespace MaterialSkin.Controls
         {
             base.OnCreateControl();
 
-            _baseTextBox.BackColor = Parent.BackColor;
+            if(Parent!=null)
+                _baseTextBox.BackColor = Parent.BackColor;
             _baseTextBox.ForeColor = Enabled ? SkinManager.GetPrimaryTextColor() : SkinManager.GetDisabledOrHintColor();
+        }
+
+        protected override void OnClick(EventArgs e)
+        {
+            ShowItemSelector();
+        }
+
+        protected override void OnGotFocus(EventArgs e)
+        {
+            ShowItemSelector();
+        }
+
+        protected override void OnEnter(EventArgs e)
+        {
+            ShowItemSelector();
+        }
+
+        protected override void OnLeave(EventArgs e)
+        {
+            HideItemSelector();
+        }
+
+
+        private bool _isSelectorShown = false;
+        private void ShowItemSelector()
+        {
+            if (_isSelectorShown)
+            {
+                HideItemSelector();
+                return;
+            }
+            _isSelectorShown = true;
+
+            InitItemSelector();
+            _frmItemSelector.Show();
+            _frmItemSelector.BringToFront();
+        }
+
+        private void HideItemSelector()
+        {
+            if (!_isSelectorShown)
+                return;
+            _isSelectorShown = false;
+            if (_frmItemSelector == null || _frmItemSelector.IsDisposed)
+                return;
+
+            _frmItemSelector.Close();
+        }
+
+        protected void InitItemSelector()
+        {
+            if (_frmItemSelector != null && !_frmItemSelector.IsDisposed)
+                return;
+
+            var startPoint = this.PointToScreen(Point.Empty);
+            startPoint.Y = startPoint.Y + this.Height;
+
+            _frmItemSelector = new MaterialComboBoxDialog();
+            _frmItemSelector.StartPosition = FormStartPosition.Manual;
+            _frmItemSelector.Location = startPoint;
+            _frmItemSelector.Width = this.Width;
+            //_frmItemSelector.TopMost = true;
+            _frmItemSelector.Leave += (sender, e) => { HideItemSelector(); };
         }
 
         private class BaseTextBox : TextBox
@@ -1084,17 +1163,6 @@ namespace MaterialSkin.Controls
                 }
             }
 
-            private char _passwordChar = EmptyChar;
-            public new char PasswordChar
-            {
-                get { return _passwordChar; }
-                set
-                {
-                    _passwordChar = value;
-                    SetBasePasswordChar();
-                }
-            }
-
             public new void SelectAll()
             {
                 BeginInvoke((MethodInvoker)delegate ()
@@ -1112,103 +1180,27 @@ namespace MaterialSkin.Controls
                 });
             }
 
-            private char _useSystemPasswordChar = EmptyChar;
-            public new bool UseSystemPasswordChar
-            {
-                get { return _useSystemPasswordChar != EmptyChar; }
-                set
-                {
-                    if (value)
-                    {
-                        _useSystemPasswordChar = Application.RenderWithVisualStyles ? VisualStylePasswordChar : NonVisualStylePasswordChar;
-                    }
-                    else
-                    {
-                        _useSystemPasswordChar = EmptyChar;
-                    }
-
-                    SetBasePasswordChar();
-                }
-            }
-
-            private void SetBasePasswordChar()
-            {
-                base.PasswordChar = UseSystemPasswordChar ? _useSystemPasswordChar : _passwordChar;
-            }
-
             public BaseTextBox()
             {
-                MaterialContextMenuStrip cms = new TextBoxContextMenuStrip();
-                cms.Opening += ContextMenuStripOnOpening;
-                cms.OnItemClickStart += ContextMenuStripOnItemClickStart;
 
-                ContextMenuStrip = cms;
             }
 
-            private void ContextMenuStripOnItemClickStart(object sender, ToolStripItemClickedEventArgs toolStripItemClickedEventArgs)
+            protected override void OnPaint(PaintEventArgs pevent)
             {
-                switch (toolStripItemClickedEventArgs.ClickedItem.Text)
-                {
-                    case "Undo":
-                        Undo();
-                        break;
-                    case "Cut":
-                        Cut();
-                        break;
-                    case "Copy":
-                        Copy();
-                        break;
-                    case "Paste":
-                        Paste();
-                        break;
-                    case "Delete":
-                        SelectedText = string.Empty;
-                        break;
-                    case "Select All":
-                        SelectAll();
-                        break;
-                }
-            }
+                base.OnPaint(pevent);
 
-            private void ContextMenuStripOnOpening(object sender, CancelEventArgs cancelEventArgs)
-            {
-                var strip = sender as TextBoxContextMenuStrip;
-                if (strip != null)
-                {
-                    strip.Undo.Enabled = CanUndo;
-                    strip.Cut.Enabled = !string.IsNullOrEmpty(SelectedText);
-                    strip.Copy.Enabled = !string.IsNullOrEmpty(SelectedText);
-                    strip.Paste.Enabled = Clipboard.ContainsText();
-                    strip.Delete.Enabled = !string.IsNullOrEmpty(SelectedText);
-                    strip.SelectAll.Enabled = !string.IsNullOrEmpty(Text);
-                }
-            }
-        }
+                //var dropDownChar = "▼";
+                //var g = pevent.Graphics;
+                ////var backBrushColored = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush;
+                ////var backBrushNormal = Enabled ? SkinManager.GetDividersBrush() : new SolidBrush(SkinManager.GetDisabledOrHintColor().AddAlpha(50));
+                ////var g = pevent.Graphics;
+                //g.Clear(Parent.BackColor);
 
-        private class TextBoxContextMenuStrip : MaterialContextMenuStrip
-        {
-            public readonly ToolStripItem Undo = new MaterialToolStripMenuItem { Text = "Undo" };
-            public readonly ToolStripItem Seperator1 = new ToolStripSeparator();
-            public readonly ToolStripItem Cut = new MaterialToolStripMenuItem { Text = "Cut" };
-            public readonly ToolStripItem Copy = new MaterialToolStripMenuItem { Text = "Copy" };
-            public readonly ToolStripItem Paste = new MaterialToolStripMenuItem { Text = "Paste" };
-            public readonly ToolStripItem Delete = new MaterialToolStripMenuItem { Text = "Delete" };
-            public readonly ToolStripItem Seperator2 = new ToolStripSeparator();
-            public readonly ToolStripItem SelectAll = new MaterialToolStripMenuItem { Text = "Select All" };
-
-            public TextBoxContextMenuStrip()
-            {
-                Items.AddRange(new[]
-                {
-                    Undo,
-                    Seperator1,
-                    Cut,
-                    Copy,
-                    Paste,
-                    Delete,
-                    Seperator2,
-                    SelectAll
-                });
+                ////var lineY = _baseTextBox.Bottom + 2;
+                ////var lineYTop = _baseTextBox.Top + 2;
+                ////var lineHeightFocused = 3f;
+                ////var lineHeightNormal = 2f;
+                //g.DrawString("A", Font, new SolidBrush(ForeColor), this.Location);
             }
         }
     }

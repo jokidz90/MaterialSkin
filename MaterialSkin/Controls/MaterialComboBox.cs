@@ -198,7 +198,7 @@
         protected override void OnDropDown (EventArgs e)
         {
             base.OnDropDown(e);
-;            
+
             if (AutoSize == false) { return; }
 
            

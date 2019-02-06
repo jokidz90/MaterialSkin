@@ -16,7 +16,7 @@ namespace MaterialSkin
         private static MaterialSkinManager _instance;
 
         //Forms to control
-        private readonly List<MaterialForm> _formsToManage = new List<MaterialForm>();
+        private readonly List<Form> _formsToManage = new List<Form>();
 
         //Theme
         private Themes _theme;
@@ -253,7 +253,7 @@ namespace MaterialSkin
 
         public static MaterialSkinManager Instance => _instance ?? (_instance = new MaterialSkinManager());
 
-        public void AddFormToManage(MaterialForm materialForm)
+        public void AddFormToManage(Form materialForm)
         {
             _formsToManage.Add(materialForm);
             UpdateBackgrounds();
