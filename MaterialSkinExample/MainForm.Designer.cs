@@ -33,6 +33,7 @@ namespace MaterialSkinExample
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.materialButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
@@ -43,6 +44,7 @@ namespace MaterialSkinExample
             this.materialFormGroup6 = new MaterialSkin.Controls.MaterialFormGroup();
             this.materialDropDown1 = new MaterialSkin.Controls.MaterialDropDown();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.materialFormGroup5 = new MaterialSkin.Controls.MaterialFormGroup();
             this.materialRadioButton8 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialRadioButton7 = new MaterialSkin.Controls.MaterialRadioButton();
@@ -67,7 +69,6 @@ namespace MaterialSkinExample
             this.item3ToolStripMenuItem = new MaterialSkin.Controls.MaterialToolStripMenuItem();
             this.materialPanel1 = new MaterialSkin.Controls.MaterialPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.materialTabControl1.SuspendLayout();
             this.tpControls.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -104,6 +105,7 @@ namespace MaterialSkinExample
             this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialButton1.BackColor = System.Drawing.Color.Maroon;
             this.materialButton1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton1.Depth = 0;
             this.materialButton1.Icon = null;
             this.materialButton1.Location = new System.Drawing.Point(641, 6);
@@ -192,28 +194,29 @@ namespace MaterialSkinExample
             this.materialFormGroup6.Size = new System.Drawing.Size(505, 65);
             this.materialFormGroup6.TabIndex = 1;
             this.materialFormGroup6.TabStop = false;
-            this.materialFormGroup6.Text = "Drop Box";
+            this.materialFormGroup6.Text = "Drop Down";
             // 
             // materialDropDown1
             // 
             this.materialDropDown1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.materialDropDown1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialDropDown1.Depth = 0;
+            this.materialDropDown1.DisplayMember = "";
             this.materialDropDown1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.materialDropDown1.DropDownHeight = 200;
+            this.materialDropDown1.DropDownItemHeight = 30;
+            this.materialDropDown1.DropDownWidth = -1;
             this.materialDropDown1.Hint = "Drop Down";
             this.materialDropDown1.IsMultiSelect = false;
+            this.materialDropDown1.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("materialDropDown1.Items")));
             this.materialDropDown1.Location = new System.Drawing.Point(3, 23);
-            this.materialDropDown1.MaxLength = 32767;
             this.materialDropDown1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDropDown1.Name = "materialDropDown1";
-            this.materialDropDown1.PasswordChar = '\0';
             this.materialDropDown1.SelectedText = "";
-            this.materialDropDown1.SelectionLength = 0;
-            this.materialDropDown1.SelectionStart = 0;
             this.materialDropDown1.Size = new System.Drawing.Size(499, 23);
             this.materialDropDown1.TabIndex = 1;
             this.materialDropDown1.TabStop = false;
-            this.materialDropDown1.UseSystemPasswordChar = false;
+            this.materialDropDown1.ValueMember = "";
             // 
             // panel1
             // 
@@ -230,6 +233,22 @@ namespace MaterialSkinExample
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(505, 491);
             this.panel1.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.comboBox1.Location = new System.Drawing.Point(48, 429);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(361, 21);
+            this.comboBox1.TabIndex = 6;
             // 
             // materialFormGroup5
             // 
@@ -489,6 +508,7 @@ namespace MaterialSkinExample
             this.materialRaisedButton1.AutoSize = true;
             this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialRaisedButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Icon = null;
             this.materialRaisedButton1.Location = new System.Drawing.Point(806, 6);
@@ -598,22 +618,6 @@ namespace MaterialSkinExample
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1024, 64);
             this.flowLayoutPanel1.TabIndex = 17;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.comboBox1.Location = new System.Drawing.Point(48, 429);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(361, 21);
-            this.comboBox1.TabIndex = 6;
             // 
             // MainForm
             // 

@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using System.Threading;
 using System.Windows.Forms;
 using MaterialSkin.Animations;
+using static System.Windows.Forms.ComboBox;
 
 namespace MaterialSkin.Controls
 {
@@ -25,9 +28,7 @@ namespace MaterialSkin.Controls
 
         public override string Text { get { return _baseTextBox.Text; } set { _baseTextBox.Text = value; } }
         public new object Tag { get { return _baseTextBox.Tag; } set { _baseTextBox.Tag = value; } }
-        public new int MaxLength { get { return _baseTextBox.MaxLength; } set { _baseTextBox.MaxLength = value; } }
 
-        public string SelectedText { get { return _baseTextBox.SelectedText; } set { _baseTextBox.SelectedText = value; } }
         private string _hint;
         public string Hint
         {
@@ -42,24 +43,45 @@ namespace MaterialSkin.Controls
             }
         }
 
-        private bool _isMultiSelect = false;
-        public bool IsMultiSelect { get => _isMultiSelect; set => _isMultiSelect = value; }
-
-        public int SelectionStart { get { return _baseTextBox.SelectionStart; } set { _baseTextBox.SelectionStart = value; } }
-        public int SelectionLength { get { return _baseTextBox.SelectionLength; } set { _baseTextBox.SelectionLength = value; } }
-        public int TextLength => _baseTextBox.TextLength;
-
-        public bool UseSystemPasswordChar { get { return _baseTextBox.UseSystemPasswordChar; } set { _baseTextBox.UseSystemPasswordChar = value; } }
-        public char PasswordChar { get { return _baseTextBox.PasswordChar; } set { _baseTextBox.PasswordChar = value; } }
-
-        public void SelectAll() { _baseTextBox.SelectAll(); }
-        public void Clear() { _baseTextBox.Clear(); }
         public void Focus() { _baseTextBox.Focus(); }
 
         private int _dropDownArrowWidth = 25;
-        private MaterialComboBoxDialog _frmItemSelector = null;
+        private MaterialDropDownDialog _frmItemSelector = null;
 
-        # region Forwarding events to baseTextBox
+        #region DropDown Properties
+
+        public event ItemSelectHandler ValueChanged;
+
+        private int _dropDownWidth = -1;
+        public int DropDownWidth { get => _dropDownWidth; set => _dropDownWidth = value; }
+
+        private int _dropDownHeight = 200;
+        public int DropDownHeight { get => _dropDownHeight; set => _dropDownHeight = value; }
+
+        private bool _isMultiSelect = false;
+        public bool IsMultiSelect { get => _isMultiSelect; set => _isMultiSelect = value; }
+
+        [Editor("System.Windows.Forms.Design.StringCollectionEditor, System.Design", "System.Drawing.Design.UITypeEditor, System.Drawing")]
+        public List<object> Items { get => _items; set => _items = value; }
+        private List<object> _items = new List<object>();
+
+        private int _dropDownItemHeight = 30;
+        public int DropDownItemHeight { get => _dropDownItemHeight; set => _dropDownItemHeight = value; }
+
+        private string _valueMember = "";
+        public string ValueMember { get => _valueMember; set => _valueMember = value; }
+
+        private string _displayMember = "";
+        public string DisplayMember { get => _displayMember; set => _displayMember = value; }
+
+        public string SelectedText { set; get; }
+        public object SelectedValue { set; get; }
+        public int SelectedIndex { get => _selectedIndex; set => _selectedIndex = value; }
+        private int _selectedIndex = -1;
+
+        #endregion
+
+        #region Forwarding events to baseTextBox
         public event EventHandler AcceptsTabChanged
         {
             add
@@ -1103,9 +1125,11 @@ namespace MaterialSkin.Controls
         private bool _isSelectorShown = false;
         private void ShowItemSelector()
         {
+            if (_isClosing)
+                return;
             if (_isSelectorShown)
             {
-                HideItemSelector();
+                HideItemSelectorHelper();
                 return;
             }
             _isSelectorShown = true;
@@ -1115,7 +1139,15 @@ namespace MaterialSkin.Controls
             _frmItemSelector.BringToFront();
         }
 
+        private bool _isClosing = false;
         private void HideItemSelector()
+        {
+            _isClosing = true;
+            HideItemSelectorHelper();
+            _isClosing = false;
+        }
+
+        private void HideItemSelectorHelper()
         {
             if (!_isSelectorShown)
                 return;
@@ -1124,22 +1156,50 @@ namespace MaterialSkin.Controls
                 return;
 
             _frmItemSelector.Close();
+            _baseTextBox.Text = SelectedText;
+            _baseTextBox.SelectAll();
+            if (_selectedIndex != _prevSelectedIndex)
+            {
+                if (ValueChanged != null)
+                {
+                    ValueChanged(this, new ItemSelectArgs
+                    {
+                        SelectedIndex = SelectedIndex,
+                        SelectedText = SelectedText,
+                        SelectedValue = SelectedValue
+                    });
+                }
+            }
         }
 
+        private int _prevSelectedIndex = -1;
         protected void InitItemSelector()
         {
             if (_frmItemSelector != null && !_frmItemSelector.IsDisposed)
                 return;
 
             var startPoint = this.PointToScreen(Point.Empty);
-            startPoint.Y = startPoint.Y + this.Height;
+            startPoint.Y = startPoint.Y;// + this.Height;
+            _prevSelectedIndex = _selectedIndex;
 
-            _frmItemSelector = new MaterialComboBoxDialog();
+            _frmItemSelector = new MaterialDropDownDialog();
+            _frmItemSelector.Items = _items;
             _frmItemSelector.StartPosition = FormStartPosition.Manual;
             _frmItemSelector.Location = startPoint;
-            _frmItemSelector.Width = this.Width;
-            //_frmItemSelector.TopMost = true;
+            _frmItemSelector.ItemHeight = _dropDownItemHeight;
+            _frmItemSelector.Width = _dropDownWidth <= 0 ? this.Width : _dropDownWidth;
+            _frmItemSelector.Height = (_items.Count * _dropDownItemHeight) > _dropDownHeight ? _dropDownHeight : (_items.Count * _dropDownItemHeight);
+            _frmItemSelector.Height += 15;
             _frmItemSelector.Leave += (sender, e) => { HideItemSelector(); };
+            _frmItemSelector.ItemSelected += (sender, e) =>
+             {
+                 this.SelectedIndex = e.SelectedIndex;
+                 this.SelectedValue = e.SelectedValue;
+                 this.SelectedText = e.SelectedText;
+
+                 if (!IsMultiSelect)
+                     HideItemSelector();
+             };
         }
 
         private class BaseTextBox : TextBox

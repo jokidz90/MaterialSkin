@@ -49,11 +49,11 @@
     <Compile Include="Controls\MaterialComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\MaterialComboBoxDialog.cs">
+    <Compile Include="Controls\MaterialDropDownDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\MaterialComboBoxDialog.Designer.cs">
-      <DependentUpon>MaterialComboBoxDialog.cs</DependentUpon>
+    <Compile Include="Controls\MaterialDropDownDialog.Designer.cs">
+      <DependentUpon>MaterialDropDownDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\MaterialContextMenuStrip.cs">
       <SubType>Component</SubType>
@@ -123,8 +123,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Controls\MaterialComboBoxDialog.resx">
-      <DependentUpon>MaterialComboBoxDialog.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\MaterialDropDownDialog.resx">
+      <DependentUpon>MaterialDropDownDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

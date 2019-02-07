@@ -50,6 +50,7 @@ namespace MaterialSkin.Controls
 
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             AutoSize = true;
+            Cursor = Cursors.Hand;
         }
 
         public override string Text

@@ -38,6 +38,9 @@ namespace MaterialSkin.Controls
             }
         }
 
+        private StringAlignment _alignment = StringAlignment.Center;
+        public StringAlignment Alignment { get => _alignment; set => _alignment = value; }
+
         public MaterialFlatButton()
         {
             Primary = false;
@@ -60,6 +63,7 @@ namespace MaterialSkin.Controls
             AutoSize = true;
             Margin = new Padding(4, 6, 4, 6);
             Padding = new Padding(0);
+            Cursor = Cursors.Hand;
         }
 
         public override string Text
@@ -143,7 +147,7 @@ namespace MaterialSkin.Controls
                 SkinManager.ROBOTO_MEDIUM_10,
                 Enabled ? (Primary ? frontBrush : SkinManager.GetPrimaryTextBrush()) : SkinManager.GetFlatButtonDisabledTextBrush(),
                 textRect,
-                new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center }
+                new StringFormat { Alignment = _alignment, LineAlignment = StringAlignment.Center }
                 );
         }
 
