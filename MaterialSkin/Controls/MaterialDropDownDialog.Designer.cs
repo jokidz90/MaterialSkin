@@ -43,7 +43,6 @@
             this.flpMain.Location = new System.Drawing.Point(2, 2);
             this.flpMain.MouseState = MaterialSkin.MouseState.HOVER;
             this.flpMain.Name = "flpMain";
-            this.flpMain.Padding = new System.Windows.Forms.Padding(5);
             this.flpMain.Size = new System.Drawing.Size(329, 196);
             this.flpMain.TabIndex = 0;
             // 

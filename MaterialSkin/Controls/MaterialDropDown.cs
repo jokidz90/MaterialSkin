@@ -8,6 +8,7 @@ using System.Threading;
 using System.Windows.Forms;
 using MaterialSkin.Animations;
 using static System.Windows.Forms.ComboBox;
+using System.Linq;
 
 namespace MaterialSkin.Controls
 {
@@ -74,10 +75,66 @@ namespace MaterialSkin.Controls
         private string _displayMember = "";
         public string DisplayMember { get => _displayMember; set => _displayMember = value; }
 
-        public string SelectedText { set; get; }
-        public object SelectedValue { set; get; }
-        public int SelectedIndex { get => _selectedIndex; set => _selectedIndex = value; }
-        private int _selectedIndex = -1;
+        public string SelectedText
+        {
+            get
+            {
+                List<string> selecteds = new List<string>();
+                for (int i = 0; i < _items.Count; i++)
+                {
+                    if (!_selectedIndices.Contains(i))
+                        continue;
+
+                    selecteds.Add(_items[i].ToString());
+                }
+
+                return string.Join(",", selecteds);
+            }
+        }
+
+        public object SelectedValue
+        {
+            get
+            {
+                List<object> selecteds = new List<object>();
+                for (int i = 0; i < _items.Count; i++)
+                {
+                    if (!_selectedIndices.Contains(i))
+                        continue;
+
+                    selecteds.Add(_items[i]);
+                }
+
+                object obj = selecteds;
+                if (!_isMultiSelect)
+                    obj = selecteds.FirstOrDefault();
+
+                return obj;
+            }
+        }
+
+        public int SelectedIndex
+        {
+            get
+            {
+                if (_selectedIndices.Count == 0)
+                    return -1;
+                else
+                    return _selectedIndices[_selectedIndices.Count - 1];
+            }
+            set
+            {
+                int sel = value;
+                if (value < 0)
+                    sel = -1;
+
+                if (sel >= 0 && !_selectedIndices.Contains(sel))
+                    _selectedIndices.Add(sel);
+            }
+        }
+
+        public List<int> SelectedIndices { get => _selectedIndices; set => _selectedIndices = value; }
+        private List<int> _selectedIndices = new List<int>();
 
         #endregion
 
@@ -1158,13 +1215,14 @@ namespace MaterialSkin.Controls
             _frmItemSelector.Close();
             _baseTextBox.Text = SelectedText;
             _baseTextBox.SelectAll();
-            if (_selectedIndex != _prevSelectedIndex)
+            if (_selectedIndices != _prevSelectedIndices)
             {
                 if (ValueChanged != null)
                 {
                     ValueChanged(this, new ItemSelectArgs
                     {
                         SelectedIndex = SelectedIndex,
+                        SelectedIndices = SelectedIndices,
                         SelectedText = SelectedText,
                         SelectedValue = SelectedValue
                     });
@@ -1172,7 +1230,7 @@ namespace MaterialSkin.Controls
             }
         }
 
-        private int _prevSelectedIndex = -1;
+        private List<int> _prevSelectedIndices = new List<int>();
         protected void InitItemSelector()
         {
             if (_frmItemSelector != null && !_frmItemSelector.IsDisposed)
@@ -1180,7 +1238,7 @@ namespace MaterialSkin.Controls
 
             var startPoint = this.PointToScreen(Point.Empty);
             startPoint.Y = startPoint.Y;// + this.Height;
-            _prevSelectedIndex = _selectedIndex;
+            _prevSelectedIndices = _selectedIndices;
 
             _frmItemSelector = new MaterialDropDownDialog();
             _frmItemSelector.Items = _items;
@@ -1191,12 +1249,11 @@ namespace MaterialSkin.Controls
             _frmItemSelector.Height = (_items.Count * _dropDownItemHeight) > _dropDownHeight ? _dropDownHeight : (_items.Count * _dropDownItemHeight);
             _frmItemSelector.Height += 15;
             _frmItemSelector.Leave += (sender, e) => { HideItemSelector(); };
+            _frmItemSelector.IsMultiSelect = IsMultiSelect;
+            _frmItemSelector.SelectedIndices = SelectedIndices;
             _frmItemSelector.ItemSelected += (sender, e) =>
              {
-                 this.SelectedIndex = e.SelectedIndex;
-                 this.SelectedValue = e.SelectedValue;
-                 this.SelectedText = e.SelectedText;
-
+                 this.SelectedIndices = e.SelectedIndices;
                  if (!IsMultiSelect)
                      HideItemSelector();
              };

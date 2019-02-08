@@ -46,6 +46,12 @@
     <Compile Include="Controls\MaterialCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\MaterialClickablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialClickablePanel.Designer.cs">
+      <DependentUpon>MaterialClickablePanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MaterialComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Controls\MaterialDropDown.Designer.cs">
       <DependentUpon>MaterialDropDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MaterialFlatButtonSelectable.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\MaterialFlatButton.cs">
       <SubType>Component</SubType>
@@ -136,6 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Roboto-Medium.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\check.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

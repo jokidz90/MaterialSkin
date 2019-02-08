@@ -67,5 +67,10 @@ namespace MaterialSkinExample
         {
 
         }
+
+        private void materialFlatButtonSelectable1_Click(object sender, EventArgs e)
+        {
+            materialFlatButtonSelectable1.IsSelected = !materialFlatButtonSelectable1.IsSelected;
+        }
     }
 }

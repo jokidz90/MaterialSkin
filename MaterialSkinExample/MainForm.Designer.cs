@@ -41,10 +41,11 @@ namespace MaterialSkinExample
             this.tpControls = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.materialFormGroup3 = new MaterialSkin.Controls.MaterialFormGroup();
+            this.materialDropDown2 = new MaterialSkin.Controls.MaterialDropDown();
             this.materialFormGroup6 = new MaterialSkin.Controls.MaterialFormGroup();
             this.materialDropDown1 = new MaterialSkin.Controls.MaterialDropDown();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.materialFormGroup5 = new MaterialSkin.Controls.MaterialFormGroup();
             this.materialRadioButton8 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialRadioButton7 = new MaterialSkin.Controls.MaterialRadioButton();
@@ -73,6 +74,7 @@ namespace MaterialSkinExample
             this.tpControls.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.materialFormGroup3.SuspendLayout();
             this.materialFormGroup6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.materialFormGroup5.SuspendLayout();
@@ -107,12 +109,12 @@ namespace MaterialSkinExample
             this.materialButton1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.materialButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton1.Depth = 0;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(641, 6);
+            this.materialButton1.Icon = global::MaterialSkinExample.Properties.Resources.minus;
+            this.materialButton1.Location = new System.Drawing.Point(613, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.Primary = true;
-            this.materialButton1.Size = new System.Drawing.Size(159, 50);
+            this.materialButton1.Size = new System.Drawing.Size(187, 50);
             this.materialButton1.TabIndex = 0;
             this.materialButton1.Text = "Change Theme";
             this.materialButton1.UseVisualStyleBackColor = false;
@@ -170,6 +172,7 @@ namespace MaterialSkinExample
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.materialFormGroup3);
             this.panel2.Controls.Add(this.materialFormGroup6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(505, 0);
@@ -177,6 +180,47 @@ namespace MaterialSkinExample
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(505, 491);
             this.panel2.TabIndex = 1;
+            // 
+            // materialFormGroup3
+            // 
+            this.materialFormGroup3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialFormGroup3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialFormGroup3.Controls.Add(this.materialDropDown2);
+            this.materialFormGroup3.Depth = 0;
+            this.materialFormGroup3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.materialFormGroup3.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.materialFormGroup3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.materialFormGroup3.Location = new System.Drawing.Point(0, 65);
+            this.materialFormGroup3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFormGroup3.Name = "materialFormGroup3";
+            this.materialFormGroup3.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.materialFormGroup3.Size = new System.Drawing.Size(505, 65);
+            this.materialFormGroup3.TabIndex = 3;
+            this.materialFormGroup3.TabStop = false;
+            this.materialFormGroup3.Text = "Multi Select Drop Down";
+            // 
+            // materialDropDown2
+            // 
+            this.materialDropDown2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialDropDown2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialDropDown2.Depth = 0;
+            this.materialDropDown2.DisplayMember = "";
+            this.materialDropDown2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.materialDropDown2.DropDownHeight = 200;
+            this.materialDropDown2.DropDownItemHeight = 30;
+            this.materialDropDown2.DropDownWidth = -1;
+            this.materialDropDown2.Hint = "Multi Select Drop Down";
+            this.materialDropDown2.IsMultiSelect = true;
+            this.materialDropDown2.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("materialDropDown2.Items")));
+            this.materialDropDown2.Location = new System.Drawing.Point(3, 23);
+            this.materialDropDown2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDropDown2.Name = "materialDropDown2";
+            this.materialDropDown2.SelectedIndex = -1;
+            this.materialDropDown2.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("materialDropDown2.SelectedIndices")));
+            this.materialDropDown2.Size = new System.Drawing.Size(499, 23);
+            this.materialDropDown2.TabIndex = 1;
+            this.materialDropDown2.TabStop = false;
+            this.materialDropDown2.ValueMember = "";
             // 
             // materialFormGroup6
             // 
@@ -212,7 +256,8 @@ namespace MaterialSkinExample
             this.materialDropDown1.Location = new System.Drawing.Point(3, 23);
             this.materialDropDown1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDropDown1.Name = "materialDropDown1";
-            this.materialDropDown1.SelectedText = "";
+            this.materialDropDown1.SelectedIndex = -1;
+            this.materialDropDown1.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("materialDropDown1.SelectedIndices")));
             this.materialDropDown1.Size = new System.Drawing.Size(499, 23);
             this.materialDropDown1.TabIndex = 1;
             this.materialDropDown1.TabStop = false;
@@ -221,7 +266,6 @@ namespace MaterialSkinExample
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.materialFormGroup5);
             this.panel1.Controls.Add(this.materialFormGroup4);
             this.panel1.Controls.Add(this.materialFormGroup2);
@@ -233,22 +277,6 @@ namespace MaterialSkinExample
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(505, 491);
             this.panel1.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.comboBox1.Location = new System.Drawing.Point(48, 429);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(361, 21);
-            this.comboBox1.TabIndex = 6;
             // 
             // materialFormGroup5
             // 
@@ -638,6 +666,7 @@ namespace MaterialSkinExample
             this.tpControls.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.materialFormGroup3.ResumeLayout(false);
             this.materialFormGroup6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.materialFormGroup5.ResumeLayout(false);
@@ -692,6 +721,7 @@ namespace MaterialSkinExample
         private MaterialSingleLineTextField materialSingleLineTextField1;
         private MaterialFormGroup materialFormGroup6;
         private MaterialDropDown materialDropDown1;
-        private ComboBox comboBox1;
+        private MaterialFormGroup materialFormGroup3;
+        private MaterialDropDown materialDropDown2;
     }
 }
