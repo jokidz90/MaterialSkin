@@ -59,7 +59,7 @@ namespace MaterialSkin
 
         private static readonly Color PRIMARY_TEXT_WHITE = Color.FromArgb(255, 255, 255, 255);
         private static readonly Brush PRIMARY_TEXT_WHITE_BRUSH = new SolidBrush(PRIMARY_TEXT_WHITE);
-        public static Color SECONDARY_TEXT_WHITE = Color.FromArgb(179, 255, 255, 255);
+        public static Color SECONDARY_TEXT_WHITE = Color.FromArgb(255, 175, 175, 175);
         public static Brush SECONDARY_TEXT_WHITE_BRUSH = new SolidBrush(SECONDARY_TEXT_WHITE);
         private static readonly Color DISABLED_OR_HINT_TEXT_WHITE = Color.FromArgb(255, 80, 80, 80);
         private static readonly Brush DISABLED_OR_HINT_TEXT_WHITE_BRUSH = new SolidBrush(DISABLED_OR_HINT_TEXT_WHITE);

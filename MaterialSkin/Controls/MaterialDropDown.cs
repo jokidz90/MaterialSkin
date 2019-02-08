@@ -27,7 +27,6 @@ namespace MaterialSkin.Controls
         private readonly BaseTextBox _baseTextBox;
         private readonly AnimationManager _animationManager;
 
-        public override string Text { get { return _baseTextBox.Text; } set { _baseTextBox.Text = value; } }
         public new object Tag { get { return _baseTextBox.Tag; } set { _baseTextBox.Tag = value; } }
 
         private string _hint;
@@ -40,7 +39,6 @@ namespace MaterialSkin.Controls
             set
             {
                 _hint = value;
-                _baseTextBox.Hint = value;
             }
         }
 
@@ -75,7 +73,7 @@ namespace MaterialSkin.Controls
         private string _displayMember = "";
         public string DisplayMember { get => _displayMember; set => _displayMember = value; }
 
-        public string SelectedText
+        public override string Text
         {
             get
             {
@@ -89,6 +87,10 @@ namespace MaterialSkin.Controls
                 }
 
                 return string.Join(",", selecteds);
+            }
+            set
+            {
+
             }
         }
 
@@ -129,11 +131,35 @@ namespace MaterialSkin.Controls
                     sel = -1;
 
                 if (sel >= 0 && !_selectedIndices.Contains(sel))
+                {
                     _selectedIndices.Add(sel);
+                    SelectedIndices = _selectedIndices;
+                }
             }
         }
 
-        public List<int> SelectedIndices { get => _selectedIndices; set => _selectedIndices = value; }
+        public List<int> SelectedIndices
+        {
+            get => _selectedIndices;
+            set
+            {
+                _selectedIndices = value;
+                if (_selectedIndices.Count == 0)
+                {
+                    _baseTextBox.Text = _hint;
+                    _baseTextBox.ForeColor = SkinManager.GetDisabledOrHintColor();
+                    _baseTextBox.SelectionLength = 0;
+                }
+                else
+                {
+                    _baseTextBox.Text = Text;
+                    _baseTextBox.ForeColor = SkinManager.GetPrimaryTextColor();
+                }
+
+                if (!Enabled)
+                    _baseTextBox.ForeColor = SkinManager.GetDisabledOrHintColor();
+            }
+        }
         private List<int> _selectedIndices = new List<int>();
 
         #endregion
@@ -1057,27 +1083,28 @@ namespace MaterialSkin.Controls
             {
                 BorderStyle = BorderStyle.None,
                 Font = SkinManager.ROBOTO_REGULAR_11,
-                ForeColor = SkinManager.GetPrimaryTextColor(),
+                //ForeColor = Color.Red,
                 Location = new Point(0, 0),
                 Width = Width - _dropDownArrowWidth,
                 Height = Height - 5
             };
 
+            SelectedIndices = new List<int>();
+
             if (!Controls.Contains(_baseTextBox) && !DesignMode)
-            {
                 Controls.Add(_baseTextBox);
-            }
 
             _baseTextBox.GotFocus += (sender, args) => _animationManager.StartNewAnimation(AnimationDirection.In);
             _baseTextBox.LostFocus += (sender, args) => _animationManager.StartNewAnimation(AnimationDirection.Out);
             BackColorChanged += (sender, args) =>
             {
                 _baseTextBox.BackColor = BackColor;
-                _baseTextBox.ForeColor = Enabled ? SkinManager.GetPrimaryTextColor() : SkinManager.GetDisabledOrHintColor();
+                _baseTextBox.ForeColor = !Enabled ? SkinManager.GetDisabledOrHintColor() : (_selectedIndices.Count > 0 ? SkinManager.GetPrimaryTextColor() : SkinManager.GetDisabledOrHintColor());
             };
             //Fix for tabstop
             this.Cursor = Cursors.Hand;
             this.TabStop = false;
+
             _baseTextBox.TabStop = true;
             _baseTextBox.ReadOnly = true;
             _baseTextBox.Cursor = Cursors.Hand;
@@ -1122,21 +1149,8 @@ namespace MaterialSkin.Controls
 
         protected override void OnEnabledChanged(EventArgs e)
         {
-            if (!Enabled)
-            {
-                _baseTextBox.Hint = "";
-                if (Text == _hint || string.IsNullOrEmpty(Text))
-                    Text = _hint;
-            }
-            else
-            {
-                _baseTextBox.Hint = _hint;
-                if (Text == _hint)
-                    Text = "";
-            }
-
             ForeColor = Enabled ? SkinManager.GetPrimaryTextColor() : SkinManager.GetDisabledOrHintColor();
-            _baseTextBox.ForeColor = Enabled ? SkinManager.GetPrimaryTextColor() : SkinManager.GetDisabledOrHintColor();
+            _baseTextBox.ForeColor = Enabled ? SkinManager.GetDisabledOrHintColor() : SkinManager.GetDisabledOrHintColor();
         }
 
         protected override void OnResize(EventArgs e)
@@ -1147,15 +1161,6 @@ namespace MaterialSkin.Controls
             _baseTextBox.Width = Width- _dropDownArrowWidth;
 
             Height = _baseTextBox.Height + 5;
-        }
-
-        protected override void OnCreateControl()
-        {
-            base.OnCreateControl();
-
-            if(Parent!=null)
-                _baseTextBox.BackColor = Parent.BackColor;
-            _baseTextBox.ForeColor = Enabled ? SkinManager.GetPrimaryTextColor() : SkinManager.GetDisabledOrHintColor();
         }
 
         protected override void OnClick(EventArgs e)
@@ -1213,8 +1218,6 @@ namespace MaterialSkin.Controls
                 return;
 
             _frmItemSelector.Close();
-            _baseTextBox.Text = SelectedText;
-            _baseTextBox.SelectAll();
             if (_selectedIndices != _prevSelectedIndices)
             {
                 if (ValueChanged != null)
@@ -1223,7 +1226,7 @@ namespace MaterialSkin.Controls
                     {
                         SelectedIndex = SelectedIndex,
                         SelectedIndices = SelectedIndices,
-                        SelectedText = SelectedText,
+                        Text = Text,
                         SelectedValue = SelectedValue
                     });
                 }
@@ -1261,25 +1264,6 @@ namespace MaterialSkin.Controls
 
         private class BaseTextBox : TextBox
         {
-            [DllImport("user32.dll", CharSet = CharSet.Auto)]
-            private static extern IntPtr SendMessage(IntPtr hWnd, int msg, int wParam, string lParam);
-
-            private const int EM_SETCUEBANNER = 0x1501;
-            private const char EmptyChar = (char)0;
-            private const char VisualStylePasswordChar = '\u25CF';
-            private const char NonVisualStylePasswordChar = '\u002A';
-
-            private string hint = string.Empty;
-            public string Hint
-            {
-                get { return hint; }
-                set
-                {
-                    hint = value;
-                    SendMessage(Handle, EM_SETCUEBANNER, (int)IntPtr.Zero, Hint);
-                }
-            }
-
             public new void SelectAll()
             {
                 BeginInvoke((MethodInvoker)delegate ()
@@ -1300,24 +1284,6 @@ namespace MaterialSkin.Controls
             public BaseTextBox()
             {
 
-            }
-
-            protected override void OnPaint(PaintEventArgs pevent)
-            {
-                base.OnPaint(pevent);
-
-                //var dropDownChar = "▼";
-                //var g = pevent.Graphics;
-                ////var backBrushColored = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush;
-                ////var backBrushNormal = Enabled ? SkinManager.GetDividersBrush() : new SolidBrush(SkinManager.GetDisabledOrHintColor().AddAlpha(50));
-                ////var g = pevent.Graphics;
-                //g.Clear(Parent.BackColor);
-
-                ////var lineY = _baseTextBox.Bottom + 2;
-                ////var lineYTop = _baseTextBox.Top + 2;
-                ////var lineHeightFocused = 3f;
-                ////var lineHeightNormal = 2f;
-                //g.DrawString("A", Font, new SolidBrush(ForeColor), this.Location);
             }
         }
     }

@@ -67,6 +67,13 @@ namespace MaterialSkin.Controls
                 ctrlSelectNone.Dock = DockStyle.Top;
                 ctrlSelectNone.BringToFront();
             }
+            else
+            {
+                var ctrlSelectNone = InitButton(-2, "", "");
+                flpMain.Controls.Add(ctrlSelectNone);
+                ctrlSelectNone.Dock = DockStyle.Top;
+                ctrlSelectNone.BringToFront();
+            }
 
             Control selectedCtrl = null;
             for (int i = 0; i < Items.Count; i++)
@@ -165,7 +172,7 @@ namespace MaterialSkin.Controls
     {
         public int SelectedIndex { set; get; }
         public List<int> SelectedIndices { set; get; }
-        public string SelectedText { set; get; }
+        public string Text { set; get; }
         public object SelectedValue { set; get; }
     }
 }

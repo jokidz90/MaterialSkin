@@ -41,6 +41,8 @@ namespace MaterialSkinExample
             this.tpControls = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.grpDisabledDropDown = new MaterialSkin.Controls.MaterialFormGroup();
+            this.materialDropDown3 = new MaterialSkin.Controls.MaterialDropDown();
             this.materialFormGroup3 = new MaterialSkin.Controls.MaterialFormGroup();
             this.materialDropDown2 = new MaterialSkin.Controls.MaterialDropDown();
             this.materialFormGroup6 = new MaterialSkin.Controls.MaterialFormGroup();
@@ -74,6 +76,7 @@ namespace MaterialSkinExample
             this.tpControls.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.grpDisabledDropDown.SuspendLayout();
             this.materialFormGroup3.SuspendLayout();
             this.materialFormGroup6.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -152,7 +155,7 @@ namespace MaterialSkinExample
             this.tpControls.Padding = new System.Windows.Forms.Padding(3);
             this.tpControls.Size = new System.Drawing.Size(1016, 497);
             this.tpControls.TabIndex = 5;
-            this.tpControls.Text = "Controls";
+            this.tpControls.Text = "Form Controls";
             this.tpControls.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
@@ -172,6 +175,7 @@ namespace MaterialSkinExample
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.grpDisabledDropDown);
             this.panel2.Controls.Add(this.materialFormGroup3);
             this.panel2.Controls.Add(this.materialFormGroup6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -180,6 +184,47 @@ namespace MaterialSkinExample
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(505, 491);
             this.panel2.TabIndex = 1;
+            // 
+            // grpDisabledDropDown
+            // 
+            this.grpDisabledDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grpDisabledDropDown.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.grpDisabledDropDown.Controls.Add(this.materialDropDown3);
+            this.grpDisabledDropDown.Depth = 0;
+            this.grpDisabledDropDown.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpDisabledDropDown.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.grpDisabledDropDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.grpDisabledDropDown.Location = new System.Drawing.Point(0, 130);
+            this.grpDisabledDropDown.MouseState = MaterialSkin.MouseState.HOVER;
+            this.grpDisabledDropDown.Name = "grpDisabledDropDown";
+            this.grpDisabledDropDown.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.grpDisabledDropDown.Size = new System.Drawing.Size(505, 65);
+            this.grpDisabledDropDown.TabIndex = 4;
+            this.grpDisabledDropDown.TabStop = false;
+            this.grpDisabledDropDown.Text = "Drop Down Disabled";
+            // 
+            // materialDropDown3
+            // 
+            this.materialDropDown3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialDropDown3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialDropDown3.Depth = 0;
+            this.materialDropDown3.DisplayMember = "";
+            this.materialDropDown3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.materialDropDown3.DropDownHeight = 200;
+            this.materialDropDown3.DropDownItemHeight = 30;
+            this.materialDropDown3.DropDownWidth = -1;
+            this.materialDropDown3.Hint = "Drop Down";
+            this.materialDropDown3.IsMultiSelect = false;
+            this.materialDropDown3.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("materialDropDown3.Items")));
+            this.materialDropDown3.Location = new System.Drawing.Point(3, 23);
+            this.materialDropDown3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDropDown3.Name = "materialDropDown3";
+            this.materialDropDown3.SelectedIndex = -1;
+            this.materialDropDown3.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("materialDropDown3.SelectedIndices")));
+            this.materialDropDown3.Size = new System.Drawing.Size(499, 23);
+            this.materialDropDown3.TabIndex = 1;
+            this.materialDropDown3.TabStop = false;
+            this.materialDropDown3.ValueMember = "";
             // 
             // materialFormGroup3
             // 
@@ -666,6 +711,7 @@ namespace MaterialSkinExample
             this.tpControls.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.grpDisabledDropDown.ResumeLayout(false);
             this.materialFormGroup3.ResumeLayout(false);
             this.materialFormGroup6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -723,5 +769,7 @@ namespace MaterialSkinExample
         private MaterialDropDown materialDropDown1;
         private MaterialFormGroup materialFormGroup3;
         private MaterialDropDown materialDropDown2;
+        private MaterialFormGroup grpDisabledDropDown;
+        private MaterialDropDown materialDropDown3;
     }
 }

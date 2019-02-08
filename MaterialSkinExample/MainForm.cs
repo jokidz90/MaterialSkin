@@ -61,16 +61,12 @@ namespace MaterialSkinExample
         private void materialCheckBox7_Click(object sender, EventArgs e)
         {
             grpDisabled.Enabled = !grpDisabled.Enabled;
+            grpDisabledDropDown.Enabled = !grpDisabledDropDown.Enabled;
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
 
-        }
-
-        private void materialFlatButtonSelectable1_Click(object sender, EventArgs e)
-        {
-            materialFlatButtonSelectable1.IsSelected = !materialFlatButtonSelectable1.IsSelected;
         }
     }
 }
