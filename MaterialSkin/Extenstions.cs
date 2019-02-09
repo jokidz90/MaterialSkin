@@ -10,7 +10,21 @@ namespace MaterialSkin
 {
     public static class Extenstions
     {
-        
+        public static List<object> ConvertToList(this object obj)
+        {
+            List<object> result = null;
+
+            try
+            {
+                result = ((IEnumerable<object>)obj).ToList();
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return result;
+        }
         public static object GetProperty(this object obj, string propName)
         {
             object value = new object();

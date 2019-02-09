@@ -47,6 +47,11 @@ namespace MaterialSkinExample
 
             dropDown1.DataSource = dataSrc1;
             dropDown2.DataSource = dataSrc2;
+            dropDown3.DataSource = new string[] { "Option 1", "Option 2", "Option 3", "Option 4", "Option 5" };
+
+            dropDown1.SelectedValue = 12;
+            dropDown2.SelectedValue = new object[] { 1, 2, 3 };
+            dropDown3.SelectedIndex = 111;
 
         }
 

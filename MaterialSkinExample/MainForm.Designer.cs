@@ -222,6 +222,7 @@ namespace MaterialSkinExample
             this.dropDown3.Name = "dropDown3";
             this.dropDown3.SelectedIndex = -1;
             this.dropDown3.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("dropDown3.SelectedIndices")));
+            this.dropDown3.SelectedValue = null;
             this.dropDown3.Size = new System.Drawing.Size(499, 23);
             this.dropDown3.TabIndex = 1;
             this.dropDown3.TabStop = false;
@@ -234,7 +235,7 @@ namespace MaterialSkinExample
             this.formDropwDown2.Controls.Add(this.dropDown2);
             this.formDropwDown2.Depth = 0;
             this.formDropwDown2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.formDropwDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.formDropwDown2.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
             this.formDropwDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.formDropwDown2.Location = new System.Drawing.Point(0, 65);
             this.formDropwDown2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -259,11 +260,12 @@ namespace MaterialSkinExample
             this.dropDown2.Hint = "Multi Select Drop Down";
             this.dropDown2.IsMultiSelect = true;
             this.dropDown2.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("dropDown2.Items")));
-            this.dropDown2.Location = new System.Drawing.Point(3, 22);
+            this.dropDown2.Location = new System.Drawing.Point(3, 23);
             this.dropDown2.MouseState = MaterialSkin.MouseState.HOVER;
             this.dropDown2.Name = "dropDown2";
             this.dropDown2.SelectedIndex = -1;
             this.dropDown2.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("dropDown2.SelectedIndices")));
+            this.dropDown2.SelectedValue = ((object)(resources.GetObject("dropDown2.SelectedValue")));
             this.dropDown2.Size = new System.Drawing.Size(499, 23);
             this.dropDown2.TabIndex = 1;
             this.dropDown2.TabStop = false;
@@ -307,6 +309,7 @@ namespace MaterialSkinExample
             this.dropDown1.Name = "dropDown1";
             this.dropDown1.SelectedIndex = -1;
             this.dropDown1.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("dropDown1.SelectedIndices")));
+            this.dropDown1.SelectedValue = null;
             this.dropDown1.Size = new System.Drawing.Size(499, 23);
             this.dropDown1.TabIndex = 1;
             this.dropDown1.TabStop = false;

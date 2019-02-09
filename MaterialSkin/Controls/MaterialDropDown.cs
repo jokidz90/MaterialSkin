@@ -155,6 +155,46 @@ namespace MaterialSkin.Controls
 
                 return obj;
             }
+            set
+            {
+                if (value == null)
+                {
+                    SelectedIndices = new List<int>();
+                    return;
+                }
+
+                List<object> selValues = value.ConvertToList();
+                if (selValues == null)
+                {
+                    selValues = new List<object>();
+                    selValues.Add(value);
+                }
+
+                var selIndices = new List<int>();
+                for (int i = 0; i < _items.Count; i++)
+                {
+                    foreach (var obj in selValues)
+                    {
+                        if (obj.ToString() != _items[i].GetProperty(ValueMember).ToString())
+                            continue;
+
+                        if (selIndices.Contains(i))
+                            continue;
+
+                        selIndices.Add(i);
+                    }
+                }
+
+                if (IsMultiSelect)
+                    SelectedIndices = selIndices;
+                else
+                {
+                    int selIndex = -1;
+                    if (selIndices.Count > 0)
+                        selIndex = selIndices[selIndices.Count - 1];
+                    SelectedIndex = selIndex;
+                }
+            }
         }
 
         public int SelectedIndex
@@ -169,7 +209,7 @@ namespace MaterialSkin.Controls
             set
             {
                 int sel = value;
-                if (value < 0)
+                if (value < 0 || value >= _items.Count)
                     sel = -1;
 
                 if (sel >= 0 && !_selectedIndices.Contains(sel))
