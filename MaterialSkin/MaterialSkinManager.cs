@@ -53,7 +53,9 @@ namespace MaterialSkin
         public static Color SECONDARY_TEXT_BLACK = Color.FromArgb(255, 130, 130, 130);
         public static Brush SECONDARY_TEXT_BLACK_BRUSH = new SolidBrush(SECONDARY_TEXT_BLACK);
         private static readonly Color DISABLED_OR_HINT_TEXT_BLACK = Color.FromArgb(255, 200, 200, 200);
+        private static readonly Color HINT_TEXT_BLACK = Color.FromArgb(255, 75, 75, 75);
         private static readonly Brush DISABLED_OR_HINT_TEXT_BLACK_BRUSH = new SolidBrush(DISABLED_OR_HINT_TEXT_BLACK);
+        private static readonly Brush HINT_TEXT_BLACK_BRUSH = new SolidBrush(HINT_TEXT_BLACK);
         private static readonly Color DIVIDERS_BLACK = Color.FromArgb(75, 0, 0, 0);
         private static readonly Brush DIVIDERS_BLACK_BRUSH = new SolidBrush(DIVIDERS_BLACK);
 
@@ -145,9 +147,19 @@ namespace MaterialSkin
             return Theme == Themes.LIGHT ? DISABLED_OR_HINT_TEXT_BLACK : DISABLED_OR_HINT_TEXT_WHITE;
         }
 
+        public Color GetHintColor()
+        {
+            return Theme == Themes.LIGHT ? HINT_TEXT_BLACK : DISABLED_OR_HINT_TEXT_WHITE ;
+        }
+
         public Brush GetDisabledOrHintBrush()
         {
             return Theme == Themes.LIGHT ? DISABLED_OR_HINT_TEXT_BLACK_BRUSH : DISABLED_OR_HINT_TEXT_WHITE_BRUSH;
+        }
+
+        public Brush GetHintBrush()
+        {
+            return Theme == Themes.LIGHT ? HINT_TEXT_BLACK_BRUSH : DISABLED_OR_HINT_TEXT_WHITE_BRUSH;
         }
 
         public Color GetDividersColor()

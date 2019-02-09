@@ -147,7 +147,7 @@ namespace MaterialSkin.Controls
                 if (_selectedIndices.Count == 0)
                 {
                     _baseTextBox.Text = _hint;
-                    _baseTextBox.ForeColor = SkinManager.GetDisabledOrHintColor();
+                    _baseTextBox.ForeColor = SkinManager.GetHintColor();
                     _baseTextBox.SelectionLength = 0;
                 }
                 else
@@ -1083,7 +1083,7 @@ namespace MaterialSkin.Controls
             {
                 BorderStyle = BorderStyle.None,
                 Font = SkinManager.ROBOTO_REGULAR_11,
-                //ForeColor = Color.Red,
+                ForeColor = SkinManager.GetHintColor(),
                 Location = new Point(0, 0),
                 Width = Width - _dropDownArrowWidth,
                 Height = Height - 5
@@ -1099,7 +1099,7 @@ namespace MaterialSkin.Controls
             BackColorChanged += (sender, args) =>
             {
                 _baseTextBox.BackColor = BackColor;
-                _baseTextBox.ForeColor = !Enabled ? SkinManager.GetDisabledOrHintColor() : (_selectedIndices.Count > 0 ? SkinManager.GetPrimaryTextColor() : SkinManager.GetDisabledOrHintColor());
+                _baseTextBox.ForeColor = !Enabled ? SkinManager.GetDisabledOrHintColor() : (_selectedIndices.Count > 0 ? SkinManager.GetPrimaryTextColor() : SkinManager.GetHintColor());
             };
             //Fix for tabstop
             this.Cursor = Cursors.Hand;
@@ -1150,7 +1150,7 @@ namespace MaterialSkin.Controls
         protected override void OnEnabledChanged(EventArgs e)
         {
             ForeColor = Enabled ? SkinManager.GetPrimaryTextColor() : SkinManager.GetDisabledOrHintColor();
-            _baseTextBox.ForeColor = Enabled ? SkinManager.GetDisabledOrHintColor() : SkinManager.GetDisabledOrHintColor();
+            _baseTextBox.ForeColor = !Enabled ? SkinManager.GetDisabledOrHintColor() : (_selectedIndices.Count > 0 ? SkinManager.GetPrimaryTextColor() : SkinManager.GetHintColor());
         }
 
         protected override void OnResize(EventArgs e)
