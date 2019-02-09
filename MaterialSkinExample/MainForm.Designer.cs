@@ -42,11 +42,11 @@ namespace MaterialSkinExample
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.grpDisabledDropDown = new MaterialSkin.Controls.MaterialFormGroup();
-            this.materialDropDown3 = new MaterialSkin.Controls.MaterialDropDown();
-            this.materialFormGroup3 = new MaterialSkin.Controls.MaterialFormGroup();
-            this.materialDropDown2 = new MaterialSkin.Controls.MaterialDropDown();
-            this.materialFormGroup6 = new MaterialSkin.Controls.MaterialFormGroup();
-            this.materialDropDown1 = new MaterialSkin.Controls.MaterialDropDown();
+            this.dropDown3 = new MaterialSkin.Controls.MaterialDropDown();
+            this.formDropwDown2 = new MaterialSkin.Controls.MaterialFormGroup();
+            this.dropDown2 = new MaterialSkin.Controls.MaterialDropDown();
+            this.formDropwDown1 = new MaterialSkin.Controls.MaterialFormGroup();
+            this.dropDown1 = new MaterialSkin.Controls.MaterialDropDown();
             this.panel1 = new System.Windows.Forms.Panel();
             this.materialFormGroup5 = new MaterialSkin.Controls.MaterialFormGroup();
             this.materialRadioButton8 = new MaterialSkin.Controls.MaterialRadioButton();
@@ -77,8 +77,8 @@ namespace MaterialSkinExample
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.grpDisabledDropDown.SuspendLayout();
-            this.materialFormGroup3.SuspendLayout();
-            this.materialFormGroup6.SuspendLayout();
+            this.formDropwDown2.SuspendLayout();
+            this.formDropwDown1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.materialFormGroup5.SuspendLayout();
             this.materialFormGroup4.SuspendLayout();
@@ -176,8 +176,8 @@ namespace MaterialSkinExample
             // panel2
             // 
             this.panel2.Controls.Add(this.grpDisabledDropDown);
-            this.panel2.Controls.Add(this.materialFormGroup3);
-            this.panel2.Controls.Add(this.materialFormGroup6);
+            this.panel2.Controls.Add(this.formDropwDown2);
+            this.panel2.Controls.Add(this.formDropwDown1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(505, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
@@ -189,7 +189,7 @@ namespace MaterialSkinExample
             // 
             this.grpDisabledDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grpDisabledDropDown.ColorStyle = MaterialSkin.ColorType.DEFAULT;
-            this.grpDisabledDropDown.Controls.Add(this.materialDropDown3);
+            this.grpDisabledDropDown.Controls.Add(this.dropDown3);
             this.grpDisabledDropDown.Depth = 0;
             this.grpDisabledDropDown.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpDisabledDropDown.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
@@ -203,110 +203,115 @@ namespace MaterialSkinExample
             this.grpDisabledDropDown.TabStop = false;
             this.grpDisabledDropDown.Text = "Drop Down Disabled";
             // 
-            // materialDropDown3
+            // dropDown3
             // 
-            this.materialDropDown3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
-            this.materialDropDown3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialDropDown3.Depth = 0;
-            this.materialDropDown3.DisplayMember = "";
-            this.materialDropDown3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.materialDropDown3.DropDownHeight = 200;
-            this.materialDropDown3.DropDownItemHeight = 30;
-            this.materialDropDown3.DropDownWidth = -1;
-            this.materialDropDown3.Hint = "Drop Down";
-            this.materialDropDown3.IsMultiSelect = false;
-            this.materialDropDown3.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("materialDropDown3.Items")));
-            this.materialDropDown3.Location = new System.Drawing.Point(3, 23);
-            this.materialDropDown3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDropDown3.Name = "materialDropDown3";
-            this.materialDropDown3.SelectedIndex = -1;
-            this.materialDropDown3.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("materialDropDown3.SelectedIndices")));
-            this.materialDropDown3.Size = new System.Drawing.Size(499, 23);
-            this.materialDropDown3.TabIndex = 1;
-            this.materialDropDown3.TabStop = false;
-            this.materialDropDown3.ValueMember = "";
+            this.dropDown3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.dropDown3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dropDown3.DataSource = ((object)(resources.GetObject("dropDown3.DataSource")));
+            this.dropDown3.Depth = 0;
+            this.dropDown3.DisplayMember = "";
+            this.dropDown3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dropDown3.DropDownHeight = 200;
+            this.dropDown3.DropDownItemHeight = 30;
+            this.dropDown3.DropDownWidth = -1;
+            this.dropDown3.Hint = "Drop Down";
+            this.dropDown3.IsMultiSelect = false;
+            this.dropDown3.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("dropDown3.Items")));
+            this.dropDown3.Location = new System.Drawing.Point(3, 23);
+            this.dropDown3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.dropDown3.Name = "dropDown3";
+            this.dropDown3.SelectedIndex = -1;
+            this.dropDown3.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("dropDown3.SelectedIndices")));
+            this.dropDown3.Size = new System.Drawing.Size(499, 23);
+            this.dropDown3.TabIndex = 1;
+            this.dropDown3.TabStop = false;
+            this.dropDown3.ValueMember = "";
             // 
-            // materialFormGroup3
+            // formDropwDown2
             // 
-            this.materialFormGroup3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialFormGroup3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
-            this.materialFormGroup3.Controls.Add(this.materialDropDown2);
-            this.materialFormGroup3.Depth = 0;
-            this.materialFormGroup3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.materialFormGroup3.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
-            this.materialFormGroup3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.materialFormGroup3.Location = new System.Drawing.Point(0, 65);
-            this.materialFormGroup3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFormGroup3.Name = "materialFormGroup3";
-            this.materialFormGroup3.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.materialFormGroup3.Size = new System.Drawing.Size(505, 65);
-            this.materialFormGroup3.TabIndex = 3;
-            this.materialFormGroup3.TabStop = false;
-            this.materialFormGroup3.Text = "Multi Select Drop Down";
+            this.formDropwDown2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.formDropwDown2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.formDropwDown2.Controls.Add(this.dropDown2);
+            this.formDropwDown2.Depth = 0;
+            this.formDropwDown2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.formDropwDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.formDropwDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.formDropwDown2.Location = new System.Drawing.Point(0, 65);
+            this.formDropwDown2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.formDropwDown2.Name = "formDropwDown2";
+            this.formDropwDown2.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.formDropwDown2.Size = new System.Drawing.Size(505, 65);
+            this.formDropwDown2.TabIndex = 3;
+            this.formDropwDown2.TabStop = false;
+            this.formDropwDown2.Text = "Multi Select Drop Down";
             // 
-            // materialDropDown2
+            // dropDown2
             // 
-            this.materialDropDown2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
-            this.materialDropDown2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialDropDown2.Depth = 0;
-            this.materialDropDown2.DisplayMember = "";
-            this.materialDropDown2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.materialDropDown2.DropDownHeight = 200;
-            this.materialDropDown2.DropDownItemHeight = 30;
-            this.materialDropDown2.DropDownWidth = -1;
-            this.materialDropDown2.Hint = "Multi Select Drop Down";
-            this.materialDropDown2.IsMultiSelect = true;
-            this.materialDropDown2.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("materialDropDown2.Items")));
-            this.materialDropDown2.Location = new System.Drawing.Point(3, 23);
-            this.materialDropDown2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDropDown2.Name = "materialDropDown2";
-            this.materialDropDown2.SelectedIndex = -1;
-            this.materialDropDown2.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("materialDropDown2.SelectedIndices")));
-            this.materialDropDown2.Size = new System.Drawing.Size(499, 23);
-            this.materialDropDown2.TabIndex = 1;
-            this.materialDropDown2.TabStop = false;
-            this.materialDropDown2.ValueMember = "";
+            this.dropDown2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.dropDown2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dropDown2.DataSource = ((object)(resources.GetObject("dropDown2.DataSource")));
+            this.dropDown2.Depth = 0;
+            this.dropDown2.DisplayMember = "CategoryName";
+            this.dropDown2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dropDown2.DropDownHeight = 200;
+            this.dropDown2.DropDownItemHeight = 30;
+            this.dropDown2.DropDownWidth = -1;
+            this.dropDown2.Hint = "Multi Select Drop Down";
+            this.dropDown2.IsMultiSelect = true;
+            this.dropDown2.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("dropDown2.Items")));
+            this.dropDown2.Location = new System.Drawing.Point(3, 22);
+            this.dropDown2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.dropDown2.Name = "dropDown2";
+            this.dropDown2.SelectedIndex = -1;
+            this.dropDown2.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("dropDown2.SelectedIndices")));
+            this.dropDown2.Size = new System.Drawing.Size(499, 23);
+            this.dropDown2.TabIndex = 1;
+            this.dropDown2.TabStop = false;
+            this.dropDown2.ValueMember = "CategoryID";
+            this.dropDown2.ValueChanged += new MaterialSkin.Controls.ItemSelectHandler(this.dropDown2_ValueChanged);
             // 
-            // materialFormGroup6
+            // formDropwDown1
             // 
-            this.materialFormGroup6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialFormGroup6.ColorStyle = MaterialSkin.ColorType.DEFAULT;
-            this.materialFormGroup6.Controls.Add(this.materialDropDown1);
-            this.materialFormGroup6.Depth = 0;
-            this.materialFormGroup6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.materialFormGroup6.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
-            this.materialFormGroup6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.materialFormGroup6.Location = new System.Drawing.Point(0, 0);
-            this.materialFormGroup6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFormGroup6.Name = "materialFormGroup6";
-            this.materialFormGroup6.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.materialFormGroup6.Size = new System.Drawing.Size(505, 65);
-            this.materialFormGroup6.TabIndex = 1;
-            this.materialFormGroup6.TabStop = false;
-            this.materialFormGroup6.Text = "Drop Down";
+            this.formDropwDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.formDropwDown1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.formDropwDown1.Controls.Add(this.dropDown1);
+            this.formDropwDown1.Depth = 0;
+            this.formDropwDown1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.formDropwDown1.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.formDropwDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.formDropwDown1.Location = new System.Drawing.Point(0, 0);
+            this.formDropwDown1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.formDropwDown1.Name = "formDropwDown1";
+            this.formDropwDown1.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.formDropwDown1.Size = new System.Drawing.Size(505, 65);
+            this.formDropwDown1.TabIndex = 1;
+            this.formDropwDown1.TabStop = false;
+            this.formDropwDown1.Text = "Drop Down";
             // 
-            // materialDropDown1
+            // dropDown1
             // 
-            this.materialDropDown1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
-            this.materialDropDown1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialDropDown1.Depth = 0;
-            this.materialDropDown1.DisplayMember = "";
-            this.materialDropDown1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.materialDropDown1.DropDownHeight = 200;
-            this.materialDropDown1.DropDownItemHeight = 30;
-            this.materialDropDown1.DropDownWidth = -1;
-            this.materialDropDown1.Hint = "Drop Down";
-            this.materialDropDown1.IsMultiSelect = false;
-            this.materialDropDown1.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("materialDropDown1.Items")));
-            this.materialDropDown1.Location = new System.Drawing.Point(3, 23);
-            this.materialDropDown1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDropDown1.Name = "materialDropDown1";
-            this.materialDropDown1.SelectedIndex = -1;
-            this.materialDropDown1.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("materialDropDown1.SelectedIndices")));
-            this.materialDropDown1.Size = new System.Drawing.Size(499, 23);
-            this.materialDropDown1.TabIndex = 1;
-            this.materialDropDown1.TabStop = false;
-            this.materialDropDown1.ValueMember = "";
+            this.dropDown1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.dropDown1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dropDown1.DataSource = ((object)(resources.GetObject("dropDown1.DataSource")));
+            this.dropDown1.Depth = 0;
+            this.dropDown1.DisplayMember = "ItemName";
+            this.dropDown1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dropDown1.DropDownHeight = 200;
+            this.dropDown1.DropDownItemHeight = 30;
+            this.dropDown1.DropDownWidth = -1;
+            this.dropDown1.Hint = "Drop Down";
+            this.dropDown1.IsMultiSelect = false;
+            this.dropDown1.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("dropDown1.Items")));
+            this.dropDown1.Location = new System.Drawing.Point(3, 23);
+            this.dropDown1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.dropDown1.Name = "dropDown1";
+            this.dropDown1.SelectedIndex = -1;
+            this.dropDown1.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("dropDown1.SelectedIndices")));
+            this.dropDown1.Size = new System.Drawing.Size(499, 23);
+            this.dropDown1.TabIndex = 1;
+            this.dropDown1.TabStop = false;
+            this.dropDown1.ValueMember = "ItemID";
+            this.dropDown1.ValueChanged += new MaterialSkin.Controls.ItemSelectHandler(this.dropDown1_ValueChanged);
             // 
             // panel1
             // 
@@ -712,8 +717,8 @@ namespace MaterialSkinExample
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.grpDisabledDropDown.ResumeLayout(false);
-            this.materialFormGroup3.ResumeLayout(false);
-            this.materialFormGroup6.ResumeLayout(false);
+            this.formDropwDown2.ResumeLayout(false);
+            this.formDropwDown1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.materialFormGroup5.ResumeLayout(false);
             this.materialFormGroup5.PerformLayout();
@@ -765,11 +770,11 @@ namespace MaterialSkinExample
         private MaterialRadioButton materialRadioButton8;
         private MaterialRadioButton materialRadioButton7;
         private MaterialSingleLineTextField materialSingleLineTextField1;
-        private MaterialFormGroup materialFormGroup6;
-        private MaterialDropDown materialDropDown1;
-        private MaterialFormGroup materialFormGroup3;
-        private MaterialDropDown materialDropDown2;
+        private MaterialFormGroup formDropwDown1;
+        private MaterialDropDown dropDown1;
+        private MaterialFormGroup formDropwDown2;
+        private MaterialDropDown dropDown2;
         private MaterialFormGroup grpDisabledDropDown;
-        private MaterialDropDown materialDropDown3;
+        private MaterialDropDown dropDown3;
     }
 }

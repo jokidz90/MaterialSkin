@@ -8,6 +8,9 @@ namespace MaterialSkin.Controls
 {
     public partial class MaterialDropDownDialog : MaterialFormDialog
     {
+        public string ValueMember { get; set; }
+        public string DisplayMember { get; set; }
+
         public event ItemSelectHandler ItemSelected;
 
         public int ItemHeight { get => _itemHeight; set => _itemHeight = value; }
@@ -79,7 +82,10 @@ namespace MaterialSkin.Controls
             for (int i = 0; i < Items.Count; i++)
             {
                 var item = Items[i];
-                MaterialFlatButtonSelectable ctrl = InitButton(i, item.ToString(), item);
+                string itemText = item.GetProperty(DisplayMember).ToString();
+                object itemValue = item.GetProperty(ValueMember);
+
+                MaterialFlatButtonSelectable ctrl = InitButton(i, itemText, itemValue);
                 flpMain.Controls.Add(ctrl);
                 ctrl.Dock = DockStyle.Top;
                 ctrl.BringToFront();

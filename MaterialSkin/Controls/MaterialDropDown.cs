@@ -9,6 +9,9 @@ using System.Windows.Forms;
 using MaterialSkin.Animations;
 using static System.Windows.Forms.ComboBox;
 using System.Linq;
+using System.Collections;
+using System.Data;
+using System.Dynamic;
 
 namespace MaterialSkin.Controls
 {
@@ -67,11 +70,50 @@ namespace MaterialSkin.Controls
         private int _dropDownItemHeight = 30;
         public int DropDownItemHeight { get => _dropDownItemHeight; set => _dropDownItemHeight = value; }
 
-        private string _valueMember = "";
-        public string ValueMember { get => _valueMember; set => _valueMember = value; }
+        public string ValueMember { get; set; }
+        public string DisplayMember { get; set; }
 
-        private string _displayMember = "";
-        public string DisplayMember { get => _displayMember; set => _displayMember = value; }
+        public object DataSource
+        {
+            set
+            {
+                try
+                {
+                    if (value.GetType().GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEnumerable<>)))
+                        _items = ((IEnumerable<object>)value).ToList();
+                    else if (value is DataTable || value is DataSet)
+                    {
+                        DataTable dt = null;
+                        if (value is DataTable)
+                            dt = (DataTable)value;
+                        else
+                            dt = ((DataSet)value).Tables[0];
+
+                        _items = new List<object>();
+                        var dynamicList = new List<dynamic>();
+
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            dynamic myObj = new ExpandoObject();
+                            var newListItem = myObj as IDictionary<string, object>;
+                            for (int i = 0; i < dt.Columns.Count; i++)
+                                newListItem[dr.Table.Columns[i].ColumnName] = dr[i];
+                            _items.Add(newListItem);
+                        }
+                    }
+                    else
+                        _items = new List<object>();
+                }
+                catch (Exception ex)
+                {
+                    _items = new List<object>();
+                }
+            }
+            get
+            {
+                return _items;
+            }
+        }
 
         public override string Text
         {
@@ -83,7 +125,7 @@ namespace MaterialSkin.Controls
                     if (!_selectedIndices.Contains(i))
                         continue;
 
-                    selecteds.Add(_items[i].ToString());
+                    selecteds.Add(_items[i].GetProperty(DisplayMember).ToString());
                 }
 
                 return string.Join(",", selecteds);
@@ -104,7 +146,7 @@ namespace MaterialSkin.Controls
                     if (!_selectedIndices.Contains(i))
                         continue;
 
-                    selecteds.Add(_items[i]);
+                    selecteds.Add(_items[i].GetProperty(ValueMember));
                 }
 
                 object obj = selecteds;
@@ -1066,7 +1108,6 @@ namespace MaterialSkin.Controls
         }
         #endregion
 
-
         public MaterialDropDown()
         {
             SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.DoubleBuffer, true);
@@ -1241,9 +1282,14 @@ namespace MaterialSkin.Controls
 
             var startPoint = this.PointToScreen(Point.Empty);
             startPoint.Y = startPoint.Y;// + this.Height;
-            _prevSelectedIndices = _selectedIndices;
+
+            _prevSelectedIndices = new List<int>();
+            foreach (var item in _selectedIndices)
+                _prevSelectedIndices.Add(item);
 
             _frmItemSelector = new MaterialDropDownDialog();
+            _frmItemSelector.ValueMember = ValueMember;
+            _frmItemSelector.DisplayMember = DisplayMember;
             _frmItemSelector.Items = _items;
             _frmItemSelector.StartPosition = FormStartPosition.Manual;
             _frmItemSelector.Location = startPoint;
