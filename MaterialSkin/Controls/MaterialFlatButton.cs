@@ -18,7 +18,15 @@ namespace MaterialSkin.Controls
         public MouseState MouseState { get; set; }
         public bool Primary { get; set; }
         private ColorType _colorStyle = ColorType.DEFAULT;
-        public ColorType ColorStyle { get => _colorStyle; set => _colorStyle = value; }
+        public ColorType ColorStyle
+        {
+            get => _colorStyle;
+            set
+            {
+                _colorStyle = value;
+                Invalidate();
+            }
+        }
 
         private readonly AnimationManager _animationManager;
         private readonly AnimationManager _hoverAnimationManager;
@@ -81,7 +89,11 @@ namespace MaterialSkin.Controls
 
         protected override void OnPaint(PaintEventArgs pevent)
         {
-            var frontBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush;
+            //var frontBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush;
+
+            var frontBrush = Enabled ? SkinManager.GetPrimaryTextBrush() : SkinManager.GetFlatButtonDisabledTextBrush();
+            if (_colorStyle != ColorType.DEFAULT)
+                frontBrush = Enabled ? ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].LightPrimaryBrush;
 
             var g = pevent.Graphics;
             g.TextRenderingHint = TextRenderingHint.AntiAlias;
@@ -145,7 +157,7 @@ namespace MaterialSkin.Controls
             g.DrawString(
                 Text.ToUpper(),
                 SkinManager.ROBOTO_MEDIUM_10,
-                Enabled ? (Primary ? frontBrush : SkinManager.GetPrimaryTextBrush()) : SkinManager.GetFlatButtonDisabledTextBrush(),
+                frontBrush,
                 textRect,
                 new StringFormat { Alignment = _alignment, LineAlignment = StringAlignment.Center }
                 );

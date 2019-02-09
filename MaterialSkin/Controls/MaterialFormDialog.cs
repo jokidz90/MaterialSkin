@@ -66,6 +66,10 @@ namespace MaterialSkin.Controls
         private const int WMSZ_BOTTOMLEFT = 7;
         private const int WMSZ_BOTTOMRIGHT = 8;
 
+        [Browsable(true)]
+        public StringAlignment TitleAlignment { get => _titleAlignment; set => _titleAlignment = value; }
+        private StringAlignment _titleAlignment = StringAlignment.Near;
+
         private readonly Dictionary<int, int> _resizingLocationsToCmd = new Dictionary<int, int>
         {
             {HTTOP,         WMSZ_TOP},
@@ -473,7 +477,7 @@ namespace MaterialSkin.Controls
             _actionBarBounds = new Rectangle(0, STATUS_BAR_HEIGHT, Width, ACTION_BAR_HEIGHT);
             var topPadding = STATUS_BAR_HEIGHT + BORDER_WEIGHT;
             if (!string.IsNullOrEmpty(Text))
-                topPadding += ACTION_BAR_HEIGHT;
+                topPadding += (ACTION_BAR_HEIGHT- BORDER_WEIGHT);
             this.Padding = new Padding(BORDER_WEIGHT, topPadding, BORDER_WEIGHT, BORDER_WEIGHT);
         }
 
@@ -579,8 +583,17 @@ namespace MaterialSkin.Controls
             }
 
             //Form title
-            if(!string.IsNullOrEmpty(Text))
-                g.DrawString(Text, SkinManager.ROBOTO_MEDIUM_14, SkinManager.ColorScheme.TextBrush, new Rectangle(SkinManager.FORM_PADDING, STATUS_BAR_HEIGHT, Width, ACTION_BAR_HEIGHT), new StringFormat { LineAlignment = StringAlignment.Center });
+            if (!string.IsNullOrEmpty(Text))
+            {
+                int leftPadding = SkinManager.FORM_PADDING;
+                if (_titleAlignment != StringAlignment.Near)
+                    leftPadding = 0;
+                g.DrawString(Text,
+                    SkinManager.ROBOTO_MEDIUM_14,
+                    SkinManager.ColorScheme.TextBrush,
+                    new Rectangle(leftPadding, STATUS_BAR_HEIGHT, Width, ACTION_BAR_HEIGHT),
+                    new StringFormat { Alignment = _titleAlignment, LineAlignment = StringAlignment.Center });
+            }
         }
     }
 }

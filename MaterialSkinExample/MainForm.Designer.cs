@@ -41,10 +41,11 @@ namespace MaterialSkinExample
             this.tpControls = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.grpDisabledDropDown = new MaterialSkin.Controls.MaterialFormGroup();
-            this.dropDown3 = new MaterialSkin.Controls.MaterialDropDown();
+            this.materialMonthCalendar1 = new MaterialSkin.Controls.MaterialMonthCalendar();
             this.formDropwDown2 = new MaterialSkin.Controls.MaterialFormGroup();
             this.dropDown2 = new MaterialSkin.Controls.MaterialDropDown();
+            this.grpDisabledDropDown = new MaterialSkin.Controls.MaterialFormGroup();
+            this.dropDown3 = new MaterialSkin.Controls.MaterialDropDown();
             this.formDropwDown1 = new MaterialSkin.Controls.MaterialFormGroup();
             this.dropDown1 = new MaterialSkin.Controls.MaterialDropDown();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -76,8 +77,8 @@ namespace MaterialSkinExample
             this.tpControls.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.grpDisabledDropDown.SuspendLayout();
             this.formDropwDown2.SuspendLayout();
+            this.grpDisabledDropDown.SuspendLayout();
             this.formDropwDown1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.materialFormGroup5.SuspendLayout();
@@ -175,8 +176,8 @@ namespace MaterialSkinExample
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.grpDisabledDropDown);
             this.panel2.Controls.Add(this.formDropwDown2);
+            this.panel2.Controls.Add(this.grpDisabledDropDown);
             this.panel2.Controls.Add(this.formDropwDown1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(505, 0);
@@ -185,48 +186,17 @@ namespace MaterialSkinExample
             this.panel2.Size = new System.Drawing.Size(505, 491);
             this.panel2.TabIndex = 1;
             // 
-            // grpDisabledDropDown
+            // materialMonthCalendar1
             // 
-            this.grpDisabledDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grpDisabledDropDown.ColorStyle = MaterialSkin.ColorType.DEFAULT;
-            this.grpDisabledDropDown.Controls.Add(this.dropDown3);
-            this.grpDisabledDropDown.Depth = 0;
-            this.grpDisabledDropDown.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpDisabledDropDown.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
-            this.grpDisabledDropDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.grpDisabledDropDown.Location = new System.Drawing.Point(0, 130);
-            this.grpDisabledDropDown.MouseState = MaterialSkin.MouseState.HOVER;
-            this.grpDisabledDropDown.Name = "grpDisabledDropDown";
-            this.grpDisabledDropDown.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.grpDisabledDropDown.Size = new System.Drawing.Size(505, 65);
-            this.grpDisabledDropDown.TabIndex = 4;
-            this.grpDisabledDropDown.TabStop = false;
-            this.grpDisabledDropDown.Text = "Drop Down Disabled";
-            // 
-            // dropDown3
-            // 
-            this.dropDown3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
-            this.dropDown3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dropDown3.DataSource = ((object)(resources.GetObject("dropDown3.DataSource")));
-            this.dropDown3.Depth = 0;
-            this.dropDown3.DisplayMember = "";
-            this.dropDown3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dropDown3.DropDownHeight = 200;
-            this.dropDown3.DropDownItemHeight = 30;
-            this.dropDown3.DropDownWidth = -1;
-            this.dropDown3.Hint = "Drop Down";
-            this.dropDown3.IsMultiSelect = false;
-            this.dropDown3.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("dropDown3.Items")));
-            this.dropDown3.Location = new System.Drawing.Point(3, 23);
-            this.dropDown3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.dropDown3.Name = "dropDown3";
-            this.dropDown3.SelectedIndex = -1;
-            this.dropDown3.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("dropDown3.SelectedIndices")));
-            this.dropDown3.SelectedValue = null;
-            this.dropDown3.Size = new System.Drawing.Size(499, 23);
-            this.dropDown3.TabIndex = 1;
-            this.dropDown3.TabStop = false;
-            this.dropDown3.ValueMember = "";
+            this.materialMonthCalendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialMonthCalendar1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialMonthCalendar1.Depth = 0;
+            this.materialMonthCalendar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialMonthCalendar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.materialMonthCalendar1.Location = new System.Drawing.Point(270, 320);
+            this.materialMonthCalendar1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialMonthCalendar1.Name = "materialMonthCalendar1";
+            this.materialMonthCalendar1.TabIndex = 5;
             // 
             // formDropwDown2
             // 
@@ -237,7 +207,7 @@ namespace MaterialSkinExample
             this.formDropwDown2.Dock = System.Windows.Forms.DockStyle.Top;
             this.formDropwDown2.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
             this.formDropwDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.formDropwDown2.Location = new System.Drawing.Point(0, 65);
+            this.formDropwDown2.Location = new System.Drawing.Point(0, 130);
             this.formDropwDown2.MouseState = MaterialSkin.MouseState.HOVER;
             this.formDropwDown2.Name = "formDropwDown2";
             this.formDropwDown2.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
@@ -271,6 +241,49 @@ namespace MaterialSkinExample
             this.dropDown2.TabStop = false;
             this.dropDown2.ValueMember = "CategoryID";
             this.dropDown2.ValueChanged += new MaterialSkin.Controls.ItemSelectHandler(this.dropDown2_ValueChanged);
+            // 
+            // grpDisabledDropDown
+            // 
+            this.grpDisabledDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grpDisabledDropDown.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.grpDisabledDropDown.Controls.Add(this.dropDown3);
+            this.grpDisabledDropDown.Depth = 0;
+            this.grpDisabledDropDown.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpDisabledDropDown.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.grpDisabledDropDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.grpDisabledDropDown.Location = new System.Drawing.Point(0, 65);
+            this.grpDisabledDropDown.MouseState = MaterialSkin.MouseState.HOVER;
+            this.grpDisabledDropDown.Name = "grpDisabledDropDown";
+            this.grpDisabledDropDown.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.grpDisabledDropDown.Size = new System.Drawing.Size(505, 65);
+            this.grpDisabledDropDown.TabIndex = 4;
+            this.grpDisabledDropDown.TabStop = false;
+            this.grpDisabledDropDown.Text = "Drop Down Disabled";
+            // 
+            // dropDown3
+            // 
+            this.dropDown3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.dropDown3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dropDown3.DataSource = ((object)(resources.GetObject("dropDown3.DataSource")));
+            this.dropDown3.Depth = 0;
+            this.dropDown3.DisplayMember = "";
+            this.dropDown3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dropDown3.DropDownHeight = 200;
+            this.dropDown3.DropDownItemHeight = 30;
+            this.dropDown3.DropDownWidth = -1;
+            this.dropDown3.Hint = "Drop Down";
+            this.dropDown3.IsMultiSelect = false;
+            this.dropDown3.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("dropDown3.Items")));
+            this.dropDown3.Location = new System.Drawing.Point(3, 23);
+            this.dropDown3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.dropDown3.Name = "dropDown3";
+            this.dropDown3.SelectedIndex = -1;
+            this.dropDown3.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("dropDown3.SelectedIndices")));
+            this.dropDown3.SelectedValue = null;
+            this.dropDown3.Size = new System.Drawing.Size(499, 23);
+            this.dropDown3.TabIndex = 1;
+            this.dropDown3.TabStop = false;
+            this.dropDown3.ValueMember = "";
             // 
             // formDropwDown1
             // 
@@ -319,6 +332,7 @@ namespace MaterialSkinExample
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.materialMonthCalendar1);
             this.panel1.Controls.Add(this.materialFormGroup5);
             this.panel1.Controls.Add(this.materialFormGroup4);
             this.panel1.Controls.Add(this.materialFormGroup2);
@@ -719,8 +733,8 @@ namespace MaterialSkinExample
             this.tpControls.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.grpDisabledDropDown.ResumeLayout(false);
             this.formDropwDown2.ResumeLayout(false);
+            this.grpDisabledDropDown.ResumeLayout(false);
             this.formDropwDown1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.materialFormGroup5.ResumeLayout(false);
@@ -779,5 +793,6 @@ namespace MaterialSkinExample
         private MaterialDropDown dropDown2;
         private MaterialFormGroup grpDisabledDropDown;
         private MaterialDropDown dropDown3;
+        private MaterialMonthCalendar materialMonthCalendar1;
     }
 }

@@ -56,6 +56,12 @@
     <Compile Include="Controls\MaterialComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\MaterialDatePickerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialDatePickerForm.Designer.cs">
+      <DependentUpon>MaterialDatePickerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MaterialDropDownDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     <Compile Include="Controls\MaterialListView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\MaterialMonthCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialMonthCalendar.Designer.cs">
+      <DependentUpon>MaterialMonthCalendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MaterialPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -134,6 +146,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controls\MaterialDatePickerForm.resx">
+      <DependentUpon>MaterialDatePickerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\MaterialDropDownDialog.resx">
       <DependentUpon>MaterialDropDownDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +165,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\check.png" />
+    <None Include="Resources\right.png" />
+    <None Include="Resources\left.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
