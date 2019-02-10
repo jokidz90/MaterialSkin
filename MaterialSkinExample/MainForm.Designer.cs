@@ -41,7 +41,8 @@ namespace MaterialSkinExample
             this.tpControls = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.materialMonthCalendar1 = new MaterialSkin.Controls.MaterialMonthCalendar();
+            this.frmDate = new MaterialSkin.Controls.MaterialFormGroup();
+            this.materialDatePicker1 = new MaterialSkin.Controls.MaterialDatePicker();
             this.formDropwDown2 = new MaterialSkin.Controls.MaterialFormGroup();
             this.dropDown2 = new MaterialSkin.Controls.MaterialDropDown();
             this.grpDisabledDropDown = new MaterialSkin.Controls.MaterialFormGroup();
@@ -73,10 +74,13 @@ namespace MaterialSkinExample
             this.item3ToolStripMenuItem = new MaterialSkin.Controls.MaterialToolStripMenuItem();
             this.materialPanel1 = new MaterialSkin.Controls.MaterialPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.materialFormGroup6 = new MaterialSkin.Controls.MaterialFormGroup();
+            this.materialDatePicker2 = new MaterialSkin.Controls.MaterialDatePicker();
             this.materialTabControl1.SuspendLayout();
             this.tpControls.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.frmDate.SuspendLayout();
             this.formDropwDown2.SuspendLayout();
             this.grpDisabledDropDown.SuspendLayout();
             this.formDropwDown1.SuspendLayout();
@@ -89,6 +93,7 @@ namespace MaterialSkinExample
             this.materialContextMenuStrip1.SuspendLayout();
             this.materialPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.materialFormGroup6.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialDivider1
@@ -176,6 +181,8 @@ namespace MaterialSkinExample
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.materialFormGroup6);
+            this.panel2.Controls.Add(this.frmDate);
             this.panel2.Controls.Add(this.formDropwDown2);
             this.panel2.Controls.Add(this.grpDisabledDropDown);
             this.panel2.Controls.Add(this.formDropwDown1);
@@ -186,17 +193,43 @@ namespace MaterialSkinExample
             this.panel2.Size = new System.Drawing.Size(505, 491);
             this.panel2.TabIndex = 1;
             // 
-            // materialMonthCalendar1
+            // frmDate
             // 
-            this.materialMonthCalendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialMonthCalendar1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
-            this.materialMonthCalendar1.Depth = 0;
-            this.materialMonthCalendar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.materialMonthCalendar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialMonthCalendar1.Location = new System.Drawing.Point(270, 320);
-            this.materialMonthCalendar1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialMonthCalendar1.Name = "materialMonthCalendar1";
-            this.materialMonthCalendar1.TabIndex = 5;
+            this.frmDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.frmDate.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.frmDate.Controls.Add(this.materialDatePicker1);
+            this.frmDate.Depth = 0;
+            this.frmDate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.frmDate.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.frmDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.frmDate.Location = new System.Drawing.Point(0, 195);
+            this.frmDate.MouseState = MaterialSkin.MouseState.HOVER;
+            this.frmDate.Name = "frmDate";
+            this.frmDate.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.frmDate.Size = new System.Drawing.Size(505, 65);
+            this.frmDate.TabIndex = 5;
+            this.frmDate.TabStop = false;
+            this.frmDate.Text = "Date Picker";
+            // 
+            // materialDatePicker1
+            // 
+            this.materialDatePicker1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialDatePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialDatePicker1.DateFormat = "ddd, dd MMM yyyy";
+            this.materialDatePicker1.Depth = 0;
+            this.materialDatePicker1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.materialDatePicker1.DropDownHeight = 300;
+            this.materialDatePicker1.DropDownWidth = -1;
+            this.materialDatePicker1.Hint = null;
+            this.materialDatePicker1.Location = new System.Drawing.Point(3, 23);
+            this.materialDatePicker1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDatePicker1.Name = "materialDatePicker1";
+            this.materialDatePicker1.ShowTime = false;
+            this.materialDatePicker1.Size = new System.Drawing.Size(499, 23);
+            this.materialDatePicker1.TabIndex = 0;
+            this.materialDatePicker1.TabStop = false;
+            this.materialDatePicker1.Text = "materialDatePicker1";
+            this.materialDatePicker1.Value = new System.DateTime(2019, 2, 10, 14, 33, 19, 160);
             // 
             // formDropwDown2
             // 
@@ -227,6 +260,7 @@ namespace MaterialSkinExample
             this.dropDown2.DropDownHeight = 200;
             this.dropDown2.DropDownItemHeight = 30;
             this.dropDown2.DropDownWidth = -1;
+            this.dropDown2.HideEmptyValue = false;
             this.dropDown2.Hint = "Multi Select Drop Down";
             this.dropDown2.IsMultiSelect = true;
             this.dropDown2.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("dropDown2.Items")));
@@ -271,6 +305,7 @@ namespace MaterialSkinExample
             this.dropDown3.DropDownHeight = 200;
             this.dropDown3.DropDownItemHeight = 30;
             this.dropDown3.DropDownWidth = -1;
+            this.dropDown3.HideEmptyValue = false;
             this.dropDown3.Hint = "Drop Down";
             this.dropDown3.IsMultiSelect = false;
             this.dropDown3.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("dropDown3.Items")));
@@ -314,6 +349,7 @@ namespace MaterialSkinExample
             this.dropDown1.DropDownHeight = 200;
             this.dropDown1.DropDownItemHeight = 30;
             this.dropDown1.DropDownWidth = -1;
+            this.dropDown1.HideEmptyValue = false;
             this.dropDown1.Hint = "Drop Down";
             this.dropDown1.IsMultiSelect = false;
             this.dropDown1.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("dropDown1.Items")));
@@ -332,7 +368,6 @@ namespace MaterialSkinExample
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.materialMonthCalendar1);
             this.panel1.Controls.Add(this.materialFormGroup5);
             this.panel1.Controls.Add(this.materialFormGroup4);
             this.panel1.Controls.Add(this.materialFormGroup2);
@@ -714,6 +749,44 @@ namespace MaterialSkinExample
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1024, 64);
             this.flowLayoutPanel1.TabIndex = 17;
             // 
+            // materialFormGroup6
+            // 
+            this.materialFormGroup6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialFormGroup6.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialFormGroup6.Controls.Add(this.materialDatePicker2);
+            this.materialFormGroup6.Depth = 0;
+            this.materialFormGroup6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.materialFormGroup6.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.materialFormGroup6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.materialFormGroup6.Location = new System.Drawing.Point(0, 260);
+            this.materialFormGroup6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFormGroup6.Name = "materialFormGroup6";
+            this.materialFormGroup6.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.materialFormGroup6.Size = new System.Drawing.Size(505, 65);
+            this.materialFormGroup6.TabIndex = 6;
+            this.materialFormGroup6.TabStop = false;
+            this.materialFormGroup6.Text = "Date & Time Picker";
+            // 
+            // materialDatePicker2
+            // 
+            this.materialDatePicker2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialDatePicker2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialDatePicker2.DateFormat = "ddd, dd MMM yyyy";
+            this.materialDatePicker2.Depth = 0;
+            this.materialDatePicker2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.materialDatePicker2.DropDownHeight = 300;
+            this.materialDatePicker2.DropDownWidth = -1;
+            this.materialDatePicker2.Hint = null;
+            this.materialDatePicker2.Location = new System.Drawing.Point(3, 23);
+            this.materialDatePicker2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDatePicker2.Name = "materialDatePicker2";
+            this.materialDatePicker2.ShowTime = true;
+            this.materialDatePicker2.Size = new System.Drawing.Size(499, 23);
+            this.materialDatePicker2.TabIndex = 0;
+            this.materialDatePicker2.TabStop = false;
+            this.materialDatePicker2.Text = "materialDatePicker2";
+            this.materialDatePicker2.Value = new System.DateTime(2019, 2, 10, 14, 33, 19, 160);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -733,6 +806,7 @@ namespace MaterialSkinExample
             this.tpControls.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.frmDate.ResumeLayout(false);
             this.formDropwDown2.ResumeLayout(false);
             this.grpDisabledDropDown.ResumeLayout(false);
             this.formDropwDown1.ResumeLayout(false);
@@ -749,6 +823,7 @@ namespace MaterialSkinExample
             this.materialPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.materialFormGroup6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -793,6 +868,9 @@ namespace MaterialSkinExample
         private MaterialDropDown dropDown2;
         private MaterialFormGroup grpDisabledDropDown;
         private MaterialDropDown dropDown3;
-        private MaterialMonthCalendar materialMonthCalendar1;
+        private MaterialFormGroup frmDate;
+        private MaterialDatePicker materialDatePicker1;
+        private MaterialFormGroup materialFormGroup6;
+        private MaterialDatePicker materialDatePicker2;
     }
 }

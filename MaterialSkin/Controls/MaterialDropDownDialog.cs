@@ -8,6 +8,7 @@ namespace MaterialSkin.Controls
 {
     public partial class MaterialDropDownDialog : MaterialFormDialog
     {
+        public bool HideEmptyValue { set; get; }
         public string ValueMember { get; set; }
         public string DisplayMember { get; set; }
 
@@ -72,10 +73,13 @@ namespace MaterialSkin.Controls
             }
             else
             {
-                var ctrlSelectNone = InitButton(-2, "", "");
-                flpMain.Controls.Add(ctrlSelectNone);
-                ctrlSelectNone.Dock = DockStyle.Top;
-                ctrlSelectNone.BringToFront();
+                if (!HideEmptyValue)
+                {
+                    var ctrlSelectNone = InitButton(-2, "", "");
+                    flpMain.Controls.Add(ctrlSelectNone);
+                    ctrlSelectNone.Dock = DockStyle.Top;
+                    ctrlSelectNone.BringToFront();
+                }
             }
 
             Control selectedCtrl = null;

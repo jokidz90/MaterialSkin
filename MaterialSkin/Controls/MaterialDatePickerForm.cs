@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,10 @@ namespace MaterialSkin.Controls
 {
     public partial class MaterialDatePickerForm : MaterialFormDialog
     {
+        public event DateChangedHandler ValueChanged;
+
         private string _dateFormat = "ddd, dd MMM yyyy";
+        public string DateFormat { get => _dateFormat; set => _dateFormat = value; }
 
         private DateTime _value = DateTime.Now;
         public DateTime Value
@@ -20,12 +24,29 @@ namespace MaterialSkin.Controls
             set
             {
                 _value = value;
-                this.Text = _value.ToString(_dateFormat);
+                btnDateValue.Text = _value.ToString(DateFormat);
+                ddHour.SelectedValue = _value.Hour.ToString("00");
+                ddMinute.SelectedValue = _value.Minute.ToString("00");
+                ddAMPM.SelectedValue = _value.ToString("tt", CultureInfo.InvariantCulture);
                 this.Invalidate();
             }
             get
             {
                 return _value;
+            }
+        }
+
+        public bool ShowTime
+        {
+            set
+            {
+                pnlTime.Visible = value;
+                if (!value)
+                    tblHeader.ColumnStyles.RemoveAt(1);
+            }
+            get
+            {
+                return pnlTime.Visible;
             }
         }
 
@@ -36,27 +57,29 @@ namespace MaterialSkin.Controls
 
         private void MaterialDatePickerForm_Load(object sender, EventArgs e)
         {
-            btnToday.Text = DateTime.Now.ToString(_dateFormat);
+            btnToday.Text = DateTime.Now.ToString(DateFormat);
             btnShowYear.Tag = _value.Year;
             btnShowYear.Text = _value.Year.ToString();
             btnShowMonth.Tag = _value.Month;
             btnShowMonth.Text = _value.ToString("MMMM");
+            ddHour.SelectedValue = Convert.ToInt32(_value.ToString("hh")).ToString("00");
+            if (ddHour.SelectedValue == null)
+                ddHour.SelectedIndex = 0;
+
+            ddMinute.SelectedValue = _value.Minute.ToString("00");
+            if (ddMinute.SelectedValue == null)
+                ddMinute.SelectedIndex = 0;
+
+            ddAMPM.SelectedValue = _value.ToString("tt");
+            if (ddAMPM.SelectedValue == null)
+                ddAMPM.SelectedIndex = 0;
+
             LoadDate();
         }
 
         private void LoadDate()
         {
-            this.SuspendLayout();
-            tblDate.Dock = DockStyle.Fill;
-            tblDate.BringToFront();
-            tblMonth.Dock = DockStyle.Bottom;
-            tblYear.Dock = DockStyle.Bottom;
-            tblDate.Visible = true;
-            tblMonth.Visible = false;
-            tblYear.Visible = false;
-            btnPrev.Enabled = true;
-            btnNext.Enabled = true;
-
+            ShowPanel("DATE");
             for (int y = 1; y < 7; y++)
             {
                 for (int x = 0; x < 7; x++)
@@ -98,25 +121,15 @@ namespace MaterialSkin.Controls
 
                 startDay = 0;
             }
-            this.ResumeLayout();
         }
 
         private void LoadYear()
         {
-            tblDate.Dock = DockStyle.Bottom;
-            tblMonth.Dock = DockStyle.Bottom;
-            tblYear.Dock = DockStyle.Fill;
-            tblYear.BringToFront();
-            tblDate.Visible = false;
-            tblMonth.Visible = false;
-            tblYear.Visible = true;
-            btnPrev.Enabled = true;
-            btnNext.Enabled = true;
-
+            ShowPanel("YEAR");
             int year = (int)btnShowYear.Tag;
-            for (int x = 0; x < tblYear.ColumnCount; x++)
+            for (int y = 0; y < tblYear.RowCount; y++)
             {
-                for (int y = 0; y < tblYear.RowCount; y++)
+                for (int x = 0; x < tblYear.ColumnCount; x++)
                 {
                     var pnl = tblYear.GetControlFromPosition(x, y);
                     var btn = (MaterialFlatButton)pnl.Controls[0];
@@ -129,15 +142,38 @@ namespace MaterialSkin.Controls
 
         private void LoadMonth()
         {
+            ShowPanel("MONTH");
+        }
+
+        private void ShowPanel(string panel)
+        {
             tblDate.Dock = DockStyle.Bottom;
-            tblMonth.Dock = DockStyle.Fill;
-            tblMonth.BringToFront();
+            tblMonth.Dock = DockStyle.Bottom;
             tblYear.Dock = DockStyle.Bottom;
             tblDate.Visible = false;
-            tblMonth.Visible = true;
+            tblMonth.Visible = false;
             tblYear.Visible = false;
-            btnPrev.Enabled = false;
-            btnNext.Enabled = false;
+            btnPrev.Enabled = true;
+            btnNext.Enabled = true;
+            pnlNavigation.Visible = true;
+
+            if (panel == "DATE")
+            {
+                tblDate.Dock = DockStyle.Fill;
+                tblDate.Visible = true;
+            }
+            else if (panel == "MONTH")
+            {
+                tblMonth.Dock = DockStyle.Fill;
+                tblMonth.Visible = true;
+                btnPrev.Enabled = false;
+                btnNext.Enabled = false;
+            }
+            else if (panel == "YEAR")
+            {
+                tblYear.Dock = DockStyle.Fill;
+                tblYear.Visible = true;
+            }
         }
 
         MaterialFlatButton selectedBtn = null;
@@ -148,7 +184,16 @@ namespace MaterialSkin.Controls
 
             selectedBtn = (MaterialFlatButton)sender;
             selectedBtn.ColorStyle = ColorType.INFO;
-            Value = (DateTime)selectedBtn.Tag;
+
+            string hour = ddHour.SelectedValue + "";
+            if (string.IsNullOrEmpty(hour))
+                hour = "00";
+            string min = ddMinute.SelectedValue + "";
+            if (string.IsNullOrEmpty(min))
+                min = "00";
+            var dtStr = ((DateTime)selectedBtn.Tag).ToString("yyyy-MM-dd") + " " + hour + ":" + min + " " + ddAMPM.SelectedValue;
+            var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            Value = ShowTime ? dtValue : dtValue.Date;
         }
 
         private void btnMonth_Clicked(object sender, EventArgs e)
@@ -166,7 +211,6 @@ namespace MaterialSkin.Controls
             btnShowYear.Text = btn.Tag.ToString();
             LoadDate();
         }
-
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
@@ -229,5 +273,42 @@ namespace MaterialSkin.Controls
             btnShowMonth.Text = _value.ToString("MMMM");
             LoadDate();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            if (ValueChanged != null)
+                ValueChanged(this, Value);
+            this.Close();
+        }
+
+        private void btnDateValue_Click(object sender, EventArgs e)
+        {
+            btnShowYear.Tag = _value.Year;
+            btnShowYear.Text = _value.Year.ToString();
+            btnShowMonth.Tag = _value.Month;
+            btnShowMonth.Text = _value.ToString("MMMM");
+            LoadDate();
+        }
+
+        private void ddTime_ValueChanged(object sender, ItemSelectArgs e)
+        {
+            string hour = ddHour.SelectedValue + "";
+            if (string.IsNullOrEmpty(hour))
+                hour = "00";
+            string min = ddMinute.SelectedValue + "";
+            if (string.IsNullOrEmpty(min))
+                min = "00";
+
+            var dtStr = _value.ToString("yyyy-MM-dd") + " " + hour + ":" + min + " " + ddAMPM.SelectedValue;
+            var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            Value = ShowTime ? dtValue : dtValue.Date;
+        }
     }
+
+    public delegate void DateChangedHandler(object sender, DateTime value);
 }

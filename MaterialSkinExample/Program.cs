@@ -10,7 +10,7 @@ namespace MaterialSkinExample
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MaterialSkin.Controls.MaterialDatePickerForm());
+            Application.Run(new MainForm());
         }
     }
 }

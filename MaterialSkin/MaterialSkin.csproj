@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -53,14 +54,17 @@
     <Compile Include="Controls\MaterialClickablePanel.Designer.cs">
       <DependentUpon>MaterialClickablePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MaterialComboBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Controls\MaterialDatePickerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controls\MaterialDatePickerForm.Designer.cs">
       <DependentUpon>MaterialDatePickerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MaterialDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialDatePicker.Designer.cs">
+      <DependentUpon>MaterialDatePicker.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\MaterialDropDownDialog.cs">
       <SubType>Form</SubType>
@@ -109,6 +113,12 @@
     </Compile>
     <Compile Include="Controls\MaterialMonthCalendar.Designer.cs">
       <DependentUpon>MaterialMonthCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MaterialPanelColored.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialPanelColored.Designer.cs">
+      <DependentUpon>MaterialPanelColored.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\MaterialPanel.cs">
       <SubType>Component</SubType>
@@ -165,6 +175,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\check.png" />
+    <Content Include="Resources\date.png" />
+    <Content Include="Resources\expand.png" />
+    <Content Include="Resources\time.png" />
     <None Include="Resources\right.png" />
     <None Include="Resources\left.png" />
   </ItemGroup>

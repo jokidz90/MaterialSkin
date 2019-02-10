@@ -73,6 +73,7 @@ namespace MaterialSkinExample
         {
             grpDisabled.Enabled = !grpDisabled.Enabled;
             grpDisabledDropDown.Enabled = !grpDisabledDropDown.Enabled;
+            frmDate.Enabled = !frmDate.Enabled;
         }
 
         private void MainForm_Shown(object sender, EventArgs e)

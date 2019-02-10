@@ -197,6 +197,11 @@ namespace MaterialSkin
             return RAISED_BUTTON_BACKGROUND_BRUSH;
         }
 
+        public Color GetRaisedButtonTextColor(bool primary)
+        {
+            return primary ? RAISED_BUTTON_TEXT_LIGHT : RAISED_BUTTON_TEXT_DARK;
+        }
+
         public Brush GetRaisedButtonTextBrush(bool primary)
         {
             return primary ? RAISED_BUTTON_TEXT_LIGHT_BRUSH : RAISED_BUTTON_TEXT_DARK_BRUSH;
