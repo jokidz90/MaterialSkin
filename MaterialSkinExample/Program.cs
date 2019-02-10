@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 
 namespace MaterialSkinExample
 {
@@ -10,7 +11,8 @@ namespace MaterialSkinExample
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new MaterialDateRangePickerForm());
+            //Application.Run(new MainForm());
         }
     }
 }

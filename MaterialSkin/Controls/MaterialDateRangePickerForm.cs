@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace MaterialSkin.Controls
 {
-    public partial class MaterialDatePickerForm : MaterialFormDialog
+    public partial class MaterialDateRangePickerForm : MaterialFormDialog
     {
         public event DateChangedHandler ValueChanged;
 
@@ -24,7 +24,7 @@ namespace MaterialSkin.Controls
             set
             {
                 _value = value;
-                btnDateValue.Text = _value.ToString(DateFormat);
+                btnStartDateValue.Text = _value.ToString(DateFormat);
                 ddHour.SelectedValue = _value.Hour.ToString("00");
                 ddMinute.SelectedValue = _value.Minute.ToString("00");
                 ddAMPM.SelectedValue = _value.ToString("tt", CultureInfo.InvariantCulture);
@@ -50,14 +50,13 @@ namespace MaterialSkin.Controls
             }
         }
 
-        public MaterialDatePickerForm()
+        public MaterialDateRangePickerForm()
         {
             InitializeComponent();
         }
 
         private void MaterialDatePickerForm_Load(object sender, EventArgs e)
         {
-            btnToday.Text = DateTime.Now.ToString(DateFormat);
             btnShowYear.Tag = _value.Year;
             btnShowYear.Text = _value.Year.ToString();
             btnShowMonth.Tag = _value.Month;
@@ -77,8 +76,12 @@ namespace MaterialSkin.Controls
             LoadDate();
         }
 
+        private bool _loadingDate = false;
         private void LoadDate()
         {
+            if (_loadingDate)
+                return;
+            _loadingDate = true;
             ShowPanel("DATE");
             for (int y = 1; y < 7; y++)
             {
@@ -121,6 +124,8 @@ namespace MaterialSkin.Controls
 
                 startDay = 0;
             }
+
+            _loadingDate = false;
         }
 
         private void LoadYear()
@@ -286,15 +291,6 @@ namespace MaterialSkin.Controls
             this.Close();
         }
 
-        private void btnDateValue_Click(object sender, EventArgs e)
-        {
-            btnShowYear.Tag = _value.Year;
-            btnShowYear.Text = _value.Year.ToString();
-            btnShowMonth.Tag = _value.Month;
-            btnShowMonth.Text = _value.ToString("MMMM");
-            LoadDate();
-        }
-
         private void ddTime_ValueChanged(object sender, ItemSelectArgs e)
         {
             string hour = ddHour.SelectedValue + "";
@@ -308,7 +304,27 @@ namespace MaterialSkin.Controls
             var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
             Value = ShowTime ? dtValue : dtValue.Date;
         }
+
+        private void btnStarDateValue_Click(object sender, EventArgs e)
+        {
+            if (_loadingDate)
+                return;
+            btnShowYear.Tag = _value.Year;
+            btnShowYear.Text = _value.Year.ToString();
+            btnShowMonth.Tag = _value.Month;
+            btnShowMonth.Text = _value.ToString("MMMM");
+            LoadDate();
+
+            pnlHeaderStart.ColorStyle = ColorType.DEFAULT;
+            pnlHeaderEnd.ColorStyle = ColorType.GREY;
+        }
+
+        private void btnEndDateValue_Click(object sender, EventArgs e)
+        {
+            pnlHeaderStart.ColorStyle = ColorType.GREY;
+            pnlHeaderEnd.ColorStyle = ColorType.DEFAULT;
+        }
     }
 
-    public delegate void DateRangeChangedHandler(object sender, DateTime startTime, DateTime endTime);
+    public delegate void DateChangedHandler(object sender, DateTime value);
 }

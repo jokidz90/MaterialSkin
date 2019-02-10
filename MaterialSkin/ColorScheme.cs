@@ -84,6 +84,8 @@ namespace MaterialSkin
                     _swatches.Add(ColorType.PINK, new ColorScheme(Primary.PINKNormal, Primary.PINKDark, Primary.PINKLight, Accent.PINK));
                     _swatches.Add(ColorType.PURPLE, new ColorScheme(Primary.PURPLENormal, Primary.PURPLEDark, Primary.PURPLELight, Accent.PURPLE));
                     _swatches.Add(ColorType.YELLOW, new ColorScheme(Primary.YELLOWNormal, Primary.YELLOWDark, Primary.YELLOWLight, Accent.YELLOW, TextShade.BLACK));
+                    _swatches.Add(ColorType.GREY, new ColorScheme(Primary.Grey500, Primary.Grey200, Primary.Grey50, Accent.INVERSE, TextShade.BLACK));
+
                 }
 
                 return _swatches;
