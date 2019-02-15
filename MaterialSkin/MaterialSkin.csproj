@@ -141,6 +141,9 @@
     <Compile Include="Controls\MaterialRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\MaterialRichText.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\MaterialSingleLineTextField.cs">
       <SubType>Component</SubType>
     </Compile>

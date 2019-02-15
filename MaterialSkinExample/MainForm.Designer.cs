@@ -56,10 +56,10 @@ namespace MaterialSkinExample
             this.formDropwDown1 = new MaterialSkin.Controls.MaterialFormGroup();
             this.dropDown1 = new MaterialSkin.Controls.MaterialDropDown();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.frmMultiLine = new MaterialSkin.Controls.MaterialFormGroup();
+            this.materialRichText1 = new MaterialSkin.Controls.MaterialRichText();
             this.materialFormGroup5 = new MaterialSkin.Controls.MaterialFormGroup();
-            this.materialRadioButton8 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialRadioButton7 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton5 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialRadioButton6 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialFormGroup4 = new MaterialSkin.Controls.MaterialFormGroup();
             this.materialCheckBox8 = new MaterialSkin.Controls.MaterialCheckBox();
@@ -92,6 +92,7 @@ namespace MaterialSkinExample
             this.grpDisabledDropDown.SuspendLayout();
             this.formDropwDown1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.frmMultiLine.SuspendLayout();
             this.materialFormGroup5.SuspendLayout();
             this.materialFormGroup4.SuspendLayout();
             this.materialFormGroup2.SuspendLayout();
@@ -494,6 +495,7 @@ namespace MaterialSkinExample
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.frmMultiLine);
             this.panel1.Controls.Add(this.materialFormGroup5);
             this.panel1.Controls.Add(this.materialFormGroup4);
             this.panel1.Controls.Add(this.materialFormGroup2);
@@ -506,13 +508,46 @@ namespace MaterialSkinExample
             this.panel1.Size = new System.Drawing.Size(505, 491);
             this.panel1.TabIndex = 0;
             // 
+            // frmMultiLine
+            // 
+            this.frmMultiLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.frmMultiLine.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.frmMultiLine.Controls.Add(this.materialRichText1);
+            this.frmMultiLine.Depth = 0;
+            this.frmMultiLine.Dock = System.Windows.Forms.DockStyle.Top;
+            this.frmMultiLine.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.frmMultiLine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.frmMultiLine.Location = new System.Drawing.Point(0, 353);
+            this.frmMultiLine.MouseState = MaterialSkin.MouseState.HOVER;
+            this.frmMultiLine.Name = "frmMultiLine";
+            this.frmMultiLine.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.frmMultiLine.Size = new System.Drawing.Size(505, 135);
+            this.frmMultiLine.TabIndex = 9;
+            this.frmMultiLine.TabStop = false;
+            this.frmMultiLine.Text = "Multi Line Text";
+            // 
+            // materialRichText1
+            // 
+            this.materialRichText1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialRichText1.Depth = 0;
+            this.materialRichText1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialRichText1.Hint = "Multi Line Text";
+            this.materialRichText1.Location = new System.Drawing.Point(3, 23);
+            this.materialRichText1.MaxLength = 2147483647;
+            this.materialRichText1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRichText1.Name = "materialRichText1";
+            this.materialRichText1.SelectedText = "";
+            this.materialRichText1.SelectionLength = 0;
+            this.materialRichText1.SelectionStart = 0;
+            this.materialRichText1.Size = new System.Drawing.Size(499, 109);
+            this.materialRichText1.TabIndex = 0;
+            this.materialRichText1.TabStop = false;
+            // 
             // materialFormGroup5
             // 
             this.materialFormGroup5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialFormGroup5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
-            this.materialFormGroup5.Controls.Add(this.materialRadioButton8);
             this.materialFormGroup5.Controls.Add(this.materialRadioButton7);
-            this.materialFormGroup5.Controls.Add(this.materialRadioButton5);
             this.materialFormGroup5.Controls.Add(this.materialRadioButton6);
             this.materialFormGroup5.Depth = 0;
             this.materialFormGroup5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -522,29 +557,10 @@ namespace MaterialSkinExample
             this.materialFormGroup5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFormGroup5.Name = "materialFormGroup5";
             this.materialFormGroup5.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.materialFormGroup5.Size = new System.Drawing.Size(505, 162);
+            this.materialFormGroup5.Size = new System.Drawing.Size(505, 93);
             this.materialFormGroup5.TabIndex = 5;
             this.materialFormGroup5.TabStop = false;
             this.materialFormGroup5.Text = "Radio Button";
-            // 
-            // materialRadioButton8
-            // 
-            this.materialRadioButton8.AutoSize = true;
-            this.materialRadioButton8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.materialRadioButton8.Depth = 0;
-            this.materialRadioButton8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.materialRadioButton8.Enabled = false;
-            this.materialRadioButton8.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton8.Location = new System.Drawing.Point(3, 113);
-            this.materialRadioButton8.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton8.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton8.Name = "materialRadioButton8";
-            this.materialRadioButton8.Ripple = true;
-            this.materialRadioButton8.Size = new System.Drawing.Size(499, 30);
-            this.materialRadioButton8.TabIndex = 14;
-            this.materialRadioButton8.Text = "Selection 4";
-            this.materialRadioButton8.UseVisualStyleBackColor = true;
             // 
             // materialRadioButton7
             // 
@@ -553,7 +569,7 @@ namespace MaterialSkinExample
             this.materialRadioButton7.Depth = 0;
             this.materialRadioButton7.Dock = System.Windows.Forms.DockStyle.Top;
             this.materialRadioButton7.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton7.Location = new System.Drawing.Point(3, 83);
+            this.materialRadioButton7.Location = new System.Drawing.Point(3, 53);
             this.materialRadioButton7.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton7.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton7.MouseState = MaterialSkin.MouseState.HOVER;
@@ -563,24 +579,6 @@ namespace MaterialSkinExample
             this.materialRadioButton7.TabIndex = 13;
             this.materialRadioButton7.Text = "Selection 3";
             this.materialRadioButton7.UseVisualStyleBackColor = true;
-            // 
-            // materialRadioButton5
-            // 
-            this.materialRadioButton5.AutoSize = true;
-            this.materialRadioButton5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.materialRadioButton5.Depth = 0;
-            this.materialRadioButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.materialRadioButton5.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton5.Location = new System.Drawing.Point(3, 53);
-            this.materialRadioButton5.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton5.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton5.Name = "materialRadioButton5";
-            this.materialRadioButton5.Ripple = true;
-            this.materialRadioButton5.Size = new System.Drawing.Size(499, 30);
-            this.materialRadioButton5.TabIndex = 11;
-            this.materialRadioButton5.Text = "Selection 2";
-            this.materialRadioButton5.UseVisualStyleBackColor = true;
             // 
             // materialRadioButton6
             // 
@@ -902,6 +900,7 @@ namespace MaterialSkinExample
             this.grpDisabledDropDown.ResumeLayout(false);
             this.formDropwDown1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.frmMultiLine.ResumeLayout(false);
             this.materialFormGroup5.ResumeLayout(false);
             this.materialFormGroup5.PerformLayout();
             this.materialFormGroup4.ResumeLayout(false);
@@ -947,9 +946,7 @@ namespace MaterialSkinExample
         private MaterialFormGroup materialFormGroup4;
         private MaterialCheckBox materialCheckBox8;
         private MaterialFormGroup materialFormGroup5;
-        private MaterialRadioButton materialRadioButton5;
         private MaterialRadioButton materialRadioButton6;
-        private MaterialRadioButton materialRadioButton8;
         private MaterialRadioButton materialRadioButton7;
         private MaterialSingleLineTextField materialSingleLineTextField1;
         private MaterialFormGroup formDropwDown1;
@@ -966,5 +963,7 @@ namespace MaterialSkinExample
         private MaterialDateRangePicker materialDateRangePicker1;
         private MaterialFormGroup materialFormGroup7;
         private MaterialDateRangePicker materialDateRangePicker2;
+        private MaterialFormGroup frmMultiLine;
+        private MaterialRichText materialRichText1;
     }
 }

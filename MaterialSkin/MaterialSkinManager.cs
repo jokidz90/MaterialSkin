@@ -350,6 +350,11 @@ namespace MaterialSkin
                 controlToUpdate.BackColor = newBackColor;
             }
 
+            if (controlToUpdate is MaterialRichText)
+            {
+                controlToUpdate.BackColor = newBackColor;
+            }
+
             if (controlToUpdate is MaterialPanel)
             {
                 controlToUpdate.BackColor = newBackColor;
