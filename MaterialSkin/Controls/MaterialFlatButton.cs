@@ -17,6 +17,18 @@ namespace MaterialSkin.Controls
         [Browsable(false)]
         public MouseState MouseState { get; set; }
         public bool Primary { get; set; }
+
+        private ColorType _borderColorType = ColorType.DEFAULT;
+        public ColorType BorderColorType
+        {
+            get => _borderColorType;
+            set
+            {
+                _borderColorType = value;
+                Invalidate();
+            }
+        }
+
         private ColorType _colorStyle = ColorType.DEFAULT;
         public ColorType ColorStyle
         {
@@ -99,6 +111,16 @@ namespace MaterialSkin.Controls
             g.TextRenderingHint = TextRenderingHint.AntiAlias;
 
             g.Clear(Parent.BackColor);
+
+            if (_borderColorType != ColorType.DEFAULT)
+            {
+                var pen = new Pen(ColorScheme.ColorSwatches[_borderColorType].PrimaryColor);
+                int penW = 2;
+                pen.Width = penW;
+                pen.LineJoin = LineJoin.Round;
+                var newRect = new Rectangle(ClientRectangle.X + penW, ClientRectangle.Y + penW, ClientRectangle.Width - (2 * penW), ClientRectangle.Height - (2 * penW));
+                g.DrawRectangle(pen, newRect);
+            }
 
             //Hover
             Color c = SkinManager.GetFlatButtonHoverBackgroundColor();

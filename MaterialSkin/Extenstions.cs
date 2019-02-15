@@ -12,6 +12,96 @@ namespace MaterialSkin
 {
     public static class Extenstions
     {
+        public static int GetInt32Value(this string txt)
+        {
+            int val = 0;
+            int.TryParse(txt, out val);
+            return val;
+        }
+
+        public static bool IsEqual(this string val, string comparation)
+        {
+            bool isSame = false;
+
+            isSame = (val + "").ToLower().Trim().Equals((comparation + "").ToLower().Trim());
+
+            return isSame;
+        }
+
+        public static void GetDateRange(string dateRangeType, string cutOffStr, out DateTime startDate, out DateTime endDate)
+        {
+            startDate = DateTime.MinValue;
+            endDate = DateTime.MaxValue;
+            int cutOffHour = 0;
+            int cutOffMin = 0;
+            if (!cutOffStr.Contains(":"))
+                cutOffHour = cutOffStr.GetInt32Value();
+            else
+            {
+                cutOffHour = cutOffStr.Split(':')[0].GetInt32Value();
+                cutOffMin = cutOffStr.Split(':')[1].GetInt32Value();
+            }
+            if (cutOffHour >= 24 || cutOffHour < 0)
+                cutOffHour = 0;
+            if (cutOffMin >= 60 || cutOffMin < 0)
+                cutOffMin = 0;
+
+            if (dateRangeType.IsEqual("YESTERDAY"))
+            {
+                startDate = DateTime.Now.Date.AddDays(-1).Date;
+                endDate = DateTime.Now.Date.AddDays(-1).Date;
+            }
+            else if (dateRangeType.IsEqual("THISWEEK"))
+            {
+                startDate = DateTime.Now.Date.AddDays(-1 * (int)DateTime.Now.DayOfWeek).Date;
+                endDate = startDate.AddDays(6).Date;
+            }
+
+            else if (dateRangeType.IsEqual("LASTWEEK"))
+            {
+                startDate = DateTime.Now.Date.AddDays(-1 * (int)DateTime.Now.DayOfWeek).AddDays(-7).Date;
+                endDate = startDate.AddDays(6).Date;
+            }
+            else if (dateRangeType.IsEqual("THISMONTH"))
+            {
+                startDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).Date;
+                endDate = startDate.AddMonths(1).AddDays(-1).Date;
+            }
+            else if (dateRangeType.IsEqual("LASTMONTH"))
+            {
+                endDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).AddDays(-1).Date;
+                startDate = new DateTime(endDate.Year, endDate.Month, 1);
+            }
+            else if (dateRangeType.IsEqual("THISYEAR"))
+            {
+                startDate = new DateTime(DateTime.Now.Year, 1, 1).Date;
+                endDate = new DateTime(DateTime.Now.Year, 12, 31).Date;
+            }
+            else if (dateRangeType.IsEqual("LASTYEAR"))
+            {
+                startDate = new DateTime(DateTime.Now.Year - 1, 1, 1).Date;
+                endDate = new DateTime(DateTime.Now.Year - 1, 12, 31).Date;
+            }
+            else
+            {
+                startDate = DateTime.Now.Date;
+                endDate = DateTime.Now.Date;
+            }
+
+            if (cutOffHour > 0)
+            {
+                startDate = startDate.AddHours(cutOffHour);
+                endDate = endDate.AddHours(cutOffHour);
+            }
+            if (cutOffMin > 0)
+            {
+                startDate = startDate.AddMinutes(cutOffMin);
+                endDate = endDate.AddMinutes(cutOffMin);
+            }
+
+            endDate = endDate.AddDays(1).AddSeconds(-1);
+        }
+
         public static List<object> ConvertToList(this object obj)
         {
             List<object> result = null;
@@ -110,5 +200,18 @@ namespace MaterialSkin
 
             return target;
         }
+    }
+
+    public enum DateRangeType
+    {
+        TODAY,
+        YESTERDAY,
+        THISWEEK,
+        LASTWEEK,
+        THISMONTH,
+        LASTMONTH,
+        THISYEAR,
+        LASTYEAR,
+        CUSTOM
     }
 }

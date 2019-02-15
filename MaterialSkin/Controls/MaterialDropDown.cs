@@ -216,6 +216,8 @@ namespace MaterialSkin.Controls
 
                 if (sel >= 0 && !_selectedIndices.Contains(sel))
                 {
+                    if (!IsMultiSelect)
+                        _selectedIndices.Clear();
                     _selectedIndices.Add(sel);
                     SelectedIndices = _selectedIndices;
                 }
@@ -228,6 +230,16 @@ namespace MaterialSkin.Controls
             set
             {
                 _selectedIndices = value;
+                if (ValueChanged != null)
+                {
+                    ValueChanged(this, new ItemSelectArgs
+                    {
+                        SelectedIndex = SelectedIndex,
+                        SelectedIndices = SelectedIndices,
+                        Text = Text,
+                        SelectedValue = SelectedValue
+                    });
+                }
                 if (_selectedIndices.Count == 0)
                 {
                     _baseTextBox.Text = _hint;
@@ -1245,7 +1257,7 @@ namespace MaterialSkin.Controls
             base.OnResize(e);
 
             _baseTextBox.Location = new Point(0, 0);
-            _baseTextBox.Width = Width- _dropDownArrowWidth;
+            _baseTextBox.Width = Width - _dropDownArrowWidth;
 
             Height = _baseTextBox.Height + 5;
         }
@@ -1305,19 +1317,6 @@ namespace MaterialSkin.Controls
                 return;
 
             _frmItemSelector.Close();
-            if (_selectedIndices != _prevSelectedIndices)
-            {
-                if (ValueChanged != null)
-                {
-                    ValueChanged(this, new ItemSelectArgs
-                    {
-                        SelectedIndex = SelectedIndex,
-                        SelectedIndices = SelectedIndices,
-                        Text = Text,
-                        SelectedValue = SelectedValue
-                    });
-                }
-            }
         }
 
         private List<int> _prevSelectedIndices = new List<int>();
@@ -1379,5 +1378,17 @@ namespace MaterialSkin.Controls
 
             }
         }
+    }
+
+    public class DropDownItem
+    {
+        public DropDownItem() { }
+        public DropDownItem(object value, string text)
+        {
+            this.Value = value;
+            this.Text = text;
+        }
+        public object Value { set; get; }
+        public string Text { set; get; }
     }
 }
