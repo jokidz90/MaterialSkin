@@ -194,7 +194,7 @@
             this.pnlHeaderStart = new MaterialSkin.Controls.MaterialPanelColored();
             this.tblHeader = new System.Windows.Forms.TableLayoutPanel();
             this.btnEndDateValue = new MaterialSkin.Controls.MaterialFlatButton();
-            this.pblDateSelector = new MaterialSkin.Controls.MaterialPanelColored();
+            this.pnlDateSelector = new MaterialSkin.Controls.MaterialPanelColored();
             this.rbEnd = new MaterialSkin.Controls.MaterialRadioButton();
             this.rbStart = new MaterialSkin.Controls.MaterialRadioButton();
             this.pnlStartTime = new MaterialSkin.Controls.MaterialPanelColored();
@@ -299,7 +299,7 @@
             this.materialPanel75.SuspendLayout();
             this.pnlHeaderStart.SuspendLayout();
             this.tblHeader.SuspendLayout();
-            this.pblDateSelector.SuspendLayout();
+            this.pnlDateSelector.SuspendLayout();
             this.pnlStartTime.SuspendLayout();
             this.tblTime.SuspendLayout();
             this.materialPanelColored4.SuspendLayout();
@@ -3514,7 +3514,7 @@
             this.tblHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tblHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tblHeader.Controls.Add(this.btnEndDateValue, 1, 1);
-            this.tblHeader.Controls.Add(this.pblDateSelector, 0, 0);
+            this.tblHeader.Controls.Add(this.pnlDateSelector, 0, 0);
             this.tblHeader.Controls.Add(this.pnlStartTime, 2, 0);
             this.tblHeader.Controls.Add(this.btnStartDateValue, 1, 0);
             this.tblHeader.Controls.Add(this.pnlEndTime, 2, 1);
@@ -3551,23 +3551,23 @@
             this.btnEndDateValue.UseVisualStyleBackColor = true;
             this.btnEndDateValue.Click += new System.EventHandler(this.btnEndDateValue_Click);
             // 
-            // pblDateSelector
+            // pnlDateSelector
             // 
-            this.pblDateSelector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(156)))), ((int)(((byte)(236)))));
-            this.pblDateSelector.ColorStyle = MaterialSkin.ColorType.PRIMARY;
-            this.pblDateSelector.Controls.Add(this.rbEnd);
-            this.pblDateSelector.Controls.Add(this.rbStart);
-            this.pblDateSelector.Depth = 0;
-            this.pblDateSelector.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pblDateSelector.Font = new System.Drawing.Font("Roboto", 11F);
-            this.pblDateSelector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pblDateSelector.Location = new System.Drawing.Point(0, 0);
-            this.pblDateSelector.Margin = new System.Windows.Forms.Padding(0);
-            this.pblDateSelector.MouseState = MaterialSkin.MouseState.HOVER;
-            this.pblDateSelector.Name = "pblDateSelector";
-            this.tblHeader.SetRowSpan(this.pblDateSelector, 2);
-            this.pblDateSelector.Size = new System.Drawing.Size(115, 70);
-            this.pblDateSelector.TabIndex = 10;
+            this.pnlDateSelector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(156)))), ((int)(((byte)(236)))));
+            this.pnlDateSelector.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.pnlDateSelector.Controls.Add(this.rbEnd);
+            this.pnlDateSelector.Controls.Add(this.rbStart);
+            this.pnlDateSelector.Depth = 0;
+            this.pnlDateSelector.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlDateSelector.Font = new System.Drawing.Font("Roboto", 11F);
+            this.pnlDateSelector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pnlDateSelector.Location = new System.Drawing.Point(0, 0);
+            this.pnlDateSelector.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlDateSelector.MouseState = MaterialSkin.MouseState.HOVER;
+            this.pnlDateSelector.Name = "pnlDateSelector";
+            this.tblHeader.SetRowSpan(this.pnlDateSelector, 2);
+            this.pnlDateSelector.Size = new System.Drawing.Size(115, 70);
+            this.pnlDateSelector.TabIndex = 10;
             // 
             // rbEnd
             // 
@@ -3592,7 +3592,7 @@
             // 
             this.rbStart.Depth = 0;
             this.rbStart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rbStart.Font = new System.Drawing.Font("Roboto", 10F);
+            this.rbStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.rbStart.Location = new System.Drawing.Point(0, 0);
             this.rbStart.Margin = new System.Windows.Forms.Padding(0);
             this.rbStart.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -4152,7 +4152,7 @@
             this.pnlHeaderStart.ResumeLayout(false);
             this.tblHeader.ResumeLayout(false);
             this.tblHeader.PerformLayout();
-            this.pblDateSelector.ResumeLayout(false);
+            this.pnlDateSelector.ResumeLayout(false);
             this.pnlStartTime.ResumeLayout(false);
             this.pnlStartTime.PerformLayout();
             this.tblTime.ResumeLayout(false);
@@ -4344,7 +4344,7 @@
         private MaterialPanelColored materialPanelColored3;
         private MaterialLabel materialLabel1;
         private MaterialRadioButton rbStart;
-        private MaterialPanelColored pblDateSelector;
+        private MaterialPanelColored pnlDateSelector;
         private MaterialFlatButton btnEndDateValue;
         private MaterialRadioButton rbEnd;
         private MaterialPanelColored pnlEndTime;

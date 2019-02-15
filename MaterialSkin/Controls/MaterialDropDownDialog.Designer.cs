@@ -54,6 +54,7 @@
             this.Controls.Add(this.flpMain);
             this.Name = "MaterialDropDownDialog";
             this.Padding = new System.Windows.Forms.Padding(2);
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.MaterialComboBoxDialog_Load);
             this.ResumeLayout(false);

@@ -3688,6 +3688,7 @@
             this.Controls.Add(this.pnlHeader);
             this.Name = "MaterialDatePickerForm";
             this.Padding = new System.Windows.Forms.Padding(2);
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.TitleAlignment = System.Drawing.StringAlignment.Center;
             this.Load += new System.EventHandler(this.MaterialDatePickerForm_Load);
