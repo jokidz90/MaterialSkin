@@ -13,7 +13,7 @@ namespace MaterialSkin.Controls
 {
     public partial class MaterialDateRangePickerForm : MaterialFormDialog
     {
-        public event DateChangedHandler ValueChanged;
+        public event DateRangeChangedHandler ValueChanged;
 
         private string _dateFormat = "ddd, dd MMM yyyy";
         public string DateFormat { get => _dateFormat; set => _dateFormat = value; }
@@ -59,8 +59,9 @@ namespace MaterialSkin.Controls
             set
             {
                 pnlStartTime.Visible = value;
+                pnlEndTime.Visible = value;
                 if (!value)
-                    tblHeaderStart.ColumnStyles.RemoveAt(1);
+                    tblHeader.ColumnStyles.RemoveAt(2);
             }
             get
             {
@@ -68,19 +69,23 @@ namespace MaterialSkin.Controls
             }
         }
 
+        private DateRangeType _rangeSelection;
+        public DateRangeType RangeSelection
+        {
+            set
+            {
+                ddRangeType.SelectedValue = value.ToString();
+                _rangeSelection = value;
+            }
+            get
+            {
+                return _rangeSelection;
+            }
+        }
+
         public MaterialDateRangePickerForm()
         {
             InitializeComponent();
-        }
-
-        private void MaterialDatePickerForm_Load(object sender, EventArgs e)
-        {
-            btnShowYear.Tag = _startValue.Year;
-            btnShowYear.Text = _startValue.Year.ToString();
-            btnShowMonth.Tag = _startValue.Month;
-            btnShowMonth.Text = _startValue.ToString("MMMM");
-
-            LoadDate();
 
             var listType = new List<DropDownItem>();
             listType.Add(new DropDownItem(DateRangeType.TODAY, "TODAY"));
@@ -95,10 +100,16 @@ namespace MaterialSkin.Controls
             ddRangeType.DisplayMember = "Text";
             ddRangeType.ValueMember = "Value";
             ddRangeType.DataSource = listType;
-            ddRangeType.SelectedIndex = 0;
+        }
 
+        private void MaterialDatePickerForm_Load(object sender, EventArgs e)
+        {
+            btnShowYear.Tag = _startValue.Year;
+            btnShowYear.Text = _startValue.Year.ToString();
+            btnShowMonth.Tag = _startValue.Month;
+            btnShowMonth.Text = _startValue.ToString("MMMM");
 
-
+            LoadDate();
             rbStart.Checked = true;
         }
 
@@ -179,8 +190,8 @@ namespace MaterialSkin.Controls
                     var date = (DateTime)btn.Tag;
                     if (date.Date >= _startValue.Date && date.Date <= _endValue.Date)
                     {
-                        btn.ColorStyle = ColorType.PRIMARY;
-                        btn.BorderColorType = ColorType.PRIMARY;
+                        btn.ColorStyle = ColorType.INFO;
+                        btn.BorderColorType = ColorType.INFO;
                     }
                     
                 }
@@ -369,8 +380,10 @@ namespace MaterialSkin.Controls
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            string val = ddRangeType.SelectedValue + "";
+            Enum.TryParse(val, out _rangeSelection);
             if (ValueChanged != null)
-                ValueChanged(this, StartValue);
+                ValueChanged(this, StartValue, EndValue, _rangeSelection);
             this.Close();
         }
 
@@ -433,6 +446,7 @@ namespace MaterialSkin.Controls
         private void ddRangeType_ValueChanged(object sender, ItemSelectArgs e)
         {
             string val = e.SelectedValue + "";
+            Enum.TryParse(val, out _rangeSelection);
             if (val.IsEqual("CUSTOM"))
                 return;
 
@@ -456,5 +470,5 @@ namespace MaterialSkin.Controls
         }
     }
 
-    public delegate void DateChangedHandler(object sender, DateTime value);
+    public delegate void DateRangeChangedHandler(object sender, DateTime startValue, DateTime endValue, DateRangeType rangeType);
 }

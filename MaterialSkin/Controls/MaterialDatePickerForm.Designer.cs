@@ -201,8 +201,6 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialPanelColored2 = new MaterialSkin.Controls.MaterialPanelColored();
             this.ddHour = new MaterialSkin.Controls.MaterialDropDown();
-            this.materialPanelColored5 = new MaterialSkin.Controls.MaterialPanelColored();
-            this.ddAMPM = new MaterialSkin.Controls.MaterialDropDown();
             this.btnTimeValue = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -291,7 +289,6 @@
             this.materialPanelColored4.SuspendLayout();
             this.materialPanelColored3.SuspendLayout();
             this.materialPanelColored2.SuspendLayout();
-            this.materialPanelColored5.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialPanel1
@@ -332,6 +329,7 @@
             this.btnToday.Alignment = System.Drawing.StringAlignment.Center;
             this.btnToday.AutoSize = true;
             this.btnToday.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnToday.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnToday.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnToday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnToday.Depth = 0;
@@ -424,6 +422,7 @@
             this.btnShowYear.Alignment = System.Drawing.StringAlignment.Center;
             this.btnShowYear.AutoSize = true;
             this.btnShowYear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnShowYear.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnShowYear.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnShowYear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowYear.Depth = 0;
@@ -445,6 +444,7 @@
             this.btnShowMonth.Alignment = System.Drawing.StringAlignment.Center;
             this.btnShowMonth.AutoSize = true;
             this.btnShowMonth.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnShowMonth.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnShowMonth.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnShowMonth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowMonth.Depth = 0;
@@ -466,6 +466,7 @@
             this.btnPrev.Alignment = System.Drawing.StringAlignment.Center;
             this.btnPrev.AutoSize = true;
             this.btnPrev.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPrev.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnPrev.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrev.Depth = 0;
@@ -486,6 +487,7 @@
             this.btnNext.Alignment = System.Drawing.StringAlignment.Center;
             this.btnNext.AutoSize = true;
             this.btnNext.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNext.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnNext.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.Depth = 0;
@@ -609,6 +611,7 @@
             this.materialFlatButton2.Alignment = System.Drawing.StringAlignment.Center;
             this.materialFlatButton2.AutoSize = true;
             this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton2.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.materialFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton2.Depth = 0;
@@ -646,6 +649,7 @@
             this.materialFlatButton7.Alignment = System.Drawing.StringAlignment.Center;
             this.materialFlatButton7.AutoSize = true;
             this.materialFlatButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton7.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton7.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton7.Depth = 0;
@@ -683,6 +687,7 @@
             this.materialFlatButton6.Alignment = System.Drawing.StringAlignment.Center;
             this.materialFlatButton6.AutoSize = true;
             this.materialFlatButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton6.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton6.Depth = 0;
@@ -720,6 +725,7 @@
             this.materialFlatButton5.Alignment = System.Drawing.StringAlignment.Center;
             this.materialFlatButton5.AutoSize = true;
             this.materialFlatButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton5.Depth = 0;
@@ -757,6 +763,7 @@
             this.materialFlatButton4.Alignment = System.Drawing.StringAlignment.Center;
             this.materialFlatButton4.AutoSize = true;
             this.materialFlatButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton4.Depth = 0;
@@ -794,6 +801,7 @@
             this.materialFlatButton3.Alignment = System.Drawing.StringAlignment.Center;
             this.materialFlatButton3.AutoSize = true;
             this.materialFlatButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton3.Depth = 0;
@@ -831,6 +839,7 @@
             this.btn5x6.Alignment = System.Drawing.StringAlignment.Center;
             this.btn5x6.AutoSize = true;
             this.btn5x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn5x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn5x6.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn5x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5x6.Depth = 0;
@@ -868,6 +877,7 @@
             this.btn5x5.Alignment = System.Drawing.StringAlignment.Center;
             this.btn5x5.AutoSize = true;
             this.btn5x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn5x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn5x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn5x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5x5.Depth = 0;
@@ -905,6 +915,7 @@
             this.btn5x4.Alignment = System.Drawing.StringAlignment.Center;
             this.btn5x4.AutoSize = true;
             this.btn5x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn5x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn5x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn5x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5x4.Depth = 0;
@@ -942,6 +953,7 @@
             this.btn5x3.Alignment = System.Drawing.StringAlignment.Center;
             this.btn5x3.AutoSize = true;
             this.btn5x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn5x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn5x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn5x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5x3.Depth = 0;
@@ -979,6 +991,7 @@
             this.btn5x2.Alignment = System.Drawing.StringAlignment.Center;
             this.btn5x2.AutoSize = true;
             this.btn5x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn5x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn5x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn5x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5x2.Depth = 0;
@@ -1016,6 +1029,7 @@
             this.btn5x1.Alignment = System.Drawing.StringAlignment.Center;
             this.btn5x1.AutoSize = true;
             this.btn5x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn5x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn5x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn5x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5x1.Depth = 0;
@@ -1053,6 +1067,7 @@
             this.btn5x0.Alignment = System.Drawing.StringAlignment.Center;
             this.btn5x0.AutoSize = true;
             this.btn5x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn5x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn5x0.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn5x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5x0.Depth = 0;
@@ -1090,6 +1105,7 @@
             this.btn4x6.Alignment = System.Drawing.StringAlignment.Center;
             this.btn4x6.AutoSize = true;
             this.btn4x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn4x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn4x6.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn4x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4x6.Depth = 0;
@@ -1127,6 +1143,7 @@
             this.btn4x5.Alignment = System.Drawing.StringAlignment.Center;
             this.btn4x5.AutoSize = true;
             this.btn4x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn4x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn4x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn4x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4x5.Depth = 0;
@@ -1164,6 +1181,7 @@
             this.btn4x4.Alignment = System.Drawing.StringAlignment.Center;
             this.btn4x4.AutoSize = true;
             this.btn4x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn4x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn4x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn4x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4x4.Depth = 0;
@@ -1201,6 +1219,7 @@
             this.btn4x3.Alignment = System.Drawing.StringAlignment.Center;
             this.btn4x3.AutoSize = true;
             this.btn4x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn4x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn4x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn4x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4x3.Depth = 0;
@@ -1238,6 +1257,7 @@
             this.btn4x2.Alignment = System.Drawing.StringAlignment.Center;
             this.btn4x2.AutoSize = true;
             this.btn4x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn4x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn4x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn4x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4x2.Depth = 0;
@@ -1275,6 +1295,7 @@
             this.btn4x1.Alignment = System.Drawing.StringAlignment.Center;
             this.btn4x1.AutoSize = true;
             this.btn4x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn4x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn4x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn4x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4x1.Depth = 0;
@@ -1312,6 +1333,7 @@
             this.btn4x0.Alignment = System.Drawing.StringAlignment.Center;
             this.btn4x0.AutoSize = true;
             this.btn4x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn4x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn4x0.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn4x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4x0.Depth = 0;
@@ -1349,6 +1371,7 @@
             this.btn3x6.Alignment = System.Drawing.StringAlignment.Center;
             this.btn3x6.AutoSize = true;
             this.btn3x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn3x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn3x6.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn3x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3x6.Depth = 0;
@@ -1386,6 +1409,7 @@
             this.btn3x5.Alignment = System.Drawing.StringAlignment.Center;
             this.btn3x5.AutoSize = true;
             this.btn3x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn3x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn3x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn3x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3x5.Depth = 0;
@@ -1423,6 +1447,7 @@
             this.btn3x4.Alignment = System.Drawing.StringAlignment.Center;
             this.btn3x4.AutoSize = true;
             this.btn3x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn3x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn3x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn3x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3x4.Depth = 0;
@@ -1460,6 +1485,7 @@
             this.btn3x3.Alignment = System.Drawing.StringAlignment.Center;
             this.btn3x3.AutoSize = true;
             this.btn3x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn3x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn3x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn3x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3x3.Depth = 0;
@@ -1497,6 +1523,7 @@
             this.btn3x2.Alignment = System.Drawing.StringAlignment.Center;
             this.btn3x2.AutoSize = true;
             this.btn3x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn3x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn3x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn3x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3x2.Depth = 0;
@@ -1534,6 +1561,7 @@
             this.btn3x1.Alignment = System.Drawing.StringAlignment.Center;
             this.btn3x1.AutoSize = true;
             this.btn3x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn3x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn3x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn3x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3x1.Depth = 0;
@@ -1571,6 +1599,7 @@
             this.btn3x0.Alignment = System.Drawing.StringAlignment.Center;
             this.btn3x0.AutoSize = true;
             this.btn3x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn3x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn3x0.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn3x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3x0.Depth = 0;
@@ -1608,6 +1637,7 @@
             this.btn2x6.Alignment = System.Drawing.StringAlignment.Center;
             this.btn2x6.AutoSize = true;
             this.btn2x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn2x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn2x6.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn2x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2x6.Depth = 0;
@@ -1645,6 +1675,7 @@
             this.btn2x5.Alignment = System.Drawing.StringAlignment.Center;
             this.btn2x5.AutoSize = true;
             this.btn2x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn2x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn2x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn2x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2x5.Depth = 0;
@@ -1682,6 +1713,7 @@
             this.btn2x4.Alignment = System.Drawing.StringAlignment.Center;
             this.btn2x4.AutoSize = true;
             this.btn2x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn2x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn2x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn2x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2x4.Depth = 0;
@@ -1719,6 +1751,7 @@
             this.btn2x3.Alignment = System.Drawing.StringAlignment.Center;
             this.btn2x3.AutoSize = true;
             this.btn2x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn2x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn2x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn2x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2x3.Depth = 0;
@@ -1756,6 +1789,7 @@
             this.btn2x2.Alignment = System.Drawing.StringAlignment.Center;
             this.btn2x2.AutoSize = true;
             this.btn2x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn2x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn2x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn2x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2x2.Depth = 0;
@@ -1793,6 +1827,7 @@
             this.btn2x1.Alignment = System.Drawing.StringAlignment.Center;
             this.btn2x1.AutoSize = true;
             this.btn2x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn2x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn2x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn2x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2x1.Depth = 0;
@@ -1830,6 +1865,7 @@
             this.btn2x0.Alignment = System.Drawing.StringAlignment.Center;
             this.btn2x0.AutoSize = true;
             this.btn2x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn2x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn2x0.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn2x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2x0.Depth = 0;
@@ -1867,6 +1903,7 @@
             this.btn1x6.Alignment = System.Drawing.StringAlignment.Center;
             this.btn1x6.AutoSize = true;
             this.btn1x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn1x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn1x6.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn1x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1x6.Depth = 0;
@@ -1904,6 +1941,7 @@
             this.btn1x5.Alignment = System.Drawing.StringAlignment.Center;
             this.btn1x5.AutoSize = true;
             this.btn1x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn1x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn1x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn1x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1x5.Depth = 0;
@@ -1941,6 +1979,7 @@
             this.btn1x4.Alignment = System.Drawing.StringAlignment.Center;
             this.btn1x4.AutoSize = true;
             this.btn1x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn1x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn1x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn1x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1x4.Depth = 0;
@@ -1978,6 +2017,7 @@
             this.btn1x3.Alignment = System.Drawing.StringAlignment.Center;
             this.btn1x3.AutoSize = true;
             this.btn1x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn1x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn1x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn1x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1x3.Depth = 0;
@@ -2015,6 +2055,7 @@
             this.btn1x2.Alignment = System.Drawing.StringAlignment.Center;
             this.btn1x2.AutoSize = true;
             this.btn1x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn1x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn1x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn1x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1x2.Depth = 0;
@@ -2052,6 +2093,7 @@
             this.btn1x1.Alignment = System.Drawing.StringAlignment.Center;
             this.btn1x1.AutoSize = true;
             this.btn1x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn1x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn1x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn1x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1x1.Depth = 0;
@@ -2089,6 +2131,7 @@
             this.btn1x0.Alignment = System.Drawing.StringAlignment.Center;
             this.btn1x0.AutoSize = true;
             this.btn1x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn1x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn1x0.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn1x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1x0.Depth = 0;
@@ -2126,6 +2169,7 @@
             this.btn0x6.Alignment = System.Drawing.StringAlignment.Center;
             this.btn0x6.AutoSize = true;
             this.btn0x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn0x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn0x6.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn0x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0x6.Depth = 0;
@@ -2163,6 +2207,7 @@
             this.btn0x5.Alignment = System.Drawing.StringAlignment.Center;
             this.btn0x5.AutoSize = true;
             this.btn0x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn0x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn0x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn0x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0x5.Depth = 0;
@@ -2200,6 +2245,7 @@
             this.btn0x4.Alignment = System.Drawing.StringAlignment.Center;
             this.btn0x4.AutoSize = true;
             this.btn0x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn0x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn0x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn0x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0x4.Depth = 0;
@@ -2237,6 +2283,7 @@
             this.btn0x3.Alignment = System.Drawing.StringAlignment.Center;
             this.btn0x3.AutoSize = true;
             this.btn0x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn0x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn0x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn0x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0x3.Depth = 0;
@@ -2274,6 +2321,7 @@
             this.btn0x2.Alignment = System.Drawing.StringAlignment.Center;
             this.btn0x2.AutoSize = true;
             this.btn0x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn0x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn0x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn0x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0x2.Depth = 0;
@@ -2311,6 +2359,7 @@
             this.btn0x1.Alignment = System.Drawing.StringAlignment.Center;
             this.btn0x1.AutoSize = true;
             this.btn0x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn0x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn0x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn0x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0x1.Depth = 0;
@@ -2348,6 +2397,7 @@
             this.btn0x0.Alignment = System.Drawing.StringAlignment.Center;
             this.btn0x0.AutoSize = true;
             this.btn0x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn0x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn0x0.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn0x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0x0.Depth = 0;
@@ -2385,6 +2435,7 @@
             this.materialFlatButton1.Alignment = System.Drawing.StringAlignment.Center;
             this.materialFlatButton1.AutoSize = true;
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton1.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.materialFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton1.Depth = 0;
@@ -2452,6 +2503,7 @@
             this.btnMonth12.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth12.AutoSize = true;
             this.btnMonth12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth12.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth12.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth12.Depth = 0;
@@ -2490,6 +2542,7 @@
             this.btnMonth11.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth11.AutoSize = true;
             this.btnMonth11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth11.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth11.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth11.Depth = 0;
@@ -2528,6 +2581,7 @@
             this.btnMonth10.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth10.AutoSize = true;
             this.btnMonth10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth10.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth10.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth10.Depth = 0;
@@ -2566,6 +2620,7 @@
             this.btnMonth9.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth9.AutoSize = true;
             this.btnMonth9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth9.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth9.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth9.Depth = 0;
@@ -2604,6 +2659,7 @@
             this.btnMonth8.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth8.AutoSize = true;
             this.btnMonth8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth8.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth8.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth8.Depth = 0;
@@ -2642,6 +2698,7 @@
             this.btnMonth7.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth7.AutoSize = true;
             this.btnMonth7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth7.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth7.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth7.Depth = 0;
@@ -2680,6 +2737,7 @@
             this.btnMonth6.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth6.AutoSize = true;
             this.btnMonth6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth6.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth6.Depth = 0;
@@ -2718,6 +2776,7 @@
             this.btnMonth5.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth5.AutoSize = true;
             this.btnMonth5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth5.Depth = 0;
@@ -2756,6 +2815,7 @@
             this.btnMonth4.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth4.AutoSize = true;
             this.btnMonth4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth4.Depth = 0;
@@ -2794,6 +2854,7 @@
             this.btnMonth3.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth3.AutoSize = true;
             this.btnMonth3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth3.Depth = 0;
@@ -2832,6 +2893,7 @@
             this.btnMonth2.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth2.AutoSize = true;
             this.btnMonth2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth2.Depth = 0;
@@ -2870,6 +2932,7 @@
             this.btnMonth1.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth1.AutoSize = true;
             this.btnMonth1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth1.Depth = 0;
@@ -2938,6 +3001,7 @@
             this.btnYear11.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear11.AutoSize = true;
             this.btnYear11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear11.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear11.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear11.Depth = 0;
@@ -2976,6 +3040,7 @@
             this.btnYear10.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear10.AutoSize = true;
             this.btnYear10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear10.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear10.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear10.Depth = 0;
@@ -3014,6 +3079,7 @@
             this.btnYear9.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear9.AutoSize = true;
             this.btnYear9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear9.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear9.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear9.Depth = 0;
@@ -3052,6 +3118,7 @@
             this.btnYear8.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear8.AutoSize = true;
             this.btnYear8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear8.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear8.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear8.Depth = 0;
@@ -3090,6 +3157,7 @@
             this.btnYear7.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear7.AutoSize = true;
             this.btnYear7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear7.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear7.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear7.Depth = 0;
@@ -3128,6 +3196,7 @@
             this.btnYear6.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear6.AutoSize = true;
             this.btnYear6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear6.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear6.Depth = 0;
@@ -3166,6 +3235,7 @@
             this.btnYear5.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear5.AutoSize = true;
             this.btnYear5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear5.Depth = 0;
@@ -3204,6 +3274,7 @@
             this.btnYear4.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear4.AutoSize = true;
             this.btnYear4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear4.Depth = 0;
@@ -3242,6 +3313,7 @@
             this.btnYear3.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear3.AutoSize = true;
             this.btnYear3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear3.Depth = 0;
@@ -3280,6 +3352,7 @@
             this.btnYear2.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear2.AutoSize = true;
             this.btnYear2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear2.Depth = 0;
@@ -3318,6 +3391,7 @@
             this.btnYear1.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear1.AutoSize = true;
             this.btnYear1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear1.Depth = 0;
@@ -3356,6 +3430,7 @@
             this.btnYear0.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear0.AutoSize = true;
             this.btnYear0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear0.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear0.Depth = 0;
@@ -3392,8 +3467,8 @@
             // tblHeader
             // 
             this.tblHeader.ColumnCount = 2;
-            this.tblHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tblHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tblHeader.Controls.Add(this.btnDateValue, 0, 0);
             this.tblHeader.Controls.Add(this.pnlTime, 1, 0);
             this.tblHeader.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -3409,6 +3484,7 @@
             this.btnDateValue.Alignment = System.Drawing.StringAlignment.Center;
             this.btnDateValue.AutoSize = true;
             this.btnDateValue.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDateValue.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDateValue.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnDateValue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDateValue.Depth = 0;
@@ -3419,7 +3495,7 @@
             this.btnDateValue.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDateValue.Name = "btnDateValue";
             this.btnDateValue.Primary = true;
-            this.btnDateValue.Size = new System.Drawing.Size(228, 35);
+            this.btnDateValue.Size = new System.Drawing.Size(275, 35);
             this.btnDateValue.TabIndex = 5;
             this.btnDateValue.Text = "Mon, 1 May 2000";
             this.btnDateValue.UseVisualStyleBackColor = true;
@@ -3432,34 +3508,32 @@
             this.pnlTime.Controls.Add(this.tblTime);
             this.pnlTime.Controls.Add(this.btnTimeValue);
             this.pnlTime.Depth = 0;
+            this.pnlTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTime.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pnlTime.Location = new System.Drawing.Point(233, 0);
+            this.pnlTime.Location = new System.Drawing.Point(280, 0);
             this.pnlTime.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTime.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlTime.Name = "pnlTime";
-            this.pnlTime.Size = new System.Drawing.Size(188, 35);
+            this.pnlTime.Size = new System.Drawing.Size(187, 35);
             this.pnlTime.TabIndex = 6;
             // 
             // tblTime
             // 
             this.tblTime.BackColor = System.Drawing.Color.Transparent;
-            this.tblTime.ColumnCount = 5;
-            this.tblTime.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tblTime.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tblTime.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tblTime.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tblTime.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tblTime.ColumnCount = 3;
+            this.tblTime.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblTime.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tblTime.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblTime.Controls.Add(this.materialPanelColored4, 2, 0);
             this.tblTime.Controls.Add(this.materialPanelColored3, 1, 0);
             this.tblTime.Controls.Add(this.materialPanelColored2, 0, 0);
-            this.tblTime.Controls.Add(this.materialPanelColored5, 4, 0);
             this.tblTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblTime.Location = new System.Drawing.Point(44, 0);
             this.tblTime.Name = "tblTime";
             this.tblTime.RowCount = 1;
             this.tblTime.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tblTime.Size = new System.Drawing.Size(144, 35);
+            this.tblTime.Size = new System.Drawing.Size(143, 35);
             this.tblTime.TabIndex = 7;
             // 
             // materialPanelColored4
@@ -3471,12 +3545,12 @@
             this.materialPanelColored4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanelColored4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanelColored4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialPanelColored4.Location = new System.Drawing.Point(50, 0);
+            this.materialPanelColored4.Location = new System.Drawing.Point(76, 0);
             this.materialPanelColored4.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanelColored4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored4.Name = "materialPanelColored4";
             this.materialPanelColored4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.materialPanelColored4.Size = new System.Drawing.Size(43, 35);
+            this.materialPanelColored4.Size = new System.Drawing.Size(67, 35);
             this.materialPanelColored4.TabIndex = 2;
             // 
             // ddMinute
@@ -3500,7 +3574,7 @@
             this.ddMinute.SelectedIndex = -1;
             this.ddMinute.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("ddMinute.SelectedIndices")));
             this.ddMinute.SelectedValue = null;
-            this.ddMinute.Size = new System.Drawing.Size(43, 23);
+            this.ddMinute.Size = new System.Drawing.Size(67, 23);
             this.ddMinute.TabIndex = 1;
             this.ddMinute.TabStop = false;
             this.ddMinute.ValueMember = null;
@@ -3515,11 +3589,11 @@
             this.materialPanelColored3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanelColored3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanelColored3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialPanelColored3.Location = new System.Drawing.Point(43, 0);
+            this.materialPanelColored3.Location = new System.Drawing.Point(66, 0);
             this.materialPanelColored3.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanelColored3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored3.Name = "materialPanelColored3";
-            this.materialPanelColored3.Size = new System.Drawing.Size(7, 35);
+            this.materialPanelColored3.Size = new System.Drawing.Size(10, 35);
             this.materialPanelColored3.TabIndex = 1;
             // 
             // materialLabel1
@@ -3531,7 +3605,7 @@
             this.materialLabel1.Location = new System.Drawing.Point(0, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(7, 35);
+            this.materialLabel1.Size = new System.Drawing.Size(10, 35);
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = ":";
             this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3550,7 +3624,7 @@
             this.materialPanelColored2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored2.Name = "materialPanelColored2";
             this.materialPanelColored2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.materialPanelColored2.Size = new System.Drawing.Size(43, 35);
+            this.materialPanelColored2.Size = new System.Drawing.Size(66, 35);
             this.materialPanelColored2.TabIndex = 0;
             // 
             // ddHour
@@ -3574,60 +3648,18 @@
             this.ddHour.SelectedIndex = -1;
             this.ddHour.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("ddHour.SelectedIndices")));
             this.ddHour.SelectedValue = null;
-            this.ddHour.Size = new System.Drawing.Size(43, 23);
+            this.ddHour.Size = new System.Drawing.Size(66, 23);
             this.ddHour.TabIndex = 0;
             this.ddHour.TabStop = false;
             this.ddHour.ValueMember = null;
             this.ddHour.ValueChanged += new MaterialSkin.Controls.ItemSelectHandler(this.ddTime_ValueChanged);
-            // 
-            // materialPanelColored5
-            // 
-            this.materialPanelColored5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(156)))), ((int)(((byte)(236)))));
-            this.materialPanelColored5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
-            this.materialPanelColored5.Controls.Add(this.ddAMPM);
-            this.materialPanelColored5.Depth = 0;
-            this.materialPanelColored5.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialPanelColored5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialPanelColored5.Location = new System.Drawing.Point(100, 0);
-            this.materialPanelColored5.Margin = new System.Windows.Forms.Padding(0);
-            this.materialPanelColored5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialPanelColored5.Name = "materialPanelColored5";
-            this.materialPanelColored5.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.materialPanelColored5.Size = new System.Drawing.Size(44, 35);
-            this.materialPanelColored5.TabIndex = 3;
-            // 
-            // ddAMPM
-            // 
-            this.ddAMPM.ColorStyle = MaterialSkin.ColorType.INVERSE;
-            this.ddAMPM.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ddAMPM.DataSource = ((object)(resources.GetObject("ddAMPM.DataSource")));
-            this.ddAMPM.Depth = 0;
-            this.ddAMPM.DisplayMember = null;
-            this.ddAMPM.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ddAMPM.DropDownHeight = 200;
-            this.ddAMPM.DropDownItemHeight = 30;
-            this.ddAMPM.DropDownWidth = -1;
-            this.ddAMPM.HideEmptyValue = true;
-            this.ddAMPM.Hint = null;
-            this.ddAMPM.IsMultiSelect = false;
-            this.ddAMPM.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("ddAMPM.Items")));
-            this.ddAMPM.Location = new System.Drawing.Point(0, 5);
-            this.ddAMPM.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ddAMPM.Name = "ddAMPM";
-            this.ddAMPM.SelectedIndex = -1;
-            this.ddAMPM.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("ddAMPM.SelectedIndices")));
-            this.ddAMPM.SelectedValue = null;
-            this.ddAMPM.Size = new System.Drawing.Size(44, 23);
-            this.ddAMPM.TabIndex = 1;
-            this.ddAMPM.TabStop = false;
-            this.ddAMPM.ValueMember = null;
-            this.ddAMPM.ValueChanged += new MaterialSkin.Controls.ItemSelectHandler(this.ddTime_ValueChanged);
             // 
             // btnTimeValue
             // 
             this.btnTimeValue.Alignment = System.Drawing.StringAlignment.Center;
             this.btnTimeValue.AutoSize = true;
             this.btnTimeValue.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTimeValue.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnTimeValue.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnTimeValue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTimeValue.Depth = 0;
@@ -3824,7 +3856,6 @@
             this.materialPanelColored4.ResumeLayout(false);
             this.materialPanelColored3.ResumeLayout(false);
             this.materialPanelColored2.ResumeLayout(false);
-            this.materialPanelColored5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3999,10 +4030,8 @@
         private System.Windows.Forms.TableLayoutPanel tblTime;
         private MaterialDropDown ddHour;
         private MaterialDropDown ddMinute;
-        private MaterialDropDown ddAMPM;
         private MaterialPanelColored pnlTime;
         private MaterialPanelColored materialPanelColored2;
-        private MaterialPanelColored materialPanelColored5;
         private MaterialPanelColored materialPanelColored4;
         private MaterialPanelColored materialPanelColored3;
         private MaterialLabel materialLabel1;

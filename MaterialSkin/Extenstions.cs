@@ -12,6 +12,12 @@ namespace MaterialSkin
 {
     public static class Extenstions
     {
+        public static string ToUpperFirst(this string source)
+        {
+            return source.ToLower().Remove(0, 1)
+                    .Insert(0, source.Substring(0, 1).ToUpper());
+        }
+
         public static int GetInt32Value(this string txt)
         {
             int val = 0;

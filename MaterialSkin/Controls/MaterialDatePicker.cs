@@ -1147,6 +1147,16 @@ namespace MaterialSkin.Controls
                 return;
             var startPoint = this.PointToScreen(Point.Empty);
             startPoint.Y = startPoint.Y;// + this.Height;
+            var frmWidth = _dropDownWidth <= 0 ? this.Width : _dropDownWidth;
+            var frmHeight = _dropDownHeight <= 0 ? 300 : _dropDownHeight;
+            //frmHeight += 15;
+
+            Screen myScreen = Screen.FromControl(this);
+            Rectangle area = myScreen.WorkingArea;
+
+            int yDiff = area.Height - (startPoint.Y + frmHeight);
+            if (yDiff < 0)
+                startPoint.Y = startPoint.Y + yDiff;
 
             _frmDatePicker = new MaterialDatePickerForm();
             _frmDatePicker.Value = Value;
@@ -1154,8 +1164,8 @@ namespace MaterialSkin.Controls
             _frmDatePicker.ShowTime = ShowTime;
             _frmDatePicker.StartPosition = FormStartPosition.Manual;
             _frmDatePicker.Location = startPoint;
-            _frmDatePicker.Width = _dropDownWidth <= 0 ? this.Width : _dropDownWidth;
-            _frmDatePicker.Height = _dropDownHeight <= 0 ? 300 : _dropDownHeight;
+            _frmDatePicker.Width = frmWidth;
+            _frmDatePicker.Height = frmHeight;
             _frmDatePicker.Leave += (sender, e) => { HideDateSelector(); };
             _frmDatePicker.ValueChanged += (sender, e) =>
               {

@@ -27,7 +27,6 @@ namespace MaterialSkin.Controls
                 btnDateValue.Text = _value.ToString(DateFormat);
                 ddHour.SelectedValue = _value.Hour.ToString("00");
                 ddMinute.SelectedValue = _value.Minute.ToString("00");
-                ddAMPM.SelectedValue = _value.ToString("tt", CultureInfo.InvariantCulture);
                 this.Invalidate();
             }
             get
@@ -62,17 +61,13 @@ namespace MaterialSkin.Controls
             btnShowYear.Text = _value.Year.ToString();
             btnShowMonth.Tag = _value.Month;
             btnShowMonth.Text = _value.ToString("MMMM");
-            ddHour.SelectedValue = Convert.ToInt32(_value.ToString("hh")).ToString("00");
+            ddHour.SelectedValue = _value.Hour.ToString("00");
             if (ddHour.SelectedValue == null)
                 ddHour.SelectedIndex = 0;
 
             ddMinute.SelectedValue = _value.Minute.ToString("00");
             if (ddMinute.SelectedValue == null)
                 ddMinute.SelectedIndex = 0;
-
-            ddAMPM.SelectedValue = _value.ToString("tt");
-            if (ddAMPM.SelectedValue == null)
-                ddAMPM.SelectedIndex = 0;
 
             LoadDate();
         }
@@ -110,8 +105,13 @@ namespace MaterialSkin.Controls
                     btn.Text = startMonth.Day.ToString();
                     btn.Tag = startMonth.Date;
                     btn.Enabled = true;
-                    if (startMonth.Date == DateTime.Now.Date)
-                        btn.ColorStyle = ColorType.PRIMARY;
+                    if (startMonth.Date == _value.Date)
+                    {
+                        btn.ColorStyle = ColorType.INFO;
+                        btn.BorderColorType = ColorType.INFO;
+                        if (selectedBtn == null)
+                            selectedBtn = btn;
+                    }
 
                     startMonth = startMonth.AddDays(1);
                     if (startMonth.Date > endMonth.Date)
@@ -180,10 +180,14 @@ namespace MaterialSkin.Controls
         private void btnDate_Click(object sender, EventArgs e)
         {
             if (selectedBtn != null)
+            {
                 selectedBtn.ColorStyle = (_value.DayOfWeek == DayOfWeek.Sunday || _value.DayOfWeek == DayOfWeek.Saturday) ? ColorType.DANGER : ColorType.DEFAULT;
+                selectedBtn.BorderColorType = ColorType.DEFAULT;
+            }
 
             selectedBtn = (MaterialFlatButton)sender;
             selectedBtn.ColorStyle = ColorType.INFO;
+            selectedBtn.BorderColorType = ColorType.INFO;
 
             string hour = ddHour.SelectedValue + "";
             if (string.IsNullOrEmpty(hour))
@@ -191,8 +195,8 @@ namespace MaterialSkin.Controls
             string min = ddMinute.SelectedValue + "";
             if (string.IsNullOrEmpty(min))
                 min = "00";
-            var dtStr = ((DateTime)selectedBtn.Tag).ToString("yyyy-MM-dd") + " " + hour + ":" + min + " " + ddAMPM.SelectedValue;
-            var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            var dtStr = ((DateTime)selectedBtn.Tag).ToString("yyyy-MM-dd") + " " + hour + ":" + min;
+            var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture);
             Value = ShowTime ? dtValue : dtValue.Date;
         }
 
@@ -304,11 +308,11 @@ namespace MaterialSkin.Controls
             if (string.IsNullOrEmpty(min))
                 min = "00";
 
-            var dtStr = _value.ToString("yyyy-MM-dd") + " " + hour + ":" + min + " " + ddAMPM.SelectedValue;
-            var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            var dtStr = _value.ToString("yyyy-MM-dd") + " " + hour + ":" + min;
+            var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture);
             Value = ShowTime ? dtValue : dtValue.Date;
         }
     }
 
-    public delegate void DateRangeChangedHandler(object sender, DateTime startTime, DateTime endTime);
+    public delegate void DateChangedHandler(object sender, DateTime value);
 }

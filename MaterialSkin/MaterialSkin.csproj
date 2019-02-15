@@ -54,6 +54,12 @@
     <Compile Include="Controls\MaterialClickablePanel.Designer.cs">
       <DependentUpon>MaterialClickablePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MaterialDateRangePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialDateRangePicker.Designer.cs">
+      <DependentUpon>MaterialDateRangePicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MaterialDateRangePickerForm.cs">
       <SubType>Form</SubType>
     </Compile>

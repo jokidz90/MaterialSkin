@@ -192,7 +192,7 @@
             this.materialPanel75 = new MaterialSkin.Controls.MaterialPanel();
             this.btnYear0 = new MaterialSkin.Controls.MaterialFlatButton();
             this.pnlHeaderStart = new MaterialSkin.Controls.MaterialPanelColored();
-            this.tblHeaderStart = new System.Windows.Forms.TableLayoutPanel();
+            this.tblHeader = new System.Windows.Forms.TableLayoutPanel();
             this.btnEndDateValue = new MaterialSkin.Controls.MaterialFlatButton();
             this.pblDateSelector = new MaterialSkin.Controls.MaterialPanelColored();
             this.rbEnd = new MaterialSkin.Controls.MaterialRadioButton();
@@ -298,7 +298,7 @@
             this.materialPanel74.SuspendLayout();
             this.materialPanel75.SuspendLayout();
             this.pnlHeaderStart.SuspendLayout();
-            this.tblHeaderStart.SuspendLayout();
+            this.tblHeader.SuspendLayout();
             this.pblDateSelector.SuspendLayout();
             this.pnlStartTime.SuspendLayout();
             this.tblTime.SuspendLayout();
@@ -325,7 +325,7 @@
             this.materialPanel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel1.Name = "materialPanel1";
             this.materialPanel1.Padding = new System.Windows.Forms.Padding(5, 5, 0, 5);
-            this.materialPanel1.Size = new System.Drawing.Size(446, 45);
+            this.materialPanel1.Size = new System.Drawing.Size(712, 45);
             this.materialPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -342,7 +342,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(441, 35);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(707, 35);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // btnOK
@@ -354,12 +354,12 @@
             this.btnOK.Depth = 0;
             this.btnOK.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnOK.Icon = null;
-            this.btnOK.Location = new System.Drawing.Point(330, 0);
+            this.btnOK.Location = new System.Drawing.Point(529, 0);
             this.btnOK.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnOK.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnOK.Name = "btnOK";
             this.btnOK.Primary = true;
-            this.btnOK.Size = new System.Drawing.Size(106, 35);
+            this.btnOK.Size = new System.Drawing.Size(173, 35);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -374,12 +374,12 @@
             this.btnCancel.Depth = 0;
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCancel.Icon = null;
-            this.btnCancel.Location = new System.Drawing.Point(220, 0);
+            this.btnCancel.Location = new System.Drawing.Point(353, 0);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Primary = true;
-            this.btnCancel.Size = new System.Drawing.Size(105, 35);
+            this.btnCancel.Size = new System.Drawing.Size(171, 35);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -398,8 +398,8 @@
             this.materialPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel2.Name = "materialPanel2";
-            this.materialPanel2.Padding = new System.Windows.Forms.Padding(0, 5, 10, 0);
-            this.materialPanel2.Size = new System.Drawing.Size(220, 35);
+            this.materialPanel2.Padding = new System.Windows.Forms.Padding(20, 5, 10, 0);
+            this.materialPanel2.Size = new System.Drawing.Size(353, 35);
             this.materialPanel2.TabIndex = 3;
             // 
             // ddRangeType
@@ -417,13 +417,13 @@
             this.ddRangeType.Hint = null;
             this.ddRangeType.IsMultiSelect = false;
             this.ddRangeType.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("ddRangeType.Items")));
-            this.ddRangeType.Location = new System.Drawing.Point(0, 5);
+            this.ddRangeType.Location = new System.Drawing.Point(20, 5);
             this.ddRangeType.MouseState = MaterialSkin.MouseState.HOVER;
             this.ddRangeType.Name = "ddRangeType";
             this.ddRangeType.SelectedIndex = -1;
             this.ddRangeType.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("ddRangeType.SelectedIndices")));
             this.ddRangeType.SelectedValue = null;
-            this.ddRangeType.Size = new System.Drawing.Size(210, 23);
+            this.ddRangeType.Size = new System.Drawing.Size(323, 23);
             this.ddRangeType.TabIndex = 0;
             this.ddRangeType.TabStop = false;
             this.ddRangeType.ValueMember = null;
@@ -443,7 +443,7 @@
             this.pnlNavigation.Location = new System.Drawing.Point(2, 73);
             this.pnlNavigation.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlNavigation.Name = "pnlNavigation";
-            this.pnlNavigation.Size = new System.Drawing.Size(446, 35);
+            this.pnlNavigation.Size = new System.Drawing.Size(712, 35);
             this.pnlNavigation.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -458,7 +458,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(358, 35);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(624, 35);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // btnShowYear
@@ -466,17 +466,18 @@
             this.btnShowYear.Alignment = System.Drawing.StringAlignment.Center;
             this.btnShowYear.AutoSize = true;
             this.btnShowYear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnShowYear.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnShowYear.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnShowYear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowYear.Depth = 0;
             this.btnShowYear.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnShowYear.Icon = null;
-            this.btnShowYear.Location = new System.Drawing.Point(179, 0);
+            this.btnShowYear.Location = new System.Drawing.Point(312, 0);
             this.btnShowYear.Margin = new System.Windows.Forms.Padding(0);
             this.btnShowYear.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnShowYear.Name = "btnShowYear";
             this.btnShowYear.Primary = false;
-            this.btnShowYear.Size = new System.Drawing.Size(179, 35);
+            this.btnShowYear.Size = new System.Drawing.Size(312, 35);
             this.btnShowYear.TabIndex = 3;
             this.btnShowYear.Text = "2018";
             this.btnShowYear.UseVisualStyleBackColor = true;
@@ -487,6 +488,7 @@
             this.btnShowMonth.Alignment = System.Drawing.StringAlignment.Center;
             this.btnShowMonth.AutoSize = true;
             this.btnShowMonth.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnShowMonth.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnShowMonth.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnShowMonth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowMonth.Depth = 0;
@@ -497,7 +499,7 @@
             this.btnShowMonth.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnShowMonth.Name = "btnShowMonth";
             this.btnShowMonth.Primary = false;
-            this.btnShowMonth.Size = new System.Drawing.Size(179, 35);
+            this.btnShowMonth.Size = new System.Drawing.Size(312, 35);
             this.btnShowMonth.TabIndex = 2;
             this.btnShowMonth.Text = "August";
             this.btnShowMonth.UseVisualStyleBackColor = true;
@@ -508,6 +510,7 @@
             this.btnPrev.Alignment = System.Drawing.StringAlignment.Center;
             this.btnPrev.AutoSize = true;
             this.btnPrev.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPrev.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnPrev.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrev.Depth = 0;
@@ -528,12 +531,13 @@
             this.btnNext.Alignment = System.Drawing.StringAlignment.Center;
             this.btnNext.AutoSize = true;
             this.btnNext.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNext.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnNext.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.Depth = 0;
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnNext.Icon = global::MaterialSkin.Properties.Resources.right;
-            this.btnNext.Location = new System.Drawing.Point(402, 0);
+            this.btnNext.Location = new System.Drawing.Point(668, 0);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnNext.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNext.Name = "btnNext";
@@ -551,7 +555,7 @@
             this.materialDivider1.Location = new System.Drawing.Point(2, 72);
             this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(446, 1);
+            this.materialDivider1.Size = new System.Drawing.Size(712, 1);
             this.materialDivider1.TabIndex = 2;
             this.materialDivider1.Text = "materialDivider1";
             // 
@@ -627,7 +631,7 @@
             this.tblDate.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tblDate.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tblDate.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblDate.Size = new System.Drawing.Size(446, 5);
+            this.tblDate.Size = new System.Drawing.Size(712, 5);
             this.tblDate.TabIndex = 3;
             // 
             // materialPanel51
@@ -639,11 +643,11 @@
             this.materialPanel51.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel51.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel51.Location = new System.Drawing.Point(378, 0);
+            this.materialPanel51.Location = new System.Drawing.Point(606, 0);
             this.materialPanel51.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel51.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel51.Name = "materialPanel51";
-            this.materialPanel51.Size = new System.Drawing.Size(68, 1);
+            this.materialPanel51.Size = new System.Drawing.Size(106, 1);
             this.materialPanel51.TabIndex = 55;
             // 
             // materialFlatButton2
@@ -651,6 +655,7 @@
             this.materialFlatButton2.Alignment = System.Drawing.StringAlignment.Center;
             this.materialFlatButton2.AutoSize = true;
             this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton2.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.materialFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton2.Depth = 0;
@@ -662,7 +667,7 @@
             this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton2.Name = "materialFlatButton2";
             this.materialFlatButton2.Primary = false;
-            this.materialFlatButton2.Size = new System.Drawing.Size(68, 1);
+            this.materialFlatButton2.Size = new System.Drawing.Size(106, 1);
             this.materialFlatButton2.TabIndex = 6;
             this.materialFlatButton2.Text = "SAT";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
@@ -676,11 +681,11 @@
             this.materialPanel50.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel50.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel50.Location = new System.Drawing.Point(315, 0);
+            this.materialPanel50.Location = new System.Drawing.Point(505, 0);
             this.materialPanel50.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel50.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel50.Name = "materialPanel50";
-            this.materialPanel50.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel50.Size = new System.Drawing.Size(101, 1);
             this.materialPanel50.TabIndex = 54;
             // 
             // materialFlatButton7
@@ -688,6 +693,7 @@
             this.materialFlatButton7.Alignment = System.Drawing.StringAlignment.Center;
             this.materialFlatButton7.AutoSize = true;
             this.materialFlatButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton7.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton7.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton7.Depth = 0;
@@ -699,7 +705,7 @@
             this.materialFlatButton7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton7.Name = "materialFlatButton7";
             this.materialFlatButton7.Primary = false;
-            this.materialFlatButton7.Size = new System.Drawing.Size(63, 1);
+            this.materialFlatButton7.Size = new System.Drawing.Size(101, 1);
             this.materialFlatButton7.TabIndex = 6;
             this.materialFlatButton7.Text = "FRI";
             this.materialFlatButton7.UseVisualStyleBackColor = true;
@@ -713,11 +719,11 @@
             this.materialPanel49.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel49.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel49.Location = new System.Drawing.Point(252, 0);
+            this.materialPanel49.Location = new System.Drawing.Point(404, 0);
             this.materialPanel49.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel49.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel49.Name = "materialPanel49";
-            this.materialPanel49.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel49.Size = new System.Drawing.Size(101, 1);
             this.materialPanel49.TabIndex = 53;
             // 
             // materialFlatButton6
@@ -725,6 +731,7 @@
             this.materialFlatButton6.Alignment = System.Drawing.StringAlignment.Center;
             this.materialFlatButton6.AutoSize = true;
             this.materialFlatButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton6.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton6.Depth = 0;
@@ -736,7 +743,7 @@
             this.materialFlatButton6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton6.Name = "materialFlatButton6";
             this.materialFlatButton6.Primary = false;
-            this.materialFlatButton6.Size = new System.Drawing.Size(63, 1);
+            this.materialFlatButton6.Size = new System.Drawing.Size(101, 1);
             this.materialFlatButton6.TabIndex = 6;
             this.materialFlatButton6.Text = "THU";
             this.materialFlatButton6.UseVisualStyleBackColor = true;
@@ -750,11 +757,11 @@
             this.materialPanel48.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel48.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel48.Location = new System.Drawing.Point(189, 0);
+            this.materialPanel48.Location = new System.Drawing.Point(303, 0);
             this.materialPanel48.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel48.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel48.Name = "materialPanel48";
-            this.materialPanel48.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel48.Size = new System.Drawing.Size(101, 1);
             this.materialPanel48.TabIndex = 52;
             // 
             // materialFlatButton5
@@ -762,6 +769,7 @@
             this.materialFlatButton5.Alignment = System.Drawing.StringAlignment.Center;
             this.materialFlatButton5.AutoSize = true;
             this.materialFlatButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton5.Depth = 0;
@@ -773,7 +781,7 @@
             this.materialFlatButton5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton5.Name = "materialFlatButton5";
             this.materialFlatButton5.Primary = false;
-            this.materialFlatButton5.Size = new System.Drawing.Size(63, 1);
+            this.materialFlatButton5.Size = new System.Drawing.Size(101, 1);
             this.materialFlatButton5.TabIndex = 6;
             this.materialFlatButton5.Text = "WED";
             this.materialFlatButton5.UseVisualStyleBackColor = true;
@@ -787,11 +795,11 @@
             this.materialPanel47.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel47.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel47.Location = new System.Drawing.Point(126, 0);
+            this.materialPanel47.Location = new System.Drawing.Point(202, 0);
             this.materialPanel47.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel47.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel47.Name = "materialPanel47";
-            this.materialPanel47.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel47.Size = new System.Drawing.Size(101, 1);
             this.materialPanel47.TabIndex = 51;
             // 
             // materialFlatButton4
@@ -799,6 +807,7 @@
             this.materialFlatButton4.Alignment = System.Drawing.StringAlignment.Center;
             this.materialFlatButton4.AutoSize = true;
             this.materialFlatButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton4.Depth = 0;
@@ -810,7 +819,7 @@
             this.materialFlatButton4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton4.Name = "materialFlatButton4";
             this.materialFlatButton4.Primary = false;
-            this.materialFlatButton4.Size = new System.Drawing.Size(63, 1);
+            this.materialFlatButton4.Size = new System.Drawing.Size(101, 1);
             this.materialFlatButton4.TabIndex = 6;
             this.materialFlatButton4.Text = "TUE";
             this.materialFlatButton4.UseVisualStyleBackColor = true;
@@ -824,11 +833,11 @@
             this.materialPanel46.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel46.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel46.Location = new System.Drawing.Point(63, 0);
+            this.materialPanel46.Location = new System.Drawing.Point(101, 0);
             this.materialPanel46.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel46.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel46.Name = "materialPanel46";
-            this.materialPanel46.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel46.Size = new System.Drawing.Size(101, 1);
             this.materialPanel46.TabIndex = 50;
             // 
             // materialFlatButton3
@@ -836,6 +845,7 @@
             this.materialFlatButton3.Alignment = System.Drawing.StringAlignment.Center;
             this.materialFlatButton3.AutoSize = true;
             this.materialFlatButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton3.Depth = 0;
@@ -847,7 +857,7 @@
             this.materialFlatButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton3.Name = "materialFlatButton3";
             this.materialFlatButton3.Primary = false;
-            this.materialFlatButton3.Size = new System.Drawing.Size(63, 1);
+            this.materialFlatButton3.Size = new System.Drawing.Size(101, 1);
             this.materialFlatButton3.TabIndex = 6;
             this.materialFlatButton3.Text = "MON";
             this.materialFlatButton3.UseVisualStyleBackColor = true;
@@ -861,11 +871,11 @@
             this.materialPanel44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel44.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel44.Location = new System.Drawing.Point(378, 0);
+            this.materialPanel44.Location = new System.Drawing.Point(606, 0);
             this.materialPanel44.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel44.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel44.Name = "materialPanel44";
-            this.materialPanel44.Size = new System.Drawing.Size(68, 5);
+            this.materialPanel44.Size = new System.Drawing.Size(106, 5);
             this.materialPanel44.TabIndex = 48;
             // 
             // btn5x6
@@ -873,6 +883,7 @@
             this.btn5x6.Alignment = System.Drawing.StringAlignment.Center;
             this.btn5x6.AutoSize = true;
             this.btn5x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn5x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn5x6.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn5x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5x6.Depth = 0;
@@ -884,7 +895,7 @@
             this.btn5x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn5x6.Name = "btn5x6";
             this.btn5x6.Primary = false;
-            this.btn5x6.Size = new System.Drawing.Size(68, 5);
+            this.btn5x6.Size = new System.Drawing.Size(106, 5);
             this.btn5x6.TabIndex = 5;
             this.btn5x6.UseVisualStyleBackColor = true;
             this.btn5x6.Click += new System.EventHandler(this.btnDate_Click);
@@ -898,11 +909,11 @@
             this.materialPanel43.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel43.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel43.Location = new System.Drawing.Point(315, 0);
+            this.materialPanel43.Location = new System.Drawing.Point(505, 0);
             this.materialPanel43.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel43.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel43.Name = "materialPanel43";
-            this.materialPanel43.Size = new System.Drawing.Size(63, 5);
+            this.materialPanel43.Size = new System.Drawing.Size(101, 5);
             this.materialPanel43.TabIndex = 47;
             // 
             // btn5x5
@@ -910,6 +921,7 @@
             this.btn5x5.Alignment = System.Drawing.StringAlignment.Center;
             this.btn5x5.AutoSize = true;
             this.btn5x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn5x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn5x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn5x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5x5.Depth = 0;
@@ -921,7 +933,7 @@
             this.btn5x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn5x5.Name = "btn5x5";
             this.btn5x5.Primary = false;
-            this.btn5x5.Size = new System.Drawing.Size(63, 5);
+            this.btn5x5.Size = new System.Drawing.Size(101, 5);
             this.btn5x5.TabIndex = 5;
             this.btn5x5.UseVisualStyleBackColor = true;
             this.btn5x5.Click += new System.EventHandler(this.btnDate_Click);
@@ -935,11 +947,11 @@
             this.materialPanel42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel42.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel42.Location = new System.Drawing.Point(252, 0);
+            this.materialPanel42.Location = new System.Drawing.Point(404, 0);
             this.materialPanel42.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel42.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel42.Name = "materialPanel42";
-            this.materialPanel42.Size = new System.Drawing.Size(63, 5);
+            this.materialPanel42.Size = new System.Drawing.Size(101, 5);
             this.materialPanel42.TabIndex = 46;
             // 
             // btn5x4
@@ -947,6 +959,7 @@
             this.btn5x4.Alignment = System.Drawing.StringAlignment.Center;
             this.btn5x4.AutoSize = true;
             this.btn5x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn5x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn5x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn5x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5x4.Depth = 0;
@@ -958,7 +971,7 @@
             this.btn5x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn5x4.Name = "btn5x4";
             this.btn5x4.Primary = false;
-            this.btn5x4.Size = new System.Drawing.Size(63, 5);
+            this.btn5x4.Size = new System.Drawing.Size(101, 5);
             this.btn5x4.TabIndex = 5;
             this.btn5x4.UseVisualStyleBackColor = true;
             this.btn5x4.Click += new System.EventHandler(this.btnDate_Click);
@@ -972,11 +985,11 @@
             this.materialPanel41.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel41.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel41.Location = new System.Drawing.Point(189, 0);
+            this.materialPanel41.Location = new System.Drawing.Point(303, 0);
             this.materialPanel41.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel41.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel41.Name = "materialPanel41";
-            this.materialPanel41.Size = new System.Drawing.Size(63, 5);
+            this.materialPanel41.Size = new System.Drawing.Size(101, 5);
             this.materialPanel41.TabIndex = 45;
             // 
             // btn5x3
@@ -984,6 +997,7 @@
             this.btn5x3.Alignment = System.Drawing.StringAlignment.Center;
             this.btn5x3.AutoSize = true;
             this.btn5x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn5x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn5x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn5x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5x3.Depth = 0;
@@ -995,7 +1009,7 @@
             this.btn5x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn5x3.Name = "btn5x3";
             this.btn5x3.Primary = false;
-            this.btn5x3.Size = new System.Drawing.Size(63, 5);
+            this.btn5x3.Size = new System.Drawing.Size(101, 5);
             this.btn5x3.TabIndex = 5;
             this.btn5x3.UseVisualStyleBackColor = true;
             this.btn5x3.Click += new System.EventHandler(this.btnDate_Click);
@@ -1009,11 +1023,11 @@
             this.materialPanel40.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel40.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel40.Location = new System.Drawing.Point(126, 0);
+            this.materialPanel40.Location = new System.Drawing.Point(202, 0);
             this.materialPanel40.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel40.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel40.Name = "materialPanel40";
-            this.materialPanel40.Size = new System.Drawing.Size(63, 5);
+            this.materialPanel40.Size = new System.Drawing.Size(101, 5);
             this.materialPanel40.TabIndex = 44;
             // 
             // btn5x2
@@ -1021,6 +1035,7 @@
             this.btn5x2.Alignment = System.Drawing.StringAlignment.Center;
             this.btn5x2.AutoSize = true;
             this.btn5x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn5x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn5x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn5x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5x2.Depth = 0;
@@ -1032,7 +1047,7 @@
             this.btn5x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn5x2.Name = "btn5x2";
             this.btn5x2.Primary = false;
-            this.btn5x2.Size = new System.Drawing.Size(63, 5);
+            this.btn5x2.Size = new System.Drawing.Size(101, 5);
             this.btn5x2.TabIndex = 5;
             this.btn5x2.UseVisualStyleBackColor = true;
             this.btn5x2.Click += new System.EventHandler(this.btnDate_Click);
@@ -1046,11 +1061,11 @@
             this.materialPanel39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel39.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel39.Location = new System.Drawing.Point(63, 0);
+            this.materialPanel39.Location = new System.Drawing.Point(101, 0);
             this.materialPanel39.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel39.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel39.Name = "materialPanel39";
-            this.materialPanel39.Size = new System.Drawing.Size(63, 5);
+            this.materialPanel39.Size = new System.Drawing.Size(101, 5);
             this.materialPanel39.TabIndex = 43;
             // 
             // btn5x1
@@ -1058,6 +1073,7 @@
             this.btn5x1.Alignment = System.Drawing.StringAlignment.Center;
             this.btn5x1.AutoSize = true;
             this.btn5x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn5x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn5x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn5x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5x1.Depth = 0;
@@ -1069,7 +1085,7 @@
             this.btn5x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn5x1.Name = "btn5x1";
             this.btn5x1.Primary = false;
-            this.btn5x1.Size = new System.Drawing.Size(63, 5);
+            this.btn5x1.Size = new System.Drawing.Size(101, 5);
             this.btn5x1.TabIndex = 5;
             this.btn5x1.UseVisualStyleBackColor = true;
             this.btn5x1.Click += new System.EventHandler(this.btnDate_Click);
@@ -1087,7 +1103,7 @@
             this.materialPanel38.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel38.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel38.Name = "materialPanel38";
-            this.materialPanel38.Size = new System.Drawing.Size(63, 5);
+            this.materialPanel38.Size = new System.Drawing.Size(101, 5);
             this.materialPanel38.TabIndex = 42;
             // 
             // btn5x0
@@ -1095,6 +1111,7 @@
             this.btn5x0.Alignment = System.Drawing.StringAlignment.Center;
             this.btn5x0.AutoSize = true;
             this.btn5x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn5x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn5x0.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn5x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5x0.Depth = 0;
@@ -1106,7 +1123,7 @@
             this.btn5x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn5x0.Name = "btn5x0";
             this.btn5x0.Primary = false;
-            this.btn5x0.Size = new System.Drawing.Size(63, 5);
+            this.btn5x0.Size = new System.Drawing.Size(101, 5);
             this.btn5x0.TabIndex = 5;
             this.btn5x0.UseVisualStyleBackColor = true;
             this.btn5x0.Click += new System.EventHandler(this.btnDate_Click);
@@ -1120,11 +1137,11 @@
             this.materialPanel37.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel37.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel37.Location = new System.Drawing.Point(378, 0);
+            this.materialPanel37.Location = new System.Drawing.Point(606, 0);
             this.materialPanel37.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel37.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel37.Name = "materialPanel37";
-            this.materialPanel37.Size = new System.Drawing.Size(68, 1);
+            this.materialPanel37.Size = new System.Drawing.Size(106, 1);
             this.materialPanel37.TabIndex = 41;
             // 
             // btn4x6
@@ -1132,6 +1149,7 @@
             this.btn4x6.Alignment = System.Drawing.StringAlignment.Center;
             this.btn4x6.AutoSize = true;
             this.btn4x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn4x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn4x6.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn4x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4x6.Depth = 0;
@@ -1143,7 +1161,7 @@
             this.btn4x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn4x6.Name = "btn4x6";
             this.btn4x6.Primary = false;
-            this.btn4x6.Size = new System.Drawing.Size(68, 1);
+            this.btn4x6.Size = new System.Drawing.Size(106, 1);
             this.btn4x6.TabIndex = 5;
             this.btn4x6.UseVisualStyleBackColor = true;
             this.btn4x6.Click += new System.EventHandler(this.btnDate_Click);
@@ -1157,11 +1175,11 @@
             this.materialPanel36.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel36.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel36.Location = new System.Drawing.Point(315, 0);
+            this.materialPanel36.Location = new System.Drawing.Point(505, 0);
             this.materialPanel36.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel36.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel36.Name = "materialPanel36";
-            this.materialPanel36.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel36.Size = new System.Drawing.Size(101, 1);
             this.materialPanel36.TabIndex = 40;
             // 
             // btn4x5
@@ -1169,6 +1187,7 @@
             this.btn4x5.Alignment = System.Drawing.StringAlignment.Center;
             this.btn4x5.AutoSize = true;
             this.btn4x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn4x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn4x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn4x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4x5.Depth = 0;
@@ -1180,7 +1199,7 @@
             this.btn4x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn4x5.Name = "btn4x5";
             this.btn4x5.Primary = false;
-            this.btn4x5.Size = new System.Drawing.Size(63, 1);
+            this.btn4x5.Size = new System.Drawing.Size(101, 1);
             this.btn4x5.TabIndex = 5;
             this.btn4x5.UseVisualStyleBackColor = true;
             this.btn4x5.Click += new System.EventHandler(this.btnDate_Click);
@@ -1194,11 +1213,11 @@
             this.materialPanel35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel35.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel35.Location = new System.Drawing.Point(252, 0);
+            this.materialPanel35.Location = new System.Drawing.Point(404, 0);
             this.materialPanel35.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel35.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel35.Name = "materialPanel35";
-            this.materialPanel35.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel35.Size = new System.Drawing.Size(101, 1);
             this.materialPanel35.TabIndex = 39;
             // 
             // btn4x4
@@ -1206,6 +1225,7 @@
             this.btn4x4.Alignment = System.Drawing.StringAlignment.Center;
             this.btn4x4.AutoSize = true;
             this.btn4x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn4x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn4x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn4x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4x4.Depth = 0;
@@ -1217,7 +1237,7 @@
             this.btn4x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn4x4.Name = "btn4x4";
             this.btn4x4.Primary = false;
-            this.btn4x4.Size = new System.Drawing.Size(63, 1);
+            this.btn4x4.Size = new System.Drawing.Size(101, 1);
             this.btn4x4.TabIndex = 5;
             this.btn4x4.UseVisualStyleBackColor = true;
             this.btn4x4.Click += new System.EventHandler(this.btnDate_Click);
@@ -1231,11 +1251,11 @@
             this.materialPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel34.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel34.Location = new System.Drawing.Point(189, 0);
+            this.materialPanel34.Location = new System.Drawing.Point(303, 0);
             this.materialPanel34.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel34.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel34.Name = "materialPanel34";
-            this.materialPanel34.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel34.Size = new System.Drawing.Size(101, 1);
             this.materialPanel34.TabIndex = 38;
             // 
             // btn4x3
@@ -1243,6 +1263,7 @@
             this.btn4x3.Alignment = System.Drawing.StringAlignment.Center;
             this.btn4x3.AutoSize = true;
             this.btn4x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn4x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn4x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn4x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4x3.Depth = 0;
@@ -1254,7 +1275,7 @@
             this.btn4x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn4x3.Name = "btn4x3";
             this.btn4x3.Primary = false;
-            this.btn4x3.Size = new System.Drawing.Size(63, 1);
+            this.btn4x3.Size = new System.Drawing.Size(101, 1);
             this.btn4x3.TabIndex = 5;
             this.btn4x3.UseVisualStyleBackColor = true;
             this.btn4x3.Click += new System.EventHandler(this.btnDate_Click);
@@ -1268,11 +1289,11 @@
             this.materialPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel33.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel33.Location = new System.Drawing.Point(126, 0);
+            this.materialPanel33.Location = new System.Drawing.Point(202, 0);
             this.materialPanel33.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel33.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel33.Name = "materialPanel33";
-            this.materialPanel33.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel33.Size = new System.Drawing.Size(101, 1);
             this.materialPanel33.TabIndex = 37;
             // 
             // btn4x2
@@ -1280,6 +1301,7 @@
             this.btn4x2.Alignment = System.Drawing.StringAlignment.Center;
             this.btn4x2.AutoSize = true;
             this.btn4x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn4x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn4x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn4x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4x2.Depth = 0;
@@ -1291,7 +1313,7 @@
             this.btn4x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn4x2.Name = "btn4x2";
             this.btn4x2.Primary = false;
-            this.btn4x2.Size = new System.Drawing.Size(63, 1);
+            this.btn4x2.Size = new System.Drawing.Size(101, 1);
             this.btn4x2.TabIndex = 5;
             this.btn4x2.UseVisualStyleBackColor = true;
             this.btn4x2.Click += new System.EventHandler(this.btnDate_Click);
@@ -1305,11 +1327,11 @@
             this.materialPanel32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel32.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel32.Location = new System.Drawing.Point(63, 0);
+            this.materialPanel32.Location = new System.Drawing.Point(101, 0);
             this.materialPanel32.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel32.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel32.Name = "materialPanel32";
-            this.materialPanel32.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel32.Size = new System.Drawing.Size(101, 1);
             this.materialPanel32.TabIndex = 36;
             // 
             // btn4x1
@@ -1317,6 +1339,7 @@
             this.btn4x1.Alignment = System.Drawing.StringAlignment.Center;
             this.btn4x1.AutoSize = true;
             this.btn4x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn4x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn4x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn4x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4x1.Depth = 0;
@@ -1328,7 +1351,7 @@
             this.btn4x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn4x1.Name = "btn4x1";
             this.btn4x1.Primary = false;
-            this.btn4x1.Size = new System.Drawing.Size(63, 1);
+            this.btn4x1.Size = new System.Drawing.Size(101, 1);
             this.btn4x1.TabIndex = 5;
             this.btn4x1.UseVisualStyleBackColor = true;
             this.btn4x1.Click += new System.EventHandler(this.btnDate_Click);
@@ -1346,7 +1369,7 @@
             this.materialPanel31.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel31.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel31.Name = "materialPanel31";
-            this.materialPanel31.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel31.Size = new System.Drawing.Size(101, 1);
             this.materialPanel31.TabIndex = 35;
             // 
             // btn4x0
@@ -1354,6 +1377,7 @@
             this.btn4x0.Alignment = System.Drawing.StringAlignment.Center;
             this.btn4x0.AutoSize = true;
             this.btn4x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn4x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn4x0.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn4x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4x0.Depth = 0;
@@ -1365,7 +1389,7 @@
             this.btn4x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn4x0.Name = "btn4x0";
             this.btn4x0.Primary = false;
-            this.btn4x0.Size = new System.Drawing.Size(63, 1);
+            this.btn4x0.Size = new System.Drawing.Size(101, 1);
             this.btn4x0.TabIndex = 5;
             this.btn4x0.UseVisualStyleBackColor = true;
             this.btn4x0.Click += new System.EventHandler(this.btnDate_Click);
@@ -1379,11 +1403,11 @@
             this.materialPanel30.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel30.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel30.Location = new System.Drawing.Point(378, 0);
+            this.materialPanel30.Location = new System.Drawing.Point(606, 0);
             this.materialPanel30.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel30.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel30.Name = "materialPanel30";
-            this.materialPanel30.Size = new System.Drawing.Size(68, 1);
+            this.materialPanel30.Size = new System.Drawing.Size(106, 1);
             this.materialPanel30.TabIndex = 34;
             // 
             // btn3x6
@@ -1391,6 +1415,7 @@
             this.btn3x6.Alignment = System.Drawing.StringAlignment.Center;
             this.btn3x6.AutoSize = true;
             this.btn3x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn3x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn3x6.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn3x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3x6.Depth = 0;
@@ -1402,7 +1427,7 @@
             this.btn3x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn3x6.Name = "btn3x6";
             this.btn3x6.Primary = false;
-            this.btn3x6.Size = new System.Drawing.Size(68, 1);
+            this.btn3x6.Size = new System.Drawing.Size(106, 1);
             this.btn3x6.TabIndex = 5;
             this.btn3x6.UseVisualStyleBackColor = true;
             this.btn3x6.Click += new System.EventHandler(this.btnDate_Click);
@@ -1416,11 +1441,11 @@
             this.materialPanel29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel29.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel29.Location = new System.Drawing.Point(315, 0);
+            this.materialPanel29.Location = new System.Drawing.Point(505, 0);
             this.materialPanel29.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel29.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel29.Name = "materialPanel29";
-            this.materialPanel29.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel29.Size = new System.Drawing.Size(101, 1);
             this.materialPanel29.TabIndex = 33;
             // 
             // btn3x5
@@ -1428,6 +1453,7 @@
             this.btn3x5.Alignment = System.Drawing.StringAlignment.Center;
             this.btn3x5.AutoSize = true;
             this.btn3x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn3x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn3x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn3x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3x5.Depth = 0;
@@ -1439,7 +1465,7 @@
             this.btn3x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn3x5.Name = "btn3x5";
             this.btn3x5.Primary = false;
-            this.btn3x5.Size = new System.Drawing.Size(63, 1);
+            this.btn3x5.Size = new System.Drawing.Size(101, 1);
             this.btn3x5.TabIndex = 5;
             this.btn3x5.UseVisualStyleBackColor = true;
             this.btn3x5.Click += new System.EventHandler(this.btnDate_Click);
@@ -1453,11 +1479,11 @@
             this.materialPanel28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel28.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel28.Location = new System.Drawing.Point(252, 0);
+            this.materialPanel28.Location = new System.Drawing.Point(404, 0);
             this.materialPanel28.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel28.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel28.Name = "materialPanel28";
-            this.materialPanel28.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel28.Size = new System.Drawing.Size(101, 1);
             this.materialPanel28.TabIndex = 32;
             // 
             // btn3x4
@@ -1465,6 +1491,7 @@
             this.btn3x4.Alignment = System.Drawing.StringAlignment.Center;
             this.btn3x4.AutoSize = true;
             this.btn3x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn3x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn3x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn3x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3x4.Depth = 0;
@@ -1476,7 +1503,7 @@
             this.btn3x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn3x4.Name = "btn3x4";
             this.btn3x4.Primary = false;
-            this.btn3x4.Size = new System.Drawing.Size(63, 1);
+            this.btn3x4.Size = new System.Drawing.Size(101, 1);
             this.btn3x4.TabIndex = 5;
             this.btn3x4.UseVisualStyleBackColor = true;
             this.btn3x4.Click += new System.EventHandler(this.btnDate_Click);
@@ -1490,11 +1517,11 @@
             this.materialPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel27.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel27.Location = new System.Drawing.Point(189, 0);
+            this.materialPanel27.Location = new System.Drawing.Point(303, 0);
             this.materialPanel27.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel27.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel27.Name = "materialPanel27";
-            this.materialPanel27.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel27.Size = new System.Drawing.Size(101, 1);
             this.materialPanel27.TabIndex = 31;
             // 
             // btn3x3
@@ -1502,6 +1529,7 @@
             this.btn3x3.Alignment = System.Drawing.StringAlignment.Center;
             this.btn3x3.AutoSize = true;
             this.btn3x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn3x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn3x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn3x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3x3.Depth = 0;
@@ -1513,7 +1541,7 @@
             this.btn3x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn3x3.Name = "btn3x3";
             this.btn3x3.Primary = false;
-            this.btn3x3.Size = new System.Drawing.Size(63, 1);
+            this.btn3x3.Size = new System.Drawing.Size(101, 1);
             this.btn3x3.TabIndex = 5;
             this.btn3x3.UseVisualStyleBackColor = true;
             this.btn3x3.Click += new System.EventHandler(this.btnDate_Click);
@@ -1527,11 +1555,11 @@
             this.materialPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel26.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel26.Location = new System.Drawing.Point(126, 0);
+            this.materialPanel26.Location = new System.Drawing.Point(202, 0);
             this.materialPanel26.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel26.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel26.Name = "materialPanel26";
-            this.materialPanel26.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel26.Size = new System.Drawing.Size(101, 1);
             this.materialPanel26.TabIndex = 30;
             // 
             // btn3x2
@@ -1539,6 +1567,7 @@
             this.btn3x2.Alignment = System.Drawing.StringAlignment.Center;
             this.btn3x2.AutoSize = true;
             this.btn3x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn3x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn3x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn3x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3x2.Depth = 0;
@@ -1550,7 +1579,7 @@
             this.btn3x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn3x2.Name = "btn3x2";
             this.btn3x2.Primary = false;
-            this.btn3x2.Size = new System.Drawing.Size(63, 1);
+            this.btn3x2.Size = new System.Drawing.Size(101, 1);
             this.btn3x2.TabIndex = 5;
             this.btn3x2.UseVisualStyleBackColor = true;
             this.btn3x2.Click += new System.EventHandler(this.btnDate_Click);
@@ -1564,11 +1593,11 @@
             this.materialPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel25.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel25.Location = new System.Drawing.Point(63, 0);
+            this.materialPanel25.Location = new System.Drawing.Point(101, 0);
             this.materialPanel25.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel25.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel25.Name = "materialPanel25";
-            this.materialPanel25.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel25.Size = new System.Drawing.Size(101, 1);
             this.materialPanel25.TabIndex = 29;
             // 
             // btn3x1
@@ -1576,6 +1605,7 @@
             this.btn3x1.Alignment = System.Drawing.StringAlignment.Center;
             this.btn3x1.AutoSize = true;
             this.btn3x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn3x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn3x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn3x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3x1.Depth = 0;
@@ -1587,7 +1617,7 @@
             this.btn3x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn3x1.Name = "btn3x1";
             this.btn3x1.Primary = false;
-            this.btn3x1.Size = new System.Drawing.Size(63, 1);
+            this.btn3x1.Size = new System.Drawing.Size(101, 1);
             this.btn3x1.TabIndex = 5;
             this.btn3x1.UseVisualStyleBackColor = true;
             this.btn3x1.Click += new System.EventHandler(this.btnDate_Click);
@@ -1605,7 +1635,7 @@
             this.materialPanel24.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel24.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel24.Name = "materialPanel24";
-            this.materialPanel24.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel24.Size = new System.Drawing.Size(101, 1);
             this.materialPanel24.TabIndex = 28;
             // 
             // btn3x0
@@ -1613,6 +1643,7 @@
             this.btn3x0.Alignment = System.Drawing.StringAlignment.Center;
             this.btn3x0.AutoSize = true;
             this.btn3x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn3x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn3x0.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn3x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3x0.Depth = 0;
@@ -1624,7 +1655,7 @@
             this.btn3x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn3x0.Name = "btn3x0";
             this.btn3x0.Primary = false;
-            this.btn3x0.Size = new System.Drawing.Size(63, 1);
+            this.btn3x0.Size = new System.Drawing.Size(101, 1);
             this.btn3x0.TabIndex = 5;
             this.btn3x0.UseVisualStyleBackColor = true;
             this.btn3x0.Click += new System.EventHandler(this.btnDate_Click);
@@ -1638,11 +1669,11 @@
             this.materialPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel23.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel23.Location = new System.Drawing.Point(378, 0);
+            this.materialPanel23.Location = new System.Drawing.Point(606, 0);
             this.materialPanel23.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel23.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel23.Name = "materialPanel23";
-            this.materialPanel23.Size = new System.Drawing.Size(68, 1);
+            this.materialPanel23.Size = new System.Drawing.Size(106, 1);
             this.materialPanel23.TabIndex = 27;
             // 
             // btn2x6
@@ -1650,6 +1681,7 @@
             this.btn2x6.Alignment = System.Drawing.StringAlignment.Center;
             this.btn2x6.AutoSize = true;
             this.btn2x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn2x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn2x6.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn2x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2x6.Depth = 0;
@@ -1661,7 +1693,7 @@
             this.btn2x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn2x6.Name = "btn2x6";
             this.btn2x6.Primary = false;
-            this.btn2x6.Size = new System.Drawing.Size(68, 1);
+            this.btn2x6.Size = new System.Drawing.Size(106, 1);
             this.btn2x6.TabIndex = 5;
             this.btn2x6.UseVisualStyleBackColor = true;
             this.btn2x6.Click += new System.EventHandler(this.btnDate_Click);
@@ -1675,11 +1707,11 @@
             this.materialPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel22.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel22.Location = new System.Drawing.Point(315, 0);
+            this.materialPanel22.Location = new System.Drawing.Point(505, 0);
             this.materialPanel22.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel22.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel22.Name = "materialPanel22";
-            this.materialPanel22.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel22.Size = new System.Drawing.Size(101, 1);
             this.materialPanel22.TabIndex = 26;
             // 
             // btn2x5
@@ -1687,6 +1719,7 @@
             this.btn2x5.Alignment = System.Drawing.StringAlignment.Center;
             this.btn2x5.AutoSize = true;
             this.btn2x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn2x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn2x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn2x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2x5.Depth = 0;
@@ -1698,7 +1731,7 @@
             this.btn2x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn2x5.Name = "btn2x5";
             this.btn2x5.Primary = false;
-            this.btn2x5.Size = new System.Drawing.Size(63, 1);
+            this.btn2x5.Size = new System.Drawing.Size(101, 1);
             this.btn2x5.TabIndex = 5;
             this.btn2x5.UseVisualStyleBackColor = true;
             this.btn2x5.Click += new System.EventHandler(this.btnDate_Click);
@@ -1712,11 +1745,11 @@
             this.materialPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel21.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel21.Location = new System.Drawing.Point(252, 0);
+            this.materialPanel21.Location = new System.Drawing.Point(404, 0);
             this.materialPanel21.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel21.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel21.Name = "materialPanel21";
-            this.materialPanel21.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel21.Size = new System.Drawing.Size(101, 1);
             this.materialPanel21.TabIndex = 25;
             // 
             // btn2x4
@@ -1724,6 +1757,7 @@
             this.btn2x4.Alignment = System.Drawing.StringAlignment.Center;
             this.btn2x4.AutoSize = true;
             this.btn2x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn2x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn2x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn2x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2x4.Depth = 0;
@@ -1735,7 +1769,7 @@
             this.btn2x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn2x4.Name = "btn2x4";
             this.btn2x4.Primary = false;
-            this.btn2x4.Size = new System.Drawing.Size(63, 1);
+            this.btn2x4.Size = new System.Drawing.Size(101, 1);
             this.btn2x4.TabIndex = 5;
             this.btn2x4.UseVisualStyleBackColor = true;
             this.btn2x4.Click += new System.EventHandler(this.btnDate_Click);
@@ -1749,11 +1783,11 @@
             this.materialPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel20.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel20.Location = new System.Drawing.Point(189, 0);
+            this.materialPanel20.Location = new System.Drawing.Point(303, 0);
             this.materialPanel20.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel20.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel20.Name = "materialPanel20";
-            this.materialPanel20.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel20.Size = new System.Drawing.Size(101, 1);
             this.materialPanel20.TabIndex = 24;
             // 
             // btn2x3
@@ -1761,6 +1795,7 @@
             this.btn2x3.Alignment = System.Drawing.StringAlignment.Center;
             this.btn2x3.AutoSize = true;
             this.btn2x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn2x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn2x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn2x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2x3.Depth = 0;
@@ -1772,7 +1807,7 @@
             this.btn2x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn2x3.Name = "btn2x3";
             this.btn2x3.Primary = false;
-            this.btn2x3.Size = new System.Drawing.Size(63, 1);
+            this.btn2x3.Size = new System.Drawing.Size(101, 1);
             this.btn2x3.TabIndex = 5;
             this.btn2x3.UseVisualStyleBackColor = true;
             this.btn2x3.Click += new System.EventHandler(this.btnDate_Click);
@@ -1786,11 +1821,11 @@
             this.materialPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel19.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel19.Location = new System.Drawing.Point(126, 0);
+            this.materialPanel19.Location = new System.Drawing.Point(202, 0);
             this.materialPanel19.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel19.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel19.Name = "materialPanel19";
-            this.materialPanel19.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel19.Size = new System.Drawing.Size(101, 1);
             this.materialPanel19.TabIndex = 23;
             // 
             // btn2x2
@@ -1798,6 +1833,7 @@
             this.btn2x2.Alignment = System.Drawing.StringAlignment.Center;
             this.btn2x2.AutoSize = true;
             this.btn2x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn2x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn2x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn2x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2x2.Depth = 0;
@@ -1809,7 +1845,7 @@
             this.btn2x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn2x2.Name = "btn2x2";
             this.btn2x2.Primary = false;
-            this.btn2x2.Size = new System.Drawing.Size(63, 1);
+            this.btn2x2.Size = new System.Drawing.Size(101, 1);
             this.btn2x2.TabIndex = 5;
             this.btn2x2.UseVisualStyleBackColor = true;
             this.btn2x2.Click += new System.EventHandler(this.btnDate_Click);
@@ -1823,11 +1859,11 @@
             this.materialPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel18.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel18.Location = new System.Drawing.Point(63, 0);
+            this.materialPanel18.Location = new System.Drawing.Point(101, 0);
             this.materialPanel18.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel18.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel18.Name = "materialPanel18";
-            this.materialPanel18.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel18.Size = new System.Drawing.Size(101, 1);
             this.materialPanel18.TabIndex = 22;
             // 
             // btn2x1
@@ -1835,6 +1871,7 @@
             this.btn2x1.Alignment = System.Drawing.StringAlignment.Center;
             this.btn2x1.AutoSize = true;
             this.btn2x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn2x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn2x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn2x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2x1.Depth = 0;
@@ -1846,7 +1883,7 @@
             this.btn2x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn2x1.Name = "btn2x1";
             this.btn2x1.Primary = false;
-            this.btn2x1.Size = new System.Drawing.Size(63, 1);
+            this.btn2x1.Size = new System.Drawing.Size(101, 1);
             this.btn2x1.TabIndex = 5;
             this.btn2x1.UseVisualStyleBackColor = true;
             this.btn2x1.Click += new System.EventHandler(this.btnDate_Click);
@@ -1864,7 +1901,7 @@
             this.materialPanel17.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel17.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel17.Name = "materialPanel17";
-            this.materialPanel17.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel17.Size = new System.Drawing.Size(101, 1);
             this.materialPanel17.TabIndex = 21;
             // 
             // btn2x0
@@ -1872,6 +1909,7 @@
             this.btn2x0.Alignment = System.Drawing.StringAlignment.Center;
             this.btn2x0.AutoSize = true;
             this.btn2x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn2x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn2x0.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn2x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2x0.Depth = 0;
@@ -1883,7 +1921,7 @@
             this.btn2x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn2x0.Name = "btn2x0";
             this.btn2x0.Primary = false;
-            this.btn2x0.Size = new System.Drawing.Size(63, 1);
+            this.btn2x0.Size = new System.Drawing.Size(101, 1);
             this.btn2x0.TabIndex = 5;
             this.btn2x0.UseVisualStyleBackColor = true;
             this.btn2x0.Click += new System.EventHandler(this.btnDate_Click);
@@ -1897,11 +1935,11 @@
             this.materialPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel16.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel16.Location = new System.Drawing.Point(378, 0);
+            this.materialPanel16.Location = new System.Drawing.Point(606, 0);
             this.materialPanel16.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel16.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel16.Name = "materialPanel16";
-            this.materialPanel16.Size = new System.Drawing.Size(68, 1);
+            this.materialPanel16.Size = new System.Drawing.Size(106, 1);
             this.materialPanel16.TabIndex = 20;
             // 
             // btn1x6
@@ -1909,6 +1947,7 @@
             this.btn1x6.Alignment = System.Drawing.StringAlignment.Center;
             this.btn1x6.AutoSize = true;
             this.btn1x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn1x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn1x6.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn1x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1x6.Depth = 0;
@@ -1920,7 +1959,7 @@
             this.btn1x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn1x6.Name = "btn1x6";
             this.btn1x6.Primary = false;
-            this.btn1x6.Size = new System.Drawing.Size(68, 1);
+            this.btn1x6.Size = new System.Drawing.Size(106, 1);
             this.btn1x6.TabIndex = 5;
             this.btn1x6.UseVisualStyleBackColor = true;
             this.btn1x6.Click += new System.EventHandler(this.btnDate_Click);
@@ -1934,11 +1973,11 @@
             this.materialPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel15.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel15.Location = new System.Drawing.Point(315, 0);
+            this.materialPanel15.Location = new System.Drawing.Point(505, 0);
             this.materialPanel15.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel15.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel15.Name = "materialPanel15";
-            this.materialPanel15.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel15.Size = new System.Drawing.Size(101, 1);
             this.materialPanel15.TabIndex = 19;
             // 
             // btn1x5
@@ -1946,6 +1985,7 @@
             this.btn1x5.Alignment = System.Drawing.StringAlignment.Center;
             this.btn1x5.AutoSize = true;
             this.btn1x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn1x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn1x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn1x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1x5.Depth = 0;
@@ -1957,7 +1997,7 @@
             this.btn1x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn1x5.Name = "btn1x5";
             this.btn1x5.Primary = false;
-            this.btn1x5.Size = new System.Drawing.Size(63, 1);
+            this.btn1x5.Size = new System.Drawing.Size(101, 1);
             this.btn1x5.TabIndex = 5;
             this.btn1x5.UseVisualStyleBackColor = true;
             this.btn1x5.Click += new System.EventHandler(this.btnDate_Click);
@@ -1971,11 +2011,11 @@
             this.materialPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel14.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel14.Location = new System.Drawing.Point(252, 0);
+            this.materialPanel14.Location = new System.Drawing.Point(404, 0);
             this.materialPanel14.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel14.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel14.Name = "materialPanel14";
-            this.materialPanel14.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel14.Size = new System.Drawing.Size(101, 1);
             this.materialPanel14.TabIndex = 18;
             // 
             // btn1x4
@@ -1983,6 +2023,7 @@
             this.btn1x4.Alignment = System.Drawing.StringAlignment.Center;
             this.btn1x4.AutoSize = true;
             this.btn1x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn1x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn1x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn1x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1x4.Depth = 0;
@@ -1994,7 +2035,7 @@
             this.btn1x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn1x4.Name = "btn1x4";
             this.btn1x4.Primary = false;
-            this.btn1x4.Size = new System.Drawing.Size(63, 1);
+            this.btn1x4.Size = new System.Drawing.Size(101, 1);
             this.btn1x4.TabIndex = 5;
             this.btn1x4.UseVisualStyleBackColor = true;
             this.btn1x4.Click += new System.EventHandler(this.btnDate_Click);
@@ -2008,11 +2049,11 @@
             this.materialPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel13.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel13.Location = new System.Drawing.Point(189, 0);
+            this.materialPanel13.Location = new System.Drawing.Point(303, 0);
             this.materialPanel13.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel13.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel13.Name = "materialPanel13";
-            this.materialPanel13.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel13.Size = new System.Drawing.Size(101, 1);
             this.materialPanel13.TabIndex = 17;
             // 
             // btn1x3
@@ -2020,6 +2061,7 @@
             this.btn1x3.Alignment = System.Drawing.StringAlignment.Center;
             this.btn1x3.AutoSize = true;
             this.btn1x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn1x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn1x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn1x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1x3.Depth = 0;
@@ -2031,7 +2073,7 @@
             this.btn1x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn1x3.Name = "btn1x3";
             this.btn1x3.Primary = false;
-            this.btn1x3.Size = new System.Drawing.Size(63, 1);
+            this.btn1x3.Size = new System.Drawing.Size(101, 1);
             this.btn1x3.TabIndex = 5;
             this.btn1x3.UseVisualStyleBackColor = true;
             this.btn1x3.Click += new System.EventHandler(this.btnDate_Click);
@@ -2045,11 +2087,11 @@
             this.materialPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel12.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel12.Location = new System.Drawing.Point(126, 0);
+            this.materialPanel12.Location = new System.Drawing.Point(202, 0);
             this.materialPanel12.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel12.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel12.Name = "materialPanel12";
-            this.materialPanel12.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel12.Size = new System.Drawing.Size(101, 1);
             this.materialPanel12.TabIndex = 16;
             // 
             // btn1x2
@@ -2057,6 +2099,7 @@
             this.btn1x2.Alignment = System.Drawing.StringAlignment.Center;
             this.btn1x2.AutoSize = true;
             this.btn1x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn1x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn1x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn1x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1x2.Depth = 0;
@@ -2068,7 +2111,7 @@
             this.btn1x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn1x2.Name = "btn1x2";
             this.btn1x2.Primary = false;
-            this.btn1x2.Size = new System.Drawing.Size(63, 1);
+            this.btn1x2.Size = new System.Drawing.Size(101, 1);
             this.btn1x2.TabIndex = 5;
             this.btn1x2.UseVisualStyleBackColor = true;
             this.btn1x2.Click += new System.EventHandler(this.btnDate_Click);
@@ -2082,11 +2125,11 @@
             this.materialPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel11.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel11.Location = new System.Drawing.Point(63, 0);
+            this.materialPanel11.Location = new System.Drawing.Point(101, 0);
             this.materialPanel11.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel11.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel11.Name = "materialPanel11";
-            this.materialPanel11.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel11.Size = new System.Drawing.Size(101, 1);
             this.materialPanel11.TabIndex = 15;
             // 
             // btn1x1
@@ -2094,6 +2137,7 @@
             this.btn1x1.Alignment = System.Drawing.StringAlignment.Center;
             this.btn1x1.AutoSize = true;
             this.btn1x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn1x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn1x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn1x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1x1.Depth = 0;
@@ -2105,7 +2149,7 @@
             this.btn1x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn1x1.Name = "btn1x1";
             this.btn1x1.Primary = false;
-            this.btn1x1.Size = new System.Drawing.Size(63, 1);
+            this.btn1x1.Size = new System.Drawing.Size(101, 1);
             this.btn1x1.TabIndex = 5;
             this.btn1x1.UseVisualStyleBackColor = true;
             this.btn1x1.Click += new System.EventHandler(this.btnDate_Click);
@@ -2123,7 +2167,7 @@
             this.materialPanel10.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel10.Name = "materialPanel10";
-            this.materialPanel10.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel10.Size = new System.Drawing.Size(101, 1);
             this.materialPanel10.TabIndex = 14;
             // 
             // btn1x0
@@ -2131,6 +2175,7 @@
             this.btn1x0.Alignment = System.Drawing.StringAlignment.Center;
             this.btn1x0.AutoSize = true;
             this.btn1x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn1x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn1x0.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn1x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1x0.Depth = 0;
@@ -2142,7 +2187,7 @@
             this.btn1x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn1x0.Name = "btn1x0";
             this.btn1x0.Primary = false;
-            this.btn1x0.Size = new System.Drawing.Size(63, 1);
+            this.btn1x0.Size = new System.Drawing.Size(101, 1);
             this.btn1x0.TabIndex = 5;
             this.btn1x0.UseVisualStyleBackColor = true;
             this.btn1x0.Click += new System.EventHandler(this.btnDate_Click);
@@ -2156,11 +2201,11 @@
             this.materialPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel9.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel9.Location = new System.Drawing.Point(378, 0);
+            this.materialPanel9.Location = new System.Drawing.Point(606, 0);
             this.materialPanel9.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel9.Name = "materialPanel9";
-            this.materialPanel9.Size = new System.Drawing.Size(68, 1);
+            this.materialPanel9.Size = new System.Drawing.Size(106, 1);
             this.materialPanel9.TabIndex = 13;
             // 
             // btn0x6
@@ -2168,6 +2213,7 @@
             this.btn0x6.Alignment = System.Drawing.StringAlignment.Center;
             this.btn0x6.AutoSize = true;
             this.btn0x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn0x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn0x6.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn0x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0x6.Depth = 0;
@@ -2179,7 +2225,7 @@
             this.btn0x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn0x6.Name = "btn0x6";
             this.btn0x6.Primary = false;
-            this.btn0x6.Size = new System.Drawing.Size(68, 1);
+            this.btn0x6.Size = new System.Drawing.Size(106, 1);
             this.btn0x6.TabIndex = 5;
             this.btn0x6.UseVisualStyleBackColor = true;
             this.btn0x6.Click += new System.EventHandler(this.btnDate_Click);
@@ -2193,11 +2239,11 @@
             this.materialPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel8.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel8.Location = new System.Drawing.Point(315, 0);
+            this.materialPanel8.Location = new System.Drawing.Point(505, 0);
             this.materialPanel8.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel8.Name = "materialPanel8";
-            this.materialPanel8.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel8.Size = new System.Drawing.Size(101, 1);
             this.materialPanel8.TabIndex = 12;
             // 
             // btn0x5
@@ -2205,6 +2251,7 @@
             this.btn0x5.Alignment = System.Drawing.StringAlignment.Center;
             this.btn0x5.AutoSize = true;
             this.btn0x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn0x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn0x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn0x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0x5.Depth = 0;
@@ -2216,7 +2263,7 @@
             this.btn0x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn0x5.Name = "btn0x5";
             this.btn0x5.Primary = false;
-            this.btn0x5.Size = new System.Drawing.Size(63, 1);
+            this.btn0x5.Size = new System.Drawing.Size(101, 1);
             this.btn0x5.TabIndex = 5;
             this.btn0x5.UseVisualStyleBackColor = true;
             this.btn0x5.Click += new System.EventHandler(this.btnDate_Click);
@@ -2230,11 +2277,11 @@
             this.materialPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel7.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel7.Location = new System.Drawing.Point(252, 0);
+            this.materialPanel7.Location = new System.Drawing.Point(404, 0);
             this.materialPanel7.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel7.Name = "materialPanel7";
-            this.materialPanel7.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel7.Size = new System.Drawing.Size(101, 1);
             this.materialPanel7.TabIndex = 11;
             // 
             // btn0x4
@@ -2242,6 +2289,7 @@
             this.btn0x4.Alignment = System.Drawing.StringAlignment.Center;
             this.btn0x4.AutoSize = true;
             this.btn0x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn0x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn0x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn0x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0x4.Depth = 0;
@@ -2253,7 +2301,7 @@
             this.btn0x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn0x4.Name = "btn0x4";
             this.btn0x4.Primary = false;
-            this.btn0x4.Size = new System.Drawing.Size(63, 1);
+            this.btn0x4.Size = new System.Drawing.Size(101, 1);
             this.btn0x4.TabIndex = 5;
             this.btn0x4.UseVisualStyleBackColor = true;
             this.btn0x4.Click += new System.EventHandler(this.btnDate_Click);
@@ -2267,11 +2315,11 @@
             this.materialPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel6.Location = new System.Drawing.Point(189, 0);
+            this.materialPanel6.Location = new System.Drawing.Point(303, 0);
             this.materialPanel6.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel6.Name = "materialPanel6";
-            this.materialPanel6.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel6.Size = new System.Drawing.Size(101, 1);
             this.materialPanel6.TabIndex = 10;
             // 
             // btn0x3
@@ -2279,6 +2327,7 @@
             this.btn0x3.Alignment = System.Drawing.StringAlignment.Center;
             this.btn0x3.AutoSize = true;
             this.btn0x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn0x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn0x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn0x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0x3.Depth = 0;
@@ -2290,7 +2339,7 @@
             this.btn0x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn0x3.Name = "btn0x3";
             this.btn0x3.Primary = false;
-            this.btn0x3.Size = new System.Drawing.Size(63, 1);
+            this.btn0x3.Size = new System.Drawing.Size(101, 1);
             this.btn0x3.TabIndex = 5;
             this.btn0x3.UseVisualStyleBackColor = true;
             this.btn0x3.Click += new System.EventHandler(this.btnDate_Click);
@@ -2304,11 +2353,11 @@
             this.materialPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel5.Location = new System.Drawing.Point(126, 0);
+            this.materialPanel5.Location = new System.Drawing.Point(202, 0);
             this.materialPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel5.Name = "materialPanel5";
-            this.materialPanel5.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel5.Size = new System.Drawing.Size(101, 1);
             this.materialPanel5.TabIndex = 9;
             // 
             // btn0x2
@@ -2316,6 +2365,7 @@
             this.btn0x2.Alignment = System.Drawing.StringAlignment.Center;
             this.btn0x2.AutoSize = true;
             this.btn0x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn0x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn0x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn0x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0x2.Depth = 0;
@@ -2327,7 +2377,7 @@
             this.btn0x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn0x2.Name = "btn0x2";
             this.btn0x2.Primary = false;
-            this.btn0x2.Size = new System.Drawing.Size(63, 1);
+            this.btn0x2.Size = new System.Drawing.Size(101, 1);
             this.btn0x2.TabIndex = 5;
             this.btn0x2.UseVisualStyleBackColor = true;
             this.btn0x2.Click += new System.EventHandler(this.btnDate_Click);
@@ -2341,11 +2391,11 @@
             this.materialPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel4.Location = new System.Drawing.Point(63, 0);
+            this.materialPanel4.Location = new System.Drawing.Point(101, 0);
             this.materialPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel4.Name = "materialPanel4";
-            this.materialPanel4.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel4.Size = new System.Drawing.Size(101, 1);
             this.materialPanel4.TabIndex = 8;
             // 
             // btn0x1
@@ -2353,6 +2403,7 @@
             this.btn0x1.Alignment = System.Drawing.StringAlignment.Center;
             this.btn0x1.AutoSize = true;
             this.btn0x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn0x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn0x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btn0x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0x1.Depth = 0;
@@ -2364,7 +2415,7 @@
             this.btn0x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn0x1.Name = "btn0x1";
             this.btn0x1.Primary = false;
-            this.btn0x1.Size = new System.Drawing.Size(63, 1);
+            this.btn0x1.Size = new System.Drawing.Size(101, 1);
             this.btn0x1.TabIndex = 5;
             this.btn0x1.UseVisualStyleBackColor = true;
             this.btn0x1.Click += new System.EventHandler(this.btnDate_Click);
@@ -2382,7 +2433,7 @@
             this.materialPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel3.Name = "materialPanel3";
-            this.materialPanel3.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel3.Size = new System.Drawing.Size(101, 1);
             this.materialPanel3.TabIndex = 7;
             // 
             // btn0x0
@@ -2390,6 +2441,7 @@
             this.btn0x0.Alignment = System.Drawing.StringAlignment.Center;
             this.btn0x0.AutoSize = true;
             this.btn0x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn0x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btn0x0.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.btn0x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0x0.Depth = 0;
@@ -2401,7 +2453,7 @@
             this.btn0x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn0x0.Name = "btn0x0";
             this.btn0x0.Primary = false;
-            this.btn0x0.Size = new System.Drawing.Size(63, 1);
+            this.btn0x0.Size = new System.Drawing.Size(101, 1);
             this.btn0x0.TabIndex = 4;
             this.btn0x0.UseVisualStyleBackColor = true;
             this.btn0x0.Click += new System.EventHandler(this.btnDate_Click);
@@ -2419,7 +2471,7 @@
             this.materialPanel45.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel45.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel45.Name = "materialPanel45";
-            this.materialPanel45.Size = new System.Drawing.Size(63, 1);
+            this.materialPanel45.Size = new System.Drawing.Size(101, 1);
             this.materialPanel45.TabIndex = 49;
             // 
             // materialFlatButton1
@@ -2427,6 +2479,7 @@
             this.materialFlatButton1.Alignment = System.Drawing.StringAlignment.Center;
             this.materialFlatButton1.AutoSize = true;
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.materialFlatButton1.ColorStyle = MaterialSkin.ColorType.DANGER;
             this.materialFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton1.Depth = 0;
@@ -2438,7 +2491,7 @@
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
             this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(63, 1);
+            this.materialFlatButton1.Size = new System.Drawing.Size(101, 1);
             this.materialFlatButton1.TabIndex = 5;
             this.materialFlatButton1.Text = "SUN";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
@@ -2469,7 +2522,7 @@
             this.tblMonth.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tblMonth.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tblMonth.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tblMonth.Size = new System.Drawing.Size(446, 5);
+            this.tblMonth.Size = new System.Drawing.Size(712, 5);
             this.tblMonth.TabIndex = 4;
             this.tblMonth.Visible = false;
             // 
@@ -2482,11 +2535,11 @@
             this.materialPanel66.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel66.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel66.Location = new System.Drawing.Point(296, 3);
+            this.materialPanel66.Location = new System.Drawing.Point(474, 3);
             this.materialPanel66.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel66.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel66.Name = "materialPanel66";
-            this.materialPanel66.Size = new System.Drawing.Size(150, 2);
+            this.materialPanel66.Size = new System.Drawing.Size(238, 2);
             this.materialPanel66.TabIndex = 14;
             // 
             // btnMonth12
@@ -2494,6 +2547,7 @@
             this.btnMonth12.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth12.AutoSize = true;
             this.btnMonth12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth12.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth12.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth12.Depth = 0;
@@ -2504,7 +2558,7 @@
             this.btnMonth12.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonth12.Name = "btnMonth12";
             this.btnMonth12.Primary = false;
-            this.btnMonth12.Size = new System.Drawing.Size(150, 2);
+            this.btnMonth12.Size = new System.Drawing.Size(238, 2);
             this.btnMonth12.TabIndex = 3;
             this.btnMonth12.Tag = "12";
             this.btnMonth12.Text = "December";
@@ -2520,11 +2574,11 @@
             this.materialPanel65.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel65.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel65.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel65.Location = new System.Drawing.Point(148, 3);
+            this.materialPanel65.Location = new System.Drawing.Point(237, 3);
             this.materialPanel65.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel65.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel65.Name = "materialPanel65";
-            this.materialPanel65.Size = new System.Drawing.Size(148, 2);
+            this.materialPanel65.Size = new System.Drawing.Size(237, 2);
             this.materialPanel65.TabIndex = 13;
             // 
             // btnMonth11
@@ -2532,6 +2586,7 @@
             this.btnMonth11.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth11.AutoSize = true;
             this.btnMonth11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth11.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth11.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth11.Depth = 0;
@@ -2542,7 +2597,7 @@
             this.btnMonth11.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonth11.Name = "btnMonth11";
             this.btnMonth11.Primary = false;
-            this.btnMonth11.Size = new System.Drawing.Size(148, 2);
+            this.btnMonth11.Size = new System.Drawing.Size(237, 2);
             this.btnMonth11.TabIndex = 3;
             this.btnMonth11.Tag = "11";
             this.btnMonth11.Text = "November";
@@ -2562,7 +2617,7 @@
             this.materialPanel64.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel64.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel64.Name = "materialPanel64";
-            this.materialPanel64.Size = new System.Drawing.Size(148, 2);
+            this.materialPanel64.Size = new System.Drawing.Size(237, 2);
             this.materialPanel64.TabIndex = 12;
             // 
             // btnMonth10
@@ -2570,6 +2625,7 @@
             this.btnMonth10.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth10.AutoSize = true;
             this.btnMonth10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth10.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth10.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth10.Depth = 0;
@@ -2580,7 +2636,7 @@
             this.btnMonth10.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonth10.Name = "btnMonth10";
             this.btnMonth10.Primary = false;
-            this.btnMonth10.Size = new System.Drawing.Size(148, 2);
+            this.btnMonth10.Size = new System.Drawing.Size(237, 2);
             this.btnMonth10.TabIndex = 3;
             this.btnMonth10.Tag = "10";
             this.btnMonth10.Text = "October";
@@ -2596,11 +2652,11 @@
             this.materialPanel62.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel62.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel62.Location = new System.Drawing.Point(296, 2);
+            this.materialPanel62.Location = new System.Drawing.Point(474, 2);
             this.materialPanel62.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel62.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel62.Name = "materialPanel62";
-            this.materialPanel62.Size = new System.Drawing.Size(150, 1);
+            this.materialPanel62.Size = new System.Drawing.Size(238, 1);
             this.materialPanel62.TabIndex = 10;
             // 
             // btnMonth9
@@ -2608,6 +2664,7 @@
             this.btnMonth9.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth9.AutoSize = true;
             this.btnMonth9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth9.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth9.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth9.Depth = 0;
@@ -2618,7 +2675,7 @@
             this.btnMonth9.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonth9.Name = "btnMonth9";
             this.btnMonth9.Primary = false;
-            this.btnMonth9.Size = new System.Drawing.Size(150, 1);
+            this.btnMonth9.Size = new System.Drawing.Size(238, 1);
             this.btnMonth9.TabIndex = 3;
             this.btnMonth9.Tag = "9";
             this.btnMonth9.Text = "September";
@@ -2634,11 +2691,11 @@
             this.materialPanel61.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel61.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel61.Location = new System.Drawing.Point(148, 2);
+            this.materialPanel61.Location = new System.Drawing.Point(237, 2);
             this.materialPanel61.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel61.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel61.Name = "materialPanel61";
-            this.materialPanel61.Size = new System.Drawing.Size(148, 1);
+            this.materialPanel61.Size = new System.Drawing.Size(237, 1);
             this.materialPanel61.TabIndex = 9;
             // 
             // btnMonth8
@@ -2646,6 +2703,7 @@
             this.btnMonth8.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth8.AutoSize = true;
             this.btnMonth8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth8.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth8.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth8.Depth = 0;
@@ -2656,7 +2714,7 @@
             this.btnMonth8.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonth8.Name = "btnMonth8";
             this.btnMonth8.Primary = false;
-            this.btnMonth8.Size = new System.Drawing.Size(148, 1);
+            this.btnMonth8.Size = new System.Drawing.Size(237, 1);
             this.btnMonth8.TabIndex = 3;
             this.btnMonth8.Tag = "8";
             this.btnMonth8.Text = "August";
@@ -2676,7 +2734,7 @@
             this.materialPanel60.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel60.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel60.Name = "materialPanel60";
-            this.materialPanel60.Size = new System.Drawing.Size(148, 1);
+            this.materialPanel60.Size = new System.Drawing.Size(237, 1);
             this.materialPanel60.TabIndex = 8;
             // 
             // btnMonth7
@@ -2684,6 +2742,7 @@
             this.btnMonth7.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth7.AutoSize = true;
             this.btnMonth7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth7.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth7.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth7.Depth = 0;
@@ -2694,7 +2753,7 @@
             this.btnMonth7.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonth7.Name = "btnMonth7";
             this.btnMonth7.Primary = false;
-            this.btnMonth7.Size = new System.Drawing.Size(148, 1);
+            this.btnMonth7.Size = new System.Drawing.Size(237, 1);
             this.btnMonth7.TabIndex = 3;
             this.btnMonth7.Tag = "7";
             this.btnMonth7.Text = "July";
@@ -2710,11 +2769,11 @@
             this.materialPanel58.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel58.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel58.Location = new System.Drawing.Point(296, 1);
+            this.materialPanel58.Location = new System.Drawing.Point(474, 1);
             this.materialPanel58.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel58.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel58.Name = "materialPanel58";
-            this.materialPanel58.Size = new System.Drawing.Size(150, 1);
+            this.materialPanel58.Size = new System.Drawing.Size(238, 1);
             this.materialPanel58.TabIndex = 6;
             // 
             // btnMonth6
@@ -2722,6 +2781,7 @@
             this.btnMonth6.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth6.AutoSize = true;
             this.btnMonth6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth6.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth6.Depth = 0;
@@ -2732,7 +2792,7 @@
             this.btnMonth6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonth6.Name = "btnMonth6";
             this.btnMonth6.Primary = false;
-            this.btnMonth6.Size = new System.Drawing.Size(150, 1);
+            this.btnMonth6.Size = new System.Drawing.Size(238, 1);
             this.btnMonth6.TabIndex = 3;
             this.btnMonth6.Tag = "6";
             this.btnMonth6.Text = "June";
@@ -2748,11 +2808,11 @@
             this.materialPanel57.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel57.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel57.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel57.Location = new System.Drawing.Point(148, 1);
+            this.materialPanel57.Location = new System.Drawing.Point(237, 1);
             this.materialPanel57.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel57.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel57.Name = "materialPanel57";
-            this.materialPanel57.Size = new System.Drawing.Size(148, 1);
+            this.materialPanel57.Size = new System.Drawing.Size(237, 1);
             this.materialPanel57.TabIndex = 5;
             // 
             // btnMonth5
@@ -2760,6 +2820,7 @@
             this.btnMonth5.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth5.AutoSize = true;
             this.btnMonth5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth5.Depth = 0;
@@ -2770,7 +2831,7 @@
             this.btnMonth5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonth5.Name = "btnMonth5";
             this.btnMonth5.Primary = false;
-            this.btnMonth5.Size = new System.Drawing.Size(148, 1);
+            this.btnMonth5.Size = new System.Drawing.Size(237, 1);
             this.btnMonth5.TabIndex = 3;
             this.btnMonth5.Tag = "5";
             this.btnMonth5.Text = "May";
@@ -2790,7 +2851,7 @@
             this.materialPanel56.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel56.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel56.Name = "materialPanel56";
-            this.materialPanel56.Size = new System.Drawing.Size(148, 1);
+            this.materialPanel56.Size = new System.Drawing.Size(237, 1);
             this.materialPanel56.TabIndex = 4;
             // 
             // btnMonth4
@@ -2798,6 +2859,7 @@
             this.btnMonth4.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth4.AutoSize = true;
             this.btnMonth4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth4.Depth = 0;
@@ -2808,7 +2870,7 @@
             this.btnMonth4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonth4.Name = "btnMonth4";
             this.btnMonth4.Primary = false;
-            this.btnMonth4.Size = new System.Drawing.Size(148, 1);
+            this.btnMonth4.Size = new System.Drawing.Size(237, 1);
             this.btnMonth4.TabIndex = 3;
             this.btnMonth4.Tag = "4";
             this.btnMonth4.Text = "April";
@@ -2824,11 +2886,11 @@
             this.materialPanel54.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel54.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel54.Location = new System.Drawing.Point(296, 0);
+            this.materialPanel54.Location = new System.Drawing.Point(474, 0);
             this.materialPanel54.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel54.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel54.Name = "materialPanel54";
-            this.materialPanel54.Size = new System.Drawing.Size(150, 1);
+            this.materialPanel54.Size = new System.Drawing.Size(238, 1);
             this.materialPanel54.TabIndex = 2;
             // 
             // btnMonth3
@@ -2836,6 +2898,7 @@
             this.btnMonth3.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth3.AutoSize = true;
             this.btnMonth3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth3.Depth = 0;
@@ -2846,7 +2909,7 @@
             this.btnMonth3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonth3.Name = "btnMonth3";
             this.btnMonth3.Primary = false;
-            this.btnMonth3.Size = new System.Drawing.Size(150, 1);
+            this.btnMonth3.Size = new System.Drawing.Size(238, 1);
             this.btnMonth3.TabIndex = 3;
             this.btnMonth3.Tag = "3";
             this.btnMonth3.Text = "March";
@@ -2862,11 +2925,11 @@
             this.materialPanel53.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel53.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel53.Location = new System.Drawing.Point(148, 0);
+            this.materialPanel53.Location = new System.Drawing.Point(237, 0);
             this.materialPanel53.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel53.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel53.Name = "materialPanel53";
-            this.materialPanel53.Size = new System.Drawing.Size(148, 1);
+            this.materialPanel53.Size = new System.Drawing.Size(237, 1);
             this.materialPanel53.TabIndex = 1;
             // 
             // btnMonth2
@@ -2874,6 +2937,7 @@
             this.btnMonth2.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth2.AutoSize = true;
             this.btnMonth2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth2.Depth = 0;
@@ -2884,7 +2948,7 @@
             this.btnMonth2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonth2.Name = "btnMonth2";
             this.btnMonth2.Primary = false;
-            this.btnMonth2.Size = new System.Drawing.Size(148, 1);
+            this.btnMonth2.Size = new System.Drawing.Size(237, 1);
             this.btnMonth2.TabIndex = 3;
             this.btnMonth2.Tag = "2";
             this.btnMonth2.Text = "February";
@@ -2904,7 +2968,7 @@
             this.materialPanel52.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel52.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel52.Name = "materialPanel52";
-            this.materialPanel52.Size = new System.Drawing.Size(148, 1);
+            this.materialPanel52.Size = new System.Drawing.Size(237, 1);
             this.materialPanel52.TabIndex = 0;
             // 
             // btnMonth1
@@ -2912,6 +2976,7 @@
             this.btnMonth1.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMonth1.AutoSize = true;
             this.btnMonth1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMonth1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnMonth1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonth1.Depth = 0;
@@ -2922,7 +2987,7 @@
             this.btnMonth1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonth1.Name = "btnMonth1";
             this.btnMonth1.Primary = false;
-            this.btnMonth1.Size = new System.Drawing.Size(148, 1);
+            this.btnMonth1.Size = new System.Drawing.Size(237, 1);
             this.btnMonth1.TabIndex = 3;
             this.btnMonth1.Tag = "1";
             this.btnMonth1.Text = "January";
@@ -2955,7 +3020,7 @@
             this.tblYear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tblYear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tblYear.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tblYear.Size = new System.Drawing.Size(446, 185);
+            this.tblYear.Size = new System.Drawing.Size(712, 185);
             this.tblYear.TabIndex = 5;
             this.tblYear.Visible = false;
             // 
@@ -2968,11 +3033,11 @@
             this.materialPanel55.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel55.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel55.Location = new System.Drawing.Point(296, 138);
+            this.materialPanel55.Location = new System.Drawing.Point(474, 138);
             this.materialPanel55.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel55.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel55.Name = "materialPanel55";
-            this.materialPanel55.Size = new System.Drawing.Size(150, 47);
+            this.materialPanel55.Size = new System.Drawing.Size(238, 47);
             this.materialPanel55.TabIndex = 14;
             // 
             // btnYear11
@@ -2980,6 +3045,7 @@
             this.btnYear11.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear11.AutoSize = true;
             this.btnYear11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear11.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear11.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear11.Depth = 0;
@@ -2990,7 +3056,7 @@
             this.btnYear11.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnYear11.Name = "btnYear11";
             this.btnYear11.Primary = false;
-            this.btnYear11.Size = new System.Drawing.Size(150, 47);
+            this.btnYear11.Size = new System.Drawing.Size(238, 47);
             this.btnYear11.TabIndex = 3;
             this.btnYear11.Tag = "12";
             this.btnYear11.Text = "2018";
@@ -3006,11 +3072,11 @@
             this.materialPanel59.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel59.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel59.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel59.Location = new System.Drawing.Point(148, 138);
+            this.materialPanel59.Location = new System.Drawing.Point(237, 138);
             this.materialPanel59.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel59.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel59.Name = "materialPanel59";
-            this.materialPanel59.Size = new System.Drawing.Size(148, 47);
+            this.materialPanel59.Size = new System.Drawing.Size(237, 47);
             this.materialPanel59.TabIndex = 13;
             // 
             // btnYear10
@@ -3018,6 +3084,7 @@
             this.btnYear10.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear10.AutoSize = true;
             this.btnYear10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear10.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear10.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear10.Depth = 0;
@@ -3028,7 +3095,7 @@
             this.btnYear10.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnYear10.Name = "btnYear10";
             this.btnYear10.Primary = false;
-            this.btnYear10.Size = new System.Drawing.Size(148, 47);
+            this.btnYear10.Size = new System.Drawing.Size(237, 47);
             this.btnYear10.TabIndex = 3;
             this.btnYear10.Tag = "11";
             this.btnYear10.Text = "2018";
@@ -3048,7 +3115,7 @@
             this.materialPanel63.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel63.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel63.Name = "materialPanel63";
-            this.materialPanel63.Size = new System.Drawing.Size(148, 47);
+            this.materialPanel63.Size = new System.Drawing.Size(237, 47);
             this.materialPanel63.TabIndex = 12;
             // 
             // btnYear9
@@ -3056,6 +3123,7 @@
             this.btnYear9.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear9.AutoSize = true;
             this.btnYear9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear9.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear9.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear9.Depth = 0;
@@ -3066,7 +3134,7 @@
             this.btnYear9.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnYear9.Name = "btnYear9";
             this.btnYear9.Primary = false;
-            this.btnYear9.Size = new System.Drawing.Size(148, 47);
+            this.btnYear9.Size = new System.Drawing.Size(237, 47);
             this.btnYear9.TabIndex = 3;
             this.btnYear9.Tag = "10";
             this.btnYear9.Text = "2018";
@@ -3082,11 +3150,11 @@
             this.materialPanel67.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel67.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel67.Location = new System.Drawing.Point(296, 92);
+            this.materialPanel67.Location = new System.Drawing.Point(474, 92);
             this.materialPanel67.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel67.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel67.Name = "materialPanel67";
-            this.materialPanel67.Size = new System.Drawing.Size(150, 46);
+            this.materialPanel67.Size = new System.Drawing.Size(238, 46);
             this.materialPanel67.TabIndex = 10;
             // 
             // btnYear8
@@ -3094,6 +3162,7 @@
             this.btnYear8.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear8.AutoSize = true;
             this.btnYear8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear8.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear8.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear8.Depth = 0;
@@ -3104,7 +3173,7 @@
             this.btnYear8.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnYear8.Name = "btnYear8";
             this.btnYear8.Primary = false;
-            this.btnYear8.Size = new System.Drawing.Size(150, 46);
+            this.btnYear8.Size = new System.Drawing.Size(238, 46);
             this.btnYear8.TabIndex = 3;
             this.btnYear8.Tag = "9";
             this.btnYear8.Text = "2018";
@@ -3120,11 +3189,11 @@
             this.materialPanel68.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel68.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel68.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel68.Location = new System.Drawing.Point(148, 92);
+            this.materialPanel68.Location = new System.Drawing.Point(237, 92);
             this.materialPanel68.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel68.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel68.Name = "materialPanel68";
-            this.materialPanel68.Size = new System.Drawing.Size(148, 46);
+            this.materialPanel68.Size = new System.Drawing.Size(237, 46);
             this.materialPanel68.TabIndex = 9;
             // 
             // btnYear7
@@ -3132,6 +3201,7 @@
             this.btnYear7.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear7.AutoSize = true;
             this.btnYear7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear7.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear7.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear7.Depth = 0;
@@ -3142,7 +3212,7 @@
             this.btnYear7.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnYear7.Name = "btnYear7";
             this.btnYear7.Primary = false;
-            this.btnYear7.Size = new System.Drawing.Size(148, 46);
+            this.btnYear7.Size = new System.Drawing.Size(237, 46);
             this.btnYear7.TabIndex = 3;
             this.btnYear7.Tag = "8";
             this.btnYear7.Text = "2018";
@@ -3162,7 +3232,7 @@
             this.materialPanel69.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel69.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel69.Name = "materialPanel69";
-            this.materialPanel69.Size = new System.Drawing.Size(148, 46);
+            this.materialPanel69.Size = new System.Drawing.Size(237, 46);
             this.materialPanel69.TabIndex = 8;
             // 
             // btnYear6
@@ -3170,6 +3240,7 @@
             this.btnYear6.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear6.AutoSize = true;
             this.btnYear6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear6.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear6.Depth = 0;
@@ -3180,7 +3251,7 @@
             this.btnYear6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnYear6.Name = "btnYear6";
             this.btnYear6.Primary = false;
-            this.btnYear6.Size = new System.Drawing.Size(148, 46);
+            this.btnYear6.Size = new System.Drawing.Size(237, 46);
             this.btnYear6.TabIndex = 3;
             this.btnYear6.Tag = "7";
             this.btnYear6.Text = "2018";
@@ -3196,11 +3267,11 @@
             this.materialPanel70.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel70.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel70.Location = new System.Drawing.Point(296, 46);
+            this.materialPanel70.Location = new System.Drawing.Point(474, 46);
             this.materialPanel70.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel70.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel70.Name = "materialPanel70";
-            this.materialPanel70.Size = new System.Drawing.Size(150, 46);
+            this.materialPanel70.Size = new System.Drawing.Size(238, 46);
             this.materialPanel70.TabIndex = 6;
             // 
             // btnYear5
@@ -3208,6 +3279,7 @@
             this.btnYear5.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear5.AutoSize = true;
             this.btnYear5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear5.Depth = 0;
@@ -3218,7 +3290,7 @@
             this.btnYear5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnYear5.Name = "btnYear5";
             this.btnYear5.Primary = false;
-            this.btnYear5.Size = new System.Drawing.Size(150, 46);
+            this.btnYear5.Size = new System.Drawing.Size(238, 46);
             this.btnYear5.TabIndex = 3;
             this.btnYear5.Tag = "6";
             this.btnYear5.Text = "2018";
@@ -3234,11 +3306,11 @@
             this.materialPanel71.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel71.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel71.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel71.Location = new System.Drawing.Point(148, 46);
+            this.materialPanel71.Location = new System.Drawing.Point(237, 46);
             this.materialPanel71.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel71.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel71.Name = "materialPanel71";
-            this.materialPanel71.Size = new System.Drawing.Size(148, 46);
+            this.materialPanel71.Size = new System.Drawing.Size(237, 46);
             this.materialPanel71.TabIndex = 5;
             // 
             // btnYear4
@@ -3246,6 +3318,7 @@
             this.btnYear4.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear4.AutoSize = true;
             this.btnYear4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear4.Depth = 0;
@@ -3256,7 +3329,7 @@
             this.btnYear4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnYear4.Name = "btnYear4";
             this.btnYear4.Primary = false;
-            this.btnYear4.Size = new System.Drawing.Size(148, 46);
+            this.btnYear4.Size = new System.Drawing.Size(237, 46);
             this.btnYear4.TabIndex = 3;
             this.btnYear4.Tag = "5";
             this.btnYear4.Text = "2018";
@@ -3276,7 +3349,7 @@
             this.materialPanel72.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel72.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel72.Name = "materialPanel72";
-            this.materialPanel72.Size = new System.Drawing.Size(148, 46);
+            this.materialPanel72.Size = new System.Drawing.Size(237, 46);
             this.materialPanel72.TabIndex = 4;
             // 
             // btnYear3
@@ -3284,6 +3357,7 @@
             this.btnYear3.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear3.AutoSize = true;
             this.btnYear3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear3.Depth = 0;
@@ -3294,7 +3368,7 @@
             this.btnYear3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnYear3.Name = "btnYear3";
             this.btnYear3.Primary = false;
-            this.btnYear3.Size = new System.Drawing.Size(148, 46);
+            this.btnYear3.Size = new System.Drawing.Size(237, 46);
             this.btnYear3.TabIndex = 3;
             this.btnYear3.Tag = "4";
             this.btnYear3.Text = "2018";
@@ -3310,11 +3384,11 @@
             this.materialPanel73.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel73.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel73.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel73.Location = new System.Drawing.Point(296, 0);
+            this.materialPanel73.Location = new System.Drawing.Point(474, 0);
             this.materialPanel73.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel73.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel73.Name = "materialPanel73";
-            this.materialPanel73.Size = new System.Drawing.Size(150, 46);
+            this.materialPanel73.Size = new System.Drawing.Size(238, 46);
             this.materialPanel73.TabIndex = 2;
             // 
             // btnYear2
@@ -3322,6 +3396,7 @@
             this.btnYear2.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear2.AutoSize = true;
             this.btnYear2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear2.Depth = 0;
@@ -3332,7 +3407,7 @@
             this.btnYear2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnYear2.Name = "btnYear2";
             this.btnYear2.Primary = false;
-            this.btnYear2.Size = new System.Drawing.Size(150, 46);
+            this.btnYear2.Size = new System.Drawing.Size(238, 46);
             this.btnYear2.TabIndex = 3;
             this.btnYear2.Tag = "3";
             this.btnYear2.Text = "2018";
@@ -3348,11 +3423,11 @@
             this.materialPanel74.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel74.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel74.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel74.Location = new System.Drawing.Point(148, 0);
+            this.materialPanel74.Location = new System.Drawing.Point(237, 0);
             this.materialPanel74.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel74.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel74.Name = "materialPanel74";
-            this.materialPanel74.Size = new System.Drawing.Size(148, 46);
+            this.materialPanel74.Size = new System.Drawing.Size(237, 46);
             this.materialPanel74.TabIndex = 1;
             // 
             // btnYear1
@@ -3360,6 +3435,7 @@
             this.btnYear1.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear1.AutoSize = true;
             this.btnYear1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear1.Depth = 0;
@@ -3370,7 +3446,7 @@
             this.btnYear1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnYear1.Name = "btnYear1";
             this.btnYear1.Primary = false;
-            this.btnYear1.Size = new System.Drawing.Size(148, 46);
+            this.btnYear1.Size = new System.Drawing.Size(237, 46);
             this.btnYear1.TabIndex = 3;
             this.btnYear1.Tag = "2";
             this.btnYear1.Text = "2018";
@@ -3390,7 +3466,7 @@
             this.materialPanel75.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel75.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel75.Name = "materialPanel75";
-            this.materialPanel75.Size = new System.Drawing.Size(148, 46);
+            this.materialPanel75.Size = new System.Drawing.Size(237, 46);
             this.materialPanel75.TabIndex = 0;
             // 
             // btnYear0
@@ -3398,6 +3474,7 @@
             this.btnYear0.Alignment = System.Drawing.StringAlignment.Center;
             this.btnYear0.AutoSize = true;
             this.btnYear0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnYear0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYear0.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnYear0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYear0.Depth = 0;
@@ -3408,7 +3485,7 @@
             this.btnYear0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnYear0.Name = "btnYear0";
             this.btnYear0.Primary = false;
-            this.btnYear0.Size = new System.Drawing.Size(148, 46);
+            this.btnYear0.Size = new System.Drawing.Size(237, 46);
             this.btnYear0.TabIndex = 3;
             this.btnYear0.Tag = "1";
             this.btnYear0.Text = "2018";
@@ -3419,7 +3496,7 @@
             // 
             this.pnlHeaderStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(156)))), ((int)(((byte)(236)))));
             this.pnlHeaderStart.ColorStyle = MaterialSkin.ColorType.DEFAULT;
-            this.pnlHeaderStart.Controls.Add(this.tblHeaderStart);
+            this.pnlHeaderStart.Controls.Add(this.tblHeader);
             this.pnlHeaderStart.Depth = 0;
             this.pnlHeaderStart.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeaderStart.Font = new System.Drawing.Font("Roboto", 11F);
@@ -3427,34 +3504,35 @@
             this.pnlHeaderStart.Location = new System.Drawing.Point(2, 2);
             this.pnlHeaderStart.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlHeaderStart.Name = "pnlHeaderStart";
-            this.pnlHeaderStart.Size = new System.Drawing.Size(446, 70);
+            this.pnlHeaderStart.Size = new System.Drawing.Size(712, 70);
             this.pnlHeaderStart.TabIndex = 6;
             // 
-            // tblHeaderStart
+            // tblHeader
             // 
-            this.tblHeaderStart.ColumnCount = 3;
-            this.tblHeaderStart.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
-            this.tblHeaderStart.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tblHeaderStart.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tblHeaderStart.Controls.Add(this.btnEndDateValue, 1, 1);
-            this.tblHeaderStart.Controls.Add(this.pblDateSelector, 0, 0);
-            this.tblHeaderStart.Controls.Add(this.pnlStartTime, 2, 0);
-            this.tblHeaderStart.Controls.Add(this.btnStartDateValue, 1, 0);
-            this.tblHeaderStart.Controls.Add(this.pnlEndTime, 2, 1);
-            this.tblHeaderStart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblHeaderStart.Location = new System.Drawing.Point(0, 0);
-            this.tblHeaderStart.Name = "tblHeaderStart";
-            this.tblHeaderStart.RowCount = 2;
-            this.tblHeaderStart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblHeaderStart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblHeaderStart.Size = new System.Drawing.Size(446, 70);
-            this.tblHeaderStart.TabIndex = 7;
+            this.tblHeader.ColumnCount = 3;
+            this.tblHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
+            this.tblHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tblHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tblHeader.Controls.Add(this.btnEndDateValue, 1, 1);
+            this.tblHeader.Controls.Add(this.pblDateSelector, 0, 0);
+            this.tblHeader.Controls.Add(this.pnlStartTime, 2, 0);
+            this.tblHeader.Controls.Add(this.btnStartDateValue, 1, 0);
+            this.tblHeader.Controls.Add(this.pnlEndTime, 2, 1);
+            this.tblHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblHeader.Location = new System.Drawing.Point(0, 0);
+            this.tblHeader.Name = "tblHeader";
+            this.tblHeader.RowCount = 2;
+            this.tblHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblHeader.Size = new System.Drawing.Size(712, 70);
+            this.tblHeader.TabIndex = 7;
             // 
             // btnEndDateValue
             // 
             this.btnEndDateValue.Alignment = System.Drawing.StringAlignment.Center;
             this.btnEndDateValue.AutoSize = true;
             this.btnEndDateValue.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEndDateValue.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnEndDateValue.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnEndDateValue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEndDateValue.Depth = 0;
@@ -3466,9 +3544,10 @@
             this.btnEndDateValue.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEndDateValue.Name = "btnEndDateValue";
             this.btnEndDateValue.Primary = true;
-            this.btnEndDateValue.Size = new System.Drawing.Size(193, 35);
+            this.btnEndDateValue.Size = new System.Drawing.Size(353, 35);
             this.btnEndDateValue.TabIndex = 11;
             this.btnEndDateValue.Text = "Mon, 1 May 2000";
+            this.btnEndDateValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEndDateValue.UseVisualStyleBackColor = true;
             this.btnEndDateValue.Click += new System.EventHandler(this.btnEndDateValue_Click);
             // 
@@ -3486,7 +3565,7 @@
             this.pblDateSelector.Margin = new System.Windows.Forms.Padding(0);
             this.pblDateSelector.MouseState = MaterialSkin.MouseState.HOVER;
             this.pblDateSelector.Name = "pblDateSelector";
-            this.tblHeaderStart.SetRowSpan(this.pblDateSelector, 2);
+            this.tblHeader.SetRowSpan(this.pblDateSelector, 2);
             this.pblDateSelector.Size = new System.Drawing.Size(115, 70);
             this.pblDateSelector.TabIndex = 10;
             // 
@@ -3533,13 +3612,14 @@
             this.pnlStartTime.Controls.Add(this.tblTime);
             this.pnlStartTime.Controls.Add(this.btnStartTimeValue);
             this.pnlStartTime.Depth = 0;
+            this.pnlStartTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlStartTime.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlStartTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pnlStartTime.Location = new System.Drawing.Point(313, 0);
+            this.pnlStartTime.Location = new System.Drawing.Point(473, 0);
             this.pnlStartTime.Margin = new System.Windows.Forms.Padding(0);
             this.pnlStartTime.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlStartTime.Name = "pnlStartTime";
-            this.pnlStartTime.Size = new System.Drawing.Size(133, 35);
+            this.pnlStartTime.Size = new System.Drawing.Size(239, 35);
             this.pnlStartTime.TabIndex = 6;
             // 
             // tblTime
@@ -3557,7 +3637,7 @@
             this.tblTime.Name = "tblTime";
             this.tblTime.RowCount = 1;
             this.tblTime.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tblTime.Size = new System.Drawing.Size(89, 35);
+            this.tblTime.Size = new System.Drawing.Size(195, 35);
             this.tblTime.TabIndex = 7;
             // 
             // materialPanelColored4
@@ -3569,12 +3649,12 @@
             this.materialPanelColored4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanelColored4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanelColored4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialPanelColored4.Location = new System.Drawing.Point(47, 0);
+            this.materialPanelColored4.Location = new System.Drawing.Point(100, 0);
             this.materialPanelColored4.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanelColored4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored4.Name = "materialPanelColored4";
             this.materialPanelColored4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.materialPanelColored4.Size = new System.Drawing.Size(42, 35);
+            this.materialPanelColored4.Size = new System.Drawing.Size(95, 35);
             this.materialPanelColored4.TabIndex = 2;
             // 
             // ddStartMin
@@ -3598,7 +3678,7 @@
             this.ddStartMin.SelectedIndex = -1;
             this.ddStartMin.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("ddStartMin.SelectedIndices")));
             this.ddStartMin.SelectedValue = null;
-            this.ddStartMin.Size = new System.Drawing.Size(42, 23);
+            this.ddStartMin.Size = new System.Drawing.Size(95, 23);
             this.ddStartMin.TabIndex = 1;
             this.ddStartMin.TabStop = false;
             this.ddStartMin.ValueMember = null;
@@ -3613,7 +3693,7 @@
             this.materialPanelColored3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanelColored3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanelColored3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialPanelColored3.Location = new System.Drawing.Point(42, 0);
+            this.materialPanelColored3.Location = new System.Drawing.Point(95, 0);
             this.materialPanelColored3.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanelColored3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored3.Name = "materialPanelColored3";
@@ -3648,7 +3728,7 @@
             this.materialPanelColored2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored2.Name = "materialPanelColored2";
             this.materialPanelColored2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.materialPanelColored2.Size = new System.Drawing.Size(42, 35);
+            this.materialPanelColored2.Size = new System.Drawing.Size(95, 35);
             this.materialPanelColored2.TabIndex = 0;
             // 
             // ddStartHour
@@ -3672,7 +3752,7 @@
             this.ddStartHour.SelectedIndex = -1;
             this.ddStartHour.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("ddStartHour.SelectedIndices")));
             this.ddStartHour.SelectedValue = null;
-            this.ddStartHour.Size = new System.Drawing.Size(42, 23);
+            this.ddStartHour.Size = new System.Drawing.Size(95, 23);
             this.ddStartHour.TabIndex = 0;
             this.ddStartHour.TabStop = false;
             this.ddStartHour.ValueMember = null;
@@ -3683,6 +3763,7 @@
             this.btnStartTimeValue.Alignment = System.Drawing.StringAlignment.Center;
             this.btnStartTimeValue.AutoSize = true;
             this.btnStartTimeValue.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnStartTimeValue.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnStartTimeValue.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnStartTimeValue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStartTimeValue.Depth = 0;
@@ -3702,6 +3783,7 @@
             this.btnStartDateValue.Alignment = System.Drawing.StringAlignment.Center;
             this.btnStartDateValue.AutoSize = true;
             this.btnStartDateValue.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnStartDateValue.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnStartDateValue.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnStartDateValue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStartDateValue.Depth = 0;
@@ -3712,9 +3794,10 @@
             this.btnStartDateValue.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnStartDateValue.Name = "btnStartDateValue";
             this.btnStartDateValue.Primary = true;
-            this.btnStartDateValue.Size = new System.Drawing.Size(193, 35);
+            this.btnStartDateValue.Size = new System.Drawing.Size(353, 35);
             this.btnStartDateValue.TabIndex = 5;
             this.btnStartDateValue.Text = "Mon, 1 May 2000";
+            this.btnStartDateValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStartDateValue.UseVisualStyleBackColor = true;
             this.btnStartDateValue.Click += new System.EventHandler(this.btnStarDateValue_Click);
             // 
@@ -3728,11 +3811,11 @@
             this.pnlEndTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlEndTime.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlEndTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pnlEndTime.Location = new System.Drawing.Point(313, 35);
+            this.pnlEndTime.Location = new System.Drawing.Point(473, 35);
             this.pnlEndTime.Margin = new System.Windows.Forms.Padding(0);
             this.pnlEndTime.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlEndTime.Name = "pnlEndTime";
-            this.pnlEndTime.Size = new System.Drawing.Size(133, 35);
+            this.pnlEndTime.Size = new System.Drawing.Size(239, 35);
             this.pnlEndTime.TabIndex = 12;
             // 
             // tableLayoutPanel3
@@ -3750,7 +3833,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(89, 35);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(195, 35);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
             // materialPanelColored7
@@ -3762,12 +3845,12 @@
             this.materialPanelColored7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanelColored7.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanelColored7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialPanelColored7.Location = new System.Drawing.Point(47, 0);
+            this.materialPanelColored7.Location = new System.Drawing.Point(105, 0);
             this.materialPanelColored7.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanelColored7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored7.Name = "materialPanelColored7";
             this.materialPanelColored7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.materialPanelColored7.Size = new System.Drawing.Size(42, 35);
+            this.materialPanelColored7.Size = new System.Drawing.Size(90, 35);
             this.materialPanelColored7.TabIndex = 2;
             // 
             // ddEndMin
@@ -3791,7 +3874,7 @@
             this.ddEndMin.SelectedIndex = -1;
             this.ddEndMin.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("ddEndMin.SelectedIndices")));
             this.ddEndMin.SelectedValue = null;
-            this.ddEndMin.Size = new System.Drawing.Size(42, 23);
+            this.ddEndMin.Size = new System.Drawing.Size(90, 23);
             this.ddEndMin.TabIndex = 1;
             this.ddEndMin.TabStop = false;
             this.ddEndMin.ValueMember = null;
@@ -3806,11 +3889,11 @@
             this.materialPanelColored8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanelColored8.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanelColored8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialPanelColored8.Location = new System.Drawing.Point(41, 0);
+            this.materialPanelColored8.Location = new System.Drawing.Point(90, 0);
             this.materialPanelColored8.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanelColored8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored8.Name = "materialPanelColored8";
-            this.materialPanelColored8.Size = new System.Drawing.Size(6, 35);
+            this.materialPanelColored8.Size = new System.Drawing.Size(15, 35);
             this.materialPanelColored8.TabIndex = 1;
             // 
             // materialLabel2
@@ -3822,7 +3905,7 @@
             this.materialLabel2.Location = new System.Drawing.Point(0, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(6, 35);
+            this.materialLabel2.Size = new System.Drawing.Size(15, 35);
             this.materialLabel2.TabIndex = 0;
             this.materialLabel2.Text = ":";
             this.materialLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3841,7 +3924,7 @@
             this.materialPanelColored9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored9.Name = "materialPanelColored9";
             this.materialPanelColored9.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.materialPanelColored9.Size = new System.Drawing.Size(41, 35);
+            this.materialPanelColored9.Size = new System.Drawing.Size(90, 35);
             this.materialPanelColored9.TabIndex = 0;
             // 
             // ddEndHour
@@ -3865,7 +3948,7 @@
             this.ddEndHour.SelectedIndex = -1;
             this.ddEndHour.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("ddEndHour.SelectedIndices")));
             this.ddEndHour.SelectedValue = null;
-            this.ddEndHour.Size = new System.Drawing.Size(41, 23);
+            this.ddEndHour.Size = new System.Drawing.Size(90, 23);
             this.ddEndHour.TabIndex = 0;
             this.ddEndHour.TabStop = false;
             this.ddEndHour.ValueMember = null;
@@ -3876,6 +3959,7 @@
             this.btnEndTimeValue.Alignment = System.Drawing.StringAlignment.Center;
             this.btnEndTimeValue.AutoSize = true;
             this.btnEndTimeValue.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEndTimeValue.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnEndTimeValue.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnEndTimeValue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEndTimeValue.Depth = 0;
@@ -3894,7 +3978,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 350);
+            this.ClientSize = new System.Drawing.Size(716, 350);
             this.Controls.Add(this.tblYear);
             this.Controls.Add(this.tblMonth);
             this.Controls.Add(this.tblDate);
@@ -4066,8 +4150,8 @@
             this.materialPanel75.ResumeLayout(false);
             this.materialPanel75.PerformLayout();
             this.pnlHeaderStart.ResumeLayout(false);
-            this.tblHeaderStart.ResumeLayout(false);
-            this.tblHeaderStart.PerformLayout();
+            this.tblHeader.ResumeLayout(false);
+            this.tblHeader.PerformLayout();
             this.pblDateSelector.ResumeLayout(false);
             this.pnlStartTime.ResumeLayout(false);
             this.pnlStartTime.PerformLayout();
@@ -4250,7 +4334,7 @@
         private MaterialPanelColored pnlHeaderStart;
         private MaterialFlatButton btnStartDateValue;
         private MaterialFlatButton btnStartTimeValue;
-        private System.Windows.Forms.TableLayoutPanel tblHeaderStart;
+        private System.Windows.Forms.TableLayoutPanel tblHeader;
         private System.Windows.Forms.TableLayoutPanel tblTime;
         private MaterialDropDown ddStartHour;
         private MaterialDropDown ddStartMin;

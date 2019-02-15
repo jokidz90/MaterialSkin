@@ -15,7 +15,7 @@ using System.Dynamic;
 
 namespace MaterialSkin.Controls
 {
-    public partial class MaterialDropDown : Control, IMaterialControl
+    public partial class MaterialDateRangePicker : Control, IMaterialControl
     {
         //Properties for managing the material design properties
         [Browsable(false)]
@@ -48,215 +48,97 @@ namespace MaterialSkin.Controls
         public void Focus() { _baseTextBox.Focus(); }
 
         private int _dropDownArrowWidth = 20;
-        private MaterialDropDownDialog _frmItemSelector = null;
+        private MaterialDateRangePickerForm _frmDatePicker = null;
 
-        #region DropDown Properties
+        #region Date PopUp Properties
 
-        public bool HideEmptyValue { set; get; }
+        public bool ShowTime { get; set; }
 
-        public event ItemSelectHandler ValueChanged;
+        public event DateRangeChangedHandler ValueChanged;
 
         private int _dropDownWidth = -1;
         public int DropDownWidth { get => _dropDownWidth; set => _dropDownWidth = value; }
 
-        private int _dropDownHeight = 200;
+        private int _dropDownHeight = 300;
         public int DropDownHeight { get => _dropDownHeight; set => _dropDownHeight = value; }
 
-        private bool _isMultiSelect = false;
-        public bool IsMultiSelect { get => _isMultiSelect; set => _isMultiSelect = value; }
+        private string _dateFormat = "ddd, dd MMM yyyy";
+        public string DateFormat { get => _dateFormat; set => _dateFormat = value; }
 
-        [Editor("System.Windows.Forms.Design.StringCollectionEditor, System.Design", "System.Drawing.Design.UITypeEditor, System.Drawing")]
-        public List<object> Items { get => _items; set => _items = value; }
-        private List<object> _items = new List<object>();
-
-        private int _dropDownItemHeight = 30;
-        public int DropDownItemHeight { get => _dropDownItemHeight; set => _dropDownItemHeight = value; }
-
-        public string ValueMember { get; set; }
-        public string DisplayMember { get; set; }
-
-        public object DataSource
+        private DateTime _startValue = DateTime.Now;
+        private DateTime _endValue = DateTime.Now;
+        public DateTime StartValue
         {
             set
             {
-                try
+                _startValue = value;
+                string startStr = _startValue.ToString(_dateFormat);
+                string endStr = _endValue.ToString(_dateFormat);
+                if (ShowTime)
                 {
-                    if (value.GetType().GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEnumerable<>)))
-                        _items = ((IEnumerable<object>)value).ToList();
-                    else if (value is DataTable || value is DataSet)
-                    {
-                        DataTable dt = null;
-                        if (value is DataTable)
-                            dt = (DataTable)value;
-                        else
-                            dt = ((DataSet)value).Tables[0];
+                    startStr += " " + _startValue.ToString("HH:mm");
+                    endStr += " " + _endValue.ToString("HH:mm");
+                }
 
-                        _items = new List<object>();
-                        var dynamicList = new List<dynamic>();
-
-                        foreach (DataRow dr in dt.Rows)
-                        {
-                            dynamic myObj = new ExpandoObject();
-                            var newListItem = myObj as IDictionary<string, object>;
-                            for (int i = 0; i < dt.Columns.Count; i++)
-                                newListItem[dr.Table.Columns[i].ColumnName] = dr[i];
-                            _items.Add(newListItem);
-                        }
-                    }
+                _baseTextBox.Text = startStr + "  to  " + endStr;
+                if (DisplayRangeText && _rangeSelection != DateRangeType.CUSTOM)
+                {
+                    if (_rangeSelection.ToString().StartsWith("LAST"))
+                        _baseTextBox.Text = "Last " + _rangeSelection.ToString().Replace("LAST", "").ToLower();
                     else
-                        _items = new List<object>();
-                }
-                catch (Exception ex)
-                {
-                    _items = new List<object>();
+                        _baseTextBox.Text = _rangeSelection.ToString().ToUpperFirst();
                 }
             }
             get
             {
-                return _items;
+                return _startValue;
             }
         }
 
-        public override string Text
+        public DateTime EndValue
         {
+            set
+            {
+                _endValue = value;
+                string startStr = _startValue.ToString(_dateFormat);
+                string endStr = _endValue.ToString(_dateFormat);
+                if (ShowTime)
+                {
+                    startStr += " " + _startValue.ToString("HH:mm");
+                    endStr += " " + _endValue.ToString("HH:mm");
+                }
+
+                _baseTextBox.Text = startStr + " to " + endStr;
+                if (DisplayRangeText && _rangeSelection != DateRangeType.CUSTOM)
+                {
+                    if (_rangeSelection.ToString().StartsWith("LAST"))
+                        _baseTextBox.Text = "Last " + _rangeSelection.ToString().Replace("LAST", "").ToLower();
+                    else if (_rangeSelection.ToString().StartsWith("THIS"))
+                        _baseTextBox.Text = "This " + _rangeSelection.ToString().Replace("THIS", "").ToLower();
+                    else
+                        _baseTextBox.Text = _rangeSelection.ToString().ToUpperFirst();
+                }
+            }
             get
             {
-                List<string> selecteds = new List<string>();
-                for (int i = 0; i < _items.Count; i++)
-                {
-                    if (!_selectedIndices.Contains(i))
-                        continue;
-
-                    selecteds.Add(_items[i].GetProperty(DisplayMember).ToString());
-                }
-
-                return string.Join(",", selecteds);
-            }
-            set
-            {
-
+                return _endValue;
             }
         }
 
-        public object SelectedValue
+        private DateRangeType _rangeSelection;
+        private DateRangeType RangeSelection
         {
+            set
+            {
+                _rangeSelection = value;
+            }
             get
             {
-                List<object> selecteds = new List<object>();
-                for (int i = 0; i < _items.Count; i++)
-                {
-                    if (!_selectedIndices.Contains(i))
-                        continue;
-
-                    selecteds.Add(_items[i].GetProperty(ValueMember));
-                }
-
-                object obj = selecteds;
-                if (!_isMultiSelect)
-                    obj = selecteds.FirstOrDefault();
-
-                return obj;
-            }
-            set
-            {
-                if (value == null)
-                {
-                    SelectedIndices = new List<int>();
-                    return;
-                }
-
-                List<object> selValues = value.ConvertToList();
-                if (selValues == null)
-                {
-                    selValues = new List<object>();
-                    selValues.Add(value);
-                }
-
-                var selIndices = new List<int>();
-                for (int i = 0; i < _items.Count; i++)
-                {
-                    foreach (var obj in selValues)
-                    {
-                        if (obj.ToString() != _items[i].GetProperty(ValueMember).ToString())
-                            continue;
-
-                        if (selIndices.Contains(i))
-                            continue;
-
-                        selIndices.Add(i);
-                    }
-                }
-
-                if (IsMultiSelect)
-                    SelectedIndices = selIndices;
-                else
-                {
-                    int selIndex = -1;
-                    if (selIndices.Count > 0)
-                        selIndex = selIndices[selIndices.Count - 1];
-                    SelectedIndex = selIndex;
-                }
+                return _rangeSelection;
             }
         }
 
-        public int SelectedIndex
-        {
-            get
-            {
-                if (_selectedIndices.Count == 0)
-                    return -1;
-                else
-                    return _selectedIndices[_selectedIndices.Count - 1];
-            }
-            set
-            {
-                int sel = value;
-                if (value < 0 || value >= _items.Count)
-                    sel = -1;
-
-                if (sel >= 0 && !_selectedIndices.Contains(sel))
-                {
-                    if (!IsMultiSelect)
-                        _selectedIndices.Clear();
-                    _selectedIndices.Add(sel);
-                    SelectedIndices = _selectedIndices;
-                }
-            }
-        }
-
-        public List<int> SelectedIndices
-        {
-            get => _selectedIndices;
-            set
-            {
-                _selectedIndices = value;
-                if (ValueChanged != null)
-                {
-                    ValueChanged(this, new ItemSelectArgs
-                    {
-                        SelectedIndex = SelectedIndex,
-                        SelectedIndices = SelectedIndices,
-                        Text = Text,
-                        SelectedValue = SelectedValue
-                    });
-                }
-                if (_selectedIndices.Count == 0)
-                {
-                    _baseTextBox.Text = _hint;
-                    _baseTextBox.ForeColor = SkinManager.GetHintColor();
-                    _baseTextBox.SelectionLength = 0;
-                }
-                else
-                {
-                    _baseTextBox.Text = Text;
-                    _baseTextBox.ForeColor = SkinManager.GetPrimaryTextColor();
-                }
-
-                if (!Enabled)
-                    _baseTextBox.ForeColor = SkinManager.GetDisabledOrHintColor();
-            }
-        }
-        private List<int> _selectedIndices = new List<int>();
+        public bool DisplayRangeText { set; get; }
 
         #endregion
 
@@ -1162,7 +1044,7 @@ namespace MaterialSkin.Controls
         }
         #endregion
 
-        public MaterialDropDown()
+        public MaterialDateRangePicker()
         {
             SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.DoubleBuffer, true);
 
@@ -1184,8 +1066,6 @@ namespace MaterialSkin.Controls
                 Height = Height - 5
             };
 
-            SelectedIndices = new List<int>();
-
             if (!Controls.Contains(_baseTextBox) && !DesignMode)
                 Controls.Add(_baseTextBox);
 
@@ -1194,7 +1074,7 @@ namespace MaterialSkin.Controls
             BackColorChanged += (sender, args) =>
             {
                 _baseTextBox.BackColor = BackColor;
-                _baseTextBox.ForeColor = !Enabled ? SkinManager.GetDisabledOrHintColor() : (_selectedIndices.Count > 0 ? SkinManager.GetPrimaryTextColor() : SkinManager.GetHintColor());
+                _baseTextBox.ForeColor = !Enabled ? SkinManager.GetDisabledOrHintColor() : SkinManager.GetPrimaryTextColor();
             };
             //Fix for tabstop
             this.Cursor = Cursors.Hand;
@@ -1203,10 +1083,12 @@ namespace MaterialSkin.Controls
             _baseTextBox.TabStop = true;
             _baseTextBox.ReadOnly = true;
             _baseTextBox.Cursor = Cursors.Hand;
-            _baseTextBox.Click += (sender, args) => { ShowItemSelector(); };
-            _baseTextBox.GotFocus += (sender, args) => { ShowItemSelector(); };
-            _baseTextBox.Enter += (sender, args) => { ShowItemSelector(); };
-            _baseTextBox.Leave += (sender, args) => { HideItemSelector(); };
+            _baseTextBox.Click += (sender, args) => { ShowDateSelector(); };
+            _baseTextBox.GotFocus += (sender, args) => { ShowDateSelector(); };
+            _baseTextBox.Enter += (sender, args) => { ShowDateSelector(); };
+            _baseTextBox.Leave += (sender, args) => { HideDateSelector(); };
+
+            InitDateSelector();
         }
 
         protected override void OnPaint(PaintEventArgs pevent)
@@ -1224,8 +1106,7 @@ namespace MaterialSkin.Controls
             var lineHeightNormal = 2f;
             bool isFocused = _baseTextBox.Focused || _isSelectorShown;
 
-            //g.DrawString("▼", Font, isFocused ? backBrushColored : backBrushNormal, new Point(_baseTextBox.Width, _baseTextBox.Top));
-            g.DrawImage((Image)Properties.Resources.expand.ReplaceColor(Color.Black, (isFocused ? backColorColored : backColorNormal)), _baseTextBox.Width, _baseTextBox.Top, _dropDownArrowWidth, _dropDownArrowWidth);
+            g.DrawImage((Image)Properties.Resources.date.ReplaceColor(Color.Black, (isFocused ? backColorColored : backColorNormal)), _baseTextBox.Width, _baseTextBox.Top, _dropDownArrowWidth, _dropDownArrowWidth);
             if (!_animationManager.IsAnimating())
             {
                 //No animation
@@ -1249,7 +1130,7 @@ namespace MaterialSkin.Controls
         protected override void OnEnabledChanged(EventArgs e)
         {
             ForeColor = Enabled ? SkinManager.GetPrimaryTextColor() : SkinManager.GetDisabledOrHintColor();
-            _baseTextBox.ForeColor = !Enabled ? SkinManager.GetDisabledOrHintColor() : (_selectedIndices.Count > 0 ? SkinManager.GetPrimaryTextColor() : SkinManager.GetHintColor());
+            _baseTextBox.ForeColor = !Enabled ? SkinManager.GetDisabledOrHintColor() : SkinManager.GetPrimaryTextColor();
         }
 
         protected override void OnResize(EventArgs e)
@@ -1257,79 +1138,77 @@ namespace MaterialSkin.Controls
             base.OnResize(e);
 
             _baseTextBox.Location = new Point(0, 0);
-            _baseTextBox.Width = Width - _dropDownArrowWidth;
+            _baseTextBox.Width = Width- _dropDownArrowWidth;
 
             Height = _baseTextBox.Height + 5;
         }
 
         protected override void OnClick(EventArgs e)
         {
-            ShowItemSelector();
+            ShowDateSelector();
         }
 
         protected override void OnGotFocus(EventArgs e)
         {
-            ShowItemSelector();
+            ShowDateSelector();
         }
 
         protected override void OnEnter(EventArgs e)
         {
-            ShowItemSelector();
+            ShowDateSelector();
         }
 
         protected override void OnLeave(EventArgs e)
         {
-            HideItemSelector();
+            HideDateSelector();
         }
 
 
         private bool _isSelectorShown = false;
-        private void ShowItemSelector()
+        private void ShowDateSelector()
         {
             if (_isClosing)
                 return;
             if (_isSelectorShown)
             {
-                HideItemSelectorHelper();
+                HideDateSelectorHelper();
                 return;
             }
             _isSelectorShown = true;
 
-            InitItemSelector();
-            _frmItemSelector.Show();
-            _frmItemSelector.BringToFront();
+            InitDateSelector();
+            _frmDatePicker.Show();
+            _frmDatePicker.BringToFront();
         }
 
         private bool _isClosing = false;
-        private void HideItemSelector()
+        private void HideDateSelector()
         {
             _isClosing = true;
-            HideItemSelectorHelper();
+            HideDateSelectorHelper();
             _isClosing = false;
         }
 
-        private void HideItemSelectorHelper()
+        private void HideDateSelectorHelper()
         {
             if (!_isSelectorShown)
                 return;
             _isSelectorShown = false;
-            if (_frmItemSelector == null || _frmItemSelector.IsDisposed)
+            if (_frmDatePicker == null || _frmDatePicker.IsDisposed)
                 return;
 
-            _frmItemSelector.Close();
+            _frmDatePicker.Close();
         }
 
-        private List<int> _prevSelectedIndices = new List<int>();
-        protected void InitItemSelector()
+        protected void InitDateSelector()
         {
-            if (_frmItemSelector != null && !_frmItemSelector.IsDisposed)
+            if (_frmDatePicker != null && !_frmDatePicker.IsDisposed)
                 return;
-
             var startPoint = this.PointToScreen(Point.Empty);
             startPoint.Y = startPoint.Y;// + this.Height;
             var frmWidth = _dropDownWidth <= 0 ? this.Width : _dropDownWidth;
-            var frmHeight = (_items.Count * _dropDownItemHeight) > _dropDownHeight ? _dropDownHeight : (_items.Count * _dropDownItemHeight);
-            frmHeight += 15;
+            var frmHeight = _dropDownHeight <= 0 ? 300 : _dropDownHeight;
+            //frmHeight += 15;
 
             Screen myScreen = Screen.FromControl(this);
             Rectangle area = myScreen.WorkingArea;
@@ -1338,29 +1217,26 @@ namespace MaterialSkin.Controls
             if (yDiff < 0)
                 startPoint.Y = startPoint.Y + yDiff;
 
-            _prevSelectedIndices = new List<int>();
-            foreach (var item in _selectedIndices)
-                _prevSelectedIndices.Add(item);
-
-            _frmItemSelector = new MaterialDropDownDialog();
-            _frmItemSelector.HideEmptyValue = HideEmptyValue;
-            _frmItemSelector.ValueMember = ValueMember;
-            _frmItemSelector.DisplayMember = DisplayMember;
-            _frmItemSelector.Items = _items;
-            _frmItemSelector.StartPosition = FormStartPosition.Manual;
-            _frmItemSelector.Location = startPoint;
-            _frmItemSelector.ItemHeight = _dropDownItemHeight;
-            _frmItemSelector.Width = frmWidth;
-            _frmItemSelector.Height = frmHeight;
-            _frmItemSelector.Leave += (sender, e) => { HideItemSelector(); };
-            _frmItemSelector.IsMultiSelect = IsMultiSelect;
-            _frmItemSelector.SelectedIndices = SelectedIndices;
-            _frmItemSelector.ItemSelected += (sender, e) =>
-             {
-                 this.SelectedIndices = e.SelectedIndices;
-                 if (!IsMultiSelect)
-                     HideItemSelector();
-             };
+            _frmDatePicker = new MaterialDateRangePickerForm();
+            _frmDatePicker.StartValue = StartValue;
+            _frmDatePicker.EndValue = EndValue;
+            _frmDatePicker.RangeSelection = _rangeSelection;
+            _frmDatePicker.DateFormat = DateFormat;
+            _frmDatePicker.ShowTime = ShowTime;
+            _frmDatePicker.StartPosition = FormStartPosition.Manual;
+            _frmDatePicker.Location = startPoint;
+            _frmDatePicker.Width = frmWidth;
+            _frmDatePicker.Height = frmHeight;
+            _frmDatePicker.Leave += (sender, e) => { HideDateSelector(); };
+            _frmDatePicker.ValueChanged += (sender, start, end, range) =>
+              {
+                  HideDateSelector();
+                  this.RangeSelection = range;
+                  this.StartValue = start;
+                  this.EndValue = end;
+                  if (ValueChanged != null)
+                      ValueChanged(this, StartValue, EndValue, RangeSelection);
+              };
         }
 
         private class BaseTextBox : TextBox
@@ -1387,17 +1263,5 @@ namespace MaterialSkin.Controls
 
             }
         }
-    }
-
-    public class DropDownItem
-    {
-        public DropDownItem() { }
-        public DropDownItem(object value, string text)
-        {
-            this.Value = value;
-            this.Text = text;
-        }
-        public object Value { set; get; }
-        public string Text { set; get; }
     }
 }
