@@ -55,10 +55,10 @@ namespace MaterialSkin.Controls
             set
             {
                 _isSelected = value;
-                if (_isSelected.HasValue)
-                    IconType = _isSelected.GetValueOrDefault(false) ? IconType.CHECK_BOX : IconType.CHECK_BOX_OUTLINE_BLANK;
-                else
-                    IconType = IconType.NONE;
+                //if (_isSelected.HasValue)
+                //    IconType = _isSelected.GetValueOrDefault(false) ? IconType.CHECK_BOX : IconType.CHECK_BOX_OUTLINE_BLANK;
+                //else
+                //    IconType = IconType.NONE;
             }
         }
 

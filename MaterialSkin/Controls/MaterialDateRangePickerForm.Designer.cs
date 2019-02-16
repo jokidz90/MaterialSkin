@@ -521,7 +521,7 @@
             this.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrev.Depth = 0;
             this.btnPrev.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnPrev.Icon = global::MaterialSkin.Properties.Resources.left;
+            this.btnPrev.Icon = null;
             this.btnPrev.IconType = MaterialSkin.IconType.NONE;
             this.btnPrev.IsSelected = false;
             this.btnPrev.Location = new System.Drawing.Point(0, 0);
@@ -544,7 +544,7 @@
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.Depth = 0;
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnNext.Icon = global::MaterialSkin.Properties.Resources.right;
+            this.btnNext.Icon = null;
             this.btnNext.IconType = MaterialSkin.IconType.NONE;
             this.btnNext.IsSelected = false;
             this.btnNext.Location = new System.Drawing.Point(676, 0);
@@ -3694,8 +3694,8 @@
             this.btnEndDateValue.Depth = 0;
             this.btnEndDateValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEndDateValue.Enabled = false;
-            this.btnEndDateValue.Icon = global::MaterialSkin.Properties.Resources.date;
-            this.btnEndDateValue.IconType = MaterialSkin.IconType.NONE;
+            this.btnEndDateValue.Icon = ((System.Drawing.Image)(resources.GetObject("btnEndDateValue.Icon")));
+            this.btnEndDateValue.IconType = MaterialSkin.IconType.EVENT_NOTE;
             this.btnEndDateValue.IsSelected = false;
             this.btnEndDateValue.Location = new System.Drawing.Point(115, 35);
             this.btnEndDateValue.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
@@ -3926,8 +3926,8 @@
             this.btnStartTimeValue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStartTimeValue.Depth = 0;
             this.btnStartTimeValue.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnStartTimeValue.Icon = global::MaterialSkin.Properties.Resources.time;
-            this.btnStartTimeValue.IconType = MaterialSkin.IconType.NONE;
+            this.btnStartTimeValue.Icon = ((System.Drawing.Image)(resources.GetObject("btnStartTimeValue.Icon")));
+            this.btnStartTimeValue.IconType = MaterialSkin.IconType.ACCESS_TIME;
             this.btnStartTimeValue.IsSelected = false;
             this.btnStartTimeValue.Location = new System.Drawing.Point(0, 0);
             this.btnStartTimeValue.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
@@ -3948,8 +3948,8 @@
             this.btnStartDateValue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStartDateValue.Depth = 0;
             this.btnStartDateValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnStartDateValue.Icon = global::MaterialSkin.Properties.Resources.date;
-            this.btnStartDateValue.IconType = MaterialSkin.IconType.NONE;
+            this.btnStartDateValue.Icon = ((System.Drawing.Image)(resources.GetObject("btnStartDateValue.Icon")));
+            this.btnStartDateValue.IconType = MaterialSkin.IconType.EVENT_NOTE;
             this.btnStartDateValue.IsSelected = false;
             this.btnStartDateValue.Location = new System.Drawing.Point(115, 0);
             this.btnStartDateValue.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
@@ -4126,8 +4126,8 @@
             this.btnEndTimeValue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEndTimeValue.Depth = 0;
             this.btnEndTimeValue.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnEndTimeValue.Icon = global::MaterialSkin.Properties.Resources.time;
-            this.btnEndTimeValue.IconType = MaterialSkin.IconType.NONE;
+            this.btnEndTimeValue.Icon = ((System.Drawing.Image)(resources.GetObject("btnEndTimeValue.Icon")));
+            this.btnEndTimeValue.IconType = MaterialSkin.IconType.ACCESS_TIME;
             this.btnEndTimeValue.IsSelected = false;
             this.btnEndTimeValue.Location = new System.Drawing.Point(0, 0);
             this.btnEndTimeValue.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);

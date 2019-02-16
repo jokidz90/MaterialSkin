@@ -82,6 +82,7 @@ namespace MaterialSkinExample
             this.item3ToolStripMenuItem = new MaterialSkin.Controls.MaterialToolStripMenuItem();
             this.materialPanel1 = new MaterialSkin.Controls.MaterialPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.materialTabControl1.SuspendLayout();
             this.tpControls.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -157,6 +158,7 @@ namespace MaterialSkinExample
             // 
             this.materialTabControl1.Controls.Add(this.tpControls);
             this.materialTabControl1.Controls.Add(this.tabPage1);
+            this.materialTabControl1.Controls.Add(this.tabPage2);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.Location = new System.Drawing.Point(0, 112);
@@ -770,7 +772,7 @@ namespace MaterialSkinExample
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1016, 497);
             this.tabPage1.TabIndex = 6;
-            this.tabPage1.Text = "ICON";
+            this.tabPage1.Text = "Icons List";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // flpIcon
@@ -902,6 +904,16 @@ namespace MaterialSkinExample
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1024, 64);
             this.flowLayoutPanel1.TabIndex = 17;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1016, 497);
+            this.tabPage2.TabIndex = 7;
+            this.tabPage2.Text = "Grid View";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -998,5 +1010,6 @@ namespace MaterialSkinExample
         private MaterialRichText materialRichText1;
         private TabPage tabPage1;
         private FlowLayoutPanel flpIcon;
+        private TabPage tabPage2;
     }
 }

@@ -101,8 +101,8 @@ namespace MaterialSkin.Controls
                 if (ctrl.IsSelected.GetValueOrDefault(false))
                     selectedCtrl = ctrl;
             }
-
-            if(selectedCtrl == null && flpMain.Controls.Count > 0)
+            SetItemIcon();
+            if (selectedCtrl == null && flpMain.Controls.Count > 0)
                 selectedCtrl = flpMain.Controls[flpMain.Controls.Count - 1];
             if (selectedCtrl != null)
                 selectedCtrl.Select();
@@ -112,13 +112,7 @@ namespace MaterialSkin.Controls
         {
             MaterialFlatButton ctrl = new MaterialFlatButton();
             ctrl.Name = _id.ToString().ToUpper() + "_" + index;
-            bool isSelected = _selectedIndices.Contains(index);
-            if (IsMultiSelect)
-                ctrl.IsSelected = false;
-            else
-                ctrl.IconType = IconType.EMPTY;
-            if (isSelected)
-                ctrl.IsSelected = isSelected;
+            ctrl.IsSelected = _selectedIndices.Contains(index);
             ctrl.AutoSize = false;
             ctrl.Width = this.Width - 35;
             ctrl.Height = _itemHeight <= 0 ? 30 : _itemHeight;
@@ -180,6 +174,7 @@ namespace MaterialSkin.Controls
                 else
                     _selectedIndices.RemoveAll(o => o == index);
             }
+            SetItemIcon();
 
             if (ItemSelected != null)
             {
@@ -188,6 +183,21 @@ namespace MaterialSkin.Controls
                     SelectedIndex = SelectedIndex,
                     SelectedIndices = SelectedIndices
                 });
+            }
+        }
+
+        private void SetItemIcon()
+        {
+            for (int i = 0; i < flpMain.Controls.Count; i++)
+            {
+                var btn = (MaterialFlatButton)flpMain.Controls[i];
+                int ctrlIndex = Convert.ToInt32(btn.Name.Replace(_id.ToString().ToUpper() + "_", ""));
+                if (ctrlIndex < 0)
+                    continue;
+                if (IsMultiSelect)
+                    btn.IconType = btn.IsSelected.GetValueOrDefault(false) ? IconType.CHECK_BOX : IconType.CHECK_BOX_OUTLINE_BLANK;
+                else
+                    btn.IconType = btn.IsSelected.GetValueOrDefault(false) ? IconType.CHECK_BOX : IconType.EMPTY;
             }
         }
     }
