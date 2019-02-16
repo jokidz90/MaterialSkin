@@ -52,9 +52,10 @@ namespace MaterialSkin.Controls
         public MaterialDatePickerForm()
         {
             InitializeComponent();
+            InitForm();
         }
 
-        private void MaterialDatePickerForm_Load(object sender, EventArgs e)
+        private void InitForm()
         {
             btnToday.Text = DateTime.Now.ToString(DateFormat);
             btnShowYear.Tag = _value.Year;
@@ -70,6 +71,11 @@ namespace MaterialSkin.Controls
                 ddMinute.SelectedIndex = 0;
 
             LoadDate();
+        }
+
+        private void MaterialDatePickerForm_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void LoadDate()

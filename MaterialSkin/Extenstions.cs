@@ -148,6 +148,12 @@ namespace MaterialSkin
             return value;
         }
 
+        public static unsafe Image ReplaceColor(this Image source, Color toReplace, Color replacement)
+        {
+            var bmp = new Bitmap(source);
+
+            return (Image)bmp.ReplaceColor(toReplace, replacement);
+        }
         public static unsafe Bitmap ReplaceColor(this Bitmap source, Color toReplace, Color replacement)
         {
             const int pixelSize = 4; // 32 bits per pixel

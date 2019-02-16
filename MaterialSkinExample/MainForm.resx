@@ -117,6 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="materialButton1.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAWhJREFUSEvd
+        1ElKA0EUh/EgDgvHtSgexuEAgqIoLkVR8CoKgp5B0QOIa/EG7hRRN66dcfo+SEFT9ZIOWeYPPwjkVVfz
+        uuo1ej5D2MA57vHV5O8zrMOarrKCJ/zVeMQyOk4fjhA9rJ1DuLY20cPfsY1RjGEHH8jr3KRtbEu+SD48
+        zy6i2iWE8WO16rlvnmccUe0DBlHE0xItkG3JM4GoVmso4lGMimXP8+whqtUpini2o2L5Qe25bfHNffgn
+        olrdoYgXKCruhpsXqdvgF89N/o5qknCDqEUv8F7MYhgpI5jDMV6Rr7tFEWdLtegKk6jLFK5RXXuCIg6u
+        atE0Os0MqmtXUcSL5uBKRZvoNN70tM5WhxfNOBVT4Te2UBfvyA/SukW0jQMrFesC8+hHygAWcIlq7QFq
+        48jNN9Ebbpqcrvn/++hoXKc4FR1c+YNy9ry2La3ix3JwOVu8/l4gec49ip6Wlh+0F9Jo/APF4uV4PKTo
+        RwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="materialRaisedButton3.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAXFJREFUSEvd
+        lF8qRVEUxg8PjISuQUimoMiNvHggDIZS5uDGUCQDIGEK/r3w/Xb3Ky1n7X1SXu5Xv7L32mev69trrW7m
+        tSj2xLV4FJ9T+PtK7ArO/Enb4kV8NXgWW2Kw5sWF8AU34kAsiYUpy+JQ3AqfOxd825QvfxX7bFQ0J0j+
+        JpykKmzx5atsDNSacJJNNvrEY9nz7JcTgz5hGbEngY2/RLVwAM8z1RJgl99kh40oSpEgnmaqJUBHgvik
+        rIKobYJUS6ZWgpEg/lBWQTQQwZ/++cIWFu/I+qOsgv49gS2iiTLFC6NWBPH7sgpithCk3DK1EpwI4pdl
+        FcTgIkipUXJ9qiXgmztBfMxGFP4xuDiQlWotwbEghtW9jYaYihyi7Wn/oVoX74JvN9ioiYHlJPwnmV2I
+        GL/cl5+Jphi5TgK8CR1KE2EjUC08qD2HUzFoXFtMRQaXL8jA86YtmXgsBhezhfangYA6pxSplvRBZ0Fd
+        9w2UoZR3XcrogwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="materialRaisedButton4.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAPdJREFUSEvN
+        1c9KAlEUx/EBt7b2D0IvIQi+Q0uzpxB6h7QXkXwd09qFPkO1KFpU3x82cBdH+92LoD/4gHO958wwjmeq
+        U+YKjd3Hg9Ee7c3KBbaY49BJ9N0CL2hqISeX2OABUzzj688T7lA376Eot/j5xwRFGeMbUdOU9lwjKx28
+        I2oYeUMbdu5RF/cxSI73rc9gZ426UE2GyfG+9RXsfCJt5lCNnaiB43wSXZ3DTlTssBMVO+xExQ47JY/p
+        B+ykfzTXEnbSUeHS+LbTRc6we0ULWbmBO65HKIpOolEcNRZdeXHzOprzemU+Qk+K6AfVPc++LUdOVf0C
+        u0jfoPFVsbQAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="dropDown2.DataSource" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u

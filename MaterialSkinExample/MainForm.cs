@@ -100,5 +100,10 @@ namespace MaterialSkinExample
                 formDropwDown2.Text = string.Join(",", selObj);
             }
         }
+
+        private void materialTabSelector1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
