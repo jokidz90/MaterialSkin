@@ -53,6 +53,16 @@ namespace MaterialSkinExample
             dropDown2.SelectedValue = new object[] { 1, 2, 3 };
             dropDown3.SelectedIndex = 111;
 
+
+
+            foreach (IconType ico in Enum.GetValues(typeof(IconType)))
+            {
+                var btn = new MaterialFlatButton();
+                btn.Name = ico.ToString();
+                btn.Text = ico.ToString();
+                btn.IconType = ico;
+                flpIcon.Controls.Add(btn);
+            }
         }
 
         private void materialButton1_Click(object sender, EventArgs e)

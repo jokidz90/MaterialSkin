@@ -354,6 +354,7 @@
             this.btnOK.Depth = 0;
             this.btnOK.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnOK.Icon = null;
+            this.btnOK.IconType = MaterialSkin.IconType.NONE;
             this.btnOK.Location = new System.Drawing.Point(529, 0);
             this.btnOK.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnOK.MouseState = MaterialSkin.MouseState.HOVER;
@@ -374,6 +375,7 @@
             this.btnCancel.Depth = 0;
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCancel.Icon = null;
+            this.btnCancel.IconType = MaterialSkin.IconType.NONE;
             this.btnCancel.Location = new System.Drawing.Point(353, 0);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
@@ -454,11 +456,11 @@
             this.tableLayoutPanel1.Controls.Add(this.btnShowYear, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnShowMonth, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(44, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(36, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(624, 35);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(640, 35);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // btnShowYear
@@ -472,12 +474,14 @@
             this.btnShowYear.Depth = 0;
             this.btnShowYear.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnShowYear.Icon = null;
-            this.btnShowYear.Location = new System.Drawing.Point(312, 0);
+            this.btnShowYear.IconType = MaterialSkin.IconType.NONE;
+            this.btnShowYear.IsSelected = false;
+            this.btnShowYear.Location = new System.Drawing.Point(320, 0);
             this.btnShowYear.Margin = new System.Windows.Forms.Padding(0);
             this.btnShowYear.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnShowYear.Name = "btnShowYear";
             this.btnShowYear.Primary = false;
-            this.btnShowYear.Size = new System.Drawing.Size(312, 35);
+            this.btnShowYear.Size = new System.Drawing.Size(320, 35);
             this.btnShowYear.TabIndex = 3;
             this.btnShowYear.Text = "2018";
             this.btnShowYear.UseVisualStyleBackColor = true;
@@ -494,12 +498,14 @@
             this.btnShowMonth.Depth = 0;
             this.btnShowMonth.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnShowMonth.Icon = null;
+            this.btnShowMonth.IconType = MaterialSkin.IconType.NONE;
+            this.btnShowMonth.IsSelected = false;
             this.btnShowMonth.Location = new System.Drawing.Point(0, 0);
             this.btnShowMonth.Margin = new System.Windows.Forms.Padding(0);
             this.btnShowMonth.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnShowMonth.Name = "btnShowMonth";
             this.btnShowMonth.Primary = false;
-            this.btnShowMonth.Size = new System.Drawing.Size(312, 35);
+            this.btnShowMonth.Size = new System.Drawing.Size(320, 35);
             this.btnShowMonth.TabIndex = 2;
             this.btnShowMonth.Text = "August";
             this.btnShowMonth.UseVisualStyleBackColor = true;
@@ -516,12 +522,14 @@
             this.btnPrev.Depth = 0;
             this.btnPrev.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnPrev.Icon = global::MaterialSkin.Properties.Resources.left;
+            this.btnPrev.IconType = MaterialSkin.IconType.NONE;
+            this.btnPrev.IsSelected = false;
             this.btnPrev.Location = new System.Drawing.Point(0, 0);
             this.btnPrev.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnPrev.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Primary = false;
-            this.btnPrev.Size = new System.Drawing.Size(44, 35);
+            this.btnPrev.Size = new System.Drawing.Size(36, 35);
             this.btnPrev.TabIndex = 1;
             this.btnPrev.UseVisualStyleBackColor = true;
             this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
@@ -537,12 +545,14 @@
             this.btnNext.Depth = 0;
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnNext.Icon = global::MaterialSkin.Properties.Resources.right;
-            this.btnNext.Location = new System.Drawing.Point(668, 0);
+            this.btnNext.IconType = MaterialSkin.IconType.NONE;
+            this.btnNext.IsSelected = false;
+            this.btnNext.Location = new System.Drawing.Point(676, 0);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnNext.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNext.Name = "btnNext";
             this.btnNext.Primary = false;
-            this.btnNext.Size = new System.Drawing.Size(44, 35);
+            this.btnNext.Size = new System.Drawing.Size(36, 35);
             this.btnNext.TabIndex = 0;
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
@@ -662,6 +672,8 @@
             this.materialFlatButton2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialFlatButton2.Enabled = false;
             this.materialFlatButton2.Icon = null;
+            this.materialFlatButton2.IconType = MaterialSkin.IconType.NONE;
+            this.materialFlatButton2.IsSelected = false;
             this.materialFlatButton2.Location = new System.Drawing.Point(0, 0);
             this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(0);
             this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -700,6 +712,8 @@
             this.materialFlatButton7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialFlatButton7.Enabled = false;
             this.materialFlatButton7.Icon = null;
+            this.materialFlatButton7.IconType = MaterialSkin.IconType.NONE;
+            this.materialFlatButton7.IsSelected = false;
             this.materialFlatButton7.Location = new System.Drawing.Point(0, 0);
             this.materialFlatButton7.Margin = new System.Windows.Forms.Padding(0);
             this.materialFlatButton7.MouseState = MaterialSkin.MouseState.HOVER;
@@ -738,6 +752,8 @@
             this.materialFlatButton6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialFlatButton6.Enabled = false;
             this.materialFlatButton6.Icon = null;
+            this.materialFlatButton6.IconType = MaterialSkin.IconType.NONE;
+            this.materialFlatButton6.IsSelected = false;
             this.materialFlatButton6.Location = new System.Drawing.Point(0, 0);
             this.materialFlatButton6.Margin = new System.Windows.Forms.Padding(0);
             this.materialFlatButton6.MouseState = MaterialSkin.MouseState.HOVER;
@@ -776,6 +792,8 @@
             this.materialFlatButton5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialFlatButton5.Enabled = false;
             this.materialFlatButton5.Icon = null;
+            this.materialFlatButton5.IconType = MaterialSkin.IconType.NONE;
+            this.materialFlatButton5.IsSelected = false;
             this.materialFlatButton5.Location = new System.Drawing.Point(0, 0);
             this.materialFlatButton5.Margin = new System.Windows.Forms.Padding(0);
             this.materialFlatButton5.MouseState = MaterialSkin.MouseState.HOVER;
@@ -814,6 +832,8 @@
             this.materialFlatButton4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialFlatButton4.Enabled = false;
             this.materialFlatButton4.Icon = null;
+            this.materialFlatButton4.IconType = MaterialSkin.IconType.NONE;
+            this.materialFlatButton4.IsSelected = false;
             this.materialFlatButton4.Location = new System.Drawing.Point(0, 0);
             this.materialFlatButton4.Margin = new System.Windows.Forms.Padding(0);
             this.materialFlatButton4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -852,6 +872,8 @@
             this.materialFlatButton3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialFlatButton3.Enabled = false;
             this.materialFlatButton3.Icon = null;
+            this.materialFlatButton3.IconType = MaterialSkin.IconType.NONE;
+            this.materialFlatButton3.IsSelected = false;
             this.materialFlatButton3.Location = new System.Drawing.Point(0, 0);
             this.materialFlatButton3.Margin = new System.Windows.Forms.Padding(0);
             this.materialFlatButton3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -890,6 +912,8 @@
             this.btn5x6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn5x6.Enabled = false;
             this.btn5x6.Icon = null;
+            this.btn5x6.IconType = MaterialSkin.IconType.NONE;
+            this.btn5x6.IsSelected = false;
             this.btn5x6.Location = new System.Drawing.Point(0, 0);
             this.btn5x6.Margin = new System.Windows.Forms.Padding(0);
             this.btn5x6.MouseState = MaterialSkin.MouseState.HOVER;
@@ -928,6 +952,8 @@
             this.btn5x5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn5x5.Enabled = false;
             this.btn5x5.Icon = null;
+            this.btn5x5.IconType = MaterialSkin.IconType.NONE;
+            this.btn5x5.IsSelected = false;
             this.btn5x5.Location = new System.Drawing.Point(0, 0);
             this.btn5x5.Margin = new System.Windows.Forms.Padding(0);
             this.btn5x5.MouseState = MaterialSkin.MouseState.HOVER;
@@ -966,6 +992,8 @@
             this.btn5x4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn5x4.Enabled = false;
             this.btn5x4.Icon = null;
+            this.btn5x4.IconType = MaterialSkin.IconType.NONE;
+            this.btn5x4.IsSelected = false;
             this.btn5x4.Location = new System.Drawing.Point(0, 0);
             this.btn5x4.Margin = new System.Windows.Forms.Padding(0);
             this.btn5x4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1004,6 +1032,8 @@
             this.btn5x3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn5x3.Enabled = false;
             this.btn5x3.Icon = null;
+            this.btn5x3.IconType = MaterialSkin.IconType.NONE;
+            this.btn5x3.IsSelected = false;
             this.btn5x3.Location = new System.Drawing.Point(0, 0);
             this.btn5x3.Margin = new System.Windows.Forms.Padding(0);
             this.btn5x3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1042,6 +1072,8 @@
             this.btn5x2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn5x2.Enabled = false;
             this.btn5x2.Icon = null;
+            this.btn5x2.IconType = MaterialSkin.IconType.NONE;
+            this.btn5x2.IsSelected = false;
             this.btn5x2.Location = new System.Drawing.Point(0, 0);
             this.btn5x2.Margin = new System.Windows.Forms.Padding(0);
             this.btn5x2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1080,6 +1112,8 @@
             this.btn5x1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn5x1.Enabled = false;
             this.btn5x1.Icon = null;
+            this.btn5x1.IconType = MaterialSkin.IconType.NONE;
+            this.btn5x1.IsSelected = false;
             this.btn5x1.Location = new System.Drawing.Point(0, 0);
             this.btn5x1.Margin = new System.Windows.Forms.Padding(0);
             this.btn5x1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1118,6 +1152,8 @@
             this.btn5x0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn5x0.Enabled = false;
             this.btn5x0.Icon = null;
+            this.btn5x0.IconType = MaterialSkin.IconType.NONE;
+            this.btn5x0.IsSelected = false;
             this.btn5x0.Location = new System.Drawing.Point(0, 0);
             this.btn5x0.Margin = new System.Windows.Forms.Padding(0);
             this.btn5x0.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1156,6 +1192,8 @@
             this.btn4x6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn4x6.Enabled = false;
             this.btn4x6.Icon = null;
+            this.btn4x6.IconType = MaterialSkin.IconType.NONE;
+            this.btn4x6.IsSelected = false;
             this.btn4x6.Location = new System.Drawing.Point(0, 0);
             this.btn4x6.Margin = new System.Windows.Forms.Padding(0);
             this.btn4x6.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1194,6 +1232,8 @@
             this.btn4x5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn4x5.Enabled = false;
             this.btn4x5.Icon = null;
+            this.btn4x5.IconType = MaterialSkin.IconType.NONE;
+            this.btn4x5.IsSelected = false;
             this.btn4x5.Location = new System.Drawing.Point(0, 0);
             this.btn4x5.Margin = new System.Windows.Forms.Padding(0);
             this.btn4x5.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1232,6 +1272,8 @@
             this.btn4x4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn4x4.Enabled = false;
             this.btn4x4.Icon = null;
+            this.btn4x4.IconType = MaterialSkin.IconType.NONE;
+            this.btn4x4.IsSelected = false;
             this.btn4x4.Location = new System.Drawing.Point(0, 0);
             this.btn4x4.Margin = new System.Windows.Forms.Padding(0);
             this.btn4x4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1270,6 +1312,8 @@
             this.btn4x3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn4x3.Enabled = false;
             this.btn4x3.Icon = null;
+            this.btn4x3.IconType = MaterialSkin.IconType.NONE;
+            this.btn4x3.IsSelected = false;
             this.btn4x3.Location = new System.Drawing.Point(0, 0);
             this.btn4x3.Margin = new System.Windows.Forms.Padding(0);
             this.btn4x3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1308,6 +1352,8 @@
             this.btn4x2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn4x2.Enabled = false;
             this.btn4x2.Icon = null;
+            this.btn4x2.IconType = MaterialSkin.IconType.NONE;
+            this.btn4x2.IsSelected = false;
             this.btn4x2.Location = new System.Drawing.Point(0, 0);
             this.btn4x2.Margin = new System.Windows.Forms.Padding(0);
             this.btn4x2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1346,6 +1392,8 @@
             this.btn4x1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn4x1.Enabled = false;
             this.btn4x1.Icon = null;
+            this.btn4x1.IconType = MaterialSkin.IconType.NONE;
+            this.btn4x1.IsSelected = false;
             this.btn4x1.Location = new System.Drawing.Point(0, 0);
             this.btn4x1.Margin = new System.Windows.Forms.Padding(0);
             this.btn4x1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1384,6 +1432,8 @@
             this.btn4x0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn4x0.Enabled = false;
             this.btn4x0.Icon = null;
+            this.btn4x0.IconType = MaterialSkin.IconType.NONE;
+            this.btn4x0.IsSelected = false;
             this.btn4x0.Location = new System.Drawing.Point(0, 0);
             this.btn4x0.Margin = new System.Windows.Forms.Padding(0);
             this.btn4x0.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1422,6 +1472,8 @@
             this.btn3x6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn3x6.Enabled = false;
             this.btn3x6.Icon = null;
+            this.btn3x6.IconType = MaterialSkin.IconType.NONE;
+            this.btn3x6.IsSelected = false;
             this.btn3x6.Location = new System.Drawing.Point(0, 0);
             this.btn3x6.Margin = new System.Windows.Forms.Padding(0);
             this.btn3x6.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1460,6 +1512,8 @@
             this.btn3x5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn3x5.Enabled = false;
             this.btn3x5.Icon = null;
+            this.btn3x5.IconType = MaterialSkin.IconType.NONE;
+            this.btn3x5.IsSelected = false;
             this.btn3x5.Location = new System.Drawing.Point(0, 0);
             this.btn3x5.Margin = new System.Windows.Forms.Padding(0);
             this.btn3x5.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1498,6 +1552,8 @@
             this.btn3x4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn3x4.Enabled = false;
             this.btn3x4.Icon = null;
+            this.btn3x4.IconType = MaterialSkin.IconType.NONE;
+            this.btn3x4.IsSelected = false;
             this.btn3x4.Location = new System.Drawing.Point(0, 0);
             this.btn3x4.Margin = new System.Windows.Forms.Padding(0);
             this.btn3x4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1536,6 +1592,8 @@
             this.btn3x3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn3x3.Enabled = false;
             this.btn3x3.Icon = null;
+            this.btn3x3.IconType = MaterialSkin.IconType.NONE;
+            this.btn3x3.IsSelected = false;
             this.btn3x3.Location = new System.Drawing.Point(0, 0);
             this.btn3x3.Margin = new System.Windows.Forms.Padding(0);
             this.btn3x3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1574,6 +1632,8 @@
             this.btn3x2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn3x2.Enabled = false;
             this.btn3x2.Icon = null;
+            this.btn3x2.IconType = MaterialSkin.IconType.NONE;
+            this.btn3x2.IsSelected = false;
             this.btn3x2.Location = new System.Drawing.Point(0, 0);
             this.btn3x2.Margin = new System.Windows.Forms.Padding(0);
             this.btn3x2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1612,6 +1672,8 @@
             this.btn3x1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn3x1.Enabled = false;
             this.btn3x1.Icon = null;
+            this.btn3x1.IconType = MaterialSkin.IconType.NONE;
+            this.btn3x1.IsSelected = false;
             this.btn3x1.Location = new System.Drawing.Point(0, 0);
             this.btn3x1.Margin = new System.Windows.Forms.Padding(0);
             this.btn3x1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1650,6 +1712,8 @@
             this.btn3x0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn3x0.Enabled = false;
             this.btn3x0.Icon = null;
+            this.btn3x0.IconType = MaterialSkin.IconType.NONE;
+            this.btn3x0.IsSelected = false;
             this.btn3x0.Location = new System.Drawing.Point(0, 0);
             this.btn3x0.Margin = new System.Windows.Forms.Padding(0);
             this.btn3x0.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1688,6 +1752,8 @@
             this.btn2x6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn2x6.Enabled = false;
             this.btn2x6.Icon = null;
+            this.btn2x6.IconType = MaterialSkin.IconType.NONE;
+            this.btn2x6.IsSelected = false;
             this.btn2x6.Location = new System.Drawing.Point(0, 0);
             this.btn2x6.Margin = new System.Windows.Forms.Padding(0);
             this.btn2x6.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1726,6 +1792,8 @@
             this.btn2x5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn2x5.Enabled = false;
             this.btn2x5.Icon = null;
+            this.btn2x5.IconType = MaterialSkin.IconType.NONE;
+            this.btn2x5.IsSelected = false;
             this.btn2x5.Location = new System.Drawing.Point(0, 0);
             this.btn2x5.Margin = new System.Windows.Forms.Padding(0);
             this.btn2x5.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1764,6 +1832,8 @@
             this.btn2x4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn2x4.Enabled = false;
             this.btn2x4.Icon = null;
+            this.btn2x4.IconType = MaterialSkin.IconType.NONE;
+            this.btn2x4.IsSelected = false;
             this.btn2x4.Location = new System.Drawing.Point(0, 0);
             this.btn2x4.Margin = new System.Windows.Forms.Padding(0);
             this.btn2x4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1802,6 +1872,8 @@
             this.btn2x3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn2x3.Enabled = false;
             this.btn2x3.Icon = null;
+            this.btn2x3.IconType = MaterialSkin.IconType.NONE;
+            this.btn2x3.IsSelected = false;
             this.btn2x3.Location = new System.Drawing.Point(0, 0);
             this.btn2x3.Margin = new System.Windows.Forms.Padding(0);
             this.btn2x3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1840,6 +1912,8 @@
             this.btn2x2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn2x2.Enabled = false;
             this.btn2x2.Icon = null;
+            this.btn2x2.IconType = MaterialSkin.IconType.NONE;
+            this.btn2x2.IsSelected = false;
             this.btn2x2.Location = new System.Drawing.Point(0, 0);
             this.btn2x2.Margin = new System.Windows.Forms.Padding(0);
             this.btn2x2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1878,6 +1952,8 @@
             this.btn2x1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn2x1.Enabled = false;
             this.btn2x1.Icon = null;
+            this.btn2x1.IconType = MaterialSkin.IconType.NONE;
+            this.btn2x1.IsSelected = false;
             this.btn2x1.Location = new System.Drawing.Point(0, 0);
             this.btn2x1.Margin = new System.Windows.Forms.Padding(0);
             this.btn2x1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1916,6 +1992,8 @@
             this.btn2x0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn2x0.Enabled = false;
             this.btn2x0.Icon = null;
+            this.btn2x0.IconType = MaterialSkin.IconType.NONE;
+            this.btn2x0.IsSelected = false;
             this.btn2x0.Location = new System.Drawing.Point(0, 0);
             this.btn2x0.Margin = new System.Windows.Forms.Padding(0);
             this.btn2x0.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1954,6 +2032,8 @@
             this.btn1x6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn1x6.Enabled = false;
             this.btn1x6.Icon = null;
+            this.btn1x6.IconType = MaterialSkin.IconType.NONE;
+            this.btn1x6.IsSelected = false;
             this.btn1x6.Location = new System.Drawing.Point(0, 0);
             this.btn1x6.Margin = new System.Windows.Forms.Padding(0);
             this.btn1x6.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1992,6 +2072,8 @@
             this.btn1x5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn1x5.Enabled = false;
             this.btn1x5.Icon = null;
+            this.btn1x5.IconType = MaterialSkin.IconType.NONE;
+            this.btn1x5.IsSelected = false;
             this.btn1x5.Location = new System.Drawing.Point(0, 0);
             this.btn1x5.Margin = new System.Windows.Forms.Padding(0);
             this.btn1x5.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2030,6 +2112,8 @@
             this.btn1x4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn1x4.Enabled = false;
             this.btn1x4.Icon = null;
+            this.btn1x4.IconType = MaterialSkin.IconType.NONE;
+            this.btn1x4.IsSelected = false;
             this.btn1x4.Location = new System.Drawing.Point(0, 0);
             this.btn1x4.Margin = new System.Windows.Forms.Padding(0);
             this.btn1x4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2068,6 +2152,8 @@
             this.btn1x3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn1x3.Enabled = false;
             this.btn1x3.Icon = null;
+            this.btn1x3.IconType = MaterialSkin.IconType.NONE;
+            this.btn1x3.IsSelected = false;
             this.btn1x3.Location = new System.Drawing.Point(0, 0);
             this.btn1x3.Margin = new System.Windows.Forms.Padding(0);
             this.btn1x3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2106,6 +2192,8 @@
             this.btn1x2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn1x2.Enabled = false;
             this.btn1x2.Icon = null;
+            this.btn1x2.IconType = MaterialSkin.IconType.NONE;
+            this.btn1x2.IsSelected = false;
             this.btn1x2.Location = new System.Drawing.Point(0, 0);
             this.btn1x2.Margin = new System.Windows.Forms.Padding(0);
             this.btn1x2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2144,6 +2232,8 @@
             this.btn1x1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn1x1.Enabled = false;
             this.btn1x1.Icon = null;
+            this.btn1x1.IconType = MaterialSkin.IconType.NONE;
+            this.btn1x1.IsSelected = false;
             this.btn1x1.Location = new System.Drawing.Point(0, 0);
             this.btn1x1.Margin = new System.Windows.Forms.Padding(0);
             this.btn1x1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2182,6 +2272,8 @@
             this.btn1x0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn1x0.Enabled = false;
             this.btn1x0.Icon = null;
+            this.btn1x0.IconType = MaterialSkin.IconType.NONE;
+            this.btn1x0.IsSelected = false;
             this.btn1x0.Location = new System.Drawing.Point(0, 0);
             this.btn1x0.Margin = new System.Windows.Forms.Padding(0);
             this.btn1x0.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2220,6 +2312,8 @@
             this.btn0x6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn0x6.Enabled = false;
             this.btn0x6.Icon = null;
+            this.btn0x6.IconType = MaterialSkin.IconType.NONE;
+            this.btn0x6.IsSelected = false;
             this.btn0x6.Location = new System.Drawing.Point(0, 0);
             this.btn0x6.Margin = new System.Windows.Forms.Padding(0);
             this.btn0x6.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2258,6 +2352,8 @@
             this.btn0x5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn0x5.Enabled = false;
             this.btn0x5.Icon = null;
+            this.btn0x5.IconType = MaterialSkin.IconType.NONE;
+            this.btn0x5.IsSelected = false;
             this.btn0x5.Location = new System.Drawing.Point(0, 0);
             this.btn0x5.Margin = new System.Windows.Forms.Padding(0);
             this.btn0x5.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2296,6 +2392,8 @@
             this.btn0x4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn0x4.Enabled = false;
             this.btn0x4.Icon = null;
+            this.btn0x4.IconType = MaterialSkin.IconType.NONE;
+            this.btn0x4.IsSelected = false;
             this.btn0x4.Location = new System.Drawing.Point(0, 0);
             this.btn0x4.Margin = new System.Windows.Forms.Padding(0);
             this.btn0x4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2334,6 +2432,8 @@
             this.btn0x3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn0x3.Enabled = false;
             this.btn0x3.Icon = null;
+            this.btn0x3.IconType = MaterialSkin.IconType.NONE;
+            this.btn0x3.IsSelected = false;
             this.btn0x3.Location = new System.Drawing.Point(0, 0);
             this.btn0x3.Margin = new System.Windows.Forms.Padding(0);
             this.btn0x3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2372,6 +2472,8 @@
             this.btn0x2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn0x2.Enabled = false;
             this.btn0x2.Icon = null;
+            this.btn0x2.IconType = MaterialSkin.IconType.NONE;
+            this.btn0x2.IsSelected = false;
             this.btn0x2.Location = new System.Drawing.Point(0, 0);
             this.btn0x2.Margin = new System.Windows.Forms.Padding(0);
             this.btn0x2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2410,6 +2512,8 @@
             this.btn0x1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn0x1.Enabled = false;
             this.btn0x1.Icon = null;
+            this.btn0x1.IconType = MaterialSkin.IconType.NONE;
+            this.btn0x1.IsSelected = false;
             this.btn0x1.Location = new System.Drawing.Point(0, 0);
             this.btn0x1.Margin = new System.Windows.Forms.Padding(0);
             this.btn0x1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2448,6 +2552,8 @@
             this.btn0x0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn0x0.Enabled = false;
             this.btn0x0.Icon = null;
+            this.btn0x0.IconType = MaterialSkin.IconType.NONE;
+            this.btn0x0.IsSelected = false;
             this.btn0x0.Location = new System.Drawing.Point(0, 0);
             this.btn0x0.Margin = new System.Windows.Forms.Padding(0);
             this.btn0x0.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2486,6 +2592,8 @@
             this.materialFlatButton1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialFlatButton1.Enabled = false;
             this.materialFlatButton1.Icon = null;
+            this.materialFlatButton1.IconType = MaterialSkin.IconType.NONE;
+            this.materialFlatButton1.IsSelected = false;
             this.materialFlatButton1.Location = new System.Drawing.Point(0, 0);
             this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(0);
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2553,6 +2661,8 @@
             this.btnMonth12.Depth = 0;
             this.btnMonth12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMonth12.Icon = null;
+            this.btnMonth12.IconType = MaterialSkin.IconType.NONE;
+            this.btnMonth12.IsSelected = false;
             this.btnMonth12.Location = new System.Drawing.Point(0, 0);
             this.btnMonth12.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonth12.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2592,6 +2702,8 @@
             this.btnMonth11.Depth = 0;
             this.btnMonth11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMonth11.Icon = null;
+            this.btnMonth11.IconType = MaterialSkin.IconType.NONE;
+            this.btnMonth11.IsSelected = false;
             this.btnMonth11.Location = new System.Drawing.Point(0, 0);
             this.btnMonth11.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonth11.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2631,6 +2743,8 @@
             this.btnMonth10.Depth = 0;
             this.btnMonth10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMonth10.Icon = null;
+            this.btnMonth10.IconType = MaterialSkin.IconType.NONE;
+            this.btnMonth10.IsSelected = false;
             this.btnMonth10.Location = new System.Drawing.Point(0, 0);
             this.btnMonth10.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonth10.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2670,6 +2784,8 @@
             this.btnMonth9.Depth = 0;
             this.btnMonth9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMonth9.Icon = null;
+            this.btnMonth9.IconType = MaterialSkin.IconType.NONE;
+            this.btnMonth9.IsSelected = false;
             this.btnMonth9.Location = new System.Drawing.Point(0, 0);
             this.btnMonth9.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonth9.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2709,6 +2825,8 @@
             this.btnMonth8.Depth = 0;
             this.btnMonth8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMonth8.Icon = null;
+            this.btnMonth8.IconType = MaterialSkin.IconType.NONE;
+            this.btnMonth8.IsSelected = false;
             this.btnMonth8.Location = new System.Drawing.Point(0, 0);
             this.btnMonth8.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonth8.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2748,6 +2866,8 @@
             this.btnMonth7.Depth = 0;
             this.btnMonth7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMonth7.Icon = null;
+            this.btnMonth7.IconType = MaterialSkin.IconType.NONE;
+            this.btnMonth7.IsSelected = false;
             this.btnMonth7.Location = new System.Drawing.Point(0, 0);
             this.btnMonth7.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonth7.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2787,6 +2907,8 @@
             this.btnMonth6.Depth = 0;
             this.btnMonth6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMonth6.Icon = null;
+            this.btnMonth6.IconType = MaterialSkin.IconType.NONE;
+            this.btnMonth6.IsSelected = false;
             this.btnMonth6.Location = new System.Drawing.Point(0, 0);
             this.btnMonth6.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonth6.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2826,6 +2948,8 @@
             this.btnMonth5.Depth = 0;
             this.btnMonth5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMonth5.Icon = null;
+            this.btnMonth5.IconType = MaterialSkin.IconType.NONE;
+            this.btnMonth5.IsSelected = false;
             this.btnMonth5.Location = new System.Drawing.Point(0, 0);
             this.btnMonth5.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonth5.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2865,6 +2989,8 @@
             this.btnMonth4.Depth = 0;
             this.btnMonth4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMonth4.Icon = null;
+            this.btnMonth4.IconType = MaterialSkin.IconType.NONE;
+            this.btnMonth4.IsSelected = false;
             this.btnMonth4.Location = new System.Drawing.Point(0, 0);
             this.btnMonth4.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonth4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2904,6 +3030,8 @@
             this.btnMonth3.Depth = 0;
             this.btnMonth3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMonth3.Icon = null;
+            this.btnMonth3.IconType = MaterialSkin.IconType.NONE;
+            this.btnMonth3.IsSelected = false;
             this.btnMonth3.Location = new System.Drawing.Point(0, 0);
             this.btnMonth3.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonth3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2943,6 +3071,8 @@
             this.btnMonth2.Depth = 0;
             this.btnMonth2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMonth2.Icon = null;
+            this.btnMonth2.IconType = MaterialSkin.IconType.NONE;
+            this.btnMonth2.IsSelected = false;
             this.btnMonth2.Location = new System.Drawing.Point(0, 0);
             this.btnMonth2.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonth2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2982,6 +3112,8 @@
             this.btnMonth1.Depth = 0;
             this.btnMonth1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMonth1.Icon = null;
+            this.btnMonth1.IconType = MaterialSkin.IconType.NONE;
+            this.btnMonth1.IsSelected = false;
             this.btnMonth1.Location = new System.Drawing.Point(0, 0);
             this.btnMonth1.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonth1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3051,6 +3183,8 @@
             this.btnYear11.Depth = 0;
             this.btnYear11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnYear11.Icon = null;
+            this.btnYear11.IconType = MaterialSkin.IconType.NONE;
+            this.btnYear11.IsSelected = false;
             this.btnYear11.Location = new System.Drawing.Point(0, 0);
             this.btnYear11.Margin = new System.Windows.Forms.Padding(0);
             this.btnYear11.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3090,6 +3224,8 @@
             this.btnYear10.Depth = 0;
             this.btnYear10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnYear10.Icon = null;
+            this.btnYear10.IconType = MaterialSkin.IconType.NONE;
+            this.btnYear10.IsSelected = false;
             this.btnYear10.Location = new System.Drawing.Point(0, 0);
             this.btnYear10.Margin = new System.Windows.Forms.Padding(0);
             this.btnYear10.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3129,6 +3265,8 @@
             this.btnYear9.Depth = 0;
             this.btnYear9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnYear9.Icon = null;
+            this.btnYear9.IconType = MaterialSkin.IconType.NONE;
+            this.btnYear9.IsSelected = false;
             this.btnYear9.Location = new System.Drawing.Point(0, 0);
             this.btnYear9.Margin = new System.Windows.Forms.Padding(0);
             this.btnYear9.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3168,6 +3306,8 @@
             this.btnYear8.Depth = 0;
             this.btnYear8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnYear8.Icon = null;
+            this.btnYear8.IconType = MaterialSkin.IconType.NONE;
+            this.btnYear8.IsSelected = false;
             this.btnYear8.Location = new System.Drawing.Point(0, 0);
             this.btnYear8.Margin = new System.Windows.Forms.Padding(0);
             this.btnYear8.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3207,6 +3347,8 @@
             this.btnYear7.Depth = 0;
             this.btnYear7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnYear7.Icon = null;
+            this.btnYear7.IconType = MaterialSkin.IconType.NONE;
+            this.btnYear7.IsSelected = false;
             this.btnYear7.Location = new System.Drawing.Point(0, 0);
             this.btnYear7.Margin = new System.Windows.Forms.Padding(0);
             this.btnYear7.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3246,6 +3388,8 @@
             this.btnYear6.Depth = 0;
             this.btnYear6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnYear6.Icon = null;
+            this.btnYear6.IconType = MaterialSkin.IconType.NONE;
+            this.btnYear6.IsSelected = false;
             this.btnYear6.Location = new System.Drawing.Point(0, 0);
             this.btnYear6.Margin = new System.Windows.Forms.Padding(0);
             this.btnYear6.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3285,6 +3429,8 @@
             this.btnYear5.Depth = 0;
             this.btnYear5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnYear5.Icon = null;
+            this.btnYear5.IconType = MaterialSkin.IconType.NONE;
+            this.btnYear5.IsSelected = false;
             this.btnYear5.Location = new System.Drawing.Point(0, 0);
             this.btnYear5.Margin = new System.Windows.Forms.Padding(0);
             this.btnYear5.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3324,6 +3470,8 @@
             this.btnYear4.Depth = 0;
             this.btnYear4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnYear4.Icon = null;
+            this.btnYear4.IconType = MaterialSkin.IconType.NONE;
+            this.btnYear4.IsSelected = false;
             this.btnYear4.Location = new System.Drawing.Point(0, 0);
             this.btnYear4.Margin = new System.Windows.Forms.Padding(0);
             this.btnYear4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3363,6 +3511,8 @@
             this.btnYear3.Depth = 0;
             this.btnYear3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnYear3.Icon = null;
+            this.btnYear3.IconType = MaterialSkin.IconType.NONE;
+            this.btnYear3.IsSelected = false;
             this.btnYear3.Location = new System.Drawing.Point(0, 0);
             this.btnYear3.Margin = new System.Windows.Forms.Padding(0);
             this.btnYear3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3402,6 +3552,8 @@
             this.btnYear2.Depth = 0;
             this.btnYear2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnYear2.Icon = null;
+            this.btnYear2.IconType = MaterialSkin.IconType.NONE;
+            this.btnYear2.IsSelected = false;
             this.btnYear2.Location = new System.Drawing.Point(0, 0);
             this.btnYear2.Margin = new System.Windows.Forms.Padding(0);
             this.btnYear2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3441,6 +3593,8 @@
             this.btnYear1.Depth = 0;
             this.btnYear1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnYear1.Icon = null;
+            this.btnYear1.IconType = MaterialSkin.IconType.NONE;
+            this.btnYear1.IsSelected = false;
             this.btnYear1.Location = new System.Drawing.Point(0, 0);
             this.btnYear1.Margin = new System.Windows.Forms.Padding(0);
             this.btnYear1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3480,6 +3634,8 @@
             this.btnYear0.Depth = 0;
             this.btnYear0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnYear0.Icon = null;
+            this.btnYear0.IconType = MaterialSkin.IconType.NONE;
+            this.btnYear0.IsSelected = false;
             this.btnYear0.Location = new System.Drawing.Point(0, 0);
             this.btnYear0.Margin = new System.Windows.Forms.Padding(0);
             this.btnYear0.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3539,6 +3695,8 @@
             this.btnEndDateValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEndDateValue.Enabled = false;
             this.btnEndDateValue.Icon = global::MaterialSkin.Properties.Resources.date;
+            this.btnEndDateValue.IconType = MaterialSkin.IconType.NONE;
+            this.btnEndDateValue.IsSelected = false;
             this.btnEndDateValue.Location = new System.Drawing.Point(115, 35);
             this.btnEndDateValue.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnEndDateValue.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3592,7 +3750,7 @@
             // 
             this.rbStart.Depth = 0;
             this.rbStart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rbStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbStart.Font = new System.Drawing.Font("Roboto", 10F);
             this.rbStart.Location = new System.Drawing.Point(0, 0);
             this.rbStart.Margin = new System.Windows.Forms.Padding(0);
             this.rbStart.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -3633,11 +3791,11 @@
             this.tblTime.Controls.Add(this.materialPanelColored3, 1, 0);
             this.tblTime.Controls.Add(this.materialPanelColored2, 0, 0);
             this.tblTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblTime.Location = new System.Drawing.Point(44, 0);
+            this.tblTime.Location = new System.Drawing.Point(36, 0);
             this.tblTime.Name = "tblTime";
             this.tblTime.RowCount = 1;
             this.tblTime.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tblTime.Size = new System.Drawing.Size(195, 35);
+            this.tblTime.Size = new System.Drawing.Size(203, 35);
             this.tblTime.TabIndex = 7;
             // 
             // materialPanelColored4
@@ -3649,12 +3807,12 @@
             this.materialPanelColored4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanelColored4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanelColored4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialPanelColored4.Location = new System.Drawing.Point(100, 0);
+            this.materialPanelColored4.Location = new System.Drawing.Point(104, 0);
             this.materialPanelColored4.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanelColored4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored4.Name = "materialPanelColored4";
             this.materialPanelColored4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.materialPanelColored4.Size = new System.Drawing.Size(95, 35);
+            this.materialPanelColored4.Size = new System.Drawing.Size(99, 35);
             this.materialPanelColored4.TabIndex = 2;
             // 
             // ddStartMin
@@ -3678,7 +3836,7 @@
             this.ddStartMin.SelectedIndex = -1;
             this.ddStartMin.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("ddStartMin.SelectedIndices")));
             this.ddStartMin.SelectedValue = null;
-            this.ddStartMin.Size = new System.Drawing.Size(95, 23);
+            this.ddStartMin.Size = new System.Drawing.Size(99, 23);
             this.ddStartMin.TabIndex = 1;
             this.ddStartMin.TabStop = false;
             this.ddStartMin.ValueMember = null;
@@ -3693,7 +3851,7 @@
             this.materialPanelColored3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanelColored3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanelColored3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialPanelColored3.Location = new System.Drawing.Point(95, 0);
+            this.materialPanelColored3.Location = new System.Drawing.Point(99, 0);
             this.materialPanelColored3.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanelColored3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored3.Name = "materialPanelColored3";
@@ -3728,7 +3886,7 @@
             this.materialPanelColored2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored2.Name = "materialPanelColored2";
             this.materialPanelColored2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.materialPanelColored2.Size = new System.Drawing.Size(95, 35);
+            this.materialPanelColored2.Size = new System.Drawing.Size(99, 35);
             this.materialPanelColored2.TabIndex = 0;
             // 
             // ddStartHour
@@ -3752,7 +3910,7 @@
             this.ddStartHour.SelectedIndex = -1;
             this.ddStartHour.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("ddStartHour.SelectedIndices")));
             this.ddStartHour.SelectedValue = null;
-            this.ddStartHour.Size = new System.Drawing.Size(95, 23);
+            this.ddStartHour.Size = new System.Drawing.Size(99, 23);
             this.ddStartHour.TabIndex = 0;
             this.ddStartHour.TabStop = false;
             this.ddStartHour.ValueMember = null;
@@ -3769,12 +3927,14 @@
             this.btnStartTimeValue.Depth = 0;
             this.btnStartTimeValue.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnStartTimeValue.Icon = global::MaterialSkin.Properties.Resources.time;
+            this.btnStartTimeValue.IconType = MaterialSkin.IconType.NONE;
+            this.btnStartTimeValue.IsSelected = false;
             this.btnStartTimeValue.Location = new System.Drawing.Point(0, 0);
             this.btnStartTimeValue.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnStartTimeValue.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnStartTimeValue.Name = "btnStartTimeValue";
             this.btnStartTimeValue.Primary = true;
-            this.btnStartTimeValue.Size = new System.Drawing.Size(44, 35);
+            this.btnStartTimeValue.Size = new System.Drawing.Size(36, 35);
             this.btnStartTimeValue.TabIndex = 6;
             this.btnStartTimeValue.UseVisualStyleBackColor = true;
             // 
@@ -3789,6 +3949,8 @@
             this.btnStartDateValue.Depth = 0;
             this.btnStartDateValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnStartDateValue.Icon = global::MaterialSkin.Properties.Resources.date;
+            this.btnStartDateValue.IconType = MaterialSkin.IconType.NONE;
+            this.btnStartDateValue.IsSelected = false;
             this.btnStartDateValue.Location = new System.Drawing.Point(115, 0);
             this.btnStartDateValue.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnStartDateValue.MouseState = MaterialSkin.MouseState.HOVER;
@@ -3829,11 +3991,11 @@
             this.tableLayoutPanel3.Controls.Add(this.materialPanelColored8, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.materialPanelColored9, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(44, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(36, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(195, 35);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(203, 35);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
             // materialPanelColored7
@@ -3845,12 +4007,12 @@
             this.materialPanelColored7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanelColored7.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanelColored7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialPanelColored7.Location = new System.Drawing.Point(105, 0);
+            this.materialPanelColored7.Location = new System.Drawing.Point(108, 0);
             this.materialPanelColored7.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanelColored7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored7.Name = "materialPanelColored7";
             this.materialPanelColored7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.materialPanelColored7.Size = new System.Drawing.Size(90, 35);
+            this.materialPanelColored7.Size = new System.Drawing.Size(95, 35);
             this.materialPanelColored7.TabIndex = 2;
             // 
             // ddEndMin
@@ -3874,7 +4036,7 @@
             this.ddEndMin.SelectedIndex = -1;
             this.ddEndMin.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("ddEndMin.SelectedIndices")));
             this.ddEndMin.SelectedValue = null;
-            this.ddEndMin.Size = new System.Drawing.Size(90, 23);
+            this.ddEndMin.Size = new System.Drawing.Size(95, 23);
             this.ddEndMin.TabIndex = 1;
             this.ddEndMin.TabStop = false;
             this.ddEndMin.ValueMember = null;
@@ -3889,7 +4051,7 @@
             this.materialPanelColored8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanelColored8.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanelColored8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialPanelColored8.Location = new System.Drawing.Point(90, 0);
+            this.materialPanelColored8.Location = new System.Drawing.Point(93, 0);
             this.materialPanelColored8.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanelColored8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored8.Name = "materialPanelColored8";
@@ -3924,7 +4086,7 @@
             this.materialPanelColored9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanelColored9.Name = "materialPanelColored9";
             this.materialPanelColored9.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.materialPanelColored9.Size = new System.Drawing.Size(90, 35);
+            this.materialPanelColored9.Size = new System.Drawing.Size(93, 35);
             this.materialPanelColored9.TabIndex = 0;
             // 
             // ddEndHour
@@ -3948,7 +4110,7 @@
             this.ddEndHour.SelectedIndex = -1;
             this.ddEndHour.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("ddEndHour.SelectedIndices")));
             this.ddEndHour.SelectedValue = null;
-            this.ddEndHour.Size = new System.Drawing.Size(90, 23);
+            this.ddEndHour.Size = new System.Drawing.Size(93, 23);
             this.ddEndHour.TabIndex = 0;
             this.ddEndHour.TabStop = false;
             this.ddEndHour.ValueMember = null;
@@ -3965,12 +4127,14 @@
             this.btnEndTimeValue.Depth = 0;
             this.btnEndTimeValue.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnEndTimeValue.Icon = global::MaterialSkin.Properties.Resources.time;
+            this.btnEndTimeValue.IconType = MaterialSkin.IconType.NONE;
+            this.btnEndTimeValue.IsSelected = false;
             this.btnEndTimeValue.Location = new System.Drawing.Point(0, 0);
             this.btnEndTimeValue.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnEndTimeValue.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEndTimeValue.Name = "btnEndTimeValue";
             this.btnEndTimeValue.Primary = true;
-            this.btnEndTimeValue.Size = new System.Drawing.Size(44, 35);
+            this.btnEndTimeValue.Size = new System.Drawing.Size(36, 35);
             this.btnEndTimeValue.TabIndex = 6;
             this.btnEndTimeValue.UseVisualStyleBackColor = true;
             // 

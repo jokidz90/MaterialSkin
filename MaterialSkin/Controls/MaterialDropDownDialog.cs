@@ -62,11 +62,15 @@ namespace MaterialSkin.Controls
             if (IsMultiSelect)
             {
                 var ctrlSelectAll = InitButton(-1, "SELECT ALL", "SELECT ALL");
+                ctrlSelectAll.IsSelected = null;
+                ctrlSelectAll.IconType = IconType.DONE_ALL;
                 flpMain.Controls.Add(ctrlSelectAll);
                 ctrlSelectAll.Dock = DockStyle.Top;
                 ctrlSelectAll.BringToFront();
 
                 var ctrlSelectNone = InitButton(-2, "CLEAR SELECTION", "CLEAR SELECTION");
+                ctrlSelectNone.IsSelected = null;
+                ctrlSelectNone.IconType = IconType.REMOVE;
                 flpMain.Controls.Add(ctrlSelectNone);
                 ctrlSelectNone.Dock = DockStyle.Top;
                 ctrlSelectNone.BringToFront();
@@ -89,12 +93,12 @@ namespace MaterialSkin.Controls
                 string itemText = item.GetProperty(DisplayMember).ToString();
                 object itemValue = item.GetProperty(ValueMember);
 
-                MaterialFlatButtonSelectable ctrl = InitButton(i, itemText, itemValue);
+                MaterialFlatButton ctrl = InitButton(i, itemText, itemValue);
                 flpMain.Controls.Add(ctrl);
                 ctrl.Dock = DockStyle.Top;
                 ctrl.BringToFront();
 
-                if (ctrl.IsSelected)
+                if (ctrl.IsSelected.GetValueOrDefault(false))
                     selectedCtrl = ctrl;
             }
 
@@ -104,11 +108,17 @@ namespace MaterialSkin.Controls
                 selectedCtrl.Select();
         }
 
-        private MaterialFlatButtonSelectable InitButton(int index, string text, object value)
+        private MaterialFlatButton InitButton(int index, string text, object value)
         {
-            MaterialFlatButtonSelectable ctrl = new MaterialFlatButtonSelectable();
+            MaterialFlatButton ctrl = new MaterialFlatButton();
             ctrl.Name = _id.ToString().ToUpper() + "_" + index;
-            ctrl.IsSelected = _selectedIndices.Contains(index);
+            bool isSelected = _selectedIndices.Contains(index);
+            if (IsMultiSelect)
+                ctrl.IsSelected = false;
+            else
+                ctrl.IconType = IconType.EMPTY;
+            if (isSelected)
+                ctrl.IsSelected = isSelected;
             ctrl.AutoSize = false;
             ctrl.Width = this.Width - 35;
             ctrl.Height = _itemHeight <= 0 ? 30 : _itemHeight;
@@ -124,14 +134,14 @@ namespace MaterialSkin.Controls
 
         private void Ctrl_Click(object sender, EventArgs e)
         {
-            MaterialFlatButtonSelectable ctrl = (MaterialFlatButtonSelectable)sender;
+            MaterialFlatButton ctrl = (MaterialFlatButton)sender;
             int index = Convert.ToInt32(ctrl.Name.Replace(_id.ToString().ToUpper() + "_", ""));
             if (index == -1)
             {
                 _selectedIndices = new List<int>();
                 for (int i = 0; i < flpMain.Controls.Count; i++)
                 {
-                    var btn = (MaterialFlatButtonSelectable)flpMain.Controls[i];
+                    var btn = (MaterialFlatButton)flpMain.Controls[i];
                     int ctrlIndex = Convert.ToInt32(btn.Name.Replace(_id.ToString().ToUpper() + "_", ""));
                     if (ctrlIndex < 0)
                         continue;
@@ -143,7 +153,10 @@ namespace MaterialSkin.Controls
             {
                 for (int i = 0; i < flpMain.Controls.Count; i++)
                 {
-                    var btn = (MaterialFlatButtonSelectable)flpMain.Controls[i];
+                    var btn = (MaterialFlatButton)flpMain.Controls[i];
+                    int ctrlIndex = Convert.ToInt32(btn.Name.Replace(_id.ToString().ToUpper() + "_", ""));
+                    if (ctrlIndex < 0)
+                        continue;
                     btn.IsSelected = false;
                 }
                 _selectedIndices = new List<int>();
@@ -154,12 +167,15 @@ namespace MaterialSkin.Controls
                 {
                     for (int i = 0; i < flpMain.Controls.Count; i++)
                     {
-                        var btn = (MaterialFlatButtonSelectable)flpMain.Controls[i];
+                        var btn = (MaterialFlatButton)flpMain.Controls[i];
+                        int ctrlIndex = Convert.ToInt32(btn.Name.Replace(_id.ToString().ToUpper() + "_", ""));
+                        if (ctrlIndex < 0)
+                            continue;
                         btn.IsSelected = false;
                     }
                 }
                 ctrl.IsSelected = !ctrl.IsSelected;
-                if (ctrl.IsSelected)
+                if (ctrl.IsSelected.GetValueOrDefault(false))
                     SelectedIndex = index;
                 else
                     _selectedIndices.RemoveAll(o => o == index);

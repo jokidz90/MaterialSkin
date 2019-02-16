@@ -24,6 +24,7 @@ namespace MaterialSkin.Controls
 
         private SizeF _textSize;
 
+        private int _iconSize = 24;
         private IconType _iconType = IconType.NONE;
         public IconType IconType
         {
@@ -38,7 +39,6 @@ namespace MaterialSkin.Controls
             }
         }
 
-        private int _iconSize = 24;
         private Image _icon;
         public Image Icon
         {
@@ -175,9 +175,9 @@ namespace MaterialSkin.Controls
         public override Size GetPreferredSize(Size proposedSize)
         {
             // Provides extra space for proper padding for content
-            int defaultHeight = 50;
+            int defaultHeight = 40;
             int defaultWidth = defaultHeight;
-            var extra = 50;
+            var extra = 40;
 
             if (!string.IsNullOrEmpty(Text))
             {

@@ -96,9 +96,6 @@
     <Compile Include="Controls\MaterialDropDown.Designer.cs">
       <DependentUpon>MaterialDropDown.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MaterialFlatButtonSelectable.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Controls\MaterialFlatButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -411,6 +408,7 @@
     <Content Include="Resources\Icons\EDIT_LOCATION.PNG" />
     <Content Include="Resources\Icons\EJECT.PNG" />
     <Content Include="Resources\Icons\EMAIL.PNG" />
+    <Content Include="Resources\Icons\EMPTY.png" />
     <Content Include="Resources\Icons\ENHANCED_ENCRYPTION.PNG" />
     <Content Include="Resources\Icons\EQUALIZER.PNG" />
     <Content Include="Resources\Icons\ERROR.PNG" />

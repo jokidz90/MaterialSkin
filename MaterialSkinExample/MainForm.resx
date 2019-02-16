@@ -130,28 +130,6 @@
         RwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="materialRaisedButton3.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAXFJREFUSEvd
-        lF8qRVEUxg8PjISuQUimoMiNvHggDIZS5uDGUCQDIGEK/r3w/Xb3Ky1n7X1SXu5Xv7L32mev69trrW7m
-        tSj2xLV4FJ9T+PtK7ArO/Enb4kV8NXgWW2Kw5sWF8AU34kAsiYUpy+JQ3AqfOxd825QvfxX7bFQ0J0j+
-        JpykKmzx5atsDNSacJJNNvrEY9nz7JcTgz5hGbEngY2/RLVwAM8z1RJgl99kh40oSpEgnmaqJUBHgvik
-        rIKobYJUS6ZWgpEg/lBWQTQQwZ/++cIWFu/I+qOsgv49gS2iiTLFC6NWBPH7sgpithCk3DK1EpwI4pdl
-        FcTgIkipUXJ9qiXgmztBfMxGFP4xuDiQlWotwbEghtW9jYaYihyi7Wn/oVoX74JvN9ioiYHlJPwnmV2I
-        GL/cl5+Jphi5TgK8CR1KE2EjUC08qD2HUzFoXFtMRQaXL8jA86YtmXgsBhezhfangYA6pxSplvRBZ0Fd
-        9w2UoZR3XcrogwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="materialRaisedButton4.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAPdJREFUSEvN
-        1c9KAlEUx/EBt7b2D0IvIQi+Q0uzpxB6h7QXkXwd09qFPkO1KFpU3x82cBdH+92LoD/4gHO958wwjmeq
-        U+YKjd3Hg9Ee7c3KBbaY49BJ9N0CL2hqISeX2OABUzzj688T7lA376Eot/j5xwRFGeMbUdOU9lwjKx28
-        I2oYeUMbdu5RF/cxSI73rc9gZ426UE2GyfG+9RXsfCJt5lCNnaiB43wSXZ3DTlTssBMVO+xExQ47JY/p
-        B+ykfzTXEnbSUeHS+LbTRc6we0ULWbmBO65HKIpOolEcNRZdeXHzOprzemU+Qk+K6AfVPc++LUdOVf0C
-        u0jfoPFVsbQAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="dropDown2.DataSource" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAJoBbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u

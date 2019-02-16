@@ -45,6 +45,38 @@ namespace MaterialSkin.Controls
 
         private SizeF _textSize;
 
+        private bool? _isSelected = false;
+        public bool? IsSelected
+        {
+            get
+            {
+                return _isSelected;
+            }
+            set
+            {
+                _isSelected = value;
+                if (_isSelected.HasValue)
+                    IconType = _isSelected.GetValueOrDefault(false) ? IconType.CHECK_BOX : IconType.CHECK_BOX_OUTLINE_BLANK;
+                else
+                    IconType = IconType.NONE;
+            }
+        }
+
+        private int _iconSize = 24;
+        private IconType _iconType = IconType.NONE;
+        public IconType IconType
+        {
+            get { return _iconType; }
+            set
+            {
+                _iconType = value;
+                if (_iconType == IconType.NONE)
+                    Icon = null;
+                else
+                    Icon = IconManager.Settings[_iconType];
+            }
+        }
+
         private Image _icon;
         public Image Icon
         {
@@ -101,11 +133,10 @@ namespace MaterialSkin.Controls
 
         protected override void OnPaint(PaintEventArgs pevent)
         {
-            //var frontBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush;
-
             var frontBrush = Enabled ? SkinManager.GetPrimaryTextBrush() : SkinManager.GetFlatButtonDisabledTextBrush();
             if (_colorStyle != ColorType.DEFAULT)
                 frontBrush = Enabled ? ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].LightPrimaryBrush;
+            var frontColor = frontBrush.GetColor();
 
             var g = pevent.Graphics;
             g.TextRenderingHint = TextRenderingHint.AntiAlias;
@@ -146,14 +177,13 @@ namespace MaterialSkin.Controls
             }
 
             //Icon
-            var iconRect = new Rectangle(8, 6, 24, 24);
-
+            var iconY = (this.Height - _iconSize) / 2;
+            var iconX = iconY;
             if (string.IsNullOrEmpty(Text))
-                // Center Icon
-                iconRect.X += 2;
-
+                iconX = (this.Width - _iconSize) / 2;
+            var iconRect = new Rectangle(iconX, iconY, _iconSize, _iconSize);
             if (Icon != null)
-                g.DrawImage(Icon, iconRect);
+                g.DrawImage(Icon.ReplaceColor(Color.Black, frontColor), iconRect);
 
             //Text
             var textRect = ClientRectangle;
@@ -168,12 +198,12 @@ namespace MaterialSkin.Controls
                 // 24: icon width
                 // Second 4: space between Icon and Text
                 // Third 8: right padding
-                textRect.Width -= 8 + 24 + 4 + 8;
+                textRect.Width -= 8 + _iconSize + 4 + 8;
 
                 // First 8: left padding
                 // 24: icon width
                 // Second 4: space between Icon and Text
-                textRect.X += 8 + 24 + 4;
+                textRect.X += 8 + _iconSize + 4;
             }
 
             g.DrawString(
@@ -193,14 +223,29 @@ namespace MaterialSkin.Controls
         public override Size GetPreferredSize(Size proposedSize)
         {
             // Provides extra space for proper padding for content
+            //var extra = 16;
+
+            //if (Icon != null)
+            //    // 24 is for icon size
+            //    // 4 is for the space between icon & text
+            //    extra += 24 + 4;
+
+            //return new Size((int)Math.Ceiling(_textSize.Width) + extra, 36);
+            int defaultHeight = 36;
+            int defaultWidth = defaultHeight;
             var extra = 16;
 
-            if (Icon != null)
-                // 24 is for icon size
-                // 4 is for the space between icon & text
-                extra += 24 + 4;
+            if (!string.IsNullOrEmpty(Text))
+            {
+                defaultWidth = (int)Math.Ceiling(_textSize.Width) + extra;
+                if (Icon != null)
+                {
+                    var iconY = (defaultHeight - _iconSize) / 2;
+                    defaultWidth = defaultWidth + (iconY) + _iconSize;
+                }
+            }
 
-            return new Size((int)Math.Ceiling(_textSize.Width) + extra, 36);
+            return new Size(defaultWidth, defaultHeight);
         }
 
         protected override void OnCreateControl()

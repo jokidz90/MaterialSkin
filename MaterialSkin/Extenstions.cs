@@ -12,6 +12,11 @@ namespace MaterialSkin
 {
     public static class Extenstions
     {
+        public static Color GetColor(this Brush brush)
+        {
+            return new Pen(brush).Color;
+        }
+
         public static string ToUpperFirst(this string source)
         {
             return source.ToLower().Remove(0, 1)
