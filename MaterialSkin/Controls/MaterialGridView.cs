@@ -33,15 +33,17 @@ namespace MaterialSkin.Controls
         {
             base.OnCreateControl();
             SetGridColors();
+            SetGridProperties();
             BackColorChanged += (sender, e) => { SetGridColors(); };
         }
 
-        private int _paddingAll = 10;
+        private int _paddingAll = 12;
         private void SetGridProperties()
         {
             this.Font = SkinManager.ROBOTO_REGULAR_11;
             this.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            this.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+
             this.EnableHeadersVisualStyles = false;
             this.AutoGenerateColumns = false;
             this.AllowUserToAddRows = false;
@@ -61,7 +63,8 @@ namespace MaterialSkin.Controls
             this.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
 
             this.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            this.DefaultCellStyle.Padding = new Padding(_paddingAll, _paddingAll / 2, _paddingAll, _paddingAll / 2);
+            this.DefaultCellStyle.Padding = new Padding(_paddingAll, _paddingAll - 5, _paddingAll, _paddingAll - 5);
+            this.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
 
         public void SetGridColors()
@@ -72,7 +75,7 @@ namespace MaterialSkin.Controls
 
             this.ForeColor = SkinManager.GetPrimaryTextColor();
             this.BackgroundColor = this.BackColor;
-            this.GridColor = this.BackColor;
+            this.GridColor = selectionColor;
             this.DefaultCellStyle.BackColor = this.BackColor;
 
             this.ColumnHeadersDefaultCellStyle.BackColor = headerColor;
@@ -97,30 +100,6 @@ namespace MaterialSkin.Controls
         protected override void OnPaint(PaintEventArgs pevent)
         {
             base.OnPaint(pevent);
-            //var lineBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.DarkPrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].DarkPrimaryBrush;
-            //var g = pevent.Graphics;
-            //int lineWeight = 2;
-            //int pad = lineWeight;
-            //var lineY1 = 0;
-            //var lineY2 = Height - lineY1 - pad;
-
-            //var lineX1 = 0;
-            //var lineX2 = Width - lineX1;
-
-            ////No animation
-            ////top
-            //g.FillRectangle(lineBrush, lineX1, lineY1, lineX2, lineWeight);
-
-            ////bottom
-            //g.FillRectangle(lineBrush, lineX1, lineY2, lineX2, lineWeight);
-
-            ////left
-            //g.FillRectangle(lineBrush, lineX1, lineY1 + lineWeight, lineWeight, lineY2 - lineWeight);
-
-            ////right
-            //g.FillRectangle(lineBrush, lineX2 - lineWeight, lineY1 + lineWeight, lineWeight, lineY2 - lineWeight);
         }
     }
-
-
 }
