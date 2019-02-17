@@ -360,6 +360,12 @@ namespace MaterialSkin
                 controlToUpdate.BackColor = newBackColor;
             }
 
+            if (controlToUpdate is MaterialGridView)
+            {
+                controlToUpdate.BackColor = newBackColor;
+                ((MaterialGridView)controlToUpdate).SetGridColors();
+            }
+
             //recursive call
             foreach (Control control in controlToUpdate.Controls)
             {

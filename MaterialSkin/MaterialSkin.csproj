@@ -54,6 +54,7 @@
     <Compile Include="Controls\MaterialClickablePanel.Designer.cs">
       <DependentUpon>MaterialClickablePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MaterialDataGridViewButtonColumn.cs" />
     <Compile Include="Controls\MaterialDateRangePicker.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -110,6 +111,9 @@
     </Compile>
     <Compile Include="Controls\MaterialFormGroup.Designer.cs">
       <DependentUpon>MaterialFormGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MaterialGridView.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\MaterialLabel.cs">
       <SubType>Component</SubType>

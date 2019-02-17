@@ -53,8 +53,6 @@ namespace MaterialSkinExample
             dropDown2.SelectedValue = new object[] { 1, 2, 3 };
             dropDown3.SelectedIndex = 111;
 
-
-
             foreach (IconType ico in Enum.GetValues(typeof(IconType)))
             {
                 var btn = new MaterialFlatButton();
@@ -63,6 +61,29 @@ namespace MaterialSkinExample
                 btn.IconType = ico;
                 flpIcon.Controls.Add(btn);
             }
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("No", typeof(int));
+            dt.Columns.Add("Product", typeof(string));
+            dt.Columns.Add("Qty", typeof(int));
+            dt.Columns.Add("Price", typeof(decimal));
+            dt.Columns.Add("Amount", typeof(decimal));
+            dt.Columns.Add("DGCheck", typeof(bool));
+            Random rand = new Random();
+            int maxRow = rand.Next(10, 100);
+            for (int i = 0; i < maxRow; i++)
+            {
+                var newRow = dt.NewRow();
+                newRow["No"] = (i + 1);
+                newRow["Product"] = "Product #"+(i + 1);
+                newRow["Qty"] = rand.Next(1, 10);
+                newRow["Price"] = rand.Next(1, 30);
+                newRow["Amount"] = ((int)newRow["Qty"]) * ((decimal)newRow["Price"]);
+                newRow["DGCheck"] = rand.Next(1, 10) % 3 == 0;
+                dt.Rows.Add(newRow);
+            }
+
+            gView.DataSource = dt;
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
