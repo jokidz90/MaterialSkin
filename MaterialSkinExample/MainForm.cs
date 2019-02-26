@@ -5,6 +5,8 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Data;
+using System.Diagnostics;
+using System.Drawing;
 
 namespace MaterialSkinExample
 {
@@ -57,7 +59,7 @@ namespace MaterialSkinExample
             {
                 var btn = new MaterialFlatButton();
                 btn.Name = ico.ToString();
-                btn.Text = ico.ToString();
+                //btn.Text = ico.ToString();
                 btn.IconType = ico;
                 flpIcon.Controls.Add(btn);
             }
@@ -84,6 +86,14 @@ namespace MaterialSkinExample
             }
 
             gView.DataSource = dt;
+
+            //Rectangle screen = Screen.PrimaryScreen.WorkingArea;
+            //int w = Width >= screen.Width ? screen.Width : (screen.Width + Width) / 2;
+            //int h = Height >= screen.Height ? screen.Height : (screen.Height + Height) / 2;
+            //this.Location = new Point((screen.Width - w) / 2, (screen.Height - h) / 2);
+            //this.Size = new Size(w, h);
+            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            //this.WindowState = FormWindowState.Maximized;
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
@@ -133,6 +143,16 @@ namespace MaterialSkinExample
         }
 
         private void materialTabSelector1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            Debug.Write(WindowState);
+        }
+
+        private void MainForm_ResizeEnd(object sender, EventArgs e)
         {
 
         }

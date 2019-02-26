@@ -12,6 +12,7 @@ namespace MaterialSkinExample
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new MaterialDateRangePickerForm());
+            //Application.Run(new MDIMain());
             Application.Run(new MainForm());
         }
     }
