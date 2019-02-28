@@ -45,6 +45,12 @@
     <Compile Include="Animations\AnimationManager.cs" />
     <Compile Include="Animations\Animations.cs" />
     <Compile Include="ColorScheme.cs" />
+    <Compile Include="Controls\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MaterialCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -55,6 +61,12 @@
       <DependentUpon>MaterialClickablePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\MaterialDataGridViewButtonColumn.cs" />
+    <Compile Include="Controls\MaterialDatePickerFormOld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialDatePickerFormOld.Designer.cs">
+      <DependentUpon>MaterialDatePickerFormOld.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MaterialDateRangePicker.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -176,6 +188,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controls\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MaterialDatePickerFormOld.resx">
+      <DependentUpon>MaterialDatePickerFormOld.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\MaterialDateRangePickerForm.resx">
       <DependentUpon>MaterialDateRangePickerForm.cs</DependentUpon>
     </EmbeddedResource>

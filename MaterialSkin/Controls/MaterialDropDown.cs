@@ -1204,8 +1204,8 @@ namespace MaterialSkin.Controls
             _baseTextBox.ReadOnly = true;
             _baseTextBox.Cursor = Cursors.Hand;
             _baseTextBox.Click += (sender, args) => { ShowItemSelector(); };
-            _baseTextBox.GotFocus += (sender, args) => { ShowItemSelector(); };
-            _baseTextBox.Enter += (sender, args) => { ShowItemSelector(); };
+            //_baseTextBox.GotFocus += (sender, args) => { ShowItemSelector(); };
+            //_baseTextBox.Enter += (sender, args) => { ShowItemSelector(); };
             _baseTextBox.Leave += (sender, args) => { HideItemSelector(); };
         }
 
@@ -1264,21 +1264,31 @@ namespace MaterialSkin.Controls
 
         protected override void OnClick(EventArgs e)
         {
+            Debug.WriteLine("OnClick");
             ShowItemSelector();
         }
 
         protected override void OnGotFocus(EventArgs e)
         {
+            Debug.WriteLine("OnGotFocus");
             ShowItemSelector();
         }
 
         protected override void OnEnter(EventArgs e)
         {
+            Debug.WriteLine("OnEnter");
             ShowItemSelector();
         }
 
         protected override void OnLeave(EventArgs e)
         {
+            Debug.WriteLine("OnLeave");
+            HideItemSelector();
+        }
+
+        protected override void OnLostFocus(EventArgs e)
+        {
+            Debug.WriteLine("OnLostFocus");
             HideItemSelector();
         }
 
@@ -1286,6 +1296,7 @@ namespace MaterialSkin.Controls
         private bool _isSelectorShown = false;
         private void ShowItemSelector()
         {
+            Debug.WriteLine("ShowItemSelector");
             if (_isClosing)
                 return;
             if (_isSelectorShown)
@@ -1303,6 +1314,7 @@ namespace MaterialSkin.Controls
         private bool _isClosing = false;
         private void HideItemSelector()
         {
+            Debug.WriteLine("HideItemSelector");
             _isClosing = true;
             HideItemSelectorHelper();
             _isClosing = false;
@@ -1315,7 +1327,7 @@ namespace MaterialSkin.Controls
             _isSelectorShown = false;
             if (_frmItemSelector == null || _frmItemSelector.IsDisposed)
                 return;
-
+            Debug.WriteLine("HideItemSelectorHelper");
             _frmItemSelector.Close();
         }
 
@@ -1353,6 +1365,8 @@ namespace MaterialSkin.Controls
             _frmItemSelector.Width = frmWidth;
             _frmItemSelector.Height = frmHeight;
             _frmItemSelector.Leave += (sender, e) => { HideItemSelector(); };
+            _frmItemSelector.FormClosed += (sender, e) => { _isSelectorShown = false; };
+            _frmItemSelector.Deactivate+= (sender, e) => { HideItemSelector(); };
             _frmItemSelector.IsMultiSelect = IsMultiSelect;
             _frmItemSelector.SelectedIndices = SelectedIndices;
             _frmItemSelector.ItemSelected += (sender, e) =>

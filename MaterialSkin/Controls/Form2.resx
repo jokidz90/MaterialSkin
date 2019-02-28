@@ -118,36 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnToday.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAI1JREFUSEvt
-        lUEKwzAMBP3B0vb/H0jziWYNWRCSxTp2iy8ZmINgLN2SspLvqaK3C/zlwBt+IB9ddYdPmDKznNYdKa0H
-        I6a04hFTWvGIKTIQ3AckPznAxkr8HJABYGMlfg7IALCxEj8HZADYWImfAzIAbKzEzwEZCNYfqN9zRqNu
-        MOUFZ/4JdfkD3vRSygHH3sbHsTU9YwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnPrev.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAGZJREFUSEtj
-        GAWjABdQgGKaAJDBD6BYFiRATQAz/D8QHwZiHiCmGqCb4UeAmGaGHwViXiCmKjgAxCDDfwCxNEiA2gDZ
-        B8eAmOo+AIFRS0gCMEvuAbEMSIAWAGSJPIQ5CkYBbQEDAwD/Th3N7dC57gAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnNext.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAGlJREFUSEvt
-        0jEOQEAQheGNCvfQEddwQ9dQiiPZC4iG/0W2pJpRzZ98iWzxppGiqNSgfj7ta7FhhcuRDjsuuB3p8cuR
-        DNcjA9yPjDihI4seLKswQ+MHJpgV46/pz9Gwy3hJw27jUfRVSjdzTh4TJmHBjwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnDateValue.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAIVJREFUSEvt
-        lUEKgDAMBPtBUf//AfUTmhb30ibdmiIKOjCHpZvkpuFJ9lNGa6/glgOzuIoYuuomjqJJz3IYd5hoAx5N
-        tLJHE63s0YQWCO87gMwEeS6wBpggzwW0QHjfAWRNjdpbIi8ga2rU3hK0QPjAgfg9R8nrIppMYs8/IS4f
-        xJ9WQjgAFr/PvrhBB/QAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnTimeValue.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAZRJREFUSEvd
