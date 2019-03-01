@@ -11,6 +11,7 @@ namespace MaterialSkin.Controls
 {
     public class MaterialForm : Form, IMaterialControl
     {
+        public bool MaximizeFormAtStart { set; get; }
         [Browsable(false)]
         public int Depth { get; set; }
         [Browsable(false)]
@@ -259,6 +260,13 @@ namespace MaterialSkin.Controls
                 par.Style = par.Style | WS_MINIMIZEBOX | WS_SYSMENU; // Turn on the WS_MINIMIZEBOX style flag
                 return par;
             }
+        }
+
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            if (MaximizeFormAtStart)
+                MaximizeWindow(true);
         }
 
         protected override void OnMouseDown(MouseEventArgs e)
