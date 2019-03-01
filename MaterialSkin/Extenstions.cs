@@ -7,11 +7,27 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MaterialSkin
 {
     public static class Extenstions
     {
+        public static Control GetChildControlByName(this Control mainCtrl, string name)
+        {
+            Control ctrl = null;
+
+            foreach (Control child in mainCtrl.Controls)
+            {
+                if (child.Name == name)
+                {
+                    ctrl = child;
+                    break;
+                }
+            }
+
+            return ctrl;
+        }
         public static Color GetColor(this Brush brush)
         {
             return new Pen(brush).Color;

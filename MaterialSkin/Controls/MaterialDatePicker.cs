@@ -59,7 +59,7 @@ namespace MaterialSkin.Controls
         private int _dropDownWidth = -1;
         public int DropDownWidth { get => _dropDownWidth; set => _dropDownWidth = value; }
 
-        private int _dropDownHeight = 300;
+        private int _dropDownHeight = 400;
         public int DropDownHeight { get => _dropDownHeight; set => _dropDownHeight = value; }
 
         private string _dateFormat = "ddd, dd MMM yyyy";
@@ -1025,11 +1025,9 @@ namespace MaterialSkin.Controls
             _baseTextBox.ReadOnly = true;
             _baseTextBox.Cursor = Cursors.Hand;
             _baseTextBox.Click += (sender, args) => { ShowDateSelector(); };
-            _baseTextBox.GotFocus += (sender, args) => { ShowDateSelector(); };
-            _baseTextBox.Enter += (sender, args) => { ShowDateSelector(); };
+            //_baseTextBox.GotFocus += (sender, args) => { ShowDateSelector(); };
+            //_baseTextBox.Enter += (sender, args) => { ShowDateSelector(); };
             _baseTextBox.Leave += (sender, args) => { HideDateSelector(); };
-
-            InitDateSelector();
         }
 
         protected override void OnPaint(PaintEventArgs pevent)
@@ -1115,6 +1113,7 @@ namespace MaterialSkin.Controls
                 HideDateSelectorHelper();
                 return;
             }
+            Debug.WriteLine("ShowDateSelector");
             _isSelectorShown = true;
 
             InitDateSelector();
@@ -1125,6 +1124,7 @@ namespace MaterialSkin.Controls
         private bool _isClosing = false;
         private void HideDateSelector()
         {
+            Debug.WriteLine("HideDateSelector");
             _isClosing = true;
             HideDateSelectorHelper();
             _isClosing = false;
@@ -1137,7 +1137,7 @@ namespace MaterialSkin.Controls
             _isSelectorShown = false;
             if (_frmDatePicker == null || _frmDatePicker.IsDisposed)
                 return;
-
+            Debug.WriteLine("HideDateSelectorHelper");
             _frmDatePicker.Close();
         }
 
@@ -1167,6 +1167,8 @@ namespace MaterialSkin.Controls
             _frmDatePicker.Width = frmWidth;
             _frmDatePicker.Height = frmHeight;
             _frmDatePicker.Leave += (sender, e) => { HideDateSelector(); };
+            _frmDatePicker.FormClosed += (sender, e) => { _isSelectorShown = false; };
+            _frmDatePicker.Deactivate += (sender, e) => { HideDateSelector(); };
             _frmDatePicker.ValueChanged += (sender, e) =>
               {
                   HideDateSelector();

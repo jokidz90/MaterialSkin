@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
@@ -10,6 +11,9 @@ namespace MaterialSkin.Controls
 {
     public class MaterialFlatButton : Button, IMaterialControl
     {
+        public event MouseEventHandler TouchDown;
+        public event MouseEventHandler TouchUp;
+
         [Browsable(false)]
         public int Depth { get; set; }
         [Browsable(false)]
@@ -276,12 +280,55 @@ namespace MaterialSkin.Controls
                     Invalidate();
                 }
             };
+            TouchDown += (sender, args) => { OnMouseDown(args); };
+
             MouseUp += (sender, args) =>
             {
                 MouseState = MouseState.HOVER;
 
                 Invalidate();
             };
+            TouchUp += (sender, args) => { OnMouseUp(args); };
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case Win32.WM_POINTERDOWN:
+                case Win32.WM_POINTERUP:
+                case Win32.WM_POINTERUPDATE:
+                case Win32.WM_POINTERCAPTURECHANGED:
+                    break;
+
+                default:
+                    base.WndProc(ref m);
+                    return;
+            }
+            int pointerID = Win32.GET_POINTER_ID(m.WParam);
+            Win32.POINTER_INFO pi = new Win32.POINTER_INFO();
+            if (!Win32.GetPointerInfo(pointerID, ref pi))
+            {
+                Win32.CheckLastError();
+            }
+            Point pt = PointToClient(pi.PtPixelLocation.ToPoint());
+            MouseEventArgs me = new MouseEventArgs(System.Windows.Forms.MouseButtons.Left, 1, pt.X, pt.Y, 0);
+            switch (m.Msg)
+            {
+                case Win32.WM_POINTERDOWN:
+                    Debug.WriteLine("TOUCH DOWN" + pt);
+                    if (TouchDown != null) TouchDown(this, me);
+                    break;
+
+                case Win32.WM_POINTERUP:
+                    Debug.WriteLine("TOUCH UP");
+                    if (TouchUp != null) TouchUp(this, me);
+                    break;
+
+                case Win32.WM_POINTERUPDATE:
+                    //Console.WriteLine("UPDATE");
+                    break;
+            }
         }
     }
 }
