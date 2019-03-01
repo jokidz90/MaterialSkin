@@ -51,7 +51,13 @@ namespace MaterialSkin.Controls
             }
         }
 
-
+        private int _minYear = 2000;
+        private int _yearPos = 4;
+        private string _shownPanel = "";
+        MaterialFlatButton _selectedBtn = null;
+        private int _hourStep = 0;
+        private int _minStep = 0;
+        private int _timerInterval = 500;
 
         public MaterialDatePickerForm()
         {
@@ -147,11 +153,6 @@ namespace MaterialSkin.Controls
             }
         }
 
-        private void MaterialDatePickerForm_Load(object sender, EventArgs e)
-        {
-            InitForm();
-        }
-
         private void LoadDate()
         {
             ShowPanel("DATE");
@@ -213,13 +214,11 @@ namespace MaterialSkin.Controls
             }
         }
 
-        private int minYear = 2000;
-        private int yearPos = 4;
         private void LoadYear()
         {
             ShowPanel("YEAR");
-            minYear = ((int)btnShowYear.Tag) - yearPos;
-            int yearCount = minYear;
+            _minYear = ((int)btnShowYear.Tag) - _yearPos;
+            int yearCount = _minYear;
             for (int y = 0; y < 4; y++)
             {
                 for (int x = 0; x < 3; x++)
@@ -288,7 +287,6 @@ namespace MaterialSkin.Controls
             btnAMPM.Tag = timeValue.ToString("tt");
         }
 
-        private string _shownPanel = "";
         private void ShowPanel(string panel)
         {
             _shownPanel = panel;
@@ -332,7 +330,49 @@ namespace MaterialSkin.Controls
             }
         }
 
-        MaterialFlatButton _selectedBtn = null;
+        private void MoveHour(int step)
+        {
+            string timeStr = btnTimeValue.Tag + "";
+            if (string.IsNullOrEmpty(timeStr))
+                timeStr = "00:00 AM";
+            timeStr = "2000-01-01 " + timeStr;
+            var timeValue = DateTime.ParseExact(timeStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            timeValue = timeValue.AddHours(step);
+            SetTimeValue(timeValue);
+            LoadTime();
+        }
+
+        private void MoveMin(int step)
+        {
+            string timeStr = btnTimeValue.Tag + "";
+            if (string.IsNullOrEmpty(timeStr))
+                timeStr = "00:00 AM";
+            timeStr = "2000-01-01 " + timeStr;
+            var timeValue = DateTime.ParseExact(timeStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            timeValue = timeValue.AddMinutes(step);
+            SetTimeValue(timeValue);
+            LoadTime();
+        }
+
+        private void SetTimeValue(DateTime timeValue)
+        {
+            btnTimeValue.Text = timeValue.ToString("hh:mm tt");
+            btnTimeValue.Tag = timeValue.ToString("hh:mm tt");
+
+            var timeStr = btnTimeValue.Tag + "";
+            if (string.IsNullOrEmpty(timeStr))
+                timeStr = "00:00 AM";
+
+            var dtStr = _value.ToString("yyyy-MM-dd") + " " + timeStr;
+            var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            _value = ShowTime ? dtValue : dtValue.Date;
+        }
+
+        private void MaterialDatePickerForm_Load(object sender, EventArgs e)
+        {
+            InitForm();
+        }
+
         private void btnDate_Click(object sender, EventArgs e)
         {
             if (_selectedBtn != null && _selectedBtn.Tag != null)
@@ -385,7 +425,7 @@ namespace MaterialSkin.Controls
             }
             else if (_shownPanel == "YEAR")
             {
-                btnShowYear.Tag = (minYear + yearPos)-12;
+                btnShowYear.Tag = (_minYear + _yearPos)-12;
                 btnShowYear.Text = btnShowYear.Tag.ToString();
                 LoadYear();
             }
@@ -406,7 +446,7 @@ namespace MaterialSkin.Controls
             }
             else if (_shownPanel == "YEAR")
             {
-                btnShowYear.Tag = (minYear + yearPos) + 12;
+                btnShowYear.Tag = (_minYear + _yearPos) + 12;
                 btnShowYear.Text = btnShowYear.Tag.ToString();
                 LoadYear();
             }
@@ -475,57 +515,6 @@ namespace MaterialSkin.Controls
             LoadTime();
         }
 
-        private void btnAMPM_Click(object sender, EventArgs e)
-        {
-            string val = btnAMPM.Text == "AM" ? "PM" : "AM";
-            btnAMPM.Text = val;
-            btnAMPM.Tag = val;
-            string timeStr = btnHour.Tag + ":" + btnMin.Tag + " " + btnAMPM.Tag;
-            if (string.IsNullOrEmpty(timeStr))
-                timeStr = "00:00 AM";
-            timeStr = "2000-01-01 " + timeStr;
-            var timeValue = DateTime.ParseExact(timeStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
-            SetTimeValue(timeValue);
-        }
-
-        private void MoveHour(int step)
-        {
-            string timeStr = btnTimeValue.Tag + "";
-            if (string.IsNullOrEmpty(timeStr))
-                timeStr = "00:00 AM";
-            timeStr = "2000-01-01 " + timeStr;
-            var timeValue = DateTime.ParseExact(timeStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
-            timeValue = timeValue.AddHours(step);
-            SetTimeValue(timeValue);
-            LoadTime();
-        }
-
-        private void MoveMin(int step)
-        {
-            string timeStr = btnTimeValue.Tag + "";
-            if (string.IsNullOrEmpty(timeStr))
-                timeStr = "00:00 AM";
-            timeStr = "2000-01-01 " + timeStr;
-            var timeValue = DateTime.ParseExact(timeStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
-            timeValue = timeValue.AddMinutes(step);
-            SetTimeValue(timeValue);
-            LoadTime();
-        }
-
-        private void SetTimeValue(DateTime timeValue)
-        {
-            btnTimeValue.Text = timeValue.ToString("hh:mm tt");
-            btnTimeValue.Tag = timeValue.ToString("hh:mm tt");
-
-            var timeStr = btnTimeValue.Tag + "";
-            if (string.IsNullOrEmpty(timeStr))
-                timeStr = "00:00 AM";
-
-            var dtStr = _value.ToString("yyyy-MM-dd") + " " + timeStr;
-            var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
-            _value = ShowTime ? dtValue : dtValue.Date;
-        }
-
         private void btnSetHour_Click(object sender, EventArgs e)
         {
             string hour = (((Control)sender).Tag + "");
@@ -550,11 +539,22 @@ namespace MaterialSkin.Controls
             LoadTime();
         }
 
-        private int _hourStep = 0;
-        private int _timerInterval = 500;
-        private void btnNextHour_MouseDown(object sender, MouseEventArgs e)
+        private void btnAMPM_Click(object sender, EventArgs e)
         {
-            _hourStep = 1;
+            string val = btnAMPM.Text == "AM" ? "PM" : "AM";
+            btnAMPM.Text = val;
+            btnAMPM.Tag = val;
+            string timeStr = btnHour.Tag + ":" + btnMin.Tag + " " + btnAMPM.Tag;
+            if (string.IsNullOrEmpty(timeStr))
+                timeStr = "00:00 AM";
+            timeStr = "2000-01-01 " + timeStr;
+            var timeValue = DateTime.ParseExact(timeStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            SetTimeValue(timeValue);
+        }
+
+        private void btnMoveHour_MouseDown(object sender, MouseEventArgs e)
+        {
+            _hourStep = (((Control)sender).Tag + "").GetInt32Value();
             MoveHour(_hourStep);
             _timerInterval = 500;
             timerMain.Interval = _timerInterval;
@@ -562,7 +562,7 @@ namespace MaterialSkin.Controls
             timerMain.Start();
         }
 
-        private void btnNextHour_MouseUp(object sender, MouseEventArgs e)
+        private void btnMoveHour_MouseUp(object sender, MouseEventArgs e)
         {
             _hourStep = 0;
             _timerInterval = 500;
@@ -570,19 +570,19 @@ namespace MaterialSkin.Controls
             timerMain.Stop();
         }
 
-        private void btnPrevHour_MouseDown(object sender, MouseEventArgs e)
+        private void btnMoveMin_MouseDown(object sender, MouseEventArgs e)
         {
-            _hourStep = -1;
-            MoveHour(_hourStep);
+            _minStep = (((Control)sender).Tag + "").GetInt32Value();
+            MoveMin(_minStep);
             _timerInterval = 500;
             timerMain.Interval = _timerInterval;
             timerMain.Enabled = true;
             timerMain.Start();
         }
 
-        private void btnPrevHour_MouseUp(object sender, MouseEventArgs e)
+        private void btnMoveMin_MouseUp(object sender, MouseEventArgs e)
         {
-            _hourStep = 0;
+            _minStep = 0;
             _timerInterval = 500;
             timerMain.Enabled = false;
             timerMain.Stop();
@@ -590,9 +590,6 @@ namespace MaterialSkin.Controls
 
         private void timerMain_Tick(object sender, EventArgs e)
         {
-            Debug.WriteLine("timerMain.Interval:" + timerMain.Interval);
-            Debug.WriteLine("_hourStep:" + _hourStep);
-            Debug.WriteLine("_minStep:" + _minStep);
             if (_hourStep != 0)
             {
                 if (_timerInterval > 100)
@@ -607,43 +604,6 @@ namespace MaterialSkin.Controls
                 MoveMin(_minStep);
                 timerMain.Interval = _timerInterval;
             }
-        }
-
-        private int _minStep = 0;
-        private void btnNextMin_MouseDown(object sender, MouseEventArgs e)
-        {
-            _minStep = 1;
-            MoveMin(_minStep);
-            _timerInterval = 500;
-            timerMain.Interval = _timerInterval;
-            timerMain.Enabled = true;
-            timerMain.Start();
-        }
-
-        private void btnNextMin_MouseUp(object sender, MouseEventArgs e)
-        {
-            _minStep = 0;
-            _timerInterval = 500;
-            timerMain.Enabled = false;
-            timerMain.Stop();
-        }
-
-        private void btnPrevMin_MouseDown(object sender, MouseEventArgs e)
-        {
-            _minStep = -1;
-            MoveMin(_minStep);
-            _timerInterval = 500;
-            timerMain.Interval = _timerInterval;
-            timerMain.Enabled = true;
-            timerMain.Start();
-        }
-
-        private void btnPrevMin_MouseUp(object sender, MouseEventArgs e)
-        {
-            _minStep = 0;
-            _timerInterval = 500;
-            timerMain.Enabled = false;
-            timerMain.Stop();
         }
     }
 
