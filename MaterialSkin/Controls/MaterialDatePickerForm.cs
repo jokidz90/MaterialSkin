@@ -199,8 +199,8 @@ namespace MaterialSkin.Controls
                     {
                         btn.ColorStyle = ColorType.PRIMARY;
                         btn.BorderColorType = ColorType.PRIMARY;
-                        if (selectedBtn == null)
-                            selectedBtn = btn;
+                        if (_selectedBtn == null)
+                            _selectedBtn = btn;
                     }
 
                     startMonth = startMonth.AddDays(1);
@@ -332,24 +332,24 @@ namespace MaterialSkin.Controls
             }
         }
 
-        MaterialFlatButton selectedBtn = null;
+        MaterialFlatButton _selectedBtn = null;
         private void btnDate_Click(object sender, EventArgs e)
         {
-            if (selectedBtn != null && selectedBtn.Tag != null)
+            if (_selectedBtn != null && _selectedBtn.Tag != null)
             {
-                selectedBtn.ColorStyle = (_value.DayOfWeek == DayOfWeek.Sunday || _value.DayOfWeek == DayOfWeek.Saturday) ? ColorType.DANGER : ColorType.DEFAULT;
-                selectedBtn.BorderColorType = ((DateTime)selectedBtn.Tag).Date == DateTime.Now.Date ? ColorType.SUCCESS : ColorType.DEFAULT;
+                _selectedBtn.ColorStyle = (_value.DayOfWeek == DayOfWeek.Sunday || _value.DayOfWeek == DayOfWeek.Saturday) ? ColorType.DANGER : ColorType.DEFAULT;
+                _selectedBtn.BorderColorType = ((DateTime)_selectedBtn.Tag).Date == DateTime.Now.Date ? ColorType.SUCCESS : ColorType.DEFAULT;
             }
 
-            selectedBtn = (MaterialFlatButton)sender;
-            selectedBtn.ColorStyle = ColorType.PRIMARY;
-            selectedBtn.BorderColorType = ColorType.PRIMARY;
+            _selectedBtn = (MaterialFlatButton)sender;
+            _selectedBtn.ColorStyle = ColorType.PRIMARY;
+            _selectedBtn.BorderColorType = ColorType.PRIMARY;
 
             var timeStr = btnTimeValue.Tag + "";
             if (string.IsNullOrEmpty(timeStr))
                 timeStr = "00:00 AM";
             
-            var dtStr = ((DateTime)selectedBtn.Tag).ToString("yyyy-MM-dd") + " " + timeStr;
+            var dtStr = ((DateTime)_selectedBtn.Tag).ToString("yyyy-MM-dd") + " " + timeStr;
             var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
             Value = ShowTime ? dtValue : dtValue.Date;
         }
@@ -430,7 +430,23 @@ namespace MaterialSkin.Controls
             btnShowYear.Text = _value.Year.ToString();
             btnShowMonth.Tag = _value.Month;
             btnShowMonth.Text = _value.ToString("MMMM");
+
             LoadDate();
+
+            foreach (Control ctrl in pnlDate.Controls)
+            {
+                if (!(ctrl is MaterialFlatButton))
+                    continue;
+
+                var btn = (MaterialFlatButton)ctrl;
+                if (btn == null)
+                    continue;
+                if (btn.Tag == null)
+                    continue;
+
+                if (((DateTime)btn.Tag).Date == _value.Date)
+                    _selectedBtn = btn;
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

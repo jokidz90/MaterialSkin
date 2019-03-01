@@ -212,7 +212,7 @@ namespace MaterialSkin.Controls
 
             g.DrawString(
                 Text.ToUpper(),
-                SkinManager.ROBOTO_MEDIUM_10,
+                SkinManager.ROBOTO_MEDIUM_11,
                 frontBrush,
                 textRect,
                 new StringFormat { Alignment = _alignment, LineAlignment = StringAlignment.Center }
