@@ -14,6 +14,20 @@ namespace MaterialSkin.Controls
 {
     public partial class MaterialFormGroup : GroupBox, IMaterialControl
     {
+        private bool _isSelected = false;
+        public bool IsSelected
+        {
+            set
+            {
+                _isSelected = value;
+                Invalidate();
+            }
+            get
+            {
+                return _isSelected;
+            }
+        }
+
         private ColorType _colorStyle = ColorType.DEFAULT;
         public ColorType ColorStyle { get => _colorStyle; set => _colorStyle = value; }
 
@@ -54,7 +68,7 @@ namespace MaterialSkin.Controls
             Brush frontBrush = new SolidBrush(ForeColor);
             if (!Enabled)
                 frontBrush = SkinManager.GetDisabledOrHintBrush();
-            else if (_isEntered)
+            else if (_isEntered || _isSelected)
                 frontBrush = backBrush;
 
             g.DrawString(Text, Font, frontBrush, rect, new StringFormat { Alignment = StringAlignment.Near, LineAlignment = StringAlignment.Near });

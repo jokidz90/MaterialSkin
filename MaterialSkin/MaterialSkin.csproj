@@ -67,6 +67,12 @@
     <Compile Include="Controls\MaterialDateRangePicker.Designer.cs">
       <DependentUpon>MaterialDateRangePicker.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MaterialDateRangePickerFormOld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialDateRangePickerFormOld.Designer.cs">
+      <DependentUpon>MaterialDateRangePickerFormOld.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MaterialDateRangePickerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Controls\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MaterialDateRangePickerFormOld.resx">
+      <DependentUpon>MaterialDateRangePickerFormOld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MaterialDateRangePickerForm.resx">
       <DependentUpon>MaterialDateRangePickerForm.cs</DependentUpon>

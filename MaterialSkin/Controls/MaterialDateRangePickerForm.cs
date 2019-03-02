@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -15,19 +16,15 @@ namespace MaterialSkin.Controls
     {
         public event DateRangeChangedHandler ValueChanged;
 
-        private string _dateFormat = "ddd, dd MMM yyyy";
-        public string DateFormat { get => _dateFormat; set => _dateFormat = value; }
-
         private DateTime _startValue = DateTime.Now;
         public DateTime StartValue
         {
             set
             {
                 _startValue = value;
-                btnStartDateValue.Text = _startValue.ToString(DateFormat);
-                ddStartHour.SelectedValue = _startValue.Hour.ToString("00");
-                ddStartMin.SelectedValue = _startValue.Minute.ToString("00");
-                SetSelectedDate();
+                btnStartDate.Text = _startValue.ToString(DateFormat);
+                btnStartTime.Text = _startValue.ToString("hh:mm tt");
+                btnStartTime.Tag = _startValue.ToString("hh:mm tt");
                 this.Invalidate();
             }
             get
@@ -42,10 +39,9 @@ namespace MaterialSkin.Controls
             set
             {
                 _endValue = value;
-                btnEndDateValue.Text = _endValue.ToString(DateFormat);
-                ddEndHour.SelectedValue = _endValue.Hour.ToString("00");
-                ddEndMin.SelectedValue = _endValue.Minute.ToString("00");
-                SetSelectedDate();
+                btnEndDate.Text = _endValue.ToString(DateFormat);
+                btnEndTime.Text = _endValue.ToString("hh:mm tt");
+                btnEndTime.Tag = _endValue.ToString("hh:mm tt");
                 this.Invalidate();
             }
             get
@@ -54,27 +50,11 @@ namespace MaterialSkin.Controls
             }
         }
 
-        public bool ShowTime
-        {
-            set
-            {
-                pnlStartTime.Visible = value;
-                pnlEndTime.Visible = value;
-                if (!value)
-                    tblHeader.ColumnStyles.RemoveAt(2);
-            }
-            get
-            {
-                return pnlStartTime.Visible;
-            }
-        }
-
         private DateRangeType _rangeSelection;
         public DateRangeType RangeSelection
         {
             set
             {
-                ddRangeType.SelectedValue = value.ToString();
                 _rangeSelection = value;
             }
             get
@@ -83,88 +63,293 @@ namespace MaterialSkin.Controls
             }
         }
 
+        private string _dateFormat = "ddd, dd MMM yyyy";
+        public string DateFormat { get => _dateFormat; set => _dateFormat = value; }
+
+        private bool IsSelectEndDate
+        {
+            set
+            {
+                if (value)
+                    grpEndDate.Focus();
+                else
+                    grpStartDate.Focus();
+                grpStartDate.IsSelected = !value;
+                grpEndDate.IsSelected = value;
+
+                btnStartDate.ColorStyle = value ? ColorType.GREY : ColorType.DEFAULT;
+                btnStartTime.ColorStyle = value ? ColorType.GREY : ColorType.DEFAULT;
+                btnEndDate.ColorStyle = value ? ColorType.DEFAULT : ColorType.GREY;
+                btnEndTime.ColorStyle = value ? ColorType.DEFAULT : ColorType.GREY;
+
+                Debug.WriteLine("grpStartDate.IsSelected:" + grpStartDate.IsSelected);
+                Debug.WriteLine("grpEndDate.IsSelected:" + grpEndDate.IsSelected);
+            }
+            get
+            {
+                return grpEndDate.IsSelected;
+            }
+        }
+
+        public DateTime CurrentValue
+        {
+            set
+            {
+                if (IsSelectEndDate)
+                {
+                    EndValue = value;
+                    if (_endValue.Date < _startValue.Date)
+                        StartValue = EndValue.Date.Add(_startValue.TimeOfDay);
+                }
+                else
+                {
+                    StartValue = value;
+                    if (_startValue.Date > _endValue.Date)
+                        EndValue = StartValue.Date.Add(_endValue.TimeOfDay);
+                }
+            }
+            get
+            {
+                if (IsSelectEndDate)
+                    return EndValue;
+                else
+                    return StartValue;
+            }
+        }
+
+        public bool ShowTime
+        {
+            set
+            {
+                btnStartTime.Visible = value;
+                btnEndTime.Visible = value;
+            }
+            get
+            {
+                return btnStartTime.Visible;
+            }
+        }
+
+        private int _minYear = 2000;
+        private int _yearPos = 4;
+        private string _shownPanel = "";
+        MaterialFlatButton _selectedBtn = null;
+        private int _hourStep = 0;
+        private int _minStep = 0;
+        private int _timerInterval = 500;
+
         public MaterialDateRangePickerForm()
         {
             InitializeComponent();
-
-            var listType = new List<DropDownItem>();
-            listType.Add(new DropDownItem(DateRangeType.TODAY, "TODAY"));
-            listType.Add(new DropDownItem(DateRangeType.YESTERDAY, "YESTERDAY"));
-            listType.Add(new DropDownItem(DateRangeType.THISWEEK, "THIS WEEK"));
-            listType.Add(new DropDownItem(DateRangeType.LASTWEEK, "LAST WEEK"));
-            listType.Add(new DropDownItem(DateRangeType.THISMONTH, "THIS MONTH"));
-            listType.Add(new DropDownItem(DateRangeType.LASTMONTH, "LAST MONTH"));
-            listType.Add(new DropDownItem(DateRangeType.THISYEAR, "THIS YEAR"));
-            listType.Add(new DropDownItem(DateRangeType.LASTYEAR, "LAST YEAR"));
-            listType.Add(new DropDownItem(DateRangeType.CUSTOM, "CUSTOM"));
-            ddRangeType.DisplayMember = "Text";
-            ddRangeType.ValueMember = "Value";
-            ddRangeType.DataSource = listType;
         }
 
-        private void MaterialDatePickerForm_Load(object sender, EventArgs e)
+        private void InitForm()
         {
-            btnShowYear.Tag = _startValue.Year;
-            btnShowYear.Text = _startValue.Year.ToString();
-            btnShowMonth.Tag = _startValue.Month;
-            btnShowMonth.Text = _startValue.ToString("MMMM");
-
+            _rangeSelection = DateRangeType.TODAY;
+            btnSelectDateRange.Text = DateRangeType.TODAY.ToString();
+            btnSelectDateRange.Tag = DateRangeType.TODAY.ToString();
+            SetTimeValue(CurrentValue);
+            btnShowYear.Tag = CurrentValue.Year;
+            btnShowYear.Text = CurrentValue.Year.ToString();
+            btnShowMonth.Tag = CurrentValue.Month;
+            btnShowMonth.Text = CurrentValue.ToString("MMMM");
+            IsSelectEndDate = false;
             LoadDate();
-            rbStart.Checked = true;
+            SetHeaderButtonSize();
         }
 
-        private bool _loadingDate = false;
-
-        private void GenerateDate()
+        private void SetHeaderButtonSize()
         {
+            int widthL = Convert.ToInt32(Math.Round(pnlHeader.Width * 0.5m, 0, MidpointRounding.ToEven));
+
+            grpStartDate.Width = widthL;
+            grpEndDate.Width = widthL;
+            btnStartTime.AutoSize = false;
+            btnStartTime.Width = 150;
+            btnEndTime.AutoSize = false;
+            btnEndTime.Width = 150;
+        }
+
+        private void SetTimeButtonSize()
+        {
+            var widthL = Convert.ToInt32(Math.Round(pnlTime.Width * 0.3m, 0, MidpointRounding.ToEven));
+            var widthSM = Convert.ToInt32(Math.Round(pnlTime.Width * 0.03m, 0, MidpointRounding.ToEven));
+
+            var heightL = Convert.ToInt32(Math.Round(pnlTime.Height * 0.28m, 0, MidpointRounding.ToEven));
+            var heightSM = Convert.ToInt32(Math.Round(pnlTime.Height * 0.18m, 0, MidpointRounding.ToEven));
+
+            btnNextHour.AutoSize = false;
+            btnNextMin.AutoSize = false;
+            btnPrevHour.AutoSize = false;
+            btnPrevMin.AutoSize = false;
+            btnHourNext.AutoSize = false;
+            btnHourPrev.AutoSize = false;
+            btnMinNext.AutoSize = false;
+            btnMinPrev.AutoSize = false;
+
+            btnNextHour.Height = heightSM;
+            btnNextMin.Height = heightSM;
+            btnPrevHour.Height = heightSM;
+            btnPrevMin.Height = heightSM;
+            btnHourNext.Height = heightSM;
+            btnHourPrev.Height = heightSM;
+            btnMinNext.Height = heightSM;
+            btnMinPrev.Height = heightSM;
+
+            pnlHour.Width = widthL;
+            pnlMin.Width = widthL;
+            //pnlAMPM.Width = widthL;
+            pnlTimeSeparator1.Width = widthSM;
+            pnlTimeSeparator2.Width = widthSM;
+            btnAMPM.AutoSize = false;
+            btnAMPM.Height = btnMin.Height;
+            btnAMPM.Width = pnlAMPM.Width;
+            btnAMPM.Location = new Point(0, ((pnlAMPM.Height - btnAMPM.Height) / 2));
+        }
+
+        private void SetMonthButtonSize()
+        {
+            int btnWidth = Convert.ToInt32(Math.Round((pnlDate.Width / 3m), 0, MidpointRounding.ToEven));
+            int btnHeight = Convert.ToInt32(Math.Round((pnlDate.Height / 4m), 0, MidpointRounding.ToEven));
+
+            for (int i = 0; i < pnlMonthYear.Controls.Count; i++)
+            {
+                var btn = (MaterialFlatButton)pnlMonthYear.Controls[i];
+                if (btn == null)
+                    continue;
+
+                int x = (btn.Name.Replace("btnMonthYear", "").Split('x')[0] + "").GetInt32Value();
+                int y = (btn.Name.Replace("btnMonthYear", "").Split('x')[1] + "").GetInt32Value();
+
+                btn.AutoSize = false;
+                btn.Size = new Size(btnWidth, btnHeight);
+                btn.Location = new Point((x * btnWidth), (y * btnHeight));
+            }
+        }
+
+        private void SetDateButtonSize()
+        {
+            int btnWidth = Convert.ToInt32(Math.Round((pnlDate.Width / 7m), 0, MidpointRounding.ToEven));
+            int btnHeight = Convert.ToInt32(Math.Round((pnlDate.Height / 7m), 0, MidpointRounding.ToEven));
+
+            for (int i = 0; i < pnlDate.Controls.Count; i++)
+            {
+                var btn = (MaterialFlatButton)pnlDate.Controls[i];
+                if (btn == null)
+                    continue;
+
+                int x = (btn.Name.Replace("btnDate", "").Split('x')[0] + "").GetInt32Value();
+                int y = (btn.Name.Replace("btnDate", "").Split('x')[1] + "").GetInt32Value();
+
+                btn.AutoSize = false;
+                btn.Size = new Size(btnWidth, btnHeight);
+                btn.Location = new Point((x * btnWidth), (y * btnHeight));
+            }
+        }
+
+        private void SetDateRangeButtonSize()
+        {
+            int btnWidth = Convert.ToInt32(Math.Round((pnlDateRange.Width / 2m), 0, MidpointRounding.ToEven));
+            int btnHeight = Convert.ToInt32(Math.Round((pnlDateRange.Height / 5m), 0, MidpointRounding.ToEven));
+
+            btnToday.AutoSize = false;
+            btnYesterday.AutoSize = false;
+            btnThisWeek.AutoSize = false;
+            btnLastWeek.AutoSize = false;
+            btnThisMonth.AutoSize = false;
+            btnLastMonth.AutoSize = false;
+            btnThisYear.AutoSize = false;
+            btnLastYear.AutoSize = false;
+            btnCustom.AutoSize = false;
+
+            btnToday.Size = new Size(btnWidth, btnHeight);
+            btnYesterday.Size = new Size(btnWidth, btnHeight);
+            btnThisWeek.Size = new Size(btnWidth, btnHeight);
+            btnLastWeek.Size = new Size(btnWidth, btnHeight);
+            btnThisMonth.Size = new Size(btnWidth, btnHeight);
+            btnLastMonth.Size = new Size(btnWidth, btnHeight);
+            btnThisYear.Size = new Size(btnWidth, btnHeight);
+            btnLastYear.Size = new Size(btnWidth, btnHeight);
+            btnCustom.Size = new Size(pnlDateRange.Width, btnHeight);
+
+            btnToday.Location = new Point(btnWidth, btnHeight * 0);
+            btnYesterday.Location = new Point(0, btnHeight * 0);
+
+            btnThisWeek.Location = new Point(btnWidth, btnHeight * 1);
+            btnLastWeek.Location = new Point(0, btnHeight * 1);
+
+            btnThisMonth.Location = new Point(btnWidth, btnHeight * 2);
+            btnLastMonth.Location = new Point(0, btnHeight * 2);
+
+            btnThisYear.Location = new Point(btnWidth, btnHeight * 3);
+            btnLastYear.Location = new Point(0, btnHeight * 3);
+
+            btnCustom.Location = new Point(0, btnHeight * 4);
+
+            btnToday.BorderColorType = _rangeSelection == DateRangeType.TODAY ? ColorType.PRIMARY : ColorType.DEFAULT;
+            btnYesterday.BorderColorType = _rangeSelection == DateRangeType.YESTERDAY ? ColorType.PRIMARY : ColorType.DEFAULT;
+            btnThisWeek.BorderColorType = _rangeSelection == DateRangeType.THISWEEK ? ColorType.PRIMARY : ColorType.DEFAULT;
+            btnLastWeek.BorderColorType = _rangeSelection == DateRangeType.LASTWEEK ? ColorType.PRIMARY : ColorType.DEFAULT;
+            btnThisMonth.BorderColorType = _rangeSelection == DateRangeType.THISMONTH ? ColorType.PRIMARY : ColorType.DEFAULT;
+            btnLastMonth.BorderColorType = _rangeSelection == DateRangeType.LASTMONTH ? ColorType.PRIMARY : ColorType.DEFAULT;
+            btnThisYear.BorderColorType = _rangeSelection == DateRangeType.THISYEAR ? ColorType.PRIMARY : ColorType.DEFAULT;
+            btnLastYear.BorderColorType = _rangeSelection == DateRangeType.LASTYEAR ? ColorType.PRIMARY : ColorType.DEFAULT;
+            btnCustom.BorderColorType = _rangeSelection == DateRangeType.CUSTOM ? ColorType.PRIMARY : ColorType.DEFAULT;
+        }
+
+        private void LoadDate()
+        {
+            ShowPanel("DATE");
             int year = (int)btnShowYear.Tag;
             int month = (int)btnShowMonth.Tag;
-            string newTag = year + "-" + month;
-            string oldTag = tblDate.Tag + "";
-            if (newTag.IsEqual(oldTag))
-                return;
 
-            tblDate.Tag = newTag;
-            for (int y = 1; y < 7; y++)
+            for (int i = 0; i < pnlDate.Controls.Count; i++)
             {
-                for (int x = 0; x < 7; x++)
-                {
-                    var pnl = tblDate.GetControlFromPosition(x, y);
-                    var btn = (MaterialFlatButton)pnl.Controls[0];
-                    btn.Enabled = false;
-                    btn.Text = "";
-                    btn.Tag = null;
-                    btn.ColorStyle = (x == 0 || x == 6) ? ColorType.DANGER : ColorType.DEFAULT;
-                }
+                var btn = (MaterialFlatButton)pnlDate.Controls[i];
+                if (btn == null)
+                    continue;
+
+                int x = (btn.Name.Replace("btnDate", "").Split('x')[0] + "").GetInt32Value();
+                int y = (btn.Name.Replace("btnDate", "").Split('x')[1] + "").GetInt32Value();
+
+                if (y == 0)
+                    continue;
+                btn.Enabled = false;
+                btn.Text = "";
+                btn.Tag = null;
+                btn.ColorStyle = (x == 0 || x == 6) ? ColorType.DANGER : ColorType.DEFAULT;
+                btn.BorderColorType = ColorType.DEFAULT;
             }
 
-            DateTime startMonth = new DateTime(year, month, 1).Date;
-            DateTime endMonth = startMonth.AddMonths(1).AddDays(-1).Date;
-
-            int startDay = (int)startMonth.DayOfWeek;
+            DateTime startDT = new DateTime(year, month, 1).Date;
+            DateTime endDT = startDT.AddMonths(1).AddDays(-1).Date;
+            int startDay = (int)startDT.DayOfWeek;
             int row = 1;
-            while (startMonth.Date <= endMonth.Date)
+
+            while (startDT.Date <= endDT.Date)
             {
                 for (int i = startDay; i < 7; i++)
                 {
-                    var pnl = tblDate.GetControlFromPosition(i, row);
-                    var btn = (MaterialFlatButton)pnl.Controls[0];
-                    btn.Text = startMonth.Day.ToString();
-                    btn.Tag = startMonth.Date;
+                    var btn = (MaterialFlatButton)pnlDate.GetChildControlByName(string.Format("btnDate{0}x{1}", i, row));
+                    btn.Text = startDT.Day.ToString();
+                    btn.Tag = startDT.Date;
                     btn.Enabled = true;
-                    if (startMonth.Date == DateTime.Now.Date)
+                    if (startDT.Date == DateTime.Now.Date)
+                    {
+                        btn.ColorStyle = ColorType.SUCCESS;
+                        btn.BorderColorType = ColorType.SUCCESS;
+                    }
+
+                    if (startDT.Date >= _startValue.Date && startDT.Date <= _endValue.Date)
                     {
                         btn.ColorStyle = ColorType.PRIMARY;
                         btn.BorderColorType = ColorType.PRIMARY;
+                        if (_selectedBtn == null)
+                            _selectedBtn = btn;
                     }
 
-                    //if (rbStart.Checked)
-                    //    btn.Enabled = startMonth.Date <= _endValue;
-                    //else
-                    //    btn.Enabled = startMonth.Date >= _startValue;
-
-                    startMonth = startMonth.AddDays(1);
-                    if (startMonth.Date > endMonth.Date)
+                    startDT = startDT.AddDays(1);
+                    if (startDT.Date > endDT.Date)
                         break;
                 }
                 row++;
@@ -173,59 +358,26 @@ namespace MaterialSkin.Controls
             }
         }
 
-        private void SetSelectedDate()
-        {
-            for (int y = 1; y < 7; y++)
-            {
-                for (int x = 0; x < 7; x++)
-                {
-                    var pnl = tblDate.GetControlFromPosition(x, y);
-                    var btn = (MaterialFlatButton)pnl.Controls[0];
-                    btn.ColorStyle = (x == 0 || x == 6) ? ColorType.DANGER : ColorType.DEFAULT;
-                    btn.BorderColorType = ColorType.DEFAULT;
-
-                    if (btn.Tag == null)
-                        continue;
-
-                    var date = (DateTime)btn.Tag;
-                    if (date.Date >= _startValue.Date && date.Date <= _endValue.Date)
-                    {
-                        btn.ColorStyle = ColorType.INFO;
-                        btn.BorderColorType = ColorType.INFO;
-                    }
-                    
-                }
-            }
-        }
-
-        private void LoadDate()
-        {
-            if (_loadingDate)
-                return;
-            _loadingDate = true;
-
-            ShowPanel("DATE");
-
-            GenerateDate();
-
-            SetSelectedDate();
-
-            _loadingDate = false;
-        }
-
         private void LoadYear()
         {
             ShowPanel("YEAR");
-            int year = (int)btnShowYear.Tag;
-            for (int y = 0; y < tblYear.RowCount; y++)
+            _minYear = ((int)btnShowYear.Tag) - _yearPos;
+            int yearCount = _minYear;
+            for (int y = 0; y < 4; y++)
             {
-                for (int x = 0; x < tblYear.ColumnCount; x++)
+                for (int x = 0; x < 3; x++)
                 {
-                    var pnl = tblYear.GetControlFromPosition(x, y);
-                    var btn = (MaterialFlatButton)pnl.Controls[0];
-                    btn.Tag = year;
-                    btn.Text = year.ToString();
-                    year++;
+                    var btn = (MaterialFlatButton)pnlMonthYear.GetChildControlByName(string.Format("btnMonthYear{0}x{1}", x, y));
+                    btn.Tag = yearCount;
+                    btn.Text = yearCount.ToString();
+                    btn.ColorStyle = ColorType.DEFAULT;
+                    btn.BorderColorType = ColorType.DEFAULT;
+                    if (yearCount == CurrentValue.Year)
+                    {
+                        btn.ColorStyle = ColorType.PRIMARY;
+                        btn.BorderColorType = ColorType.PRIMARY;
+                    }
+                    yearCount++;
                 }
             }
         }
@@ -233,91 +385,205 @@ namespace MaterialSkin.Controls
         private void LoadMonth()
         {
             ShowPanel("MONTH");
+            var month = new DateTime(2000, 1, 1);
+            for (int y = 0; y < 4; y++)
+            {
+                for (int x = 0; x < 3; x++)
+                {
+                    var btn = (MaterialFlatButton)pnlMonthYear.GetChildControlByName(string.Format("btnMonthYear{0}x{1}", x, y));
+                    btn.Tag = month.Month;
+                    btn.Text = month.ToString("MMMM");
+                    btn.ColorStyle = ColorType.DEFAULT;
+                    btn.BorderColorType = ColorType.DEFAULT;
+                    if (month.Month == CurrentValue.Month)
+                    {
+                        btn.ColorStyle = ColorType.PRIMARY;
+                        btn.BorderColorType = ColorType.PRIMARY;
+                    }
+                    month = month.AddMonths(1);
+                }
+            }
         }
 
+        private void LoadTime()
+        {
+            ShowPanel("TIME");
+            string timeStr = btnStartTime.Tag + "";
+            if (IsSelectEndDate)
+                timeStr = btnEndTime.Tag + "";
 
-        private string displayedPanel = "";
+            if (string.IsNullOrEmpty(timeStr))
+                timeStr = "00:00 AM";
+            timeStr = "2000-01-01 " + timeStr;
+            var timeValue = DateTime.ParseExact(timeStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            btnHour.Text = timeValue.ToString("hh");
+            btnHour.Tag = timeValue.ToString("hh");
+            btnHourPrev.Text = timeValue.AddHours(-1).ToString("hh");
+            btnHourPrev.Tag = timeValue.AddHours(-1).ToString("hh");
+            btnHourNext.Text = timeValue.AddHours(1).ToString("hh");
+            btnHourNext.Tag = timeValue.AddHours(1).ToString("hh");
+
+            btnMin.Text = timeValue.ToString("mm");
+            btnMin.Tag = timeValue.ToString("mm");
+            btnMinPrev.Text = timeValue.AddMinutes(-1).ToString("mm");
+            btnMinPrev.Tag = timeValue.AddMinutes(-1).ToString("mm");
+            btnMinNext.Text = timeValue.AddMinutes(1).ToString("mm");
+            btnMinNext.Tag = timeValue.AddMinutes(1).ToString("mm");
+
+            btnAMPM.Text = timeValue.ToString("tt");
+            btnAMPM.Tag = timeValue.ToString("tt");
+        }
+
         private void ShowPanel(string panel)
         {
-            if (displayedPanel.IsEqual(panel))
-                return;
-            tblDate.Dock = DockStyle.Bottom;
-            tblMonth.Dock = DockStyle.Bottom;
-            tblYear.Dock = DockStyle.Bottom;
-            tblDate.Visible = false;
-            tblMonth.Visible = false;
-            tblYear.Visible = false;
+            _shownPanel = panel;
+            pnlMonthYear.Dock = DockStyle.Fill;
+            pnlDate.Dock = DockStyle.Fill;
+            pnlTime.Dock = DockStyle.Fill;
+            pnlDateRange.Dock = DockStyle.Fill;
+            pnlNavigation.Visible = true;
+            pnlMonthYear.Visible = false;
+            pnlDate.Visible = false;
+            pnlTime.Visible = false;
+            pnlDateRange.Visible = false;
             btnPrev.Enabled = true;
             btnNext.Enabled = true;
             pnlNavigation.Visible = true;
-            displayedPanel = panel;
+
             if (panel == "DATE")
             {
-                tblDate.Dock = DockStyle.Fill;
-                tblDate.Visible = true;
+                pnlDate.Dock = DockStyle.Fill;
+                pnlDate.Visible = true;
+                SetDateButtonSize();
             }
             else if (panel == "MONTH")
             {
-                tblMonth.Dock = DockStyle.Fill;
-                tblMonth.Visible = true;
+                pnlMonthYear.Dock = DockStyle.Fill;
+                pnlMonthYear.Visible = true;
                 btnPrev.Enabled = false;
                 btnNext.Enabled = false;
+                SetMonthButtonSize();
             }
             else if (panel == "YEAR")
             {
-                tblYear.Dock = DockStyle.Fill;
-                tblYear.Visible = true;
+                pnlMonthYear.Dock = DockStyle.Fill;
+                pnlMonthYear.Visible = true;
+                SetMonthButtonSize();
+            }
+            else if (panel == "TIME")
+            {
+                pnlTime.Dock = DockStyle.Fill;
+                pnlTime.Visible = true;
+                btnPrev.Enabled = false;
+                btnNext.Enabled = false;
+                SetTimeButtonSize();
+            }
+            else if (panel == "DATERANGE")
+            {
+                pnlNavigation.Visible = false;
+                pnlDateRange.Dock = DockStyle.Fill;
+                pnlDateRange.Visible = true;
+                SetDateRangeButtonSize();
             }
         }
 
-        MaterialFlatButton selectedBtn = null;
-        private void btnDate_Click(object sender, EventArgs e)
+        private void MoveHour(int step)
         {
-            if (selectedBtn != null)
-                selectedBtn.ColorStyle = (_startValue.DayOfWeek == DayOfWeek.Sunday || _startValue.DayOfWeek == DayOfWeek.Saturday) ? ColorType.DANGER : ColorType.DEFAULT;
+            string timeStr = btnStartTime.Tag + "";
+            if (IsSelectEndDate)
+                timeStr = btnEndTime.Tag + "";
 
-            selectedBtn = (MaterialFlatButton)sender;
-            selectedBtn.ColorStyle = ColorType.INFO;
+            if (string.IsNullOrEmpty(timeStr))
+                timeStr = "00:00 AM";
+            timeStr = "2000-01-01 " + timeStr;
+            var timeValue = DateTime.ParseExact(timeStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            timeValue = timeValue.AddHours(step);
+            SetTimeValue(timeValue);
+            LoadTime();
+        }
 
-            string hour = (rbStart.Checked ? ddStartHour.SelectedValue : ddEndHour.SelectedValue) + "";
-            if (string.IsNullOrEmpty(hour))
-                hour = "00";
+        private void MoveMin(int step)
+        {
+            string timeStr = btnStartTime.Tag + "";
+            if (IsSelectEndDate)
+                timeStr = btnEndTime.Tag + "";
 
-            string min = (rbStart.Checked ? ddStartMin.SelectedValue : ddStartMin.SelectedValue) + "";
-            if (string.IsNullOrEmpty(min))
-                min = "00";
-            var dtStr = ((DateTime)selectedBtn.Tag).ToString("yyyy-MM-dd") + " " + hour + ":" + min;
-            var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture);
+            if (string.IsNullOrEmpty(timeStr))
+                timeStr = "00:00 AM";
+            timeStr = "2000-01-01 " + timeStr;
+            var timeValue = DateTime.ParseExact(timeStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            timeValue = timeValue.AddMinutes(step);
+            SetTimeValue(timeValue);
+            LoadTime();
+        }
 
-            if (rbStart.Checked)
+        private void SetTimeValue(DateTime timeValue)
+        {
+            if (IsSelectEndDate)
             {
-                StartValue = ShowTime ? dtValue : dtValue.Date;
-                if (_startValue.Date > _endValue.Date)
-                    EndValue = _startValue.Date;
-                rbEnd.Checked = true;
+                btnEndTime.Text = timeValue.ToString("hh:mm tt");
+                btnEndTime.Tag = timeValue.ToString("hh:mm tt");
             }
             else
             {
-                EndValue = ShowTime ? dtValue : dtValue.Date;
-                if (_startValue.Date > _endValue.Date)
-                    StartValue = _endValue.Date;
+                btnStartTime.Text = timeValue.ToString("hh:mm tt");
+                btnStartTime.Tag = timeValue.ToString("hh:mm tt");
             }
-            ddRangeType.SelectedValue = DateRangeType.CUSTOM.ToString();
+
+            string timeStr = btnStartTime.Tag + "";
+            if (IsSelectEndDate)
+                timeStr = btnEndTime.Tag + "";
+
+            if (string.IsNullOrEmpty(timeStr))
+                timeStr = "00:00 AM";
+
+            var dtStr = CurrentValue.ToString("yyyy-MM-dd") + " " + timeStr;
+            var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            CurrentValue = ShowTime ? dtValue : dtValue.Date;
         }
 
-        private void btnMonth_Clicked(object sender, EventArgs e)
+        private void MaterialDatePickerForm_Load(object sender, EventArgs e)
         {
-            var btn = (MaterialFlatButton)sender;
-            btnShowMonth.Tag = Convert.ToInt32(btn.Tag);
-            btnShowMonth.Text = new DateTime(2000, (int)btnShowMonth.Tag, 1).ToString("MMMM");
+            InitForm();
+        }
+
+        private void btnDate_Click(object sender, EventArgs e)
+        {
+            //if (_selectedBtn != null && _selectedBtn.Tag != null)
+            //{
+            //    _selectedBtn.ColorStyle = (CurrentValue.DayOfWeek == DayOfWeek.Sunday || CurrentValue.DayOfWeek == DayOfWeek.Saturday) ? ColorType.DANGER : ColorType.DEFAULT;
+            //    _selectedBtn.BorderColorType = ((DateTime)_selectedBtn.Tag).Date == DateTime.Now.Date ? ColorType.SUCCESS : ColorType.DEFAULT;
+            //}
+
+            _selectedBtn = (MaterialFlatButton)sender;
+            //_selectedBtn.ColorStyle = ColorType.PRIMARY;
+            //_selectedBtn.BorderColorType = ColorType.PRIMARY;
+
+            var timeStr = btnStartTime.Tag + "";
+            if (string.IsNullOrEmpty(timeStr))
+                timeStr = "00:00 AM";
+
+            var dtStr = ((DateTime)_selectedBtn.Tag).ToString("yyyy-MM-dd") + " " + timeStr;
+            var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            CurrentValue = ShowTime ? dtValue : dtValue.Date;
+            if (!IsSelectEndDate)
+                IsSelectEndDate = true;
             LoadDate();
         }
 
-        private void btnYear_Click(object sender, EventArgs e)
+        private void btnMonthYear_Click(object sender, EventArgs e)
         {
             var btn = (MaterialFlatButton)sender;
-            btnShowYear.Tag = Convert.ToInt32(btn.Tag);
-            btnShowYear.Text = btn.Tag.ToString();
+            if (_shownPanel == "MONTH")
+            {
+                btnShowMonth.Tag = Convert.ToInt32(btn.Tag);
+                btnShowMonth.Text = new DateTime(2000, (int)btnShowMonth.Tag, 1).ToString("MMMM");
+            }
+            else if (_shownPanel == "YEAR")
+            {
+                btnShowYear.Tag = Convert.ToInt32(btn.Tag);
+                btnShowYear.Text = btn.Tag.ToString();
+            }
             LoadDate();
         }
 
@@ -325,7 +591,7 @@ namespace MaterialSkin.Controls
         {
             int year = (int)btnShowYear.Tag;
             int month = (int)btnShowMonth.Tag;
-            if (tblDate.Visible)
+            if (_shownPanel == "DATE")
             {
                 DateTime prev = new DateTime(year, month, 1).AddMonths(-1);
                 btnShowYear.Tag = prev.Year;
@@ -334,9 +600,9 @@ namespace MaterialSkin.Controls
                 btnShowMonth.Text = prev.ToString("MMMM");
                 LoadDate();
             }
-            else if (tblYear.Visible)
+            else if (_shownPanel == "YEAR")
             {
-                btnShowYear.Tag = year - (tblYear.RowCount * tblYear.ColumnCount);
+                btnShowYear.Tag = (_minYear + _yearPos) - 12;
                 btnShowYear.Text = btnShowYear.Tag.ToString();
                 LoadYear();
             }
@@ -346,7 +612,7 @@ namespace MaterialSkin.Controls
         {
             int year = (int)btnShowYear.Tag;
             int month = (int)btnShowMonth.Tag;
-            if (tblDate.Visible)
+            if (_shownPanel == "DATE")
             {
                 DateTime next = new DateTime(year, month, 1).AddMonths(1);
                 btnShowYear.Tag = next.Year;
@@ -355,9 +621,9 @@ namespace MaterialSkin.Controls
                 btnShowMonth.Text = next.ToString("MMMM");
                 LoadDate();
             }
-            else if (tblYear.Visible)
+            else if (_shownPanel == "YEAR")
             {
-                btnShowYear.Tag = year + (tblYear.RowCount * tblYear.ColumnCount);
+                btnShowYear.Tag = (_minYear + _yearPos) + 12;
                 btnShowYear.Text = btnShowYear.Tag.ToString();
                 LoadYear();
             }
@@ -365,6 +631,7 @@ namespace MaterialSkin.Controls
 
         private void btnShowYear_Click(object sender, EventArgs e)
         {
+            Debug.WriteLine("btnShowYear");
             LoadYear();
         }
 
@@ -380,93 +647,163 @@ namespace MaterialSkin.Controls
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            string val = ddRangeType.SelectedValue + "";
-            Enum.TryParse(val, out _rangeSelection);
             if (ValueChanged != null)
                 ValueChanged(this, StartValue, EndValue, _rangeSelection);
             this.Close();
         }
 
-        private void ddStartTime_ValueChanged(object sender, ItemSelectArgs e)
+        private void btnStartDate_Click(object sender, EventArgs e)
         {
-            string hour = ddStartHour.SelectedValue + "";
-            if (string.IsNullOrEmpty(hour))
-                hour = "00";
-
-            string min = ddStartMin.SelectedValue + "";
-            if (string.IsNullOrEmpty(min))
-                min = "00";
-
-            var dtStr = _startValue.ToString("yyyy-MM-dd") + " " + hour + ":" + min;
-            var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture);
-            StartValue = ShowTime ? dtValue : dtValue.Date;
-        }
-
-        private void btnStarDateValue_Click(object sender, EventArgs e)
-        {
-            if (_loadingDate)
-                return;
-            btnShowYear.Tag = _startValue.Year;
-            btnShowYear.Text = _startValue.Year.ToString();
-            btnShowMonth.Tag = _startValue.Month;
-            btnShowMonth.Text = _startValue.ToString("MMMM");
+            IsSelectEndDate = false;
+            btnShowYear.Tag = CurrentValue.Year;
+            btnShowYear.Text = CurrentValue.Year.ToString();
+            btnShowMonth.Tag = CurrentValue.Month;
+            btnShowMonth.Text = CurrentValue.ToString("MMMM");
             LoadDate();
-
-            rbStart.Checked = true;
         }
 
-        private void ddEndTime_ValueChanged(object sender, ItemSelectArgs e)
+        private void btnEndDate_Click(object sender, EventArgs e)
         {
-            string hour = ddStartHour.SelectedValue + "";
-            if (string.IsNullOrEmpty(hour))
-                hour = "00";
-
-            string min = ddStartMin.SelectedValue + "";
-            if (string.IsNullOrEmpty(min))
-                min = "00";
-
-            var dtStr = _startValue.ToString("yyyy-MM-dd") + " " + hour + ":" + min;
-            var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture);
-            StartValue = ShowTime ? dtValue : dtValue.Date;
-        }
-
-        private void btnEndDateValue_Click(object sender, EventArgs e)
-        {
-            if (_loadingDate)
-                return;
-            btnShowYear.Tag = _endValue.Year;
-            btnShowYear.Text = _endValue.Year.ToString();
-            btnShowMonth.Tag = _endValue.Month;
-            btnShowMonth.Text = _endValue.ToString("MMMM");
+            IsSelectEndDate = true;
+            btnShowYear.Tag = CurrentValue.Year;
+            btnShowYear.Text = CurrentValue.Year.ToString();
+            btnShowMonth.Tag = CurrentValue.Month;
+            btnShowMonth.Text = CurrentValue.ToString("MMMM");
             LoadDate();
-
-            rbEnd.Checked = true;
         }
 
-        private void ddRangeType_ValueChanged(object sender, ItemSelectArgs e)
+        private void btnStartTimeValue_Click(object sender, EventArgs e)
         {
-            string val = e.SelectedValue + "";
-            Enum.TryParse(val, out _rangeSelection);
-            if (val.IsEqual("CUSTOM"))
-                return;
+            IsSelectEndDate = false;
+            LoadTime();
+        }
 
+        private void btnEndTimeValue_Click(object sender, EventArgs e)
+        {
+            IsSelectEndDate = true;
+            LoadTime();
+        }
+
+        private void btnSetHour_Click(object sender, EventArgs e)
+        {
+            string hour = (((Control)sender).Tag + "");
+            string timeStr = hour + ":" + btnMin.Tag + " " + btnAMPM.Tag;
+            if (string.IsNullOrEmpty(timeStr))
+                timeStr = "00:00 AM";
+            timeStr = "2000-01-01 " + timeStr;
+            var timeValue = DateTime.ParseExact(timeStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            SetTimeValue(timeValue);
+            LoadTime();
+        }
+
+        private void btnSetMin_Click(object sender, EventArgs e)
+        {
+            string min = (((Control)sender).Tag + "");
+            string timeStr = btnHour.Tag + ":" + min + " " + btnAMPM.Tag;
+            if (string.IsNullOrEmpty(timeStr))
+                timeStr = "00:00 AM";
+            timeStr = "2000-01-01 " + timeStr;
+            var timeValue = DateTime.ParseExact(timeStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            SetTimeValue(timeValue);
+            LoadTime();
+        }
+
+        private void btnAMPM_Click(object sender, EventArgs e)
+        {
+            string val = btnAMPM.Text == "AM" ? "PM" : "AM";
+            btnAMPM.Text = val;
+            btnAMPM.Tag = val;
+            string timeStr = btnHour.Tag + ":" + btnMin.Tag + " " + btnAMPM.Tag;
+            if (string.IsNullOrEmpty(timeStr))
+                timeStr = "00:00 AM";
+            timeStr = "2000-01-01 " + timeStr;
+            var timeValue = DateTime.ParseExact(timeStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
+            SetTimeValue(timeValue);
+        }
+
+        private void btnMoveHour_MouseDown(object sender, MouseEventArgs e)
+        {
+            _hourStep = (((Control)sender).Tag + "").GetInt32Value();
+            MoveHour(_hourStep);
+            _timerInterval = 500;
+            timerMain.Interval = _timerInterval;
+            timerMain.Enabled = true;
+            timerMain.Start();
+        }
+
+        private void btnMoveHour_MouseUp(object sender, MouseEventArgs e)
+        {
+            _hourStep = 0;
+            _timerInterval = 500;
+            timerMain.Enabled = false;
+            timerMain.Stop();
+        }
+
+        private void btnMoveMin_MouseDown(object sender, MouseEventArgs e)
+        {
+            _minStep = (((Control)sender).Tag + "").GetInt32Value();
+            MoveMin(_minStep);
+            _timerInterval = 500;
+            timerMain.Interval = _timerInterval;
+            timerMain.Enabled = true;
+            timerMain.Start();
+        }
+
+        private void btnMoveMin_MouseUp(object sender, MouseEventArgs e)
+        {
+            _minStep = 0;
+            _timerInterval = 500;
+            timerMain.Enabled = false;
+            timerMain.Stop();
+        }
+
+        private void timerMain_Tick(object sender, EventArgs e)
+        {
+            if (_hourStep != 0)
+            {
+                if (_timerInterval > 100)
+                    _timerInterval -= 100;
+                MoveHour(_hourStep);
+                timerMain.Interval = _timerInterval;
+            }
+            else if (_minStep != 0)
+            {
+                if (_timerInterval > 100)
+                    _timerInterval -= 100;
+                MoveMin(_minStep);
+                timerMain.Interval = _timerInterval;
+            }
+        }
+
+        private void btnDateRangeType_Click(object sender, EventArgs e)
+        {
+            string range = ((Control)sender).Tag + "";
+            Enum.TryParse(range, out _rangeSelection);
+            if (_rangeSelection == DateRangeType.CUSTOM)
+            {
+                LoadDate();
+                return;
+            }
+
+            btnSelectDateRange.Text = ((Control)sender).Text;
+            btnSelectDateRange.Tag = range;
             var startDate = DateTime.Now.Date;
             var endDate = DateTime.Now.Date;
-            Extenstions.GetDateRange(val.Replace(" ", ""), "00:00", out startDate, out endDate);
+            Extenstions.GetDateRange(_rangeSelection.ToString(), "00:00", out startDate, out endDate);
             StartValue = startDate;
             EndValue = endDate;
-            btnShowYear.Tag = startDate.Year;
-            btnShowYear.Text = startDate.Year.ToString();
-            btnShowMonth.Tag = startDate.Month;
-            btnShowMonth.Text = startDate.ToString("MMMM");
+            IsSelectEndDate = false;
+
+            btnShowYear.Tag = CurrentValue.Year;
+            btnShowYear.Text = CurrentValue.Year.ToString();
+            btnShowMonth.Tag = CurrentValue.Month;
+            btnShowMonth.Text = CurrentValue.ToString("MMMM");
             LoadDate();
         }
 
-        private void rbStart_CheckedChanged(object sender, EventArgs e)
+        private void btnSelectDateRange_Click(object sender, EventArgs e)
         {
-            btnStartDateValue.Enabled = rbStart.Checked;
-            btnEndDateValue.Enabled = rbEnd.Checked;
-            LoadDate();
+            ShowPanel("DATERANGE");
         }
     }
 

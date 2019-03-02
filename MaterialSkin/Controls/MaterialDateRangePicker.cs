@@ -76,8 +76,8 @@ namespace MaterialSkin.Controls
                 string endStr = _endValue.ToString(_dateFormat);
                 if (ShowTime)
                 {
-                    startStr += " " + _startValue.ToString("HH:mm");
-                    endStr += " " + _endValue.ToString("HH:mm");
+                    startStr += " " + _startValue.ToString("hh:mm tt");
+                    endStr += " " + _endValue.ToString("hh:mm tt");
                 }
 
                 _baseTextBox.Text = startStr + "  to  " + endStr;
@@ -104,8 +104,8 @@ namespace MaterialSkin.Controls
                 string endStr = _endValue.ToString(_dateFormat);
                 if (ShowTime)
                 {
-                    startStr += " " + _startValue.ToString("HH:mm");
-                    endStr += " " + _endValue.ToString("HH:mm");
+                    startStr += " " + _startValue.ToString("hh:mm tt");
+                    endStr += " " + _endValue.ToString("hh:mm tt");
                 }
 
                 _baseTextBox.Text = startStr + " to " + endStr;
@@ -1087,8 +1087,6 @@ namespace MaterialSkin.Controls
             _baseTextBox.GotFocus += (sender, args) => { ShowDateSelector(); };
             _baseTextBox.Enter += (sender, args) => { ShowDateSelector(); };
             _baseTextBox.Leave += (sender, args) => { HideDateSelector(); };
-
-            InitDateSelector();
         }
 
         protected override void OnPaint(PaintEventArgs pevent)
