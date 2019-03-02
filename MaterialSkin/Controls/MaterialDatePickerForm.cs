@@ -54,7 +54,7 @@ namespace MaterialSkin.Controls
         private int _minYear = 2000;
         private int _yearPos = 4;
         private string _shownPanel = "";
-        MaterialFlatButton _selectedBtn = null;
+        MaterialButton _selectedBtn = null;
         private int _hourStep = 0;
         private int _minStep = 0;
         private int _timerInterval = 500;
@@ -120,7 +120,7 @@ namespace MaterialSkin.Controls
 
             for (int i = 0; i < pnlMonthYear.Controls.Count; i++)
             {
-                var btn = (MaterialFlatButton)pnlMonthYear.Controls[i];
+                var btn = (MaterialButton)pnlMonthYear.Controls[i];
                 if (btn == null)
                     continue;
 
@@ -140,7 +140,7 @@ namespace MaterialSkin.Controls
 
             for (int i = 0; i < pnlDate.Controls.Count; i++)
             {
-                var btn = (MaterialFlatButton)pnlDate.Controls[i];
+                var btn = (MaterialButton)pnlDate.Controls[i];
                 if (btn == null)
                     continue;
 
@@ -161,7 +161,7 @@ namespace MaterialSkin.Controls
 
             for (int i = 0; i < pnlDate.Controls.Count; i++)
             {
-                var btn = (MaterialFlatButton)pnlDate.Controls[i];
+                var btn = (MaterialButton)pnlDate.Controls[i];
                 if (btn == null)
                     continue;
 
@@ -186,7 +186,7 @@ namespace MaterialSkin.Controls
             {
                 for (int i = startDay; i < 7; i++)
                 {
-                    var btn = (MaterialFlatButton)pnlDate.GetChildControlByName(string.Format("btnDate{0}x{1}", i, row));
+                    var btn = (MaterialButton)pnlDate.GetChildControlByName(string.Format("btnDate{0}x{1}", i, row));
                     btn.Text = startMonth.Day.ToString();
                     btn.Tag = startMonth.Date;
                     btn.Enabled = true;
@@ -223,7 +223,7 @@ namespace MaterialSkin.Controls
             {
                 for (int x = 0; x < 3; x++)
                 {
-                    var btn = (MaterialFlatButton)pnlMonthYear.GetChildControlByName(string.Format("btnMonthYear{0}x{1}", x, y));
+                    var btn = (MaterialButton)pnlMonthYear.GetChildControlByName(string.Format("btnMonthYear{0}x{1}", x, y));
                     btn.Tag = yearCount;
                     btn.Text = yearCount.ToString();
                     btn.ColorStyle = ColorType.DEFAULT;
@@ -246,7 +246,7 @@ namespace MaterialSkin.Controls
             {
                 for (int x = 0; x < 3; x++)
                 {
-                    var btn = (MaterialFlatButton)pnlMonthYear.GetChildControlByName(string.Format("btnMonthYear{0}x{1}", x, y));
+                    var btn = (MaterialButton)pnlMonthYear.GetChildControlByName(string.Format("btnMonthYear{0}x{1}", x, y));
                     btn.Tag = month.Month;
                     btn.Text = month.ToString("MMMM");
                     btn.ColorStyle = ColorType.DEFAULT;
@@ -381,7 +381,7 @@ namespace MaterialSkin.Controls
                 _selectedBtn.BorderColorType = ((DateTime)_selectedBtn.Tag).Date == DateTime.Now.Date ? ColorType.SUCCESS : ColorType.DEFAULT;
             }
 
-            _selectedBtn = (MaterialFlatButton)sender;
+            _selectedBtn = (MaterialButton)sender;
             _selectedBtn.ColorStyle = ColorType.PRIMARY;
             _selectedBtn.BorderColorType = ColorType.PRIMARY;
 
@@ -396,7 +396,7 @@ namespace MaterialSkin.Controls
 
         private void btnMonthYear_Click(object sender, EventArgs e)
         {
-            var btn = (MaterialFlatButton)sender;
+            var btn = (MaterialButton)sender;
             if (_shownPanel == "MONTH")
             {
                 btnShowMonth.Tag = Convert.ToInt32(btn.Tag);
@@ -475,10 +475,10 @@ namespace MaterialSkin.Controls
 
             foreach (Control ctrl in pnlDate.Controls)
             {
-                if (!(ctrl is MaterialFlatButton))
+                if (!(ctrl is MaterialButton))
                     continue;
 
-                var btn = (MaterialFlatButton)ctrl;
+                var btn = (MaterialButton)ctrl;
                 if (btn == null)
                     continue;
                 if (btn.Tag == null)

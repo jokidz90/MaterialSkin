@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.pnlTime = new MaterialSkin.Controls.MaterialPanelColored();
-            this.btnTimeValue = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnTimeValue = new MaterialSkin.Controls.MaterialButton();
             this.materialPanelColored2 = new MaterialSkin.Controls.MaterialPanelColored();
             this.ddHour = new MaterialSkin.Controls.MaterialDropDown();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
@@ -204,7 +204,7 @@
         #endregion
 
         private MaterialPanelColored pnlTime;
-        private MaterialFlatButton btnTimeValue;
+        private MaterialButton btnTimeValue;
         private MaterialPanelColored materialPanelColored2;
         private MaterialDropDown ddHour;
         private MaterialLabel materialLabel1;

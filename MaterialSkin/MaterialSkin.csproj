@@ -109,7 +109,7 @@
     <Compile Include="Controls\MaterialDropDown.Designer.cs">
       <DependentUpon>MaterialDropDown.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MaterialFlatButton.cs">
+    <Compile Include="Controls\MaterialButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\MaterialMDI.cs">
@@ -176,9 +176,6 @@
     <Compile Include="Extenstions.cs" />
     <Compile Include="IconManager.cs" />
     <Compile Include="IMaterialControl.cs" />
-    <Compile Include="Controls\MaterialRaisedButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="MaterialSkinManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

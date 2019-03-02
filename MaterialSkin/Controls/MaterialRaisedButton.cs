@@ -8,7 +8,7 @@ using System;
 
 namespace MaterialSkin.Controls
 {
-    public class MaterialRaisedButton : Button, IMaterialControl
+    public class MaterialButton : Button, IMaterialControl
     {
         [Browsable(false)]
         public int Depth { get; set; }
@@ -54,7 +54,7 @@ namespace MaterialSkin.Controls
             }
         }
 
-        public MaterialRaisedButton()
+        public MaterialButton()
         {
             Primary = true;
 

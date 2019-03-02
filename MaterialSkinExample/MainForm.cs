@@ -57,7 +57,7 @@ namespace MaterialSkinExample
 
             foreach (IconType ico in Enum.GetValues(typeof(IconType)))
             {
-                var btn = new MaterialFlatButton();
+                var btn = new MaterialButton();
                 btn.Name = ico.ToString();
                 //btn.Text = ico.ToString();
                 btn.IconType = ico;

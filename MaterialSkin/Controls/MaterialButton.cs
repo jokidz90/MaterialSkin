@@ -9,10 +9,24 @@ using MaterialSkin.Animations;
 
 namespace MaterialSkin.Controls
 {
-    public class MaterialFlatButton : Button, IMaterialControl
+    public class MaterialButton : Button, IMaterialControl
     {
         public event MouseEventHandler TouchDown;
         public event MouseEventHandler TouchUp;
+
+        private bool _useFlatStyle = false;
+        public bool UseFlatStyle
+        {
+            set
+            {
+                _useFlatStyle = value;
+                Invalidate();
+            }
+            get
+            {
+                return _useFlatStyle;
+            }
+        }
 
         [Browsable(false)]
         public int Depth { get; set; }
@@ -97,9 +111,9 @@ namespace MaterialSkin.Controls
         private StringAlignment _alignment = StringAlignment.Center;
         public StringAlignment Alignment { get => _alignment; set => _alignment = value; }
 
-        public MaterialFlatButton()
+        public MaterialButton()
         {
-            Primary = false;
+            Primary = true;
 
             _animationManager = new AnimationManager(false)
             {
@@ -136,6 +150,14 @@ namespace MaterialSkin.Controls
         }
 
         protected override void OnPaint(PaintEventArgs pevent)
+        {
+            if (_useFlatStyle)
+                DrawFlatButton(pevent);
+            else
+                DrawStandardButton(pevent);
+        }
+
+        private void DrawFlatButton(PaintEventArgs pevent)
         {
             var frontBrush = Enabled ? SkinManager.GetPrimaryTextBrush() : SkinManager.GetFlatButtonDisabledTextBrush();
             if (_colorStyle != ColorType.DEFAULT)
@@ -194,10 +216,6 @@ namespace MaterialSkin.Controls
 
             if (Icon != null)
             {
-                //
-                // Resize and move Text container
-                //
-
                 // First 8: left padding
                 // 24: icon width
                 // Second 4: space between Icon and Text
@@ -210,13 +228,75 @@ namespace MaterialSkin.Controls
                 textRect.X += 8 + _iconSize + 4;
             }
 
-            g.DrawString(
-                Text.ToUpper(),
-                SkinManager.ROBOTO_MEDIUM_11,
-                frontBrush,
-                textRect,
-                new StringFormat { Alignment = _alignment, LineAlignment = StringAlignment.Center }
-                );
+            g.DrawString(Text.ToUpper(), SkinManager.ROBOTO_MEDIUM_11, frontBrush, textRect, new StringFormat { Alignment = _alignment, LineAlignment = StringAlignment.Center });
+        }
+
+        private void DrawStandardButton(PaintEventArgs pevent)
+        {
+            var backBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush;
+            var frontBrush = SkinManager.GetRaisedButtonTextBrush(Primary);
+            var frontColor = SkinManager.GetRaisedButtonTextColor(Primary);
+            if (!Enabled)
+            {
+                backBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.LightPrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].LightPrimaryBrush;
+                frontBrush = SkinManager.GetFlatButtonDisabledTextBrush();
+            }
+
+
+            var g = pevent.Graphics;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            g.TextRenderingHint = TextRenderingHint.AntiAlias;
+
+            g.Clear(Parent.BackColor);
+
+            using (var backgroundPath = DrawHelper.CreateRoundRect(ClientRectangle.X,
+                ClientRectangle.Y,
+                ClientRectangle.Width - 1,
+                ClientRectangle.Height - 1,
+                1f))
+            {
+                g.FillPath(Primary ? backBrush : SkinManager.GetRaisedButtonBackgroundBrush(), backgroundPath);
+            }
+
+            if (_animationManager.IsAnimating())
+            {
+                for (int i = 0; i < _animationManager.GetAnimationCount(); i++)
+                {
+                    var animationValue = _animationManager.GetProgress(i);
+                    var animationSource = _animationManager.GetSource(i);
+                    var rippleBrush = new SolidBrush(Color.FromArgb((int)(51 - (animationValue * 50)), Color.White));
+                    var rippleSize = (int)(animationValue * Width * 2);
+                    g.FillEllipse(rippleBrush, new Rectangle(animationSource.X - rippleSize / 2, animationSource.Y - rippleSize / 2, rippleSize, rippleSize));
+                }
+            }
+
+            //Icon
+            var iconY = (this.Height - _iconSize) / 2;
+            var iconX = iconY;
+            if (string.IsNullOrEmpty(Text))
+                iconX = (this.Width - _iconSize) / 2;
+            var iconRect = new Rectangle(iconX, iconY, _iconSize, _iconSize);
+            if (Icon != null)
+                g.DrawImage(Icon.ReplaceColor(Color.Black, frontColor), iconRect);
+
+            //Text
+            var textRect = ClientRectangle;
+
+            if (Icon != null)
+            {
+                // First 8: left padding
+                // 24: icon width
+                // Second 4: space between Icon and Text
+                // Third 8: right padding
+                textRect.Width -= 8 + _iconSize + 4 + 8;
+
+                // First 8: left padding
+                // 24: icon width
+                // Second 4: space between Icon and Text
+                textRect.X += 8 + _iconSize + 4;
+            }
+
+            g.DrawString(Text.ToUpper(), SkinManager.ROBOTO_MEDIUM_11, frontBrush, textRect, new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
         }
 
         private Size GetPreferredSize()
@@ -272,15 +352,23 @@ namespace MaterialSkin.Controls
                     Invalidate();
                 }
             };
-            TouchDown += (sender, args) => { OnMouseDown(args); };
-
             MouseUp += (sender, args) =>
             {
                 MouseState = MouseState.HOVER;
 
                 Invalidate();
             };
-            TouchUp += (sender, args) => { OnMouseUp(args); };
+
+            TouchDown += (sender, args) =>
+            {
+                OnMouseEnter(args);
+                OnMouseDown(args);
+            };
+            TouchUp += (sender, args) => 
+            {
+                OnMouseUp(args);
+                OnMouseLeave(args);
+            };
         }
 
         protected override void WndProc(ref Message m)

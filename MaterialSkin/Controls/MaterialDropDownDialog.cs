@@ -93,7 +93,7 @@ namespace MaterialSkin.Controls
                 string itemText = item.GetProperty(DisplayMember).ToString();
                 object itemValue = item.GetProperty(ValueMember);
 
-                MaterialFlatButton ctrl = InitButton(i, itemText, itemValue);
+                MaterialButton ctrl = InitButton(i, itemText, itemValue);
                 flpMain.Controls.Add(ctrl);
                 ctrl.Dock = DockStyle.Top;
                 ctrl.BringToFront();
@@ -108,9 +108,9 @@ namespace MaterialSkin.Controls
                 selectedCtrl.Select();
         }
 
-        private MaterialFlatButton InitButton(int index, string text, object value)
+        private MaterialButton InitButton(int index, string text, object value)
         {
-            MaterialFlatButton ctrl = new MaterialFlatButton();
+            MaterialButton ctrl = new MaterialButton();
             ctrl.Name = _id.ToString().ToUpper() + "_" + index;
             ctrl.IsSelected = _selectedIndices.Contains(index);
             ctrl.AutoSize = false;
@@ -128,14 +128,14 @@ namespace MaterialSkin.Controls
 
         private void Ctrl_Click(object sender, EventArgs e)
         {
-            MaterialFlatButton ctrl = (MaterialFlatButton)sender;
+            MaterialButton ctrl = (MaterialButton)sender;
             int index = Convert.ToInt32(ctrl.Name.Replace(_id.ToString().ToUpper() + "_", ""));
             if (index == -1)
             {
                 _selectedIndices = new List<int>();
                 for (int i = 0; i < flpMain.Controls.Count; i++)
                 {
-                    var btn = (MaterialFlatButton)flpMain.Controls[i];
+                    var btn = (MaterialButton)flpMain.Controls[i];
                     int ctrlIndex = Convert.ToInt32(btn.Name.Replace(_id.ToString().ToUpper() + "_", ""));
                     if (ctrlIndex < 0)
                         continue;
@@ -147,7 +147,7 @@ namespace MaterialSkin.Controls
             {
                 for (int i = 0; i < flpMain.Controls.Count; i++)
                 {
-                    var btn = (MaterialFlatButton)flpMain.Controls[i];
+                    var btn = (MaterialButton)flpMain.Controls[i];
                     int ctrlIndex = Convert.ToInt32(btn.Name.Replace(_id.ToString().ToUpper() + "_", ""));
                     if (ctrlIndex < 0)
                         continue;
@@ -161,7 +161,7 @@ namespace MaterialSkin.Controls
                 {
                     for (int i = 0; i < flpMain.Controls.Count; i++)
                     {
-                        var btn = (MaterialFlatButton)flpMain.Controls[i];
+                        var btn = (MaterialButton)flpMain.Controls[i];
                         int ctrlIndex = Convert.ToInt32(btn.Name.Replace(_id.ToString().ToUpper() + "_", ""));
                         if (ctrlIndex < 0)
                             continue;
@@ -190,7 +190,7 @@ namespace MaterialSkin.Controls
         {
             for (int i = 0; i < flpMain.Controls.Count; i++)
             {
-                var btn = (MaterialFlatButton)flpMain.Controls[i];
+                var btn = (MaterialButton)flpMain.Controls[i];
                 int ctrlIndex = Convert.ToInt32(btn.Name.Replace(_id.ToString().ToUpper() + "_", ""));
                 if (ctrlIndex < 0)
                     continue;

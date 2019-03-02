@@ -130,7 +130,7 @@ namespace MaterialSkin.Controls
                 for (int x = 0; x < 7; x++)
                 {
                     var pnl = tblDate.GetControlFromPosition(x, y);
-                    var btn = (MaterialFlatButton)pnl.Controls[0];
+                    var btn = (MaterialButton)pnl.Controls[0];
                     btn.Enabled = false;
                     btn.Text = "";
                     btn.Tag = null;
@@ -148,7 +148,7 @@ namespace MaterialSkin.Controls
                 for (int i = startDay; i < 7; i++)
                 {
                     var pnl = tblDate.GetControlFromPosition(i, row);
-                    var btn = (MaterialFlatButton)pnl.Controls[0];
+                    var btn = (MaterialButton)pnl.Controls[0];
                     btn.Text = startMonth.Day.ToString();
                     btn.Tag = startMonth.Date;
                     btn.Enabled = true;
@@ -180,7 +180,7 @@ namespace MaterialSkin.Controls
                 for (int x = 0; x < 7; x++)
                 {
                     var pnl = tblDate.GetControlFromPosition(x, y);
-                    var btn = (MaterialFlatButton)pnl.Controls[0];
+                    var btn = (MaterialButton)pnl.Controls[0];
                     btn.ColorStyle = (x == 0 || x == 6) ? ColorType.DANGER : ColorType.DEFAULT;
                     btn.BorderColorType = ColorType.DEFAULT;
 
@@ -222,7 +222,7 @@ namespace MaterialSkin.Controls
                 for (int x = 0; x < tblYear.ColumnCount; x++)
                 {
                     var pnl = tblYear.GetControlFromPosition(x, y);
-                    var btn = (MaterialFlatButton)pnl.Controls[0];
+                    var btn = (MaterialButton)pnl.Controls[0];
                     btn.Tag = year;
                     btn.Text = year.ToString();
                     year++;
@@ -270,13 +270,13 @@ namespace MaterialSkin.Controls
             }
         }
 
-        MaterialFlatButton selectedBtn = null;
+        MaterialButton selectedBtn = null;
         private void btnDate_Click(object sender, EventArgs e)
         {
             if (selectedBtn != null)
                 selectedBtn.ColorStyle = (_startValue.DayOfWeek == DayOfWeek.Sunday || _startValue.DayOfWeek == DayOfWeek.Saturday) ? ColorType.DANGER : ColorType.DEFAULT;
 
-            selectedBtn = (MaterialFlatButton)sender;
+            selectedBtn = (MaterialButton)sender;
             selectedBtn.ColorStyle = ColorType.INFO;
 
             string hour = (rbStart.Checked ? ddStartHour.SelectedValue : ddEndHour.SelectedValue) + "";
@@ -307,7 +307,7 @@ namespace MaterialSkin.Controls
 
         private void btnMonth_Clicked(object sender, EventArgs e)
         {
-            var btn = (MaterialFlatButton)sender;
+            var btn = (MaterialButton)sender;
             btnShowMonth.Tag = Convert.ToInt32(btn.Tag);
             btnShowMonth.Text = new DateTime(2000, (int)btnShowMonth.Tag, 1).ToString("MMMM");
             LoadDate();
@@ -315,7 +315,7 @@ namespace MaterialSkin.Controls
 
         private void btnYear_Click(object sender, EventArgs e)
         {
-            var btn = (MaterialFlatButton)sender;
+            var btn = (MaterialButton)sender;
             btnShowYear.Tag = Convert.ToInt32(btn.Tag);
             btnShowYear.Text = btn.Tag.ToString();
             LoadDate();
