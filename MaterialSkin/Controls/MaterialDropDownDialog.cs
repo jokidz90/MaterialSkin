@@ -118,6 +118,7 @@ namespace MaterialSkin.Controls
             ctrl.Height = _itemHeight <= 0 ? 30 : _itemHeight;
             ctrl.Text = text;
             ctrl.Tag = value;
+            ctrl.UseFlatStyle = true;
             ctrl.Alignment = System.Drawing.StringAlignment.Near;
             ctrl.Click += Ctrl_Click;
             ctrl.Dock = DockStyle.Top;

@@ -160,7 +160,7 @@
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlFooter.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlFooter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlFooter.Location = new System.Drawing.Point(2, 329);
+            this.pnlFooter.Location = new System.Drawing.Point(2, 613);
             this.pnlFooter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlFooter.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlFooter.Name = "pnlFooter";
@@ -204,6 +204,7 @@
             this.btnToday.Size = new System.Drawing.Size(292, 59);
             this.btnToday.TabIndex = 4;
             this.btnToday.Text = "2018";
+            this.btnToday.UseFlatStyle = true;
             this.btnToday.UseVisualStyleBackColor = true;
             this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
             // 
@@ -225,14 +226,17 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Alignment = System.Drawing.StringAlignment.Center;
             this.btnCancel.AutoSize = true;
             this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancel.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnCancel.ColorStyle = MaterialSkin.ColorType.WARNING;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Depth = 0;
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCancel.Icon = null;
             this.btnCancel.IconType = MaterialSkin.IconType.NONE;
+            this.btnCancel.IsSelected = false;
             this.btnCancel.Location = new System.Drawing.Point(4, 0);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
@@ -241,6 +245,7 @@
             this.btnCancel.Size = new System.Drawing.Size(196, 59);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "CANCEL";
+            this.btnCancel.UseFlatStyle = false;
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -262,14 +267,17 @@
             // 
             // btnOK
             // 
+            this.btnOK.Alignment = System.Drawing.StringAlignment.Center;
             this.btnOK.AutoSize = true;
             this.btnOK.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOK.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnOK.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.Depth = 0;
             this.btnOK.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnOK.Icon = null;
             this.btnOK.IconType = MaterialSkin.IconType.NONE;
+            this.btnOK.IsSelected = false;
             this.btnOK.Location = new System.Drawing.Point(4, 0);
             this.btnOK.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnOK.MouseState = MaterialSkin.MouseState.HOVER;
@@ -278,6 +286,7 @@
             this.btnOK.Size = new System.Drawing.Size(196, 59);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
+            this.btnOK.UseFlatStyle = false;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -307,12 +316,12 @@
             this.tableLayoutPanel1.Controls.Add(this.btnShowYear, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnShowMonth, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(36, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(40, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(628, 60);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(620, 60);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // btnShowYear
@@ -328,14 +337,15 @@
             this.btnShowYear.Icon = null;
             this.btnShowYear.IconType = MaterialSkin.IconType.NONE;
             this.btnShowYear.IsSelected = null;
-            this.btnShowYear.Location = new System.Drawing.Point(314, 0);
+            this.btnShowYear.Location = new System.Drawing.Point(310, 0);
             this.btnShowYear.Margin = new System.Windows.Forms.Padding(0);
             this.btnShowYear.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnShowYear.Name = "btnShowYear";
             this.btnShowYear.Primary = false;
-            this.btnShowYear.Size = new System.Drawing.Size(314, 60);
+            this.btnShowYear.Size = new System.Drawing.Size(310, 60);
             this.btnShowYear.TabIndex = 3;
             this.btnShowYear.Text = "2018";
+            this.btnShowYear.UseFlatStyle = true;
             this.btnShowYear.UseVisualStyleBackColor = true;
             this.btnShowYear.Click += new System.EventHandler(this.btnShowYear_Click);
             // 
@@ -357,9 +367,10 @@
             this.btnShowMonth.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnShowMonth.Name = "btnShowMonth";
             this.btnShowMonth.Primary = false;
-            this.btnShowMonth.Size = new System.Drawing.Size(314, 60);
+            this.btnShowMonth.Size = new System.Drawing.Size(310, 60);
             this.btnShowMonth.TabIndex = 2;
             this.btnShowMonth.Text = "August";
+            this.btnShowMonth.UseFlatStyle = true;
             this.btnShowMonth.UseVisualStyleBackColor = true;
             this.btnShowMonth.Click += new System.EventHandler(this.btnShowMonth_Click);
             // 
@@ -381,8 +392,9 @@
             this.btnPrev.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Primary = false;
-            this.btnPrev.Size = new System.Drawing.Size(36, 60);
+            this.btnPrev.Size = new System.Drawing.Size(40, 60);
             this.btnPrev.TabIndex = 1;
+            this.btnPrev.UseFlatStyle = true;
             this.btnPrev.UseVisualStyleBackColor = true;
             this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
@@ -399,13 +411,14 @@
             this.btnNext.Icon = ((System.Drawing.Image)(resources.GetObject("btnNext.Icon")));
             this.btnNext.IconType = MaterialSkin.IconType.KEYBOARD_ARROW_RIGHT;
             this.btnNext.IsSelected = null;
-            this.btnNext.Location = new System.Drawing.Point(664, 0);
+            this.btnNext.Location = new System.Drawing.Point(660, 0);
             this.btnNext.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnNext.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNext.Name = "btnNext";
             this.btnNext.Primary = false;
-            this.btnNext.Size = new System.Drawing.Size(36, 60);
+            this.btnNext.Size = new System.Drawing.Size(40, 60);
             this.btnNext.TabIndex = 0;
+            this.btnNext.UseFlatStyle = true;
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
@@ -475,6 +488,7 @@
             this.btnTimeValue.Size = new System.Drawing.Size(346, 60);
             this.btnTimeValue.TabIndex = 0;
             this.btnTimeValue.Text = "07:00 AM";
+            this.btnTimeValue.UseFlatStyle = true;
             this.btnTimeValue.UseVisualStyleBackColor = true;
             this.btnTimeValue.Click += new System.EventHandler(this.btnTimeValue_Click);
             // 
@@ -499,6 +513,7 @@
             this.btnDateValue.Size = new System.Drawing.Size(346, 60);
             this.btnDateValue.TabIndex = 5;
             this.btnDateValue.Text = "Mon, 1 May 2000";
+            this.btnDateValue.UseFlatStyle = true;
             this.btnDateValue.UseVisualStyleBackColor = true;
             this.btnDateValue.Click += new System.EventHandler(this.btnDateValue_Click);
             // 
@@ -562,7 +577,7 @@
             this.pnlDate.Location = new System.Drawing.Point(2, 124);
             this.pnlDate.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlDate.Name = "pnlDate";
-            this.pnlDate.Size = new System.Drawing.Size(700, 11);
+            this.pnlDate.Size = new System.Drawing.Size(700, 45);
             this.pnlDate.TabIndex = 7;
             // 
             // btnDate6x6
@@ -582,9 +597,10 @@
             this.btnDate6x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate6x6.Name = "btnDate6x6";
             this.btnDate6x6.Primary = false;
-            this.btnDate6x6.Size = new System.Drawing.Size(47, 36);
+            this.btnDate6x6.Size = new System.Drawing.Size(71, 40);
             this.btnDate6x6.TabIndex = 51;
             this.btnDate6x6.Text = "11";
+            this.btnDate6x6.UseFlatStyle = true;
             this.btnDate6x6.UseVisualStyleBackColor = true;
             this.btnDate6x6.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -605,9 +621,10 @@
             this.btnDate2x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate2x6.Name = "btnDate2x6";
             this.btnDate2x6.Primary = false;
-            this.btnDate2x6.Size = new System.Drawing.Size(35, 36);
+            this.btnDate2x6.Size = new System.Drawing.Size(59, 40);
             this.btnDate2x6.TabIndex = 50;
             this.btnDate2x6.Text = "7";
+            this.btnDate2x6.UseFlatStyle = true;
             this.btnDate2x6.UseVisualStyleBackColor = true;
             this.btnDate2x6.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -628,9 +645,10 @@
             this.btnDate3x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate3x6.Name = "btnDate3x6";
             this.btnDate3x6.Primary = false;
-            this.btnDate3x6.Size = new System.Drawing.Size(35, 36);
+            this.btnDate3x6.Size = new System.Drawing.Size(59, 40);
             this.btnDate3x6.TabIndex = 49;
             this.btnDate3x6.Text = "8";
+            this.btnDate3x6.UseFlatStyle = true;
             this.btnDate3x6.UseVisualStyleBackColor = true;
             this.btnDate3x6.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -651,9 +669,10 @@
             this.btnDate4x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate4x6.Name = "btnDate4x6";
             this.btnDate4x6.Primary = false;
-            this.btnDate4x6.Size = new System.Drawing.Size(35, 36);
+            this.btnDate4x6.Size = new System.Drawing.Size(59, 40);
             this.btnDate4x6.TabIndex = 48;
             this.btnDate4x6.Text = "9";
+            this.btnDate4x6.UseFlatStyle = true;
             this.btnDate4x6.UseVisualStyleBackColor = true;
             this.btnDate4x6.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -674,9 +693,10 @@
             this.btnDate5x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate5x6.Name = "btnDate5x6";
             this.btnDate5x6.Primary = false;
-            this.btnDate5x6.Size = new System.Drawing.Size(47, 36);
+            this.btnDate5x6.Size = new System.Drawing.Size(71, 40);
             this.btnDate5x6.TabIndex = 47;
             this.btnDate5x6.Text = "10";
+            this.btnDate5x6.UseFlatStyle = true;
             this.btnDate5x6.UseVisualStyleBackColor = true;
             this.btnDate5x6.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -697,9 +717,10 @@
             this.btnDate1x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate1x6.Name = "btnDate1x6";
             this.btnDate1x6.Primary = false;
-            this.btnDate1x6.Size = new System.Drawing.Size(35, 36);
+            this.btnDate1x6.Size = new System.Drawing.Size(59, 40);
             this.btnDate1x6.TabIndex = 46;
             this.btnDate1x6.Text = "6";
+            this.btnDate1x6.UseFlatStyle = true;
             this.btnDate1x6.UseVisualStyleBackColor = true;
             this.btnDate1x6.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -720,9 +741,10 @@
             this.btnDate0x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate0x6.Name = "btnDate0x6";
             this.btnDate0x6.Primary = false;
-            this.btnDate0x6.Size = new System.Drawing.Size(35, 36);
+            this.btnDate0x6.Size = new System.Drawing.Size(59, 40);
             this.btnDate0x6.TabIndex = 45;
             this.btnDate0x6.Text = "5";
+            this.btnDate0x6.UseFlatStyle = true;
             this.btnDate0x6.UseVisualStyleBackColor = true;
             this.btnDate0x6.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -743,9 +765,10 @@
             this.btnDate6x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate6x5.Name = "btnDate6x5";
             this.btnDate6x5.Primary = false;
-            this.btnDate6x5.Size = new System.Drawing.Size(35, 36);
+            this.btnDate6x5.Size = new System.Drawing.Size(59, 40);
             this.btnDate6x5.TabIndex = 44;
             this.btnDate6x5.Text = "4";
+            this.btnDate6x5.UseFlatStyle = true;
             this.btnDate6x5.UseVisualStyleBackColor = true;
             this.btnDate6x5.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -766,9 +789,10 @@
             this.btnDate2x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate2x5.Name = "btnDate2x5";
             this.btnDate2x5.Primary = false;
-            this.btnDate2x5.Size = new System.Drawing.Size(47, 36);
+            this.btnDate2x5.Size = new System.Drawing.Size(71, 40);
             this.btnDate2x5.TabIndex = 43;
             this.btnDate2x5.Text = "31";
+            this.btnDate2x5.UseFlatStyle = true;
             this.btnDate2x5.UseVisualStyleBackColor = true;
             this.btnDate2x5.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -789,9 +813,10 @@
             this.btnDate3x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate3x5.Name = "btnDate3x5";
             this.btnDate3x5.Primary = false;
-            this.btnDate3x5.Size = new System.Drawing.Size(35, 36);
+            this.btnDate3x5.Size = new System.Drawing.Size(59, 40);
             this.btnDate3x5.TabIndex = 42;
             this.btnDate3x5.Text = "1";
+            this.btnDate3x5.UseFlatStyle = true;
             this.btnDate3x5.UseVisualStyleBackColor = true;
             this.btnDate3x5.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -812,9 +837,10 @@
             this.btnDate4x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate4x5.Name = "btnDate4x5";
             this.btnDate4x5.Primary = false;
-            this.btnDate4x5.Size = new System.Drawing.Size(35, 36);
+            this.btnDate4x5.Size = new System.Drawing.Size(59, 40);
             this.btnDate4x5.TabIndex = 41;
             this.btnDate4x5.Text = "2";
+            this.btnDate4x5.UseFlatStyle = true;
             this.btnDate4x5.UseVisualStyleBackColor = true;
             this.btnDate4x5.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -835,9 +861,10 @@
             this.btnDate5x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate5x5.Name = "btnDate5x5";
             this.btnDate5x5.Primary = false;
-            this.btnDate5x5.Size = new System.Drawing.Size(35, 36);
+            this.btnDate5x5.Size = new System.Drawing.Size(59, 40);
             this.btnDate5x5.TabIndex = 40;
             this.btnDate5x5.Text = "3";
+            this.btnDate5x5.UseFlatStyle = true;
             this.btnDate5x5.UseVisualStyleBackColor = true;
             this.btnDate5x5.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -858,9 +885,10 @@
             this.btnDate1x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate1x5.Name = "btnDate1x5";
             this.btnDate1x5.Primary = false;
-            this.btnDate1x5.Size = new System.Drawing.Size(47, 36);
+            this.btnDate1x5.Size = new System.Drawing.Size(71, 40);
             this.btnDate1x5.TabIndex = 39;
             this.btnDate1x5.Text = "30";
+            this.btnDate1x5.UseFlatStyle = true;
             this.btnDate1x5.UseVisualStyleBackColor = true;
             this.btnDate1x5.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -881,9 +909,10 @@
             this.btnDate0x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate0x5.Name = "btnDate0x5";
             this.btnDate0x5.Primary = false;
-            this.btnDate0x5.Size = new System.Drawing.Size(47, 36);
+            this.btnDate0x5.Size = new System.Drawing.Size(71, 40);
             this.btnDate0x5.TabIndex = 38;
             this.btnDate0x5.Text = "29";
+            this.btnDate0x5.UseFlatStyle = true;
             this.btnDate0x5.UseVisualStyleBackColor = true;
             this.btnDate0x5.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -904,9 +933,10 @@
             this.btnDate6x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate6x4.Name = "btnDate6x4";
             this.btnDate6x4.Primary = false;
-            this.btnDate6x4.Size = new System.Drawing.Size(47, 36);
+            this.btnDate6x4.Size = new System.Drawing.Size(71, 40);
             this.btnDate6x4.TabIndex = 37;
             this.btnDate6x4.Text = "28";
+            this.btnDate6x4.UseFlatStyle = true;
             this.btnDate6x4.UseVisualStyleBackColor = true;
             this.btnDate6x4.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -927,9 +957,10 @@
             this.btnDate2x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate2x4.Name = "btnDate2x4";
             this.btnDate2x4.Primary = false;
-            this.btnDate2x4.Size = new System.Drawing.Size(47, 36);
+            this.btnDate2x4.Size = new System.Drawing.Size(71, 40);
             this.btnDate2x4.TabIndex = 36;
             this.btnDate2x4.Text = "24";
+            this.btnDate2x4.UseFlatStyle = true;
             this.btnDate2x4.UseVisualStyleBackColor = true;
             this.btnDate2x4.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -950,9 +981,10 @@
             this.btnDate3x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate3x4.Name = "btnDate3x4";
             this.btnDate3x4.Primary = false;
-            this.btnDate3x4.Size = new System.Drawing.Size(47, 36);
+            this.btnDate3x4.Size = new System.Drawing.Size(71, 40);
             this.btnDate3x4.TabIndex = 35;
             this.btnDate3x4.Text = "25";
+            this.btnDate3x4.UseFlatStyle = true;
             this.btnDate3x4.UseVisualStyleBackColor = true;
             this.btnDate3x4.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -973,9 +1005,10 @@
             this.btnDate4x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate4x4.Name = "btnDate4x4";
             this.btnDate4x4.Primary = false;
-            this.btnDate4x4.Size = new System.Drawing.Size(47, 36);
+            this.btnDate4x4.Size = new System.Drawing.Size(71, 40);
             this.btnDate4x4.TabIndex = 34;
             this.btnDate4x4.Text = "26";
+            this.btnDate4x4.UseFlatStyle = true;
             this.btnDate4x4.UseVisualStyleBackColor = true;
             this.btnDate4x4.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -996,9 +1029,10 @@
             this.btnDate5x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate5x4.Name = "btnDate5x4";
             this.btnDate5x4.Primary = false;
-            this.btnDate5x4.Size = new System.Drawing.Size(47, 36);
+            this.btnDate5x4.Size = new System.Drawing.Size(71, 40);
             this.btnDate5x4.TabIndex = 33;
             this.btnDate5x4.Text = "27";
+            this.btnDate5x4.UseFlatStyle = true;
             this.btnDate5x4.UseVisualStyleBackColor = true;
             this.btnDate5x4.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1019,9 +1053,10 @@
             this.btnDate1x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate1x4.Name = "btnDate1x4";
             this.btnDate1x4.Primary = false;
-            this.btnDate1x4.Size = new System.Drawing.Size(47, 36);
+            this.btnDate1x4.Size = new System.Drawing.Size(71, 40);
             this.btnDate1x4.TabIndex = 32;
             this.btnDate1x4.Text = "23";
+            this.btnDate1x4.UseFlatStyle = true;
             this.btnDate1x4.UseVisualStyleBackColor = true;
             this.btnDate1x4.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1042,9 +1077,10 @@
             this.btnDate0x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate0x4.Name = "btnDate0x4";
             this.btnDate0x4.Primary = false;
-            this.btnDate0x4.Size = new System.Drawing.Size(47, 36);
+            this.btnDate0x4.Size = new System.Drawing.Size(71, 40);
             this.btnDate0x4.TabIndex = 31;
             this.btnDate0x4.Text = "22";
+            this.btnDate0x4.UseFlatStyle = true;
             this.btnDate0x4.UseVisualStyleBackColor = true;
             this.btnDate0x4.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1065,9 +1101,10 @@
             this.btnDate6x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate6x3.Name = "btnDate6x3";
             this.btnDate6x3.Primary = false;
-            this.btnDate6x3.Size = new System.Drawing.Size(47, 36);
+            this.btnDate6x3.Size = new System.Drawing.Size(71, 40);
             this.btnDate6x3.TabIndex = 30;
             this.btnDate6x3.Text = "21";
+            this.btnDate6x3.UseFlatStyle = true;
             this.btnDate6x3.UseVisualStyleBackColor = true;
             this.btnDate6x3.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1088,9 +1125,10 @@
             this.btnDate2x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate2x3.Name = "btnDate2x3";
             this.btnDate2x3.Primary = false;
-            this.btnDate2x3.Size = new System.Drawing.Size(47, 36);
+            this.btnDate2x3.Size = new System.Drawing.Size(71, 40);
             this.btnDate2x3.TabIndex = 29;
             this.btnDate2x3.Text = "17";
+            this.btnDate2x3.UseFlatStyle = true;
             this.btnDate2x3.UseVisualStyleBackColor = true;
             this.btnDate2x3.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1111,9 +1149,10 @@
             this.btnDate3x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate3x3.Name = "btnDate3x3";
             this.btnDate3x3.Primary = false;
-            this.btnDate3x3.Size = new System.Drawing.Size(47, 36);
+            this.btnDate3x3.Size = new System.Drawing.Size(71, 40);
             this.btnDate3x3.TabIndex = 28;
             this.btnDate3x3.Text = "18";
+            this.btnDate3x3.UseFlatStyle = true;
             this.btnDate3x3.UseVisualStyleBackColor = true;
             this.btnDate3x3.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1134,9 +1173,10 @@
             this.btnDate4x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate4x3.Name = "btnDate4x3";
             this.btnDate4x3.Primary = false;
-            this.btnDate4x3.Size = new System.Drawing.Size(47, 36);
+            this.btnDate4x3.Size = new System.Drawing.Size(71, 40);
             this.btnDate4x3.TabIndex = 27;
             this.btnDate4x3.Text = "19";
+            this.btnDate4x3.UseFlatStyle = true;
             this.btnDate4x3.UseVisualStyleBackColor = true;
             this.btnDate4x3.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1157,9 +1197,10 @@
             this.btnDate5x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate5x3.Name = "btnDate5x3";
             this.btnDate5x3.Primary = false;
-            this.btnDate5x3.Size = new System.Drawing.Size(47, 36);
+            this.btnDate5x3.Size = new System.Drawing.Size(71, 40);
             this.btnDate5x3.TabIndex = 26;
             this.btnDate5x3.Text = "20";
+            this.btnDate5x3.UseFlatStyle = true;
             this.btnDate5x3.UseVisualStyleBackColor = true;
             this.btnDate5x3.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1180,9 +1221,10 @@
             this.btnDate1x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate1x3.Name = "btnDate1x3";
             this.btnDate1x3.Primary = false;
-            this.btnDate1x3.Size = new System.Drawing.Size(47, 36);
+            this.btnDate1x3.Size = new System.Drawing.Size(71, 40);
             this.btnDate1x3.TabIndex = 25;
             this.btnDate1x3.Text = "16";
+            this.btnDate1x3.UseFlatStyle = true;
             this.btnDate1x3.UseVisualStyleBackColor = true;
             this.btnDate1x3.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1203,9 +1245,10 @@
             this.btnDate0x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate0x3.Name = "btnDate0x3";
             this.btnDate0x3.Primary = false;
-            this.btnDate0x3.Size = new System.Drawing.Size(47, 36);
+            this.btnDate0x3.Size = new System.Drawing.Size(71, 40);
             this.btnDate0x3.TabIndex = 24;
             this.btnDate0x3.Text = "15";
+            this.btnDate0x3.UseFlatStyle = true;
             this.btnDate0x3.UseVisualStyleBackColor = true;
             this.btnDate0x3.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1226,9 +1269,10 @@
             this.btnDate6x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate6x2.Name = "btnDate6x2";
             this.btnDate6x2.Primary = false;
-            this.btnDate6x2.Size = new System.Drawing.Size(47, 36);
+            this.btnDate6x2.Size = new System.Drawing.Size(71, 40);
             this.btnDate6x2.TabIndex = 23;
             this.btnDate6x2.Text = "14";
+            this.btnDate6x2.UseFlatStyle = true;
             this.btnDate6x2.UseVisualStyleBackColor = true;
             this.btnDate6x2.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1249,9 +1293,10 @@
             this.btnDate2x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate2x2.Name = "btnDate2x2";
             this.btnDate2x2.Primary = false;
-            this.btnDate2x2.Size = new System.Drawing.Size(47, 36);
+            this.btnDate2x2.Size = new System.Drawing.Size(71, 40);
             this.btnDate2x2.TabIndex = 22;
             this.btnDate2x2.Text = "10";
+            this.btnDate2x2.UseFlatStyle = true;
             this.btnDate2x2.UseVisualStyleBackColor = true;
             this.btnDate2x2.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1272,9 +1317,10 @@
             this.btnDate3x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate3x2.Name = "btnDate3x2";
             this.btnDate3x2.Primary = false;
-            this.btnDate3x2.Size = new System.Drawing.Size(47, 36);
+            this.btnDate3x2.Size = new System.Drawing.Size(71, 40);
             this.btnDate3x2.TabIndex = 21;
             this.btnDate3x2.Text = "11";
+            this.btnDate3x2.UseFlatStyle = true;
             this.btnDate3x2.UseVisualStyleBackColor = true;
             this.btnDate3x2.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1295,9 +1341,10 @@
             this.btnDate4x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate4x2.Name = "btnDate4x2";
             this.btnDate4x2.Primary = false;
-            this.btnDate4x2.Size = new System.Drawing.Size(47, 36);
+            this.btnDate4x2.Size = new System.Drawing.Size(71, 40);
             this.btnDate4x2.TabIndex = 20;
             this.btnDate4x2.Text = "12";
+            this.btnDate4x2.UseFlatStyle = true;
             this.btnDate4x2.UseVisualStyleBackColor = true;
             this.btnDate4x2.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1318,9 +1365,10 @@
             this.btnDate5x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate5x2.Name = "btnDate5x2";
             this.btnDate5x2.Primary = false;
-            this.btnDate5x2.Size = new System.Drawing.Size(47, 36);
+            this.btnDate5x2.Size = new System.Drawing.Size(71, 40);
             this.btnDate5x2.TabIndex = 19;
             this.btnDate5x2.Text = "13";
+            this.btnDate5x2.UseFlatStyle = true;
             this.btnDate5x2.UseVisualStyleBackColor = true;
             this.btnDate5x2.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1341,9 +1389,10 @@
             this.btnDate1x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate1x2.Name = "btnDate1x2";
             this.btnDate1x2.Primary = false;
-            this.btnDate1x2.Size = new System.Drawing.Size(35, 36);
+            this.btnDate1x2.Size = new System.Drawing.Size(59, 40);
             this.btnDate1x2.TabIndex = 18;
             this.btnDate1x2.Text = "9";
+            this.btnDate1x2.UseFlatStyle = true;
             this.btnDate1x2.UseVisualStyleBackColor = true;
             this.btnDate1x2.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1364,9 +1413,10 @@
             this.btnDate0x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate0x2.Name = "btnDate0x2";
             this.btnDate0x2.Primary = false;
-            this.btnDate0x2.Size = new System.Drawing.Size(35, 36);
+            this.btnDate0x2.Size = new System.Drawing.Size(59, 40);
             this.btnDate0x2.TabIndex = 17;
             this.btnDate0x2.Text = "8";
+            this.btnDate0x2.UseFlatStyle = true;
             this.btnDate0x2.UseVisualStyleBackColor = true;
             this.btnDate0x2.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1387,9 +1437,10 @@
             this.btnDate6x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate6x1.Name = "btnDate6x1";
             this.btnDate6x1.Primary = false;
-            this.btnDate6x1.Size = new System.Drawing.Size(35, 36);
+            this.btnDate6x1.Size = new System.Drawing.Size(59, 40);
             this.btnDate6x1.TabIndex = 16;
             this.btnDate6x1.Text = "7";
+            this.btnDate6x1.UseFlatStyle = true;
             this.btnDate6x1.UseVisualStyleBackColor = true;
             this.btnDate6x1.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1410,9 +1461,10 @@
             this.btnDate2x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate2x1.Name = "btnDate2x1";
             this.btnDate2x1.Primary = false;
-            this.btnDate2x1.Size = new System.Drawing.Size(35, 36);
+            this.btnDate2x1.Size = new System.Drawing.Size(59, 40);
             this.btnDate2x1.TabIndex = 15;
             this.btnDate2x1.Text = "3";
+            this.btnDate2x1.UseFlatStyle = true;
             this.btnDate2x1.UseVisualStyleBackColor = true;
             this.btnDate2x1.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1433,9 +1485,10 @@
             this.btnDate3x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate3x1.Name = "btnDate3x1";
             this.btnDate3x1.Primary = false;
-            this.btnDate3x1.Size = new System.Drawing.Size(35, 36);
+            this.btnDate3x1.Size = new System.Drawing.Size(59, 40);
             this.btnDate3x1.TabIndex = 14;
             this.btnDate3x1.Text = "4";
+            this.btnDate3x1.UseFlatStyle = true;
             this.btnDate3x1.UseVisualStyleBackColor = true;
             this.btnDate3x1.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1456,9 +1509,10 @@
             this.btnDate4x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate4x1.Name = "btnDate4x1";
             this.btnDate4x1.Primary = false;
-            this.btnDate4x1.Size = new System.Drawing.Size(35, 36);
+            this.btnDate4x1.Size = new System.Drawing.Size(59, 40);
             this.btnDate4x1.TabIndex = 13;
             this.btnDate4x1.Text = "5";
+            this.btnDate4x1.UseFlatStyle = true;
             this.btnDate4x1.UseVisualStyleBackColor = true;
             this.btnDate4x1.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1479,9 +1533,10 @@
             this.btnDate5x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate5x1.Name = "btnDate5x1";
             this.btnDate5x1.Primary = false;
-            this.btnDate5x1.Size = new System.Drawing.Size(35, 36);
+            this.btnDate5x1.Size = new System.Drawing.Size(59, 40);
             this.btnDate5x1.TabIndex = 12;
             this.btnDate5x1.Text = "6";
+            this.btnDate5x1.UseFlatStyle = true;
             this.btnDate5x1.UseVisualStyleBackColor = true;
             this.btnDate5x1.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1502,9 +1557,10 @@
             this.btnDate1x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate1x1.Name = "btnDate1x1";
             this.btnDate1x1.Primary = false;
-            this.btnDate1x1.Size = new System.Drawing.Size(35, 36);
+            this.btnDate1x1.Size = new System.Drawing.Size(59, 40);
             this.btnDate1x1.TabIndex = 11;
             this.btnDate1x1.Text = "2";
+            this.btnDate1x1.UseFlatStyle = true;
             this.btnDate1x1.UseVisualStyleBackColor = true;
             this.btnDate1x1.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1525,9 +1581,10 @@
             this.btnDate0x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate0x1.Name = "btnDate0x1";
             this.btnDate0x1.Primary = false;
-            this.btnDate0x1.Size = new System.Drawing.Size(35, 36);
+            this.btnDate0x1.Size = new System.Drawing.Size(59, 40);
             this.btnDate0x1.TabIndex = 10;
             this.btnDate0x1.Text = "1";
+            this.btnDate0x1.UseFlatStyle = true;
             this.btnDate0x1.UseVisualStyleBackColor = true;
             this.btnDate0x1.Click += new System.EventHandler(this.btnDate_Click);
             // 
@@ -1549,9 +1606,10 @@
             this.btnDate6x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate6x0.Name = "btnDate6x0";
             this.btnDate6x0.Primary = false;
-            this.btnDate6x0.Size = new System.Drawing.Size(62, 36);
+            this.btnDate6x0.Size = new System.Drawing.Size(86, 40);
             this.btnDate6x0.TabIndex = 9;
             this.btnDate6x0.Text = "SAT";
+            this.btnDate6x0.UseFlatStyle = true;
             this.btnDate6x0.UseVisualStyleBackColor = true;
             // 
             // btnDate2x0
@@ -1572,9 +1630,10 @@
             this.btnDate2x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate2x0.Name = "btnDate2x0";
             this.btnDate2x0.Primary = false;
-            this.btnDate2x0.Size = new System.Drawing.Size(61, 36);
+            this.btnDate2x0.Size = new System.Drawing.Size(85, 40);
             this.btnDate2x0.TabIndex = 8;
             this.btnDate2x0.Text = "TUE";
+            this.btnDate2x0.UseFlatStyle = true;
             this.btnDate2x0.UseVisualStyleBackColor = true;
             // 
             // btnDate3x0
@@ -1595,9 +1654,10 @@
             this.btnDate3x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate3x0.Name = "btnDate3x0";
             this.btnDate3x0.Primary = false;
-            this.btnDate3x0.Size = new System.Drawing.Size(66, 36);
+            this.btnDate3x0.Size = new System.Drawing.Size(90, 40);
             this.btnDate3x0.TabIndex = 7;
             this.btnDate3x0.Text = "WED";
+            this.btnDate3x0.UseFlatStyle = true;
             this.btnDate3x0.UseVisualStyleBackColor = true;
             // 
             // btnDate4x0
@@ -1618,9 +1678,10 @@
             this.btnDate4x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate4x0.Name = "btnDate4x0";
             this.btnDate4x0.Primary = false;
-            this.btnDate4x0.Size = new System.Drawing.Size(64, 36);
+            this.btnDate4x0.Size = new System.Drawing.Size(88, 40);
             this.btnDate4x0.TabIndex = 6;
             this.btnDate4x0.Text = "THU";
+            this.btnDate4x0.UseFlatStyle = true;
             this.btnDate4x0.UseVisualStyleBackColor = true;
             // 
             // btnDate5x0
@@ -1641,9 +1702,10 @@
             this.btnDate5x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate5x0.Name = "btnDate5x0";
             this.btnDate5x0.Primary = false;
-            this.btnDate5x0.Size = new System.Drawing.Size(53, 36);
+            this.btnDate5x0.Size = new System.Drawing.Size(77, 40);
             this.btnDate5x0.TabIndex = 5;
             this.btnDate5x0.Text = "FRI";
+            this.btnDate5x0.UseFlatStyle = true;
             this.btnDate5x0.UseVisualStyleBackColor = true;
             // 
             // btnDate1x0
@@ -1664,9 +1726,10 @@
             this.btnDate1x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate1x0.Name = "btnDate1x0";
             this.btnDate1x0.Primary = false;
-            this.btnDate1x0.Size = new System.Drawing.Size(70, 36);
+            this.btnDate1x0.Size = new System.Drawing.Size(94, 40);
             this.btnDate1x0.TabIndex = 4;
             this.btnDate1x0.Text = "MON";
+            this.btnDate1x0.UseFlatStyle = true;
             this.btnDate1x0.UseVisualStyleBackColor = true;
             // 
             // btnDate0x0
@@ -1687,9 +1750,10 @@
             this.btnDate0x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate0x0.Name = "btnDate0x0";
             this.btnDate0x0.Primary = false;
-            this.btnDate0x0.Size = new System.Drawing.Size(64, 36);
+            this.btnDate0x0.Size = new System.Drawing.Size(88, 40);
             this.btnDate0x0.TabIndex = 3;
             this.btnDate0x0.Text = "SUN";
+            this.btnDate0x0.UseFlatStyle = true;
             this.btnDate0x0.UseVisualStyleBackColor = true;
             // 
             // pnlMonthYear
@@ -1712,10 +1776,10 @@
             this.pnlMonthYear.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMonthYear.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlMonthYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlMonthYear.Location = new System.Drawing.Point(2, 135);
+            this.pnlMonthYear.Location = new System.Drawing.Point(2, 169);
             this.pnlMonthYear.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlMonthYear.Name = "pnlMonthYear";
-            this.pnlMonthYear.Size = new System.Drawing.Size(700, 15);
+            this.pnlMonthYear.Size = new System.Drawing.Size(700, 55);
             this.pnlMonthYear.TabIndex = 8;
             // 
             // btnMonthYear2x3
@@ -1735,9 +1799,10 @@
             this.btnMonthYear2x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear2x3.Name = "btnMonthYear2x3";
             this.btnMonthYear2x3.Primary = false;
-            this.btnMonthYear2x3.Size = new System.Drawing.Size(129, 36);
+            this.btnMonthYear2x3.Size = new System.Drawing.Size(153, 40);
             this.btnMonthYear2x3.TabIndex = 16;
             this.btnMonthYear2x3.Text = "DECEMBER";
+            this.btnMonthYear2x3.UseFlatStyle = true;
             this.btnMonthYear2x3.UseVisualStyleBackColor = true;
             this.btnMonthYear2x3.Click += new System.EventHandler(this.btnMonthYear_Click);
             // 
@@ -1758,9 +1823,10 @@
             this.btnMonthYear1x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear1x3.Name = "btnMonthYear1x3";
             this.btnMonthYear1x3.Primary = false;
-            this.btnMonthYear1x3.Size = new System.Drawing.Size(133, 36);
+            this.btnMonthYear1x3.Size = new System.Drawing.Size(157, 40);
             this.btnMonthYear1x3.TabIndex = 15;
             this.btnMonthYear1x3.Text = "NOVEMBER";
+            this.btnMonthYear1x3.UseFlatStyle = true;
             this.btnMonthYear1x3.UseVisualStyleBackColor = true;
             this.btnMonthYear1x3.Click += new System.EventHandler(this.btnMonthYear_Click);
             // 
@@ -1781,9 +1847,10 @@
             this.btnMonthYear0x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear0x3.Name = "btnMonthYear0x3";
             this.btnMonthYear0x3.Primary = false;
-            this.btnMonthYear0x3.Size = new System.Drawing.Size(115, 36);
+            this.btnMonthYear0x3.Size = new System.Drawing.Size(139, 40);
             this.btnMonthYear0x3.TabIndex = 14;
             this.btnMonthYear0x3.Text = "OCTOBER";
+            this.btnMonthYear0x3.UseFlatStyle = true;
             this.btnMonthYear0x3.UseVisualStyleBackColor = true;
             this.btnMonthYear0x3.Click += new System.EventHandler(this.btnMonthYear_Click);
             // 
@@ -1804,9 +1871,10 @@
             this.btnMonthYear2x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear2x2.Name = "btnMonthYear2x2";
             this.btnMonthYear2x2.Primary = false;
-            this.btnMonthYear2x2.Size = new System.Drawing.Size(140, 36);
+            this.btnMonthYear2x2.Size = new System.Drawing.Size(164, 40);
             this.btnMonthYear2x2.TabIndex = 13;
             this.btnMonthYear2x2.Text = "SEPTEMBER";
+            this.btnMonthYear2x2.UseFlatStyle = true;
             this.btnMonthYear2x2.UseVisualStyleBackColor = true;
             this.btnMonthYear2x2.Click += new System.EventHandler(this.btnMonthYear_Click);
             // 
@@ -1827,9 +1895,10 @@
             this.btnMonthYear1x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear1x2.Name = "btnMonthYear1x2";
             this.btnMonthYear1x2.Primary = false;
-            this.btnMonthYear1x2.Size = new System.Drawing.Size(103, 36);
+            this.btnMonthYear1x2.Size = new System.Drawing.Size(127, 40);
             this.btnMonthYear1x2.TabIndex = 12;
             this.btnMonthYear1x2.Text = "AUGUST";
+            this.btnMonthYear1x2.UseFlatStyle = true;
             this.btnMonthYear1x2.UseVisualStyleBackColor = true;
             this.btnMonthYear1x2.Click += new System.EventHandler(this.btnMonthYear_Click);
             // 
@@ -1850,9 +1919,10 @@
             this.btnMonthYear0x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear0x2.Name = "btnMonthYear0x2";
             this.btnMonthYear0x2.Primary = false;
-            this.btnMonthYear0x2.Size = new System.Drawing.Size(72, 36);
+            this.btnMonthYear0x2.Size = new System.Drawing.Size(96, 40);
             this.btnMonthYear0x2.TabIndex = 11;
             this.btnMonthYear0x2.Text = "JULY";
+            this.btnMonthYear0x2.UseFlatStyle = true;
             this.btnMonthYear0x2.UseVisualStyleBackColor = true;
             this.btnMonthYear0x2.Click += new System.EventHandler(this.btnMonthYear_Click);
             // 
@@ -1873,9 +1943,10 @@
             this.btnMonthYear2x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear2x1.Name = "btnMonthYear2x1";
             this.btnMonthYear2x1.Primary = false;
-            this.btnMonthYear2x1.Size = new System.Drawing.Size(74, 36);
+            this.btnMonthYear2x1.Size = new System.Drawing.Size(98, 40);
             this.btnMonthYear2x1.TabIndex = 10;
             this.btnMonthYear2x1.Text = "JUNE";
+            this.btnMonthYear2x1.UseFlatStyle = true;
             this.btnMonthYear2x1.UseVisualStyleBackColor = true;
             this.btnMonthYear2x1.Click += new System.EventHandler(this.btnMonthYear_Click);
             // 
@@ -1896,9 +1967,10 @@
             this.btnMonthYear1x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear1x1.Name = "btnMonthYear1x1";
             this.btnMonthYear1x1.Primary = false;
-            this.btnMonthYear1x1.Size = new System.Drawing.Size(67, 36);
+            this.btnMonthYear1x1.Size = new System.Drawing.Size(91, 40);
             this.btnMonthYear1x1.TabIndex = 9;
             this.btnMonthYear1x1.Text = "MAY";
+            this.btnMonthYear1x1.UseFlatStyle = true;
             this.btnMonthYear1x1.UseVisualStyleBackColor = true;
             this.btnMonthYear1x1.Click += new System.EventHandler(this.btnMonthYear_Click);
             // 
@@ -1919,9 +1991,10 @@
             this.btnMonthYear0x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear0x1.Name = "btnMonthYear0x1";
             this.btnMonthYear0x1.Primary = false;
-            this.btnMonthYear0x1.Size = new System.Drawing.Size(80, 36);
+            this.btnMonthYear0x1.Size = new System.Drawing.Size(104, 40);
             this.btnMonthYear0x1.TabIndex = 8;
             this.btnMonthYear0x1.Text = "APRIl";
+            this.btnMonthYear0x1.UseFlatStyle = true;
             this.btnMonthYear0x1.UseVisualStyleBackColor = true;
             this.btnMonthYear0x1.Click += new System.EventHandler(this.btnMonthYear_Click);
             // 
@@ -1942,9 +2015,10 @@
             this.btnMonthYear2x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear2x0.Name = "btnMonthYear2x0";
             this.btnMonthYear2x0.Primary = false;
-            this.btnMonthYear2x0.Size = new System.Drawing.Size(96, 36);
+            this.btnMonthYear2x0.Size = new System.Drawing.Size(120, 40);
             this.btnMonthYear2x0.TabIndex = 7;
             this.btnMonthYear2x0.Text = "MARCH";
+            this.btnMonthYear2x0.UseFlatStyle = true;
             this.btnMonthYear2x0.UseVisualStyleBackColor = true;
             this.btnMonthYear2x0.Click += new System.EventHandler(this.btnMonthYear_Click);
             // 
@@ -1965,9 +2039,10 @@
             this.btnMonthYear1x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear1x0.Name = "btnMonthYear1x0";
             this.btnMonthYear1x0.Primary = false;
-            this.btnMonthYear1x0.Size = new System.Drawing.Size(125, 36);
+            this.btnMonthYear1x0.Size = new System.Drawing.Size(149, 40);
             this.btnMonthYear1x0.TabIndex = 6;
             this.btnMonthYear1x0.Text = "FEBRUARY";
+            this.btnMonthYear1x0.UseFlatStyle = true;
             this.btnMonthYear1x0.UseVisualStyleBackColor = true;
             this.btnMonthYear1x0.Click += new System.EventHandler(this.btnMonthYear_Click);
             // 
@@ -1988,9 +2063,10 @@
             this.btnMonthYear0x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear0x0.Name = "btnMonthYear0x0";
             this.btnMonthYear0x0.Primary = false;
-            this.btnMonthYear0x0.Size = new System.Drawing.Size(115, 36);
+            this.btnMonthYear0x0.Size = new System.Drawing.Size(139, 40);
             this.btnMonthYear0x0.TabIndex = 5;
             this.btnMonthYear0x0.Text = "JANUARY";
+            this.btnMonthYear0x0.UseFlatStyle = true;
             this.btnMonthYear0x0.UseVisualStyleBackColor = true;
             this.btnMonthYear0x0.Click += new System.EventHandler(this.btnMonthYear_Click);
             // 
@@ -2007,11 +2083,11 @@
             this.pnlTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTime.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlTime.Location = new System.Drawing.Point(2, 150);
+            this.pnlTime.Location = new System.Drawing.Point(2, 224);
             this.pnlTime.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlTime.Name = "pnlTime";
             this.pnlTime.Padding = new System.Windows.Forms.Padding(30, 0, 30, 0);
-            this.pnlTime.Size = new System.Drawing.Size(700, 179);
+            this.pnlTime.Size = new System.Drawing.Size(700, 389);
             this.pnlTime.TabIndex = 9;
             // 
             // pnlAMPM
@@ -2026,7 +2102,7 @@
             this.pnlAMPM.Location = new System.Drawing.Point(470, 0);
             this.pnlAMPM.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlAMPM.Name = "pnlAMPM";
-            this.pnlAMPM.Size = new System.Drawing.Size(200, 179);
+            this.pnlAMPM.Size = new System.Drawing.Size(200, 389);
             this.pnlAMPM.TabIndex = 5;
             // 
             // btnAMPM
@@ -2046,9 +2122,10 @@
             this.btnAMPM.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAMPM.Name = "btnAMPM";
             this.btnAMPM.Primary = false;
-            this.btnAMPM.Size = new System.Drawing.Size(55, 36);
+            this.btnAMPM.Size = new System.Drawing.Size(79, 40);
             this.btnAMPM.TabIndex = 25;
             this.btnAMPM.Text = "AM";
+            this.btnAMPM.UseFlatStyle = true;
             this.btnAMPM.UseVisualStyleBackColor = true;
             this.btnAMPM.Click += new System.EventHandler(this.btnAMPM_Click);
             // 
@@ -2064,7 +2141,7 @@
             this.pnlTimeSeparator2.Location = new System.Drawing.Point(450, 0);
             this.pnlTimeSeparator2.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlTimeSeparator2.Name = "pnlTimeSeparator2";
-            this.pnlTimeSeparator2.Size = new System.Drawing.Size(20, 179);
+            this.pnlTimeSeparator2.Size = new System.Drawing.Size(20, 389);
             this.pnlTimeSeparator2.TabIndex = 6;
             // 
             // materialLabel2
@@ -2076,7 +2153,7 @@
             this.materialLabel2.Location = new System.Drawing.Point(0, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(20, 179);
+            this.materialLabel2.Size = new System.Drawing.Size(20, 389);
             this.materialLabel2.TabIndex = 0;
             this.materialLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2096,7 +2173,7 @@
             this.pnlMin.Location = new System.Drawing.Point(250, 0);
             this.pnlMin.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlMin.Name = "pnlMin";
-            this.pnlMin.Size = new System.Drawing.Size(200, 179);
+            this.pnlMin.Size = new System.Drawing.Size(200, 389);
             this.pnlMin.TabIndex = 2;
             // 
             // btnMin
@@ -2112,14 +2189,15 @@
             this.btnMin.Icon = null;
             this.btnMin.IconType = MaterialSkin.IconType.NONE;
             this.btnMin.IsSelected = null;
-            this.btnMin.Location = new System.Drawing.Point(0, 72);
+            this.btnMin.Location = new System.Drawing.Point(0, 80);
             this.btnMin.Margin = new System.Windows.Forms.Padding(0);
             this.btnMin.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMin.Name = "btnMin";
             this.btnMin.Primary = false;
-            this.btnMin.Size = new System.Drawing.Size(200, 35);
+            this.btnMin.Size = new System.Drawing.Size(200, 229);
             this.btnMin.TabIndex = 24;
             this.btnMin.Text = "3";
+            this.btnMin.UseFlatStyle = true;
             this.btnMin.UseVisualStyleBackColor = true;
             // 
             // btnMinNext
@@ -2135,14 +2213,15 @@
             this.btnMinNext.Icon = null;
             this.btnMinNext.IconType = MaterialSkin.IconType.NONE;
             this.btnMinNext.IsSelected = null;
-            this.btnMinNext.Location = new System.Drawing.Point(0, 107);
+            this.btnMinNext.Location = new System.Drawing.Point(0, 309);
             this.btnMinNext.Margin = new System.Windows.Forms.Padding(0);
             this.btnMinNext.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMinNext.Name = "btnMinNext";
             this.btnMinNext.Primary = false;
-            this.btnMinNext.Size = new System.Drawing.Size(200, 36);
+            this.btnMinNext.Size = new System.Drawing.Size(200, 40);
             this.btnMinNext.TabIndex = 21;
             this.btnMinNext.Text = "5";
+            this.btnMinNext.UseFlatStyle = true;
             this.btnMinNext.UseVisualStyleBackColor = true;
             this.btnMinNext.Click += new System.EventHandler(this.btnSetMin_Click);
             // 
@@ -2159,14 +2238,15 @@
             this.btnMinPrev.Icon = null;
             this.btnMinPrev.IconType = MaterialSkin.IconType.NONE;
             this.btnMinPrev.IsSelected = null;
-            this.btnMinPrev.Location = new System.Drawing.Point(0, 36);
+            this.btnMinPrev.Location = new System.Drawing.Point(0, 40);
             this.btnMinPrev.Margin = new System.Windows.Forms.Padding(0);
             this.btnMinPrev.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMinPrev.Name = "btnMinPrev";
             this.btnMinPrev.Primary = false;
-            this.btnMinPrev.Size = new System.Drawing.Size(200, 36);
+            this.btnMinPrev.Size = new System.Drawing.Size(200, 40);
             this.btnMinPrev.TabIndex = 20;
             this.btnMinPrev.Text = "1";
+            this.btnMinPrev.UseFlatStyle = true;
             this.btnMinPrev.UseVisualStyleBackColor = true;
             this.btnMinPrev.Click += new System.EventHandler(this.btnSetMin_Click);
             // 
@@ -2183,14 +2263,15 @@
             this.btnNextMin.Icon = ((System.Drawing.Image)(resources.GetObject("btnNextMin.Icon")));
             this.btnNextMin.IconType = MaterialSkin.IconType.EXPAND_MORE;
             this.btnNextMin.IsSelected = null;
-            this.btnNextMin.Location = new System.Drawing.Point(0, 143);
+            this.btnNextMin.Location = new System.Drawing.Point(0, 349);
             this.btnNextMin.Margin = new System.Windows.Forms.Padding(0);
             this.btnNextMin.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNextMin.Name = "btnNextMin";
             this.btnNextMin.Primary = false;
-            this.btnNextMin.Size = new System.Drawing.Size(200, 36);
+            this.btnNextMin.Size = new System.Drawing.Size(200, 40);
             this.btnNextMin.TabIndex = 19;
             this.btnNextMin.Tag = "1";
+            this.btnNextMin.UseFlatStyle = true;
             this.btnNextMin.UseVisualStyleBackColor = true;
             this.btnNextMin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnMoveMin_MouseDown);
             this.btnNextMin.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnMoveMin_MouseUp);
@@ -2213,9 +2294,10 @@
             this.btnPrevMin.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPrevMin.Name = "btnPrevMin";
             this.btnPrevMin.Primary = false;
-            this.btnPrevMin.Size = new System.Drawing.Size(200, 36);
+            this.btnPrevMin.Size = new System.Drawing.Size(200, 40);
             this.btnPrevMin.TabIndex = 18;
             this.btnPrevMin.Tag = "-1";
+            this.btnPrevMin.UseFlatStyle = true;
             this.btnPrevMin.UseVisualStyleBackColor = true;
             this.btnPrevMin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnMoveMin_MouseDown);
             this.btnPrevMin.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnMoveMin_MouseUp);
@@ -2232,7 +2314,7 @@
             this.pnlTimeSeparator1.Location = new System.Drawing.Point(230, 0);
             this.pnlTimeSeparator1.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlTimeSeparator1.Name = "pnlTimeSeparator1";
-            this.pnlTimeSeparator1.Size = new System.Drawing.Size(20, 179);
+            this.pnlTimeSeparator1.Size = new System.Drawing.Size(20, 389);
             this.pnlTimeSeparator1.TabIndex = 1;
             // 
             // materialLabel1
@@ -2244,7 +2326,7 @@
             this.materialLabel1.Location = new System.Drawing.Point(0, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(20, 179);
+            this.materialLabel1.Size = new System.Drawing.Size(20, 389);
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = ":";
             this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2265,7 +2347,7 @@
             this.pnlHour.Location = new System.Drawing.Point(30, 0);
             this.pnlHour.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlHour.Name = "pnlHour";
-            this.pnlHour.Size = new System.Drawing.Size(200, 179);
+            this.pnlHour.Size = new System.Drawing.Size(200, 389);
             this.pnlHour.TabIndex = 0;
             // 
             // btnHour
@@ -2281,14 +2363,15 @@
             this.btnHour.Icon = null;
             this.btnHour.IconType = MaterialSkin.IconType.NONE;
             this.btnHour.IsSelected = null;
-            this.btnHour.Location = new System.Drawing.Point(0, 72);
+            this.btnHour.Location = new System.Drawing.Point(0, 80);
             this.btnHour.Margin = new System.Windows.Forms.Padding(0);
             this.btnHour.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnHour.Name = "btnHour";
             this.btnHour.Primary = false;
-            this.btnHour.Size = new System.Drawing.Size(200, 35);
+            this.btnHour.Size = new System.Drawing.Size(200, 229);
             this.btnHour.TabIndex = 17;
             this.btnHour.Text = "3";
+            this.btnHour.UseFlatStyle = true;
             this.btnHour.UseVisualStyleBackColor = true;
             // 
             // btnHourNext
@@ -2304,14 +2387,15 @@
             this.btnHourNext.Icon = null;
             this.btnHourNext.IconType = MaterialSkin.IconType.NONE;
             this.btnHourNext.IsSelected = null;
-            this.btnHourNext.Location = new System.Drawing.Point(0, 107);
+            this.btnHourNext.Location = new System.Drawing.Point(0, 309);
             this.btnHourNext.Margin = new System.Windows.Forms.Padding(0);
             this.btnHourNext.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnHourNext.Name = "btnHourNext";
             this.btnHourNext.Primary = false;
-            this.btnHourNext.Size = new System.Drawing.Size(200, 36);
+            this.btnHourNext.Size = new System.Drawing.Size(200, 40);
             this.btnHourNext.TabIndex = 14;
             this.btnHourNext.Text = "5";
+            this.btnHourNext.UseFlatStyle = true;
             this.btnHourNext.UseVisualStyleBackColor = true;
             this.btnHourNext.Click += new System.EventHandler(this.btnSetHour_Click);
             // 
@@ -2328,14 +2412,15 @@
             this.btnHourPrev.Icon = null;
             this.btnHourPrev.IconType = MaterialSkin.IconType.NONE;
             this.btnHourPrev.IsSelected = null;
-            this.btnHourPrev.Location = new System.Drawing.Point(0, 36);
+            this.btnHourPrev.Location = new System.Drawing.Point(0, 40);
             this.btnHourPrev.Margin = new System.Windows.Forms.Padding(0);
             this.btnHourPrev.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnHourPrev.Name = "btnHourPrev";
             this.btnHourPrev.Primary = false;
-            this.btnHourPrev.Size = new System.Drawing.Size(200, 36);
+            this.btnHourPrev.Size = new System.Drawing.Size(200, 40);
             this.btnHourPrev.TabIndex = 13;
             this.btnHourPrev.Text = "1";
+            this.btnHourPrev.UseFlatStyle = true;
             this.btnHourPrev.UseVisualStyleBackColor = true;
             this.btnHourPrev.Click += new System.EventHandler(this.btnSetHour_Click);
             // 
@@ -2352,14 +2437,15 @@
             this.btnNextHour.Icon = ((System.Drawing.Image)(resources.GetObject("btnNextHour.Icon")));
             this.btnNextHour.IconType = MaterialSkin.IconType.EXPAND_MORE;
             this.btnNextHour.IsSelected = null;
-            this.btnNextHour.Location = new System.Drawing.Point(0, 143);
+            this.btnNextHour.Location = new System.Drawing.Point(0, 349);
             this.btnNextHour.Margin = new System.Windows.Forms.Padding(0);
             this.btnNextHour.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNextHour.Name = "btnNextHour";
             this.btnNextHour.Primary = false;
-            this.btnNextHour.Size = new System.Drawing.Size(200, 36);
+            this.btnNextHour.Size = new System.Drawing.Size(200, 40);
             this.btnNextHour.TabIndex = 12;
             this.btnNextHour.Tag = "1";
+            this.btnNextHour.UseFlatStyle = true;
             this.btnNextHour.UseVisualStyleBackColor = true;
             this.btnNextHour.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnMoveHour_MouseDown);
             this.btnNextHour.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnMoveHour_MouseUp);
@@ -2382,9 +2468,10 @@
             this.btnPrevHour.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPrevHour.Name = "btnPrevHour";
             this.btnPrevHour.Primary = false;
-            this.btnPrevHour.Size = new System.Drawing.Size(200, 36);
+            this.btnPrevHour.Size = new System.Drawing.Size(200, 40);
             this.btnPrevHour.TabIndex = 6;
             this.btnPrevHour.Tag = "-1";
+            this.btnPrevHour.UseFlatStyle = true;
             this.btnPrevHour.UseVisualStyleBackColor = true;
             this.btnPrevHour.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnMoveHour_MouseDown);
             this.btnPrevHour.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnMoveHour_MouseUp);
@@ -2398,7 +2485,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 400);
+            this.ClientSize = new System.Drawing.Size(704, 684);
             this.Controls.Add(this.pnlTime);
             this.Controls.Add(this.pnlMonthYear);
             this.Controls.Add(this.pnlDate);
