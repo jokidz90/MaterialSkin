@@ -489,7 +489,7 @@ namespace MaterialSkin.Controls
             g.FillRectangle(SkinManager.ColorScheme.PrimaryBrush, _actionBarBounds);
 
             //Draw border
-            using (var borderPen = new Pen(SkinManager.GetDividersColor(), 1))
+            using (var borderPen = new Pen(SkinManager.ColorScheme.DarkPrimaryColor, 1))
             {
                 g.DrawLine(borderPen, new Point(0, _actionBarBounds.Bottom), new Point(0, Height - 2));
                 g.DrawLine(borderPen, new Point(Width - 1, _actionBarBounds.Bottom), new Point(Width - 1, Height - 2));
