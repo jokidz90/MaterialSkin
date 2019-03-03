@@ -80,7 +80,6 @@ namespace MaterialSkin.Controls
             }
         }
 
-        private int _iconSize = 24;
         private IconType _iconType = IconType.NONE;
         public IconType IconType
         {
@@ -111,10 +110,63 @@ namespace MaterialSkin.Controls
         private StringAlignment _alignment = StringAlignment.Center;
         public StringAlignment Alignment { get => _alignment; set => _alignment = value; }
 
+        private ControlSize _controlSize = ControlSize.NORMAL;
+        public ControlSize ControlSize
+        {
+            set
+            {
+                _controlSize = value;
+                if (_controlSize == ControlSize.SMALL)
+                {
+                    _font = SkinManager.ROBOTO_MEDIUM_8;
+                    _iconSize = 16;
+                    _defaultHeight = 24;
+                    _extraSpace = 4;
+                    _padding = 4;
+                }
+                else if (_controlSize == ControlSize.LARGE)
+                {
+                    _font = SkinManager.ROBOTO_MEDIUM_16;
+                    _iconSize = 32;
+                    _defaultHeight = 72;
+                    _extraSpace = 72;
+                    _padding = 10;
+                }
+                //else if (_controlSize == ControlSize.EXTRA_LARGE)
+                //{
+                //    _font = SkinManager.ROBOTO_MEDIUM_18;
+                //    _iconSize = 44;
+                //    _defaultHeight = 86;
+                //    _extraSpace = 86;
+                //    _padding = 14;
+                //}
+                else
+                {
+                    _font = SkinManager.ROBOTO_MEDIUM_11;
+                    _iconSize = 24;
+                    _defaultHeight = 40;
+                    _extraSpace = 30;
+                    _padding = 8;
+                }
+                this.Invalidate();
+            }
+            get
+            {
+                return _controlSize;
+            }
+        }
+
+
+        private int _iconSize = 24;
+        private int _defaultHeight = 40;
+        private int _extraSpace = 40;
+        private int _padding = 8;
+        private Font _font = null;
+
         public MaterialButton()
         {
             Primary = true;
-
+            _font = SkinManager.ROBOTO_MEDIUM_11;
             _animationManager = new AnimationManager(false)
             {
                 Increment = 0.03,
@@ -216,19 +268,12 @@ namespace MaterialSkin.Controls
 
             if (Icon != null)
             {
-                // First 8: left padding
-                // 24: icon width
-                // Second 4: space between Icon and Text
-                // Third 8: right padding
-                textRect.Width -= 8 + _iconSize + 4 + 8;
+                textRect.Width -= _padding + _iconSize + (_padding / 2) + _padding;
 
-                // First 8: left padding
-                // 24: icon width
-                // Second 4: space between Icon and Text
-                textRect.X += 8 + _iconSize + 4;
+                textRect.X += _padding + _iconSize + (_padding / 2);
             }
 
-            g.DrawString(Text.ToUpper(), SkinManager.ROBOTO_MEDIUM_11, frontBrush, textRect, new StringFormat { Alignment = _alignment, LineAlignment = StringAlignment.Center });
+            g.DrawString(Text.ToUpper(), _font, frontBrush, textRect, new StringFormat { Alignment = _alignment, LineAlignment = StringAlignment.Center });
         }
 
         private void DrawStandardButton(PaintEventArgs pevent)
@@ -249,11 +294,7 @@ namespace MaterialSkin.Controls
 
             g.Clear(Parent.BackColor);
 
-            using (var backgroundPath = DrawHelper.CreateRoundRect(ClientRectangle.X,
-                ClientRectangle.Y,
-                ClientRectangle.Width - 1,
-                ClientRectangle.Height - 1,
-                1f))
+            using (var backgroundPath = DrawHelper.CreateRoundRect(ClientRectangle.X, ClientRectangle.Y, ClientRectangle.Width - 1, ClientRectangle.Height - 1, 1f))
             {
                 g.FillPath(Primary ? backBrush : SkinManager.GetRaisedButtonBackgroundBrush(), backgroundPath);
             }
@@ -284,19 +325,12 @@ namespace MaterialSkin.Controls
 
             if (Icon != null)
             {
-                // First 8: left padding
-                // 24: icon width
-                // Second 4: space between Icon and Text
-                // Third 8: right padding
-                textRect.Width -= 8 + _iconSize + 4 + 8;
+                textRect.Width -= _padding + _iconSize + (_padding / 2) + _padding;
 
-                // First 8: left padding
-                // 24: icon width
-                // Second 4: space between Icon and Text
-                textRect.X += 8 + _iconSize + 4;
+                textRect.X += _padding + _iconSize + (_padding / 2);
             }
 
-            g.DrawString(Text.ToUpper(), SkinManager.ROBOTO_MEDIUM_11, frontBrush, textRect, new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+            g.DrawString(Text.ToUpper(), _font, frontBrush, textRect, new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
         }
 
         private Size GetPreferredSize()
@@ -307,21 +341,19 @@ namespace MaterialSkin.Controls
         public override Size GetPreferredSize(Size proposedSize)
         {
             // Provides extra space for proper padding for content
-            int defaultHeight = 40;
-            int defaultWidth = defaultHeight;
-            var extra = 40;
+            int defaultWidth = _defaultHeight;
 
             if (!string.IsNullOrEmpty(Text))
             {
-                defaultWidth = (int)Math.Ceiling(_textSize.Width) + extra;
+                defaultWidth = (int)Math.Ceiling(_textSize.Width) + _extraSpace;
                 if (Icon != null)
                 {
-                    var iconY = (defaultHeight - _iconSize) / 2;
+                    var iconY = (_defaultHeight - _iconSize) / 2;
                     defaultWidth = defaultWidth + (iconY) + _iconSize;
                 }
             }
 
-            return new Size(defaultWidth, defaultHeight);
+            return new Size(defaultWidth, _defaultHeight);
         }
 
         protected override void OnCreateControl()

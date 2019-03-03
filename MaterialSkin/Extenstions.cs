@@ -247,4 +247,12 @@ namespace MaterialSkin
         LASTYEAR,
         CUSTOM
     }
+
+    public enum ControlSize
+    {
+        SMALL,
+        NORMAL,
+        LARGE
+        //EXTRA_LARGE
+    }
 }

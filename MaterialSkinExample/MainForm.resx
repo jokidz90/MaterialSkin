@@ -235,6 +235,27 @@
   <metadata name="Amount.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="materialButton2.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAE1JREFUSEvt
+        zyEKADEQBMH9/6fvVEygRLsQUrCmYcTOc6Rvu6V20qB20qB20qD2i+nl2kmD2kmD2kmD2i+ml2snDWon
+        DWonDWp/jjDzA4lVj3FY1JsFAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="materialButton3.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAE1JREFUSEvt
+        zyEKADEQBMH9/6fvVEygRLsQUrCmYcTOc6Rvu6V20qB20qB20qD2i+nl2kmD2kmD2kmD2i+ml2snDWon
+        DWonDWp/jjDzA4lVj3FY1JsFAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="materialButton4.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAE1JREFUSEvt
+        zyEKADEQBMH9/6fvVEygRLsQUrCmYcTOc6Rvu6V20qB20qB20qD2i+nl2kmD2kmD2kmD2i+ml2snDWon
+        DWonDWp/jjDzA4lVj3FY1JsFAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="materialRaisedButton4.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAANBJREFUSEvt

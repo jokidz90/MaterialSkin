@@ -56,6 +56,13 @@ namespace MaterialSkin.Controls
             set
             {
                 _rangeSelection = value;
+                btnSelectDateRange.Tag = _rangeSelection;
+                if (_rangeSelection.ToString().StartsWith("LAST"))
+                    btnSelectDateRange.Text = "Last " + _rangeSelection.ToString().Replace("LAST", "").ToLower();
+                else if (_rangeSelection.ToString().StartsWith("THIS"))
+                    btnSelectDateRange.Text = "This " + _rangeSelection.ToString().Replace("THIS", "").ToLower();
+                else
+                    btnSelectDateRange.Text = _rangeSelection.ToString().ToUpperFirst();
             }
             get
             {
@@ -145,7 +152,7 @@ namespace MaterialSkin.Controls
 
         private void InitForm()
         {
-            _rangeSelection = DateRangeType.TODAY;
+            RangeSelection = DateRangeType.TODAY;
             btnSelectDateRange.Text = DateRangeType.TODAY.ToString();
             btnSelectDateRange.Tag = DateRangeType.TODAY.ToString();
             SetTimeValue(CurrentValue);
@@ -566,6 +573,7 @@ namespace MaterialSkin.Controls
             var dtStr = ((DateTime)_selectedBtn.Tag).ToString("yyyy-MM-dd") + " " + timeStr;
             var dtValue = DateTime.ParseExact(dtStr, "yyyy-MM-dd hh:mm tt", CultureInfo.InvariantCulture);
             CurrentValue = ShowTime ? dtValue : dtValue.Date;
+            RangeSelection = DateRangeType.CUSTOM;
             if (!IsSelectEndDate)
                 IsSelectEndDate = true;
             LoadDate();
@@ -785,14 +793,15 @@ namespace MaterialSkin.Controls
                 return;
             }
 
-            btnSelectDateRange.Text = ((Control)sender).Text;
-            btnSelectDateRange.Tag = range;
+            //btnSelectDateRange.Text = ((Control)sender).Text;
+            //btnSelectDateRange.Tag = range;
+            RangeSelection = _rangeSelection;
             var startDate = DateTime.Now.Date;
             var endDate = DateTime.Now.Date;
             Extenstions.GetDateRange(_rangeSelection.ToString(), "00:00", out startDate, out endDate);
             StartValue = startDate;
             EndValue = endDate;
-            IsSelectEndDate = false;
+            IsSelectEndDate = true;
 
             btnShowYear.Tag = CurrentValue.Year;
             btnShowYear.Text = CurrentValue.Year.ToString();

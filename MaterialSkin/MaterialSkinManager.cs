@@ -243,11 +243,16 @@ namespace MaterialSkin
         }
 
         //Roboto font
+        public Font ROBOTO_REGULAR_11;
+
+        public Font ROBOTO_MEDIUM_18;
+        public Font ROBOTO_MEDIUM_16;
         public Font ROBOTO_MEDIUM_14;
         public Font ROBOTO_MEDIUM_12;
-        public Font ROBOTO_REGULAR_11;
         public Font ROBOTO_MEDIUM_11;
         public Font ROBOTO_MEDIUM_10;
+        public Font ROBOTO_MEDIUM_8;
+
         public Font ROBOTO_BOLD_10;
 
         //Other constants
@@ -258,12 +263,17 @@ namespace MaterialSkin
 
         private MaterialSkinManager()
         {
+            ROBOTO_REGULAR_11 = new Font(LoadFont(Resources.Roboto_Regular), 11f);
+
+            ROBOTO_MEDIUM_18 = new Font(LoadFont(Resources.Roboto_Medium), 18f);
+            ROBOTO_MEDIUM_16 = new Font(LoadFont(Resources.Roboto_Medium), 16f);
             ROBOTO_MEDIUM_14 = new Font(LoadFont(Resources.Roboto_Medium), 14f);
             ROBOTO_MEDIUM_12 = new Font(LoadFont(Resources.Roboto_Medium), 12f);
-            ROBOTO_MEDIUM_10 = new Font(LoadFont(Resources.Roboto_Medium), 10f);
-            ROBOTO_BOLD_10 = new Font(LoadFont(Resources.Roboto_Regular), 10f, FontStyle.Bold);
-            ROBOTO_REGULAR_11 = new Font(LoadFont(Resources.Roboto_Regular), 11f);
             ROBOTO_MEDIUM_11 = new Font(LoadFont(Resources.Roboto_Medium), 11f);
+            ROBOTO_MEDIUM_10 = new Font(LoadFont(Resources.Roboto_Medium), 10f);
+            ROBOTO_MEDIUM_8 = new Font(LoadFont(Resources.Roboto_Medium), 8f);
+
+            ROBOTO_BOLD_10 = new Font(LoadFont(Resources.Roboto_Regular), 10f, FontStyle.Bold);
             Theme = Themes.LIGHT;
             ColorScheme = ColorScheme.ColorSwatches[ColorType.DEFAULT];
         }
