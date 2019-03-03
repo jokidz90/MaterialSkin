@@ -34,9 +34,9 @@ namespace MaterialSkinExample
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
@@ -121,6 +121,13 @@ namespace MaterialSkinExample
             this.materialButton5 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton7 = new MaterialSkin.Controls.MaterialButton();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnDlgMessage = new MaterialSkin.Controls.MaterialButton();
+            this.btnDlgMsgWithHeader = new MaterialSkin.Controls.MaterialButton();
+            this.btnDlgInformation = new MaterialSkin.Controls.MaterialButton();
+            this.btnDlgWarning = new MaterialSkin.Controls.MaterialButton();
+            this.btnDlgError = new MaterialSkin.Controls.MaterialButton();
             this.materialTabControl1.SuspendLayout();
             this.tpControls.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -152,6 +159,8 @@ namespace MaterialSkinExample
             this.materialContextMenuStrip1.SuspendLayout();
             this.materialPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.flowLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialDivider1
@@ -214,6 +223,7 @@ namespace MaterialSkinExample
             this.materialTabControl1.Controls.Add(this.tabPage1);
             this.materialTabControl1.Controls.Add(this.tabPage2);
             this.materialTabControl1.Controls.Add(this.tabPage3);
+            this.materialTabControl1.Controls.Add(this.tabPage4);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.Location = new System.Drawing.Point(0, 143);
@@ -903,15 +913,15 @@ namespace MaterialSkinExample
             this.gView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gView.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.gView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(128)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 11F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(12);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(184)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(128)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Roboto", 11F);
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle16.Padding = new System.Windows.Forms.Padding(12);
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(184)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.gView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.No,
@@ -919,15 +929,15 @@ namespace MaterialSkinExample
             this.Qty,
             this.Price,
             this.Amount});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(12, 7, 12, 7);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(184)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Roboto", 11F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            dataGridViewCellStyle17.Padding = new System.Windows.Forms.Padding(12, 7, 12, 7);
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(184)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gView.DefaultCellStyle = dataGridViewCellStyle17;
             this.gView.Depth = 0;
             this.gView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gView.EnableHeadersVisualStyles = false;
@@ -939,14 +949,14 @@ namespace MaterialSkinExample
             this.gView.Name = "gView";
             this.gView.ReadOnly = true;
             this.gView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(128)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 11F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(184)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(128)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Roboto", 11F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(184)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gView.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.gView.RowHeadersVisible = false;
             this.gView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1729,6 +1739,155 @@ namespace MaterialSkinExample
             this.materialButton7.UseFlatStyle = false;
             this.materialButton7.UseVisualStyleBackColor = true;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.flowLayoutPanel5);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(2152, 1104);
+            this.tabPage4.TabIndex = 9;
+            this.tabPage4.Text = "Dialog";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.Controls.Add(this.btnDlgMessage);
+            this.flowLayoutPanel5.Controls.Add(this.btnDlgMsgWithHeader);
+            this.flowLayoutPanel5.Controls.Add(this.btnDlgInformation);
+            this.flowLayoutPanel5.Controls.Add(this.btnDlgWarning);
+            this.flowLayoutPanel5.Controls.Add(this.btnDlgError);
+            this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(2146, 1098);
+            this.flowLayoutPanel5.TabIndex = 0;
+            // 
+            // btnDlgMessage
+            // 
+            this.btnDlgMessage.Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDlgMessage.AutoSize = true;
+            this.btnDlgMessage.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDlgMessage.BorderColorType = MaterialSkin.ColorType.DEFAULT;
+            this.btnDlgMessage.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDlgMessage.ControlSize = MaterialSkin.ControlSize.NORMAL;
+            this.btnDlgMessage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDlgMessage.Depth = 0;
+            this.btnDlgMessage.Icon = null;
+            this.btnDlgMessage.IconType = MaterialSkin.IconType.NONE;
+            this.btnDlgMessage.IsSelected = false;
+            this.btnDlgMessage.Location = new System.Drawing.Point(4, 5);
+            this.btnDlgMessage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDlgMessage.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDlgMessage.Name = "btnDlgMessage";
+            this.btnDlgMessage.Primary = true;
+            this.btnDlgMessage.Size = new System.Drawing.Size(130, 40);
+            this.btnDlgMessage.TabIndex = 1;
+            this.btnDlgMessage.Text = "MESSAGE";
+            this.btnDlgMessage.UseFlatStyle = false;
+            this.btnDlgMessage.UseVisualStyleBackColor = true;
+            this.btnDlgMessage.Click += new System.EventHandler(this.btnDlgMessage_Click);
+            // 
+            // btnDlgMsgWithHeader
+            // 
+            this.btnDlgMsgWithHeader.Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDlgMsgWithHeader.AutoSize = true;
+            this.btnDlgMsgWithHeader.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDlgMsgWithHeader.BorderColorType = MaterialSkin.ColorType.DEFAULT;
+            this.btnDlgMsgWithHeader.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDlgMsgWithHeader.ControlSize = MaterialSkin.ControlSize.NORMAL;
+            this.btnDlgMsgWithHeader.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDlgMsgWithHeader.Depth = 0;
+            this.btnDlgMsgWithHeader.Icon = null;
+            this.btnDlgMsgWithHeader.IconType = MaterialSkin.IconType.NONE;
+            this.btnDlgMsgWithHeader.IsSelected = false;
+            this.btnDlgMsgWithHeader.Location = new System.Drawing.Point(142, 5);
+            this.btnDlgMsgWithHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDlgMsgWithHeader.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDlgMsgWithHeader.Name = "btnDlgMsgWithHeader";
+            this.btnDlgMsgWithHeader.Primary = true;
+            this.btnDlgMsgWithHeader.Size = new System.Drawing.Size(269, 40);
+            this.btnDlgMsgWithHeader.TabIndex = 2;
+            this.btnDlgMsgWithHeader.Text = "MESSAGE WITH HEADER";
+            this.btnDlgMsgWithHeader.UseFlatStyle = false;
+            this.btnDlgMsgWithHeader.UseVisualStyleBackColor = true;
+            this.btnDlgMsgWithHeader.Click += new System.EventHandler(this.btnDlgMsgWithHeader_Click);
+            // 
+            // btnDlgInformation
+            // 
+            this.btnDlgInformation.Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDlgInformation.AutoSize = true;
+            this.btnDlgInformation.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDlgInformation.BorderColorType = MaterialSkin.ColorType.DEFAULT;
+            this.btnDlgInformation.ColorStyle = MaterialSkin.ColorType.INFO;
+            this.btnDlgInformation.ControlSize = MaterialSkin.ControlSize.NORMAL;
+            this.btnDlgInformation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDlgInformation.Depth = 0;
+            this.btnDlgInformation.Icon = null;
+            this.btnDlgInformation.IconType = MaterialSkin.IconType.NONE;
+            this.btnDlgInformation.IsSelected = false;
+            this.btnDlgInformation.Location = new System.Drawing.Point(419, 5);
+            this.btnDlgInformation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDlgInformation.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDlgInformation.Name = "btnDlgInformation";
+            this.btnDlgInformation.Primary = true;
+            this.btnDlgInformation.Size = new System.Drawing.Size(174, 40);
+            this.btnDlgInformation.TabIndex = 3;
+            this.btnDlgInformation.Text = "INFORMATION";
+            this.btnDlgInformation.UseFlatStyle = false;
+            this.btnDlgInformation.UseVisualStyleBackColor = true;
+            this.btnDlgInformation.Click += new System.EventHandler(this.btnDlgInformation_Click);
+            // 
+            // btnDlgWarning
+            // 
+            this.btnDlgWarning.Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDlgWarning.AutoSize = true;
+            this.btnDlgWarning.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDlgWarning.BorderColorType = MaterialSkin.ColorType.DEFAULT;
+            this.btnDlgWarning.ColorStyle = MaterialSkin.ColorType.WARNING;
+            this.btnDlgWarning.ControlSize = MaterialSkin.ControlSize.NORMAL;
+            this.btnDlgWarning.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDlgWarning.Depth = 0;
+            this.btnDlgWarning.Icon = null;
+            this.btnDlgWarning.IconType = MaterialSkin.IconType.NONE;
+            this.btnDlgWarning.IsSelected = false;
+            this.btnDlgWarning.Location = new System.Drawing.Point(601, 5);
+            this.btnDlgWarning.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDlgWarning.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDlgWarning.Name = "btnDlgWarning";
+            this.btnDlgWarning.Primary = true;
+            this.btnDlgWarning.Size = new System.Drawing.Size(131, 40);
+            this.btnDlgWarning.TabIndex = 4;
+            this.btnDlgWarning.Text = "WARNING";
+            this.btnDlgWarning.UseFlatStyle = false;
+            this.btnDlgWarning.UseVisualStyleBackColor = true;
+            this.btnDlgWarning.Click += new System.EventHandler(this.btnDlgWarning_Click);
+            // 
+            // btnDlgError
+            // 
+            this.btnDlgError.Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDlgError.AutoSize = true;
+            this.btnDlgError.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDlgError.BorderColorType = MaterialSkin.ColorType.DEFAULT;
+            this.btnDlgError.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDlgError.ControlSize = MaterialSkin.ControlSize.NORMAL;
+            this.btnDlgError.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDlgError.Depth = 0;
+            this.btnDlgError.Icon = null;
+            this.btnDlgError.IconType = MaterialSkin.IconType.NONE;
+            this.btnDlgError.IsSelected = false;
+            this.btnDlgError.Location = new System.Drawing.Point(740, 5);
+            this.btnDlgError.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDlgError.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDlgError.Name = "btnDlgError";
+            this.btnDlgError.Primary = true;
+            this.btnDlgError.Size = new System.Drawing.Size(101, 40);
+            this.btnDlgError.TabIndex = 5;
+            this.btnDlgError.Text = "ERROR";
+            this.btnDlgError.UseFlatStyle = false;
+            this.btnDlgError.UseVisualStyleBackColor = true;
+            this.btnDlgError.Click += new System.EventHandler(this.btnDlgError_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1789,6 +1948,9 @@ namespace MaterialSkinExample
             this.materialPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.flowLayoutPanel5.ResumeLayout(false);
+            this.flowLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1879,5 +2041,12 @@ namespace MaterialSkinExample
         private MaterialButton materialButton5;
         private MaterialButton materialButton6;
         private MaterialButton materialButton7;
+        private TabPage tabPage4;
+        private FlowLayoutPanel flowLayoutPanel5;
+        private MaterialButton btnDlgMessage;
+        private MaterialButton btnDlgMsgWithHeader;
+        private MaterialButton btnDlgInformation;
+        private MaterialButton btnDlgWarning;
+        private MaterialButton btnDlgError;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace MaterialSkin.Controls
@@ -11,13 +12,37 @@ namespace MaterialSkin.Controls
         public MaterialSkinManager SkinManager => MaterialSkinManager.Instance;
         [Browsable(false)]
         public MouseState MouseState { get; set; }
+
+        private Font _font = null;
+        private ControlSize _controlSize = ControlSize.NORMAL;
+        public ControlSize ControlSize
+        {
+            set
+            {
+                _controlSize = value;
+                if (_controlSize == ControlSize.SMALL)
+                    _font = SkinManager.ROBOTO_MEDIUM_8;
+                else if (_controlSize == ControlSize.LARGE)
+                    _font = SkinManager.ROBOTO_MEDIUM_16;
+                else
+                    _font = SkinManager.ROBOTO_MEDIUM_11;
+            }
+            get
+            {
+                return _controlSize;
+            }
+        }
+
+        public MaterialLabel()
+        {
+            ControlSize = ControlSize.NORMAL;
+        }
+
         protected override void OnCreateControl()
         {
             base.OnCreateControl();
-
+            Font = _font;
             ForeColor = SkinManager.GetPrimaryTextColor();
-            Font = SkinManager.ROBOTO_REGULAR_11;
-
             BackColorChanged += (sender, args) => ForeColor = SkinManager.GetPrimaryTextColor();
         }
     }

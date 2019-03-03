@@ -45,6 +45,12 @@
     <Compile Include="Animations\AnimationManager.cs" />
     <Compile Include="Animations\Animations.cs" />
     <Compile Include="ColorScheme.cs" />
+    <Compile Include="Controls\MaterialTransparentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialTransparentForm.Designer.cs">
+      <DependentUpon>MaterialTransparentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MaterialCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -124,6 +130,12 @@
     <Compile Include="Controls\MaterialListView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\MaterialMessageBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialMessageBoxForm.Designer.cs">
+      <DependentUpon>MaterialMessageBoxForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MaterialMonthCalendar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -182,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MaterialDropDownDialog.resx">
       <DependentUpon>MaterialDropDownDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MaterialMessageBoxForm.resx">
+      <DependentUpon>MaterialMessageBoxForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

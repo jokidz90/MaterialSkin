@@ -11,6 +11,25 @@ namespace MaterialSkin.Controls
 {
     public class MaterialFormDialog : Form, IMaterialControl
     {
+        private ColorType _colorStyle = ColorType.DEFAULT;
+        public ColorType ColorStyle { get => _colorStyle; set => _colorStyle = value; }
+
+        private IconType _iconType = IconType.NONE;
+        private Image _icon;
+        private int _iconSize = 24;
+        public IconType IconType
+        {
+            get { return _iconType; }
+            set
+            {
+                _iconType = value;
+                if (_iconType == IconType.NONE)
+                    _icon = null;
+                else
+                    _icon = IconManager.Settings[_iconType];
+            }
+        }
+
         [Browsable(false)]
         public int Depth { get; set; }
         [Browsable(false)]
@@ -483,16 +502,18 @@ namespace MaterialSkin.Controls
 
         protected override void OnPaint(PaintEventArgs e)
         {
+            var backColor = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.PrimaryColor : ColorScheme.ColorSwatches[_colorStyle].PrimaryColor;
+            var backBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush;
             var g = e.Graphics;
             g.TextRenderingHint = TextRenderingHint.AntiAlias;
 
             g.Clear(SkinManager.GetApplicationBackgroundColor());
             //g.FillRectangle(SkinManager.ColorScheme.DarkPrimaryBrush, _statusBarBounds);
             if(!string.IsNullOrEmpty(Text))
-                g.FillRectangle(SkinManager.ColorScheme.PrimaryBrush, _actionBarBounds);
+                g.FillRectangle(backBrush, _actionBarBounds);
 
             //Draw border
-            using (var borderPen = new Pen(SkinManager.GetDividersColor(), BORDER_WEIGHT))
+            using (var borderPen = new Pen(backColor, BORDER_WEIGHT))
             {
                 var topBorder = _actionBarBounds.Bottom;
                 if (string.IsNullOrEmpty(Text))
@@ -582,10 +603,17 @@ namespace MaterialSkin.Controls
                 }
             }
 
+            int leftPadding = SkinManager.FORM_PADDING;
+            var iconRect = new Rectangle(leftPadding/2, Math.Abs(_iconSize - STATUS_BAR_HEIGHT)/4, _iconSize, _iconSize);
+            if (_icon != null)
+            {
+                g.DrawImage(_icon.ReplaceColor(Color.Black, SkinManager.ColorScheme.TextColor), iconRect);
+                leftPadding = leftPadding + _iconSize;
+            }
+
             //Form title
             if (!string.IsNullOrEmpty(Text))
             {
-                int leftPadding = SkinManager.FORM_PADDING;
                 if (_titleAlignment != StringAlignment.Near)
                     leftPadding = 0;
                 g.DrawString(Text,
@@ -594,6 +622,57 @@ namespace MaterialSkin.Controls
                     new Rectangle(leftPadding, STATUS_BAR_HEIGHT, Width, ACTION_BAR_HEIGHT),
                     new StringFormat { Alignment = _titleAlignment, LineAlignment = StringAlignment.Center });
             }
+        }
+
+        public DialogResult ShowFormDialog()
+        {
+            return ShowFormDialog(null);
+        }
+
+        public DialogResult ShowFormDialog(Form parent)
+        {
+            DialogResult result = DialogResult.Cancel;
+
+            try
+            {
+                string parentName = "-";
+                if (parent != null)
+                    parentName = parent.GetType().FullName;
+
+                MaterialTransparentForm frmTransparant = new MaterialTransparentForm();
+                if (SkinManager.Shadow.ContainsKey(parentName))
+                    frmTransparant = SkinManager.Shadow[parentName];
+                else
+                    SkinManager.Shadow.Add(parentName, frmTransparant);
+
+                if (frmTransparant == null || frmTransparant.IsDisposed)
+                    frmTransparant = new MaterialTransparentForm();
+
+                frmTransparant.Show();
+                frmTransparant.Visible = true;
+                frmTransparant.BringToFront();
+
+                bool isTopMost = this.TopMost;
+                this.BringToFront();
+
+                //this.TopMost = true;
+                result = this.ShowDialog();
+                this.TopMost = isTopMost;
+
+                frmTransparant.SendToBack();
+                frmTransparant.Visible = false;
+                frmTransparant.TopMost = false;
+                frmTransparant.Close();
+                frmTransparant.Dispose();
+
+                SkinManager.Shadow.Remove(parentName);
+            }
+            catch (Exception ex)
+            {
+                
+            }
+
+            return result;
         }
     }
 }

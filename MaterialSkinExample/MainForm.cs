@@ -156,5 +156,30 @@ namespace MaterialSkinExample
         {
 
         }
+
+        private void btnDlgMessage_Click(object sender, EventArgs e)
+        {
+            MaterialMessageBox.Show("This is message");
+        }
+
+        private void btnDlgMsgWithHeader_Click(object sender, EventArgs e)
+        {
+            MaterialMessageBox.Show("This is message","Message");
+        }
+
+        private void btnDlgInformation_Click(object sender, EventArgs e)
+        {
+            MaterialMessageBox.Show("This is information", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnDlgWarning_Click(object sender, EventArgs e)
+        {
+            MaterialMessageBox.Show("This is warning", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void btnDlgError_Click(object sender, EventArgs e)
+        {
+            MaterialMessageBox.Show("This is error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

@@ -12,6 +12,9 @@ namespace MaterialSkin
 {
     public class MaterialSkinManager
     {
+        private Dictionary<string, MaterialTransparentForm> _shadow = new Dictionary<string, MaterialTransparentForm>();
+        public Dictionary<string, MaterialTransparentForm> Shadow { get => _shadow; set => _shadow = value; }
+
         //Singleton instance
         private static MaterialSkinManager _instance;
 
@@ -276,9 +279,12 @@ namespace MaterialSkin
             ROBOTO_BOLD_10 = new Font(LoadFont(Resources.Roboto_Regular), 10f, FontStyle.Bold);
             Theme = Themes.LIGHT;
             ColorScheme = ColorScheme.ColorSwatches[ColorType.DEFAULT];
+            _shadow = new Dictionary<string, MaterialTransparentForm>();
         }
 
         public static MaterialSkinManager Instance => _instance ?? (_instance = new MaterialSkinManager());
+
+        
 
         public void AddFormToManage(Form materialForm)
         {
