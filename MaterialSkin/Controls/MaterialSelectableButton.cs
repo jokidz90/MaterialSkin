@@ -293,7 +293,7 @@ namespace MaterialSkin.Controls
             else if (!hideEmptyValue)
                 itemCount += 1; //add select none
 
-            if (itemCount < maxCol)
+            if (itemCount <= maxCol)
             {
                 size.Width = itemWidth + 10;//add right margin
                 size.Height = (itemHeight * itemCount);

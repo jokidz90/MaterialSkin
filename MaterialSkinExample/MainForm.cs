@@ -104,7 +104,7 @@ namespace MaterialSkinExample
             materialSkinManager.Theme = materialSkinManager.Theme == MaterialSkinManager.Themes.DARK ? MaterialSkinManager.Themes.LIGHT : MaterialSkinManager.Themes.DARK;
         }
 
-	    private int colorSchemeIndex;
+        private int colorSchemeIndex = 1;
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
 	        colorSchemeIndex++;
@@ -194,6 +194,11 @@ namespace MaterialSkinExample
         {
             var res = MaterialMessageBox.ShowSelector("Delivery/Take Away", new List<object>{ "Delivery", "Take Away" }, out object selectedValue);
             materialButton8.Text = selectedValue + "";
+        }
+
+        private void materialSelectableButton2_Click(object sender, EventArgs e)
+        {
+            materialSkinManager.Theme = materialSkinManager.Theme == MaterialSkinManager.Themes.DARK ? MaterialSkinManager.Themes.LIGHT : MaterialSkinManager.Themes.DARK;
         }
     }
 }

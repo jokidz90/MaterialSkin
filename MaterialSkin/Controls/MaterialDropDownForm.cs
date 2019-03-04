@@ -119,7 +119,7 @@ namespace MaterialSkin.Controls
             ctrl.Text = text;
             ctrl.Tag = value;
             ctrl.UseFlatStyle = true;
-            ctrl.Alignment = System.Drawing.StringAlignment.Center;
+            ctrl.Alignment = System.Drawing.StringAlignment.Near;
             ctrl.Click += Ctrl_Click;
             ctrl.Dock = DockStyle.Top;
             ctrl.BringToFront();

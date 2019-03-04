@@ -38,7 +38,6 @@ namespace MaterialSkinExample
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tpControls = new System.Windows.Forms.TabPage();
@@ -133,6 +132,7 @@ namespace MaterialSkinExample
             this.item3ToolStripMenuItem = new MaterialSkin.Controls.MaterialToolStripMenuItem();
             this.materialPanel1 = new MaterialSkin.Controls.MaterialPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.materialSelectableButton2 = new MaterialSkin.Controls.MaterialSelectableButton();
             this.materialTabControl1.SuspendLayout();
             this.tpControls.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -181,33 +181,6 @@ namespace MaterialSkinExample
             this.materialDivider1.Size = new System.Drawing.Size(1366, 1);
             this.materialDivider1.TabIndex = 16;
             this.materialDivider1.Text = "materialDivider1";
-            // 
-            // materialButton1
-            // 
-            this.materialButton1.Alignment = System.Drawing.StringAlignment.Center;
-            this.materialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialButton1.AutoSize = true;
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.BackColor = System.Drawing.Color.Maroon;
-            this.materialButton1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
-            this.materialButton1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
-            this.materialButton1.ControlSize = MaterialSkin.ControlSize.NORMAL;
-            this.materialButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.Icon = ((System.Drawing.Image)(resources.GetObject("materialButton1.Icon")));
-            this.materialButton1.IconType = MaterialSkin.IconType.ACCOUNT_CIRCLE;
-            this.materialButton1.IsSelected = false;
-            this.materialButton1.Location = new System.Drawing.Point(962, 9);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.Primary = true;
-            this.materialButton1.Size = new System.Drawing.Size(181, 40);
-            this.materialButton1.TabIndex = 0;
-            this.materialButton1.Text = "Change Theme";
-            this.materialButton1.UseFlatStyle = false;
-            this.materialButton1.UseVisualStyleBackColor = false;
-            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
             // materialTabSelector1
             // 
@@ -1910,15 +1883,15 @@ namespace MaterialSkinExample
             this.materialRaisedButton1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialRaisedButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Icon = null;
-            this.materialRaisedButton1.IconType = MaterialSkin.IconType.NONE;
+            this.materialRaisedButton1.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton1.Icon")));
+            this.materialRaisedButton1.IconType = MaterialSkin.IconType.COLOR_LENS;
             this.materialRaisedButton1.IsSelected = false;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(1151, 9);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(1119, 9);
             this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(211, 40);
+            this.materialRaisedButton1.Size = new System.Drawing.Size(243, 40);
             this.materialRaisedButton1.TabIndex = 21;
             this.materialRaisedButton1.Text = "Change color scheme";
             this.materialRaisedButton1.UseFlatStyle = false;
@@ -2013,7 +1986,7 @@ namespace MaterialSkinExample
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.materialRaisedButton1);
-            this.flowLayoutPanel1.Controls.Add(this.materialButton1);
+            this.flowLayoutPanel1.Controls.Add(this.materialSelectableButton2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 1);
@@ -2022,6 +1995,44 @@ namespace MaterialSkinExample
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1366, 64);
             this.flowLayoutPanel1.TabIndex = 17;
+            // 
+            // materialSelectableButton2
+            // 
+            this.materialSelectableButton2.Alignment = System.Drawing.StringAlignment.Center;
+            this.materialSelectableButton2.AutoSize = true;
+            this.materialSelectableButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialSelectableButton2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
+            this.materialSelectableButton2.Caption = "NIGHT MODE OFF";
+            this.materialSelectableButton2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialSelectableButton2.ControlSize = MaterialSkin.ControlSize.NORMAL;
+            this.materialSelectableButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialSelectableButton2.DataSource = ((object)(resources.GetObject("materialSelectableButton2.DataSource")));
+            this.materialSelectableButton2.Depth = 0;
+            this.materialSelectableButton2.DisplayMember = null;
+            this.materialSelectableButton2.HideCaption = false;
+            this.materialSelectableButton2.HideEmptyValue = true;
+            this.materialSelectableButton2.Icon = ((System.Drawing.Image)(resources.GetObject("materialSelectableButton2.Icon")));
+            this.materialSelectableButton2.IconType = MaterialSkin.IconType.BRIGHTNESS_6;
+            this.materialSelectableButton2.IsMultiSelect = false;
+            this.materialSelectableButton2.IsSelected = false;
+            this.materialSelectableButton2.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("materialSelectableButton2.Items")));
+            this.materialSelectableButton2.ItemSize = MaterialSkin.ControlSize.NORMAL;
+            this.materialSelectableButton2.Location = new System.Drawing.Point(912, 9);
+            this.materialSelectableButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialSelectableButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSelectableButton2.Name = "materialSelectableButton2";
+            this.materialSelectableButton2.Primary = true;
+            this.materialSelectableButton2.SelectedIndex = -1;
+            this.materialSelectableButton2.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("materialSelectableButton2.SelectedIndices")));
+            this.materialSelectableButton2.SelectedValue = null;
+            this.materialSelectableButton2.SelectorMode = MaterialSkin.Controls.ButtonSelectorMode.ROTARY;
+            this.materialSelectableButton2.Size = new System.Drawing.Size(199, 40);
+            this.materialSelectableButton2.TabIndex = 22;
+            this.materialSelectableButton2.Text = "NIGHT MODE OFF";
+            this.materialSelectableButton2.UseFlatStyle = false;
+            this.materialSelectableButton2.UseVisualStyleBackColor = true;
+            this.materialSelectableButton2.ValueMember = null;
+            this.materialSelectableButton2.Click += new System.EventHandler(this.materialSelectableButton2_Click);
             // 
             // MainForm
             // 
@@ -2092,8 +2103,6 @@ namespace MaterialSkinExample
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialDivider materialDivider1;
         private MaterialTabSelector materialTabSelector1;
         private MaterialTabControl materialTabControl1;
@@ -2189,5 +2198,6 @@ namespace MaterialSkinExample
         private MaterialSelectableButton btnDineInTakeAway;
         private MaterialSelectableButton materialSelectableButton1;
         private MaterialButton materialButton8;
+        private MaterialSelectableButton materialSelectableButton2;
     }
 }
