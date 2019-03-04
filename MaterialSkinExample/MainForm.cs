@@ -30,7 +30,7 @@ namespace MaterialSkinExample
             dataSrc1.Columns.Add("ItemName", typeof(string));
             dataSrc1.Columns.Add("ItemCategory", typeof(string));
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 15; i++)
             {
                 var newRow = dataSrc1.NewRow();
                 newRow["ItemID"] = i + 10;
@@ -55,6 +55,10 @@ namespace MaterialSkinExample
             dropDown2.SelectedValue = new object[] { 1, 2, 3 };
             dropDown3.SelectedIndex = 111;
 
+            btnSelectable1.DataSource = dataSrc1;
+            btnDineInTakeAway.DataSource = new string[] { "DINE IN", "TAKE AWAY", "DELIVERY" };
+            btnDineInTakeAway.SetItemColor(0, ColorType.GREEN);
+            btnDineInTakeAway.SetItemColor(1, ColorType.SUCCESS);
             foreach (IconType ico in Enum.GetValues(typeof(IconType)))
             {
                 var btn = new MaterialButton();
@@ -86,7 +90,6 @@ namespace MaterialSkinExample
             }
 
             gView.DataSource = dt;
-
             //Rectangle screen = Screen.PrimaryScreen.WorkingArea;
             //int w = Width >= screen.Width ? screen.Width : (screen.Width + Width) / 2;
             //int h = Height >= screen.Height ? screen.Height : (screen.Height + Height) / 2;
@@ -180,6 +183,17 @@ namespace MaterialSkinExample
         private void btnDlgError_Click(object sender, EventArgs e)
         {
             MaterialMessageBox.Show("This is error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void materialRaisedButton12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton8_Click(object sender, EventArgs e)
+        {
+            var res = MaterialMessageBox.ShowSelector("Delivery/Take Away", new List<object>{ "Delivery", "Take Away" }, out object selectedValue);
+            materialButton8.Text = selectedValue + "";
         }
     }
 }

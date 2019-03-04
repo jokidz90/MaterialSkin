@@ -6,7 +6,7 @@ using MaterialSkin.Controls;
 
 namespace MaterialSkin.Controls
 {
-    public partial class MaterialDropDownDialog : MaterialFormDialog
+    public partial class MaterialDropDownForm : MaterialFormDialog
     {
         public bool HideEmptyValue { set; get; }
         public string ValueMember { get; set; }
@@ -48,7 +48,7 @@ namespace MaterialSkin.Controls
         private readonly MaterialSkinManager materialSkinManager;
         private Guid _id = Guid.Empty;
 
-        public MaterialDropDownDialog()
+        public MaterialDropDownForm()
         {
             InitializeComponent();
             materialSkinManager = MaterialSkinManager.Instance;
@@ -79,7 +79,7 @@ namespace MaterialSkin.Controls
             {
                 if (!HideEmptyValue)
                 {
-                    var ctrlSelectNone = InitButton(-2, "", "");
+                    var ctrlSelectNone = InitButton(-2, "NONE", "");
                     flpMain.Controls.Add(ctrlSelectNone);
                     ctrlSelectNone.Dock = DockStyle.Top;
                     ctrlSelectNone.BringToFront();
@@ -119,7 +119,7 @@ namespace MaterialSkin.Controls
             ctrl.Text = text;
             ctrl.Tag = value;
             ctrl.UseFlatStyle = true;
-            ctrl.Alignment = System.Drawing.StringAlignment.Near;
+            ctrl.Alignment = System.Drawing.StringAlignment.Center;
             ctrl.Click += Ctrl_Click;
             ctrl.Dock = DockStyle.Top;
             ctrl.BringToFront();

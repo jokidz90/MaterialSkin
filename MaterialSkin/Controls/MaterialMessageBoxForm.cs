@@ -121,44 +121,89 @@ namespace MaterialSkin.Controls
     {
         public static DialogResult Show(string text)
         {
-            MaterialMessageBoxForm frm = new MaterialMessageBoxForm(text, "", MessageBoxButtons.OK, MessageBoxIcon.Information, ControlSize.NORMAL);
-            return frm.ShowFormDialog();
+            return Show(text, "", MessageBoxButtons.OK, MessageBoxIcon.None, ControlSize.NORMAL);
         }
 
         public static DialogResult Show(string text, string caption)
         {
-            MaterialMessageBoxForm frm = new MaterialMessageBoxForm(text, caption, MessageBoxButtons.OK, MessageBoxIcon.Information, ControlSize.NORMAL);
-            return frm.ShowFormDialog();
+            return Show(text, caption, MessageBoxButtons.OK, MessageBoxIcon.None, ControlSize.NORMAL);
         }
 
         public static DialogResult Show(string text, string caption, MessageBoxIcon icon)
         {
-            MaterialMessageBoxForm frm = new MaterialMessageBoxForm(text, caption, MessageBoxButtons.OK, icon, ControlSize.NORMAL);
-            return frm.ShowFormDialog();
+            return Show(text, caption, MessageBoxButtons.OK, icon, ControlSize.NORMAL);
         }
 
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons)
         {
-            MaterialMessageBoxForm frm = new MaterialMessageBoxForm(text, caption, buttons, MessageBoxIcon.Information, ControlSize.NORMAL);
-            return frm.ShowFormDialog();
+            return Show(text, caption, buttons, MessageBoxIcon.None, ControlSize.NORMAL);
         }
 
         public static DialogResult Show(string text, string caption, ControlSize size)
         {
-            MaterialMessageBoxForm frm = new MaterialMessageBoxForm(text, caption, MessageBoxButtons.OK, MessageBoxIcon.Information, size);
-            return frm.ShowFormDialog();
+            return Show(text, caption, MessageBoxButtons.OK, MessageBoxIcon.None, size);
         }
 
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon)
         {
-            MaterialMessageBoxForm frm = new MaterialMessageBoxForm(text, caption, buttons, icon, ControlSize.NORMAL);
-            return frm.ShowFormDialog();
+            return Show(text, caption, buttons, icon, ControlSize.NORMAL);
         }
 
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, ControlSize size)
         {
             MaterialMessageBoxForm frm = new MaterialMessageBoxForm(text, caption, buttons, icon, size);
             return frm.ShowFormDialog();
+        }
+
+        public static DialogResult ShowSelector(string caption, List<object> items, out object selectedValue)
+        {
+            return ShowSelector(caption, items, "", "", false, false, ControlSize.NORMAL, false, out selectedValue);
+        }
+
+        public static DialogResult ShowSelector(string caption, List<object> items, ControlSize itemSize, out object selectedValue)
+        {
+            return ShowSelector(caption, items, "", "", false, false, itemSize, false, out selectedValue);
+        }
+
+        public static DialogResult ShowSelector(string caption, List<object> items, string valueMember, string displayMember, out object selectedValue)
+        {
+            return ShowSelector(caption, items, valueMember, displayMember, false, false, ControlSize.NORMAL, false, out selectedValue);
+        }
+
+        public static DialogResult ShowSelector(string caption, List<object> items, string valueMember, string displayMember, bool isMultiSelect, bool hideEmptyValue, ControlSize itemSize, bool useFlatStyle, out object selectedValue)
+        {
+            selectedValue = null;
+            var frm = new MaterialSelectableButtonForm();
+            frm.HideEmptyValue = hideEmptyValue;
+            frm.Caption = caption;
+            frm.ItemSize = itemSize;
+            frm.ValueMember = valueMember;
+            frm.DisplayMember = displayMember;
+            frm.Items = items;
+            frm.IsMultiSelect = isMultiSelect;
+            frm.UseFlatStyle = useFlatStyle;
+            frm.Size = MaterialSelectableButton.CalculatePopUpSize(itemSize, items.Count, isMultiSelect, hideEmptyValue, string.IsNullOrWhiteSpace(caption), out int itemHeight, out int itemWidth);
+            frm.ItemHeight = itemHeight;
+            frm.ItemWidth = itemWidth;
+            var res = frm.ShowFormDialog();
+            if (res == DialogResult.OK)
+            {
+                var selIndices = frm.SelectedIndices;
+
+                List<object> selecteds = new List<object>();
+                for (int i = 0; i < items.Count; i++)
+                {
+                    if (!selIndices.Contains(i))
+                        continue;
+
+                    selecteds.Add(items[i].GetProperty(valueMember));
+                }
+
+                selectedValue = selecteds;
+                if (!isMultiSelect)
+                    selectedValue = selecteds.FirstOrDefault();
+            }
+            return res;
         }
     }
 }

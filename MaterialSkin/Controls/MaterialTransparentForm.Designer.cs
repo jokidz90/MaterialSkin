@@ -38,7 +38,7 @@
             this.ClientSize = new System.Drawing.Size(411, 351);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTransparent";
-            this.Opacity = 0.5;
+            this.Opacity = 0.4;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

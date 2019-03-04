@@ -48,7 +48,7 @@ namespace MaterialSkin.Controls
         public void Focus() { _baseTextBox.Focus(); }
 
         private int _dropDownArrowWidth = 20;
-        private MaterialDropDownDialog _frmItemSelector = null;
+        private MaterialDropDownForm _frmItemSelector = null;
 
         #region DropDown Properties
 
@@ -1354,7 +1354,7 @@ namespace MaterialSkin.Controls
             foreach (var item in _selectedIndices)
                 _prevSelectedIndices.Add(item);
 
-            _frmItemSelector = new MaterialDropDownDialog();
+            _frmItemSelector = new MaterialDropDownForm();
             _frmItemSelector.HideEmptyValue = HideEmptyValue;
             _frmItemSelector.ValueMember = ValueMember;
             _frmItemSelector.DisplayMember = DisplayMember;

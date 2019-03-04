@@ -12,9 +12,12 @@ namespace MaterialSkin.Controls
 {
     public partial class MaterialTransparentForm : Form
     {
+        [Browsable(false)]
+        public MaterialSkinManager SkinManager => MaterialSkinManager.Instance;
         public MaterialTransparentForm()
         {
             InitializeComponent();
+            //this.BackColor = SkinManager.ColorScheme.LightPrimaryColor;
         }
     }
 }

@@ -45,6 +45,15 @@
     <Compile Include="Animations\AnimationManager.cs" />
     <Compile Include="Animations\Animations.cs" />
     <Compile Include="ColorScheme.cs" />
+    <Compile Include="Controls\MaterialSelectableButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialSelectableButtonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialSelectableButtonForm.Designer.cs">
+      <DependentUpon>MaterialSelectableButtonForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MaterialTransparentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +94,11 @@
     <Compile Include="Controls\MaterialDatePicker.Designer.cs">
       <DependentUpon>MaterialDatePicker.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MaterialDropDownDialog.cs">
+    <Compile Include="Controls\MaterialDropDownForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\MaterialDropDownDialog.Designer.cs">
-      <DependentUpon>MaterialDropDownDialog.cs</DependentUpon>
+    <Compile Include="Controls\MaterialDropDownForm.Designer.cs">
+      <DependentUpon>MaterialDropDownForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\MaterialContextMenuStrip.cs">
       <SubType>Component</SubType>
@@ -192,11 +201,14 @@
     <EmbeddedResource Include="Controls\MaterialDatePickerForm.resx">
       <DependentUpon>MaterialDatePickerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\MaterialDropDownDialog.resx">
-      <DependentUpon>MaterialDropDownDialog.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\MaterialDropDownForm.resx">
+      <DependentUpon>MaterialDropDownForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MaterialMessageBoxForm.resx">
       <DependentUpon>MaterialMessageBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MaterialSelectableButtonForm.resx">
+      <DependentUpon>MaterialSelectableButtonForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

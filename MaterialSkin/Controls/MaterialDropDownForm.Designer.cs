@@ -1,6 +1,6 @@
 ﻿namespace MaterialSkin.Controls
 {
-    partial class MaterialDropDownDialog
+    partial class MaterialDropDownForm
     {
         /// <summary>
         /// Required designer variable.

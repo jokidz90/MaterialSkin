@@ -61,7 +61,7 @@ namespace MaterialSkin.Controls
         private readonly AnimationManager _animationManager;
         private readonly AnimationManager _hoverAnimationManager;
 
-        private SizeF _textSize;
+        protected SizeF TextSize;
 
         private bool? _isSelected = false;
         public bool? IsSelected
@@ -132,14 +132,6 @@ namespace MaterialSkin.Controls
                     _extraSpace = 72;
                     _padding = 10;
                 }
-                //else if (_controlSize == ControlSize.EXTRA_LARGE)
-                //{
-                //    _font = SkinManager.ROBOTO_MEDIUM_18;
-                //    _iconSize = 44;
-                //    _defaultHeight = 86;
-                //    _extraSpace = 86;
-                //    _padding = 14;
-                //}
                 else
                 {
                     _font = SkinManager.ROBOTO_MEDIUM_11;
@@ -194,7 +186,7 @@ namespace MaterialSkin.Controls
             set
             {
                 base.Text = value;
-                _textSize = CreateGraphics().MeasureString(value.ToUpper(), SkinManager.ROBOTO_MEDIUM_10);
+                TextSize = CreateGraphics().MeasureString(value.ToUpper(), SkinManager.ROBOTO_MEDIUM_11);
                 if (AutoSize)
                     Size = GetPreferredSize();
                 Invalidate();
@@ -333,7 +325,7 @@ namespace MaterialSkin.Controls
             g.DrawString(Text.ToUpper(), _font, frontBrush, textRect, new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
         }
 
-        private Size GetPreferredSize()
+        protected Size GetPreferredSize()
         {
             return GetPreferredSize(new Size(0, 0));
         }
@@ -345,7 +337,7 @@ namespace MaterialSkin.Controls
 
             if (!string.IsNullOrEmpty(Text))
             {
-                defaultWidth = (int)Math.Ceiling(_textSize.Width) + _extraSpace;
+                defaultWidth = (int)Math.Ceiling(TextSize.Width) + _extraSpace;
                 if (Icon != null)
                 {
                     var iconY = (_defaultHeight - _iconSize) / 2;
