@@ -54,6 +54,25 @@ namespace MaterialSkin.Controls
         public void Clear() { _baseTextBox.Clear(); }
         public void Focus() { _baseTextBox.Focus(); }
 
+        private ControlSize _controlSize = ControlSize.NORMAL;
+        public ControlSize ControlSize
+        {
+            set
+            {
+                _controlSize = value;
+                if (_controlSize == ControlSize.SMALL)
+                    _baseTextBox.Font = SkinManager.ROBOTO_MEDIUM_8;
+                else if (_controlSize == ControlSize.LARGE)
+                    _baseTextBox.Font = SkinManager.ROBOTO_MEDIUM_16;
+                else
+                    _baseTextBox.Font = SkinManager.ROBOTO_MEDIUM_11;
+                this.Invalidate();
+            }
+            get
+            {
+                return _controlSize;
+            }
+        }
 
         # region Forwarding events to baseTextBox
         public event EventHandler AcceptsTabChanged

@@ -37,7 +37,6 @@
             this.btnOK = new MaterialSkin.Controls.MaterialButton();
             this.materialPanel1 = new MaterialSkin.Controls.MaterialPanel();
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSign = new MaterialSkin.Controls.MaterialButton();
             this.btn1 = new MaterialSkin.Controls.MaterialButton();
             this.btn2 = new MaterialSkin.Controls.MaterialButton();
             this.btn3 = new MaterialSkin.Controls.MaterialButton();
@@ -52,10 +51,11 @@
             this.btnSubtract = new MaterialSkin.Controls.MaterialButton();
             this.btnAdd = new MaterialSkin.Controls.MaterialButton();
             this.btnEqual = new MaterialSkin.Controls.MaterialButton();
-            this.btnDot = new MaterialSkin.Controls.MaterialButton();
             this.btn0 = new MaterialSkin.Controls.MaterialButton();
             this.btn5 = new MaterialSkin.Controls.MaterialButton();
             this.btnClear = new MaterialSkin.Controls.MaterialButton();
+            this.btnDot = new MaterialSkin.Controls.MaterialButton();
+            this.btnSign = new MaterialSkin.Controls.MaterialButton();
             this.materialPanel2 = new MaterialSkin.Controls.MaterialPanel();
             this.txtNumber = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pnlFooter.SuspendLayout();
@@ -230,8 +230,8 @@
             this.tblMain.Controls.Add(this.btn0, 1, 4);
             this.tblMain.Controls.Add(this.btn5, 1, 2);
             this.tblMain.Controls.Add(this.btnClear, 0, 0);
-            this.tblMain.Controls.Add(this.btnDot, 0, 4);
-            this.tblMain.Controls.Add(this.btnSign, 2, 4);
+            this.tblMain.Controls.Add(this.btnSign, 0, 4);
+            this.tblMain.Controls.Add(this.btnDot, 2, 4);
             this.tblMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblMain.Location = new System.Drawing.Point(5, 5);
             this.tblMain.Margin = new System.Windows.Forms.Padding(0);
@@ -245,34 +245,6 @@
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblMain.Size = new System.Drawing.Size(291, 289);
             this.tblMain.TabIndex = 0;
-            // 
-            // btnSign
-            // 
-            this.btnSign.Alignment = System.Drawing.StringAlignment.Center;
-            this.btnSign.AutoSize = true;
-            this.btnSign.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSign.BorderColorType = MaterialSkin.ColorType.PRIMARY;
-            this.btnSign.ColorStyle = MaterialSkin.ColorType.PRIMARY;
-            this.btnSign.ControlSize = MaterialSkin.ControlSize.LARGE;
-            this.btnSign.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSign.Depth = 0;
-            this.btnSign.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSign.Icon = null;
-            this.btnSign.IconType = MaterialSkin.IconType.NONE;
-            this.btnSign.IsSelected = false;
-            this.btnSign.Location = new System.Drawing.Point(144, 228);
-            this.btnSign.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
-            this.btnSign.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSign.Name = "btnSign";
-            this.btnSign.Primary = true;
-            this.btnSign.Size = new System.Drawing.Size(69, 58);
-            this.btnSign.TabIndex = 18;
-            this.btnSign.TabStop = false;
-            this.btnSign.Tag = "±";
-            this.btnSign.Text = "±";
-            this.btnSign.UseFlatStyle = true;
-            this.btnSign.UseVisualStyleBackColor = true;
-            this.btnSign.Click += new System.EventHandler(this.btnSign_Click);
             // 
             // btn1
             // 
@@ -513,11 +485,11 @@
             this.btnBackspace.IconType = MaterialSkin.IconType.ARROW_BACK;
             this.btnBackspace.IsSelected = false;
             this.btnBackspace.Location = new System.Drawing.Point(144, 0);
-            this.btnBackspace.Margin = new System.Windows.Forms.Padding(0, 0, 5, 3);
+            this.btnBackspace.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
             this.btnBackspace.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBackspace.Name = "btnBackspace";
             this.btnBackspace.Primary = true;
-            this.btnBackspace.Size = new System.Drawing.Size(67, 54);
+            this.btnBackspace.Size = new System.Drawing.Size(69, 54);
             this.btnBackspace.TabIndex = 14;
             this.btnBackspace.TabStop = false;
             this.btnBackspace.Tag = "-";
@@ -665,34 +637,6 @@
             this.btnEqual.UseVisualStyleBackColor = true;
             this.btnEqual.Click += new System.EventHandler(this.btnEqual_Click);
             // 
-            // btnDot
-            // 
-            this.btnDot.Alignment = System.Drawing.StringAlignment.Center;
-            this.btnDot.AutoSize = true;
-            this.btnDot.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDot.BorderColorType = MaterialSkin.ColorType.PRIMARY;
-            this.btnDot.ColorStyle = MaterialSkin.ColorType.PRIMARY;
-            this.btnDot.ControlSize = MaterialSkin.ControlSize.LARGE;
-            this.btnDot.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDot.Depth = 0;
-            this.btnDot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDot.Icon = null;
-            this.btnDot.IconType = MaterialSkin.IconType.NONE;
-            this.btnDot.IsSelected = false;
-            this.btnDot.Location = new System.Drawing.Point(0, 228);
-            this.btnDot.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
-            this.btnDot.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDot.Name = "btnDot";
-            this.btnDot.Primary = true;
-            this.btnDot.Size = new System.Drawing.Size(69, 58);
-            this.btnDot.TabIndex = 16;
-            this.btnDot.TabStop = false;
-            this.btnDot.Tag = ".";
-            this.btnDot.Text = ".";
-            this.btnDot.UseFlatStyle = true;
-            this.btnDot.UseVisualStyleBackColor = true;
-            this.btnDot.Click += new System.EventHandler(this.btnDot_Click);
-            // 
             // btn0
             // 
             this.btn0.Alignment = System.Drawing.StringAlignment.Center;
@@ -765,11 +709,11 @@
             this.btnClear.IconType = MaterialSkin.IconType.NONE;
             this.btnClear.IsSelected = false;
             this.btnClear.Location = new System.Drawing.Point(0, 0);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(0, 0, 5, 3);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
             this.btnClear.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnClear.Name = "btnClear";
             this.btnClear.Primary = true;
-            this.btnClear.Size = new System.Drawing.Size(139, 54);
+            this.btnClear.Size = new System.Drawing.Size(141, 54);
             this.btnClear.TabIndex = 19;
             this.btnClear.TabStop = false;
             this.btnClear.Tag = "CLEAR";
@@ -777,6 +721,62 @@
             this.btnClear.UseFlatStyle = true;
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnDot
+            // 
+            this.btnDot.Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDot.AutoSize = true;
+            this.btnDot.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDot.BorderColorType = MaterialSkin.ColorType.PRIMARY;
+            this.btnDot.ColorStyle = MaterialSkin.ColorType.PRIMARY;
+            this.btnDot.ControlSize = MaterialSkin.ControlSize.LARGE;
+            this.btnDot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDot.Depth = 0;
+            this.btnDot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDot.Icon = null;
+            this.btnDot.IconType = MaterialSkin.IconType.NONE;
+            this.btnDot.IsSelected = false;
+            this.btnDot.Location = new System.Drawing.Point(144, 228);
+            this.btnDot.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.btnDot.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDot.Name = "btnDot";
+            this.btnDot.Primary = true;
+            this.btnDot.Size = new System.Drawing.Size(69, 58);
+            this.btnDot.TabIndex = 16;
+            this.btnDot.TabStop = false;
+            this.btnDot.Tag = ".";
+            this.btnDot.Text = ".";
+            this.btnDot.UseFlatStyle = true;
+            this.btnDot.UseVisualStyleBackColor = true;
+            this.btnDot.Click += new System.EventHandler(this.btnDot_Click);
+            // 
+            // btnSign
+            // 
+            this.btnSign.Alignment = System.Drawing.StringAlignment.Center;
+            this.btnSign.AutoSize = true;
+            this.btnSign.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSign.BorderColorType = MaterialSkin.ColorType.PRIMARY;
+            this.btnSign.ColorStyle = MaterialSkin.ColorType.PRIMARY;
+            this.btnSign.ControlSize = MaterialSkin.ControlSize.LARGE;
+            this.btnSign.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSign.Depth = 0;
+            this.btnSign.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSign.Icon = null;
+            this.btnSign.IconType = MaterialSkin.IconType.NONE;
+            this.btnSign.IsSelected = false;
+            this.btnSign.Location = new System.Drawing.Point(0, 228);
+            this.btnSign.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.btnSign.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSign.Name = "btnSign";
+            this.btnSign.Primary = true;
+            this.btnSign.Size = new System.Drawing.Size(69, 58);
+            this.btnSign.TabIndex = 18;
+            this.btnSign.TabStop = false;
+            this.btnSign.Tag = "±";
+            this.btnSign.Text = "±";
+            this.btnSign.UseFlatStyle = true;
+            this.btnSign.UseVisualStyleBackColor = true;
+            this.btnSign.Click += new System.EventHandler(this.btnSign_Click);
             // 
             // materialPanel2
             // 
@@ -790,7 +790,7 @@
             this.materialPanel2.Location = new System.Drawing.Point(2, 40);
             this.materialPanel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel2.Name = "materialPanel2";
-            this.materialPanel2.Padding = new System.Windows.Forms.Padding(5, 20, 5, 10);
+            this.materialPanel2.Padding = new System.Windows.Forms.Padding(8, 20, 8, 10);
             this.materialPanel2.Size = new System.Drawing.Size(296, 64);
             this.materialPanel2.TabIndex = 0;
             // 
@@ -801,7 +801,7 @@
             this.txtNumber.Depth = 0;
             this.txtNumber.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNumber.Hint = null;
-            this.txtNumber.Location = new System.Drawing.Point(5, 20);
+            this.txtNumber.Location = new System.Drawing.Point(8, 20);
             this.txtNumber.MaxLength = 32767;
             this.txtNumber.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtNumber.Name = "txtNumber";
@@ -810,7 +810,7 @@
             this.txtNumber.SelectedText = "";
             this.txtNumber.SelectionLength = 0;
             this.txtNumber.SelectionStart = 0;
-            this.txtNumber.Size = new System.Drawing.Size(286, 31);
+            this.txtNumber.Size = new System.Drawing.Size(280, 31);
             this.txtNumber.TabIndex = 0;
             this.txtNumber.TabStop = false;
             this.txtNumber.Text = "1234";

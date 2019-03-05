@@ -208,7 +208,7 @@ namespace MaterialSkinExample
         {
             //var res = MaterialMessageBox.ShowSelector("Delivery/Take Away", new List<object>{ "Delivery", "Take Away" }, out object selectedValue);
             //materialButton8.Text = selectedValue + "";
-            var res = MaterialMessageBox.ShowNumericSelector("ENTER PRICE", materialButton8.Text.GetDecimalValue(), false, out decimal price);
+            var res = MaterialMessageBox.ShowNumericSelector("ENTER PRICE", materialButton8.Text.GetDecimalValue(), true, out decimal price);
             materialButton8.Text = price + "";
         }
 
@@ -219,7 +219,7 @@ namespace MaterialSkinExample
 
         private void materialButton1_Click_1(object sender, EventArgs e)
         {
-            var res = MaterialMessageBox.ShowIntegerSelector("ENTER QTY", materialButton1.Text.GetInt32Value(), false, out int qty);
+            var res = MaterialMessageBox.ShowIntegerSelector("ENTER QTY", materialButton1.Text.GetInt32Value(), true, out int qty);
             materialButton1.Text = qty + "";
         }
 
