@@ -12,6 +12,9 @@ namespace MaterialSkin.Controls
 {
     public partial class MaterialMessageBoxNumericForm : MaterialFormDialog
     {
+        [Browsable(false)]
+        public MaterialSkinManager SkinManager => MaterialSkinManager.Instance;
+
         public decimal Value
         {
             get
@@ -55,6 +58,42 @@ namespace MaterialSkin.Controls
             txtNumber.Text = initialValue.ToString();
             if (initialValue == 0)
                 txtNumber.Text = "0";
+            btn0.ColorStyle = SkinManager.ColorStyle;
+            btn0.BorderColorType = SkinManager.ColorStyle;
+            btn1.ColorStyle = SkinManager.ColorStyle;
+            btn1.BorderColorType = SkinManager.ColorStyle;
+            btn2.ColorStyle = SkinManager.ColorStyle;
+            btn2.BorderColorType = SkinManager.ColorStyle;
+            btn3.ColorStyle = SkinManager.ColorStyle;
+            btn3.BorderColorType = SkinManager.ColorStyle;
+            btn4.ColorStyle = SkinManager.ColorStyle;
+            btn4.BorderColorType = SkinManager.ColorStyle;
+            btn5.ColorStyle = SkinManager.ColorStyle;
+            btn5.BorderColorType = SkinManager.ColorStyle;
+            btn6.ColorStyle = SkinManager.ColorStyle;
+            btn6.BorderColorType = SkinManager.ColorStyle;
+            btn7.ColorStyle = SkinManager.ColorStyle;
+            btn7.BorderColorType = SkinManager.ColorStyle;
+            btn8.ColorStyle = SkinManager.ColorStyle;
+            btn8.BorderColorType = SkinManager.ColorStyle;
+            btn9.ColorStyle = SkinManager.ColorStyle;
+            btn9.BorderColorType = SkinManager.ColorStyle;
+            btnBackspace.ColorStyle = SkinManager.ColorStyle;
+            btnBackspace.BorderColorType = SkinManager.ColorStyle;
+            btnSign.ColorStyle = SkinManager.ColorStyle;
+            btnSign.BorderColorType = SkinManager.ColorStyle;
+            btnDiv.ColorStyle = SkinManager.ColorStyle;
+            btnDiv.BorderColorType = SkinManager.ColorStyle;
+            btnMultiply.ColorStyle = SkinManager.ColorStyle;
+            btnMultiply.BorderColorType = SkinManager.ColorStyle;
+            btnSubtract.ColorStyle = SkinManager.ColorStyle;
+            btnSubtract.BorderColorType = SkinManager.ColorStyle;
+            btnAdd.ColorStyle = SkinManager.ColorStyle;
+            btnAdd.BorderColorType = SkinManager.ColorStyle;
+            btnEqual.ColorStyle = SkinManager.ColorStyle;
+            btnEqual.BorderColorType = SkinManager.ColorStyle;
+            btnDot.ColorStyle = SkinManager.ColorStyle;
+            btnDot.BorderColorType = SkinManager.ColorStyle;
         }
 
         private void btnOKCANCEL_Click(object sender, EventArgs e)

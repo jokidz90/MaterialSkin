@@ -37,10 +37,21 @@ namespace MaterialSkin
         public ColorScheme ColorScheme
         {
             get { return _colorScheme; }
-            set
+            private set
             {
                 _colorScheme = value;
                 UpdateBackgrounds();
+            }
+        }
+
+        private ColorType _colorType = ColorType.PRIMARY;
+        public ColorType ColorStyle
+        {
+            get { return _colorType; }
+            set
+            {
+                _colorType = value;
+                ColorScheme = ColorScheme.ColorSwatches[_colorType];
             }
         }
 

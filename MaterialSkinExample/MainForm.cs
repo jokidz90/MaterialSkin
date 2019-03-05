@@ -21,7 +21,7 @@ namespace MaterialSkinExample
             materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
 			materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = ColorScheme.ColorSwatches[ColorType.PRIMARY];
+            materialSkinManager.ColorStyle = ColorType.PRIMARY;
 
             var dataSrc1 = new DataTable();
             var dataSrc2 = new List<object>();
@@ -124,7 +124,7 @@ namespace MaterialSkinExample
 	        colorSchemeIndex++;
 	        if (colorSchemeIndex >= ColorScheme.ColorSwatches.Count)
                 colorSchemeIndex = 0;
-            materialSkinManager.ColorScheme = ColorScheme.ColorSwatches[((ColorType)colorSchemeIndex)];
+            materialSkinManager.ColorStyle = ((ColorType)colorSchemeIndex);
         }
 
         private void materialCheckBox7_Click(object sender, EventArgs e)

@@ -12,6 +12,9 @@ namespace MaterialSkin.Controls
 {
     public partial class MaterialMessageBoxIntegerForm : MaterialFormDialog
     {
+        [Browsable(false)]
+        public MaterialSkinManager SkinManager => MaterialSkinManager.Instance;
+
         public int Value
         {
             get
@@ -21,6 +24,7 @@ namespace MaterialSkin.Controls
                 return val;
             }
         }
+
         private bool _allowNegativeNumber = true;
 
         public MaterialMessageBoxIntegerForm(string caption, int initialValue, bool allowNegativeNumber)
@@ -38,6 +42,30 @@ namespace MaterialSkin.Controls
             txtNumber.Text = initialValue.ToString();
             if (initialValue == 0)
                 txtNumber.Text = "0";
+            btn0.ColorStyle = SkinManager.ColorStyle;
+            btn0.BorderColorType = SkinManager.ColorStyle;
+            btn1.ColorStyle = SkinManager.ColorStyle;
+            btn1.BorderColorType = SkinManager.ColorStyle;
+            btn2.ColorStyle = SkinManager.ColorStyle;
+            btn2.BorderColorType = SkinManager.ColorStyle;
+            btn3.ColorStyle = SkinManager.ColorStyle;
+            btn3.BorderColorType = SkinManager.ColorStyle;
+            btn4.ColorStyle = SkinManager.ColorStyle;
+            btn4.BorderColorType = SkinManager.ColorStyle;
+            btn5.ColorStyle = SkinManager.ColorStyle;
+            btn5.BorderColorType = SkinManager.ColorStyle;
+            btn6.ColorStyle = SkinManager.ColorStyle;
+            btn6.BorderColorType = SkinManager.ColorStyle;
+            btn7.ColorStyle = SkinManager.ColorStyle;
+            btn7.BorderColorType = SkinManager.ColorStyle;
+            btn8.ColorStyle = SkinManager.ColorStyle;
+            btn8.BorderColorType = SkinManager.ColorStyle;
+            btn9.ColorStyle = SkinManager.ColorStyle;
+            btn9.BorderColorType = SkinManager.ColorStyle;
+            btnBackspace.ColorStyle = SkinManager.ColorStyle;
+            btnBackspace.BorderColorType = SkinManager.ColorStyle;
+            btnSign.ColorStyle = SkinManager.ColorStyle;
+            btnSign.BorderColorType = SkinManager.ColorStyle;
         }
 
         private void btnOKCANCEL_Click(object sender, EventArgs e)

@@ -54,8 +54,8 @@
             this.btn0 = new MaterialSkin.Controls.MaterialButton();
             this.btn5 = new MaterialSkin.Controls.MaterialButton();
             this.btnClear = new MaterialSkin.Controls.MaterialButton();
-            this.btnDot = new MaterialSkin.Controls.MaterialButton();
             this.btnSign = new MaterialSkin.Controls.MaterialButton();
+            this.btnDot = new MaterialSkin.Controls.MaterialButton();
             this.materialPanel2 = new MaterialSkin.Controls.MaterialPanel();
             this.txtNumber = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pnlFooter.SuspendLayout();
@@ -722,34 +722,6 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // btnDot
-            // 
-            this.btnDot.Alignment = System.Drawing.StringAlignment.Center;
-            this.btnDot.AutoSize = true;
-            this.btnDot.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDot.BorderColorType = MaterialSkin.ColorType.PRIMARY;
-            this.btnDot.ColorStyle = MaterialSkin.ColorType.PRIMARY;
-            this.btnDot.ControlSize = MaterialSkin.ControlSize.LARGE;
-            this.btnDot.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDot.Depth = 0;
-            this.btnDot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDot.Icon = null;
-            this.btnDot.IconType = MaterialSkin.IconType.NONE;
-            this.btnDot.IsSelected = false;
-            this.btnDot.Location = new System.Drawing.Point(144, 228);
-            this.btnDot.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
-            this.btnDot.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDot.Name = "btnDot";
-            this.btnDot.Primary = true;
-            this.btnDot.Size = new System.Drawing.Size(69, 58);
-            this.btnDot.TabIndex = 16;
-            this.btnDot.TabStop = false;
-            this.btnDot.Tag = ".";
-            this.btnDot.Text = ".";
-            this.btnDot.UseFlatStyle = true;
-            this.btnDot.UseVisualStyleBackColor = true;
-            this.btnDot.Click += new System.EventHandler(this.btnDot_Click);
-            // 
             // btnSign
             // 
             this.btnSign.Alignment = System.Drawing.StringAlignment.Center;
@@ -777,6 +749,34 @@
             this.btnSign.UseFlatStyle = true;
             this.btnSign.UseVisualStyleBackColor = true;
             this.btnSign.Click += new System.EventHandler(this.btnSign_Click);
+            // 
+            // btnDot
+            // 
+            this.btnDot.Alignment = System.Drawing.StringAlignment.Center;
+            this.btnDot.AutoSize = true;
+            this.btnDot.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDot.BorderColorType = MaterialSkin.ColorType.PRIMARY;
+            this.btnDot.ColorStyle = MaterialSkin.ColorType.PRIMARY;
+            this.btnDot.ControlSize = MaterialSkin.ControlSize.LARGE;
+            this.btnDot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDot.Depth = 0;
+            this.btnDot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDot.Icon = null;
+            this.btnDot.IconType = MaterialSkin.IconType.NONE;
+            this.btnDot.IsSelected = false;
+            this.btnDot.Location = new System.Drawing.Point(144, 228);
+            this.btnDot.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.btnDot.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDot.Name = "btnDot";
+            this.btnDot.Primary = true;
+            this.btnDot.Size = new System.Drawing.Size(69, 58);
+            this.btnDot.TabIndex = 16;
+            this.btnDot.TabStop = false;
+            this.btnDot.Tag = ".";
+            this.btnDot.Text = ".";
+            this.btnDot.UseFlatStyle = true;
+            this.btnDot.UseVisualStyleBackColor = true;
+            this.btnDot.Click += new System.EventHandler(this.btnDot_Click);
             // 
             // materialPanel2
             // 
