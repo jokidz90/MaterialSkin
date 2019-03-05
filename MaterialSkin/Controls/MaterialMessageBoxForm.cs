@@ -205,5 +205,60 @@ namespace MaterialSkin.Controls
             }
             return res;
         }
+
+        public static DialogResult ShowNumericSelector(string caption, decimal initialValue, out decimal value)
+        {
+            return ShowNumericSelector(caption, initialValue, 2, true, out value);
+        }
+
+        public static DialogResult ShowNumericSelector(string caption, decimal initialValue, int precision, out decimal value)
+        {
+            return ShowNumericSelector(caption, initialValue, precision, true, out value);
+        }
+
+        public static DialogResult ShowNumericSelector(string caption, decimal initialValue, bool allowNegative, out decimal value)
+        {
+            return ShowNumericSelector(caption, initialValue, 2, allowNegative, out value);
+        }
+
+        public static DialogResult ShowNumericSelector(string caption, decimal initialValue, int precision, bool allowNegative, out decimal value)
+        {
+            value = initialValue;
+            MaterialMessageBoxNumericForm frm = new MaterialMessageBoxNumericForm(caption, initialValue, precision, allowNegative);
+            var res = frm.ShowFormDialog();
+            if (res == DialogResult.OK)
+                value = frm.Value;
+            return res;
+        }
+
+        public static DialogResult ShowIntegerSelector(string caption, int initialValue, out int value)
+        {
+            return ShowIntegerSelector(caption, initialValue, true, out value);
+        }
+
+        public static DialogResult ShowIntegerSelector(string caption, int initialValue, bool allowNegative, out int value)
+        {
+            value = initialValue;
+            MaterialMessageBoxIntegerForm frm = new MaterialMessageBoxIntegerForm(caption, initialValue, allowNegative);
+            var res = frm.ShowFormDialog();
+            if (res == DialogResult.OK)
+                value = frm.Value;
+            return res;
+        }
+
+        public static DialogResult ShowTextSelector(string caption, string initialValue, out string value)
+        {
+            return ShowTextSelector(caption, initialValue, false, out value);
+        }
+
+        public static DialogResult ShowTextSelector(string caption, string initialValue, bool isMulitline, out string value)
+        {
+            value = initialValue;
+            MaterialMessageBoxTextForm frm = new MaterialMessageBoxTextForm(caption, initialValue, isMulitline);
+            var res = frm.ShowFormDialog();
+            if (res == DialogResult.OK)
+                value = frm.Value;
+            return res;
+        }
     }
 }

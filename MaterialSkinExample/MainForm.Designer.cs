@@ -34,9 +34,9 @@ namespace MaterialSkinExample
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
@@ -121,6 +121,7 @@ namespace MaterialSkinExample
             this.btnDlgWarning = new MaterialSkin.Controls.MaterialButton();
             this.btnDlgError = new MaterialSkin.Controls.MaterialButton();
             this.materialButton8 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialContextMenuStrip1 = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.item1ToolStripMenuItem = new MaterialSkin.Controls.MaterialToolStripMenuItem();
@@ -133,6 +134,7 @@ namespace MaterialSkinExample
             this.materialPanel1 = new MaterialSkin.Controls.MaterialPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.materialSelectableButton2 = new MaterialSkin.Controls.MaterialSelectableButton();
+            this.materialButton9 = new MaterialSkin.Controls.MaterialButton();
             this.materialTabControl1.SuspendLayout();
             this.tpControls.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -764,6 +766,7 @@ namespace MaterialSkinExample
             // materialSingleLineTextField1
             // 
             this.materialSingleLineTextField1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialSingleLineTextField1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialSingleLineTextField1.Depth = 0;
             this.materialSingleLineTextField1.Dock = System.Windows.Forms.DockStyle.Top;
             this.materialSingleLineTextField1.ForeColor = System.Drawing.Color.Gray;
@@ -803,6 +806,7 @@ namespace MaterialSkinExample
             // materialSingleLineTextField4
             // 
             this.materialSingleLineTextField4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialSingleLineTextField4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialSingleLineTextField4.Depth = 0;
             this.materialSingleLineTextField4.Dock = System.Windows.Forms.DockStyle.Top;
             this.materialSingleLineTextField4.ForeColor = System.Drawing.Color.Gray;
@@ -866,15 +870,15 @@ namespace MaterialSkinExample
             this.gView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gView.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.gView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(128)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 11F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(12);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(184)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(128)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto", 11F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(12);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(184)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.gView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.No,
@@ -882,15 +886,15 @@ namespace MaterialSkinExample
             this.Qty,
             this.Price,
             this.Amount});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(12, 7, 12, 7);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(184)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto", 11F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(12, 7, 12, 7);
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(184)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gView.DefaultCellStyle = dataGridViewCellStyle8;
             this.gView.Depth = 0;
             this.gView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gView.EnableHeadersVisualStyles = false;
@@ -901,14 +905,14 @@ namespace MaterialSkinExample
             this.gView.Name = "gView";
             this.gView.ReadOnly = true;
             this.gView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(128)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 11F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(184)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(128)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 11F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(184)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.gView.RowHeadersVisible = false;
             this.gView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1715,6 +1719,8 @@ namespace MaterialSkinExample
             this.flowLayoutPanel5.Controls.Add(this.btnDlgWarning);
             this.flowLayoutPanel5.Controls.Add(this.btnDlgError);
             this.flowLayoutPanel5.Controls.Add(this.materialButton8);
+            this.flowLayoutPanel5.Controls.Add(this.materialButton1);
+            this.flowLayoutPanel5.Controls.Add(this.materialButton9);
             this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(2, 2);
             this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
@@ -1865,12 +1871,37 @@ namespace MaterialSkinExample
             this.materialButton8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton8.Name = "materialButton8";
             this.materialButton8.Primary = true;
-            this.materialButton8.Size = new System.Drawing.Size(199, 40);
+            this.materialButton8.Size = new System.Drawing.Size(127, 40);
             this.materialButton8.TabIndex = 6;
-            this.materialButton8.Text = "DELIVERY / TAKE AWAY";
+            this.materialButton8.Text = "ENTER PRICE";
             this.materialButton8.UseFlatStyle = false;
             this.materialButton8.UseVisualStyleBackColor = true;
             this.materialButton8.Click += new System.EventHandler(this.materialButton8_Click);
+            // 
+            // materialButton1
+            // 
+            this.materialButton1.Alignment = System.Drawing.StringAlignment.Center;
+            this.materialButton1.AutoSize = true;
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
+            this.materialButton1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialButton1.ControlSize = MaterialSkin.ControlSize.NORMAL;
+            this.materialButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.Icon = null;
+            this.materialButton1.IconType = MaterialSkin.IconType.NONE;
+            this.materialButton1.IsSelected = false;
+            this.materialButton1.Location = new System.Drawing.Point(811, 6);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.Primary = true;
+            this.materialButton1.Size = new System.Drawing.Size(114, 40);
+            this.materialButton1.TabIndex = 7;
+            this.materialButton1.Text = "ENTER QTY";
+            this.materialButton1.UseFlatStyle = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click_1);
             // 
             // materialRaisedButton1
             // 
@@ -2017,7 +2048,7 @@ namespace MaterialSkinExample
             this.materialSelectableButton2.IsSelected = false;
             this.materialSelectableButton2.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("materialSelectableButton2.Items")));
             this.materialSelectableButton2.ItemSize = MaterialSkin.ControlSize.NORMAL;
-            this.materialSelectableButton2.Location = new System.Drawing.Point(912, 9);
+            this.materialSelectableButton2.Location = new System.Drawing.Point(922, 9);
             this.materialSelectableButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialSelectableButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSelectableButton2.Name = "materialSelectableButton2";
@@ -2026,13 +2057,38 @@ namespace MaterialSkinExample
             this.materialSelectableButton2.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("materialSelectableButton2.SelectedIndices")));
             this.materialSelectableButton2.SelectedValue = null;
             this.materialSelectableButton2.SelectorMode = MaterialSkin.Controls.ButtonSelectorMode.ROTARY;
-            this.materialSelectableButton2.Size = new System.Drawing.Size(199, 40);
+            this.materialSelectableButton2.Size = new System.Drawing.Size(189, 40);
             this.materialSelectableButton2.TabIndex = 22;
             this.materialSelectableButton2.Text = "NIGHT MODE OFF";
             this.materialSelectableButton2.UseFlatStyle = false;
             this.materialSelectableButton2.UseVisualStyleBackColor = true;
             this.materialSelectableButton2.ValueMember = null;
             this.materialSelectableButton2.Click += new System.EventHandler(this.materialSelectableButton2_Click);
+            // 
+            // materialButton9
+            // 
+            this.materialButton9.Alignment = System.Drawing.StringAlignment.Center;
+            this.materialButton9.AutoSize = true;
+            this.materialButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton9.BorderColorType = MaterialSkin.ColorType.DEFAULT;
+            this.materialButton9.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.materialButton9.ControlSize = MaterialSkin.ControlSize.NORMAL;
+            this.materialButton9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton9.Depth = 0;
+            this.materialButton9.Icon = null;
+            this.materialButton9.IconType = MaterialSkin.IconType.NONE;
+            this.materialButton9.IsSelected = false;
+            this.materialButton9.Location = new System.Drawing.Point(933, 6);
+            this.materialButton9.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton9.Name = "materialButton9";
+            this.materialButton9.Primary = true;
+            this.materialButton9.Size = new System.Drawing.Size(128, 40);
+            this.materialButton9.TabIndex = 8;
+            this.materialButton9.Text = "ENTER NAME";
+            this.materialButton9.UseFlatStyle = false;
+            this.materialButton9.UseVisualStyleBackColor = true;
+            this.materialButton9.Click += new System.EventHandler(this.materialButton9_Click);
             // 
             // MainForm
             // 
@@ -2199,5 +2255,7 @@ namespace MaterialSkinExample
         private MaterialSelectableButton materialSelectableButton1;
         private MaterialButton materialButton8;
         private MaterialSelectableButton materialSelectableButton2;
+        private MaterialButton materialButton1;
+        private MaterialButton materialButton9;
     }
 }

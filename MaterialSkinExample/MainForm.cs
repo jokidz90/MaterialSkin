@@ -81,7 +81,21 @@ namespace MaterialSkinExample
             {
                 var newRow = dt.NewRow();
                 newRow["No"] = (i + 1);
-                newRow["Product"] = "Product #"+(i + 1);
+
+                newRow["Product"] = "Product #" + (i + 1);
+                if (i % 5 == 0)
+                {
+                    string productName = "Product #" + (i + 1);
+                    productName += Environment.NewLine;
+                    productName += "This is sample of multiline product";
+                    for (int j = 0; j < (i / 5); j++)
+                    {
+                        productName += Environment.NewLine;
+                        productName += "Line " + (j + 1);
+                    }
+                    newRow["Product"] = productName;
+                }
+                
                 newRow["Qty"] = rand.Next(1, 10);
                 newRow["Price"] = rand.Next(1, 30);
                 newRow["Amount"] = ((int)newRow["Qty"]) * ((decimal)newRow["Price"]);
@@ -192,13 +206,27 @@ namespace MaterialSkinExample
 
         private void materialButton8_Click(object sender, EventArgs e)
         {
-            var res = MaterialMessageBox.ShowSelector("Delivery/Take Away", new List<object>{ "Delivery", "Take Away" }, out object selectedValue);
-            materialButton8.Text = selectedValue + "";
+            //var res = MaterialMessageBox.ShowSelector("Delivery/Take Away", new List<object>{ "Delivery", "Take Away" }, out object selectedValue);
+            //materialButton8.Text = selectedValue + "";
+            var res = MaterialMessageBox.ShowNumericSelector("ENTER PRICE", materialButton8.Text.GetDecimalValue(), false, out decimal price);
+            materialButton8.Text = price + "";
         }
 
         private void materialSelectableButton2_Click(object sender, EventArgs e)
         {
             materialSkinManager.Theme = materialSkinManager.Theme == MaterialSkinManager.Themes.DARK ? MaterialSkinManager.Themes.LIGHT : MaterialSkinManager.Themes.DARK;
+        }
+
+        private void materialButton1_Click_1(object sender, EventArgs e)
+        {
+            var res = MaterialMessageBox.ShowIntegerSelector("ENTER QTY", materialButton1.Text.GetInt32Value(), false, out int qty);
+            materialButton1.Text = qty + "";
+        }
+
+        private void materialButton9_Click(object sender, EventArgs e)
+        {
+            var res = MaterialMessageBox.ShowTextSelector("ENTER NAME", materialButton9.Text, false, out string name);
+            materialButton9.Text = name + "";
         }
     }
 }

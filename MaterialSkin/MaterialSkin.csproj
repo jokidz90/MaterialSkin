@@ -45,6 +45,24 @@
     <Compile Include="Animations\AnimationManager.cs" />
     <Compile Include="Animations\Animations.cs" />
     <Compile Include="ColorScheme.cs" />
+    <Compile Include="Controls\MaterialMessageBoxTextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialMessageBoxTextForm.Designer.cs">
+      <DependentUpon>MaterialMessageBoxTextForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MaterialMessageBoxIntegerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialMessageBoxIntegerForm.Designer.cs">
+      <DependentUpon>MaterialMessageBoxIntegerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MaterialMessageBoxNumericForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialMessageBoxNumericForm.Designer.cs">
+      <DependentUpon>MaterialMessageBoxNumericForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MaterialSelectableButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -203,6 +221,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MaterialDropDownForm.resx">
       <DependentUpon>MaterialDropDownForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MaterialMessageBoxTextForm.resx">
+      <DependentUpon>MaterialMessageBoxTextForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MaterialMessageBoxIntegerForm.resx">
+      <DependentUpon>MaterialMessageBoxIntegerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MaterialMessageBoxNumericForm.resx">
+      <DependentUpon>MaterialMessageBoxNumericForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MaterialMessageBoxForm.resx">
       <DependentUpon>MaterialMessageBoxForm.cs</DependentUpon>

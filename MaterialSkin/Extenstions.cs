@@ -39,6 +39,13 @@ namespace MaterialSkin
                     .Insert(0, source.Substring(0, 1).ToUpper());
         }
 
+        public static decimal GetDecimalValue(this string txt)
+        {
+            decimal val = 0;
+            decimal.TryParse(txt, out val);
+            return val;
+        }
+
         public static int GetInt32Value(this string txt)
         {
             int val = 0;

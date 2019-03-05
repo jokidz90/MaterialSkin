@@ -45,6 +45,39 @@ namespace MaterialSkin.Controls
         public int SelectionLength { get { return _baseTextBox.SelectionLength; } set { _baseTextBox.SelectionLength = value; } }
         public int TextLength => _baseTextBox.TextLength;
 
+        [DefaultValue(HorizontalAlignment.Left)]
+        public HorizontalAlignment TextAlign
+        {
+            get
+            {
+                return _baseTextBox.TextAlign;
+            }
+            set
+            {
+                _baseTextBox.TextAlign = value;
+            }
+        }
+
+        private ControlSize _controlSize = ControlSize.NORMAL;
+        public ControlSize ControlSize
+        {
+            set
+            {
+                _controlSize = value;
+                if (_controlSize == ControlSize.SMALL)
+                    _baseTextBox.Font = SkinManager.ROBOTO_MEDIUM_8;
+                else if (_controlSize == ControlSize.LARGE)
+                    _baseTextBox.Font = SkinManager.ROBOTO_MEDIUM_16;
+                else
+                    _baseTextBox.Font = SkinManager.ROBOTO_MEDIUM_11;
+                this.Invalidate();
+            }
+            get
+            {
+                return _controlSize;
+            }
+        }
+
         public bool UseSystemPasswordChar { get { return _baseTextBox.UseSystemPasswordChar; } set { _baseTextBox.UseSystemPasswordChar = value; } }
         public char PasswordChar { get { return _baseTextBox.PasswordChar; } set { _baseTextBox.PasswordChar = value; } }
 
@@ -1072,7 +1105,7 @@ namespace MaterialSkin.Controls
             private const char EmptyChar = (char)0;
             private const char VisualStylePasswordChar = '\u25CF';
             private const char NonVisualStylePasswordChar = '\u002A';
-
+            
             private string hint = string.Empty;
             public string Hint
             {
