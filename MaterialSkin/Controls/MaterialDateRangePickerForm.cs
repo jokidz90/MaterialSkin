@@ -84,10 +84,10 @@ namespace MaterialSkin.Controls
                 grpStartDate.IsSelected = !value;
                 grpEndDate.IsSelected = value;
 
-                btnStartDate.ColorStyle = value ? ColorType.GREY : ColorType.DEFAULT;
-                btnStartTime.ColorStyle = value ? ColorType.GREY : ColorType.DEFAULT;
-                btnEndDate.ColorStyle = value ? ColorType.DEFAULT : ColorType.GREY;
-                btnEndTime.ColorStyle = value ? ColorType.DEFAULT : ColorType.GREY;
+                btnStartDate.ColorStyle = value ? ColorType.GREY : ColorType.INVERSE;
+                btnStartTime.ColorStyle = value ? ColorType.GREY : ColorType.INVERSE;
+                btnEndDate.ColorStyle = value ? ColorType.INVERSE : ColorType.GREY;
+                btnEndTime.ColorStyle = value ? ColorType.INVERSE : ColorType.GREY;
 
                 Debug.WriteLine("grpStartDate.IsSelected:" + grpStartDate.IsSelected);
                 Debug.WriteLine("grpEndDate.IsSelected:" + grpEndDate.IsSelected);
@@ -293,15 +293,15 @@ namespace MaterialSkin.Controls
 
             btnCustom.Location = new Point(0, btnHeight * 4);
 
-            btnToday.BorderColorType = _rangeSelection == DateRangeType.TODAY ? ColorType.PRIMARY : ColorType.DEFAULT;
-            btnYesterday.BorderColorType = _rangeSelection == DateRangeType.YESTERDAY ? ColorType.PRIMARY : ColorType.DEFAULT;
-            btnThisWeek.BorderColorType = _rangeSelection == DateRangeType.THISWEEK ? ColorType.PRIMARY : ColorType.DEFAULT;
-            btnLastWeek.BorderColorType = _rangeSelection == DateRangeType.LASTWEEK ? ColorType.PRIMARY : ColorType.DEFAULT;
-            btnThisMonth.BorderColorType = _rangeSelection == DateRangeType.THISMONTH ? ColorType.PRIMARY : ColorType.DEFAULT;
-            btnLastMonth.BorderColorType = _rangeSelection == DateRangeType.LASTMONTH ? ColorType.PRIMARY : ColorType.DEFAULT;
-            btnThisYear.BorderColorType = _rangeSelection == DateRangeType.THISYEAR ? ColorType.PRIMARY : ColorType.DEFAULT;
-            btnLastYear.BorderColorType = _rangeSelection == DateRangeType.LASTYEAR ? ColorType.PRIMARY : ColorType.DEFAULT;
-            btnCustom.BorderColorType = _rangeSelection == DateRangeType.CUSTOM ? ColorType.PRIMARY : ColorType.DEFAULT;
+            btnToday.UseFlatStyle = _rangeSelection != DateRangeType.TODAY;
+            btnYesterday.UseFlatStyle = _rangeSelection != DateRangeType.YESTERDAY;
+            btnThisWeek.UseFlatStyle = _rangeSelection != DateRangeType.THISWEEK;
+            btnLastWeek.UseFlatStyle = _rangeSelection != DateRangeType.LASTWEEK;
+            btnThisMonth.UseFlatStyle = _rangeSelection != DateRangeType.THISMONTH;
+            btnLastMonth.UseFlatStyle = _rangeSelection != DateRangeType.LASTMONTH;
+            btnThisYear.UseFlatStyle = _rangeSelection != DateRangeType.THISYEAR;
+            btnLastYear.UseFlatStyle = _rangeSelection != DateRangeType.LASTYEAR;
+            btnCustom.UseFlatStyle = _rangeSelection != DateRangeType.CUSTOM;
         }
 
         private void LoadDate()
@@ -324,6 +324,7 @@ namespace MaterialSkin.Controls
                 btn.Enabled = false;
                 btn.Text = "";
                 btn.Tag = null;
+                btn.UseFlatStyle = true;
                 btn.ColorStyle = (x == 0 || x == 6) ? ColorType.DANGER : ColorType.DEFAULT;
                 btn.BorderColorType = ColorType.DEFAULT;
             }
@@ -342,15 +343,11 @@ namespace MaterialSkin.Controls
                     btn.Tag = startDT.Date;
                     btn.Enabled = true;
                     if (startDT.Date == DateTime.Now.Date)
-                    {
-                        btn.ColorStyle = ColorType.SUCCESS;
-                        btn.BorderColorType = ColorType.SUCCESS;
-                    }
+                        btn.BorderColorType = SkinManager.ColorStyle;
 
                     if (startDT.Date >= _startValue.Date && startDT.Date <= _endValue.Date)
                     {
-                        btn.ColorStyle = ColorType.PRIMARY;
-                        btn.BorderColorType = ColorType.PRIMARY;
+                        btn.UseFlatStyle = false;
                         if (_selectedBtn == null)
                             _selectedBtn = btn;
                     }
@@ -379,11 +376,7 @@ namespace MaterialSkin.Controls
                     btn.Text = yearCount.ToString();
                     btn.ColorStyle = ColorType.DEFAULT;
                     btn.BorderColorType = ColorType.DEFAULT;
-                    if (yearCount == CurrentValue.Year)
-                    {
-                        btn.ColorStyle = ColorType.PRIMARY;
-                        btn.BorderColorType = ColorType.PRIMARY;
-                    }
+                    btn.UseFlatStyle = (yearCount != CurrentValue.Year);
                     yearCount++;
                 }
             }
@@ -402,11 +395,7 @@ namespace MaterialSkin.Controls
                     btn.Text = month.ToString("MMMM");
                     btn.ColorStyle = ColorType.DEFAULT;
                     btn.BorderColorType = ColorType.DEFAULT;
-                    if (month.Month == CurrentValue.Month)
-                    {
-                        btn.ColorStyle = ColorType.PRIMARY;
-                        btn.BorderColorType = ColorType.PRIMARY;
-                    }
+                    btn.UseFlatStyle = (month.Month != CurrentValue.Month);
                     month = month.AddMonths(1);
                 }
             }

@@ -209,6 +209,7 @@
             this.btnSelectDateRange.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSelectDateRange.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnSelectDateRange.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnSelectDateRange.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnSelectDateRange.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectDateRange.Depth = 0;
             this.btnSelectDateRange.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -249,7 +250,8 @@
             this.btnCancel.AutoSize = true;
             this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCancel.BorderColorType = MaterialSkin.ColorType.DEFAULT;
-            this.btnCancel.ColorStyle = MaterialSkin.ColorType.WARNING;
+            this.btnCancel.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnCancel.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Depth = 0;
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -264,7 +266,7 @@
             this.btnCancel.Size = new System.Drawing.Size(196, 59);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "CANCEL";
-            this.btnCancel.UseFlatStyle = false;
+            this.btnCancel.UseFlatStyle = true;
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -291,6 +293,7 @@
             this.btnOK.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnOK.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnOK.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnOK.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.Depth = 0;
             this.btnOK.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -350,6 +353,7 @@
             this.btnShowYear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnShowYear.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnShowYear.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnShowYear.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnShowYear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowYear.Depth = 0;
             this.btnShowYear.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -375,6 +379,7 @@
             this.btnShowMonth.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnShowMonth.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnShowMonth.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnShowMonth.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnShowMonth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowMonth.Depth = 0;
             this.btnShowMonth.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -400,6 +405,7 @@
             this.btnPrev.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnPrev.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnPrev.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnPrev.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrev.Depth = 0;
             this.btnPrev.Dock = System.Windows.Forms.DockStyle.Left;
@@ -424,6 +430,7 @@
             this.btnNext.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnNext.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnNext.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnNext.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.Depth = 0;
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Right;
@@ -516,7 +523,8 @@
             this.btnEndDate.AutoSize = true;
             this.btnEndDate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEndDate.BorderColorType = MaterialSkin.ColorType.DEFAULT;
-            this.btnEndDate.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnEndDate.ColorStyle = MaterialSkin.ColorType.INVERSE;
+            this.btnEndDate.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnEndDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEndDate.Depth = 0;
             this.btnEndDate.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -528,7 +536,7 @@
             this.btnEndDate.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEndDate.Name = "btnEndDate";
             this.btnEndDate.Primary = true;
-            this.btnEndDate.Size = new System.Drawing.Size(226, 51);
+            this.btnEndDate.Size = new System.Drawing.Size(228, 51);
             this.btnEndDate.TabIndex = 7;
             this.btnEndDate.Text = "Mon, 1 May 2000";
             this.btnEndDate.UseFlatStyle = true;
@@ -541,19 +549,20 @@
             this.btnEndTime.AutoSize = true;
             this.btnEndTime.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEndTime.BorderColorType = MaterialSkin.ColorType.DEFAULT;
-            this.btnEndTime.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnEndTime.ColorStyle = MaterialSkin.ColorType.INVERSE;
+            this.btnEndTime.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnEndTime.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEndTime.Depth = 0;
             this.btnEndTime.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEndTime.Icon = ((System.Drawing.Image)(resources.GetObject("btnEndTime.Icon")));
             this.btnEndTime.IconType = MaterialSkin.IconType.ACCESS_TIME;
             this.btnEndTime.IsSelected = null;
-            this.btnEndTime.Location = new System.Drawing.Point(226, 0);
+            this.btnEndTime.Location = new System.Drawing.Point(228, 0);
             this.btnEndTime.Margin = new System.Windows.Forms.Padding(0);
             this.btnEndTime.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEndTime.Name = "btnEndTime";
             this.btnEndTime.Primary = true;
-            this.btnEndTime.Size = new System.Drawing.Size(168, 51);
+            this.btnEndTime.Size = new System.Drawing.Size(166, 51);
             this.btnEndTime.TabIndex = 6;
             this.btnEndTime.Text = "07:00 AM";
             this.btnEndTime.UseFlatStyle = true;
@@ -604,7 +613,8 @@
             this.btnStartDate.AutoSize = true;
             this.btnStartDate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnStartDate.BorderColorType = MaterialSkin.ColorType.DEFAULT;
-            this.btnStartDate.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnStartDate.ColorStyle = MaterialSkin.ColorType.INVERSE;
+            this.btnStartDate.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnStartDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStartDate.Depth = 0;
             this.btnStartDate.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -616,7 +626,7 @@
             this.btnStartDate.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnStartDate.Name = "btnStartDate";
             this.btnStartDate.Primary = true;
-            this.btnStartDate.Size = new System.Drawing.Size(272, 51);
+            this.btnStartDate.Size = new System.Drawing.Size(274, 51);
             this.btnStartDate.TabIndex = 5;
             this.btnStartDate.Text = "Mon, 1 May 2000";
             this.btnStartDate.UseFlatStyle = true;
@@ -629,19 +639,20 @@
             this.btnStartTime.AutoSize = true;
             this.btnStartTime.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnStartTime.BorderColorType = MaterialSkin.ColorType.DEFAULT;
-            this.btnStartTime.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnStartTime.ColorStyle = MaterialSkin.ColorType.INVERSE;
+            this.btnStartTime.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnStartTime.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStartTime.Depth = 0;
             this.btnStartTime.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnStartTime.Icon = ((System.Drawing.Image)(resources.GetObject("btnStartTime.Icon")));
             this.btnStartTime.IconType = MaterialSkin.IconType.ACCESS_TIME;
             this.btnStartTime.IsSelected = null;
-            this.btnStartTime.Location = new System.Drawing.Point(272, 0);
+            this.btnStartTime.Location = new System.Drawing.Point(274, 0);
             this.btnStartTime.Margin = new System.Windows.Forms.Padding(0);
             this.btnStartTime.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnStartTime.Name = "btnStartTime";
             this.btnStartTime.Primary = true;
-            this.btnStartTime.Size = new System.Drawing.Size(168, 51);
+            this.btnStartTime.Size = new System.Drawing.Size(166, 51);
             this.btnStartTime.TabIndex = 0;
             this.btnStartTime.Text = "07:00 AM";
             this.btnStartTime.UseFlatStyle = true;
@@ -708,7 +719,7 @@
             this.pnlDate.Location = new System.Drawing.Point(2, 149);
             this.pnlDate.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlDate.Name = "pnlDate";
-            this.pnlDate.Size = new System.Drawing.Size(981, 38);
+            this.pnlDate.Size = new System.Drawing.Size(981, 39);
             this.pnlDate.TabIndex = 7;
             // 
             // btnDate6x6
@@ -718,6 +729,7 @@
             this.btnDate6x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate6x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate6x6.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDate6x6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate6x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate6x6.Depth = 0;
             this.btnDate6x6.Icon = null;
@@ -727,8 +739,8 @@
             this.btnDate6x6.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate6x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate6x6.Name = "btnDate6x6";
-            this.btnDate6x6.Primary = false;
-            this.btnDate6x6.Size = new System.Drawing.Size(71, 40);
+            this.btnDate6x6.Primary = true;
+            this.btnDate6x6.Size = new System.Drawing.Size(63, 40);
             this.btnDate6x6.TabIndex = 51;
             this.btnDate6x6.Text = "11";
             this.btnDate6x6.UseFlatStyle = true;
@@ -742,6 +754,7 @@
             this.btnDate2x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate2x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate2x6.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate2x6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate2x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate2x6.Depth = 0;
             this.btnDate2x6.Icon = null;
@@ -751,8 +764,8 @@
             this.btnDate2x6.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate2x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate2x6.Name = "btnDate2x6";
-            this.btnDate2x6.Primary = false;
-            this.btnDate2x6.Size = new System.Drawing.Size(59, 40);
+            this.btnDate2x6.Primary = true;
+            this.btnDate2x6.Size = new System.Drawing.Size(51, 40);
             this.btnDate2x6.TabIndex = 50;
             this.btnDate2x6.Text = "7";
             this.btnDate2x6.UseFlatStyle = true;
@@ -766,6 +779,7 @@
             this.btnDate3x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate3x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate3x6.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate3x6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate3x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate3x6.Depth = 0;
             this.btnDate3x6.Icon = null;
@@ -775,8 +789,8 @@
             this.btnDate3x6.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate3x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate3x6.Name = "btnDate3x6";
-            this.btnDate3x6.Primary = false;
-            this.btnDate3x6.Size = new System.Drawing.Size(59, 40);
+            this.btnDate3x6.Primary = true;
+            this.btnDate3x6.Size = new System.Drawing.Size(51, 40);
             this.btnDate3x6.TabIndex = 49;
             this.btnDate3x6.Text = "8";
             this.btnDate3x6.UseFlatStyle = true;
@@ -790,6 +804,7 @@
             this.btnDate4x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate4x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate4x6.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate4x6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate4x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate4x6.Depth = 0;
             this.btnDate4x6.Icon = null;
@@ -799,8 +814,8 @@
             this.btnDate4x6.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate4x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate4x6.Name = "btnDate4x6";
-            this.btnDate4x6.Primary = false;
-            this.btnDate4x6.Size = new System.Drawing.Size(59, 40);
+            this.btnDate4x6.Primary = true;
+            this.btnDate4x6.Size = new System.Drawing.Size(51, 40);
             this.btnDate4x6.TabIndex = 48;
             this.btnDate4x6.Text = "9";
             this.btnDate4x6.UseFlatStyle = true;
@@ -814,6 +829,7 @@
             this.btnDate5x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate5x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate5x6.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate5x6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate5x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate5x6.Depth = 0;
             this.btnDate5x6.Icon = null;
@@ -823,8 +839,8 @@
             this.btnDate5x6.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate5x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate5x6.Name = "btnDate5x6";
-            this.btnDate5x6.Primary = false;
-            this.btnDate5x6.Size = new System.Drawing.Size(71, 40);
+            this.btnDate5x6.Primary = true;
+            this.btnDate5x6.Size = new System.Drawing.Size(63, 40);
             this.btnDate5x6.TabIndex = 47;
             this.btnDate5x6.Text = "10";
             this.btnDate5x6.UseFlatStyle = true;
@@ -838,6 +854,7 @@
             this.btnDate1x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate1x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate1x6.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate1x6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate1x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate1x6.Depth = 0;
             this.btnDate1x6.Icon = null;
@@ -847,8 +864,8 @@
             this.btnDate1x6.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate1x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate1x6.Name = "btnDate1x6";
-            this.btnDate1x6.Primary = false;
-            this.btnDate1x6.Size = new System.Drawing.Size(59, 40);
+            this.btnDate1x6.Primary = true;
+            this.btnDate1x6.Size = new System.Drawing.Size(51, 40);
             this.btnDate1x6.TabIndex = 46;
             this.btnDate1x6.Text = "6";
             this.btnDate1x6.UseFlatStyle = true;
@@ -862,6 +879,7 @@
             this.btnDate0x6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate0x6.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate0x6.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDate0x6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate0x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate0x6.Depth = 0;
             this.btnDate0x6.Icon = null;
@@ -871,8 +889,8 @@
             this.btnDate0x6.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate0x6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate0x6.Name = "btnDate0x6";
-            this.btnDate0x6.Primary = false;
-            this.btnDate0x6.Size = new System.Drawing.Size(59, 40);
+            this.btnDate0x6.Primary = true;
+            this.btnDate0x6.Size = new System.Drawing.Size(51, 40);
             this.btnDate0x6.TabIndex = 45;
             this.btnDate0x6.Text = "5";
             this.btnDate0x6.UseFlatStyle = true;
@@ -886,6 +904,7 @@
             this.btnDate6x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate6x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate6x5.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDate6x5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate6x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate6x5.Depth = 0;
             this.btnDate6x5.Icon = null;
@@ -895,8 +914,8 @@
             this.btnDate6x5.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate6x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate6x5.Name = "btnDate6x5";
-            this.btnDate6x5.Primary = false;
-            this.btnDate6x5.Size = new System.Drawing.Size(59, 40);
+            this.btnDate6x5.Primary = true;
+            this.btnDate6x5.Size = new System.Drawing.Size(51, 40);
             this.btnDate6x5.TabIndex = 44;
             this.btnDate6x5.Text = "4";
             this.btnDate6x5.UseFlatStyle = true;
@@ -910,6 +929,7 @@
             this.btnDate2x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate2x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate2x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate2x5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate2x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate2x5.Depth = 0;
             this.btnDate2x5.Icon = null;
@@ -919,8 +939,8 @@
             this.btnDate2x5.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate2x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate2x5.Name = "btnDate2x5";
-            this.btnDate2x5.Primary = false;
-            this.btnDate2x5.Size = new System.Drawing.Size(71, 40);
+            this.btnDate2x5.Primary = true;
+            this.btnDate2x5.Size = new System.Drawing.Size(63, 40);
             this.btnDate2x5.TabIndex = 43;
             this.btnDate2x5.Text = "31";
             this.btnDate2x5.UseFlatStyle = true;
@@ -934,6 +954,7 @@
             this.btnDate3x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate3x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate3x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate3x5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate3x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate3x5.Depth = 0;
             this.btnDate3x5.Icon = null;
@@ -943,8 +964,8 @@
             this.btnDate3x5.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate3x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate3x5.Name = "btnDate3x5";
-            this.btnDate3x5.Primary = false;
-            this.btnDate3x5.Size = new System.Drawing.Size(59, 40);
+            this.btnDate3x5.Primary = true;
+            this.btnDate3x5.Size = new System.Drawing.Size(51, 40);
             this.btnDate3x5.TabIndex = 42;
             this.btnDate3x5.Text = "1";
             this.btnDate3x5.UseFlatStyle = true;
@@ -958,6 +979,7 @@
             this.btnDate4x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate4x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate4x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate4x5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate4x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate4x5.Depth = 0;
             this.btnDate4x5.Icon = null;
@@ -967,8 +989,8 @@
             this.btnDate4x5.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate4x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate4x5.Name = "btnDate4x5";
-            this.btnDate4x5.Primary = false;
-            this.btnDate4x5.Size = new System.Drawing.Size(59, 40);
+            this.btnDate4x5.Primary = true;
+            this.btnDate4x5.Size = new System.Drawing.Size(51, 40);
             this.btnDate4x5.TabIndex = 41;
             this.btnDate4x5.Text = "2";
             this.btnDate4x5.UseFlatStyle = true;
@@ -982,6 +1004,7 @@
             this.btnDate5x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate5x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate5x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate5x5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate5x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate5x5.Depth = 0;
             this.btnDate5x5.Icon = null;
@@ -991,8 +1014,8 @@
             this.btnDate5x5.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate5x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate5x5.Name = "btnDate5x5";
-            this.btnDate5x5.Primary = false;
-            this.btnDate5x5.Size = new System.Drawing.Size(59, 40);
+            this.btnDate5x5.Primary = true;
+            this.btnDate5x5.Size = new System.Drawing.Size(51, 40);
             this.btnDate5x5.TabIndex = 40;
             this.btnDate5x5.Text = "3";
             this.btnDate5x5.UseFlatStyle = true;
@@ -1006,6 +1029,7 @@
             this.btnDate1x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate1x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate1x5.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate1x5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate1x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate1x5.Depth = 0;
             this.btnDate1x5.Icon = null;
@@ -1015,8 +1039,8 @@
             this.btnDate1x5.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate1x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate1x5.Name = "btnDate1x5";
-            this.btnDate1x5.Primary = false;
-            this.btnDate1x5.Size = new System.Drawing.Size(71, 40);
+            this.btnDate1x5.Primary = true;
+            this.btnDate1x5.Size = new System.Drawing.Size(63, 40);
             this.btnDate1x5.TabIndex = 39;
             this.btnDate1x5.Text = "30";
             this.btnDate1x5.UseFlatStyle = true;
@@ -1030,6 +1054,7 @@
             this.btnDate0x5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate0x5.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate0x5.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDate0x5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate0x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate0x5.Depth = 0;
             this.btnDate0x5.Icon = null;
@@ -1039,8 +1064,8 @@
             this.btnDate0x5.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate0x5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate0x5.Name = "btnDate0x5";
-            this.btnDate0x5.Primary = false;
-            this.btnDate0x5.Size = new System.Drawing.Size(71, 40);
+            this.btnDate0x5.Primary = true;
+            this.btnDate0x5.Size = new System.Drawing.Size(63, 40);
             this.btnDate0x5.TabIndex = 38;
             this.btnDate0x5.Text = "29";
             this.btnDate0x5.UseFlatStyle = true;
@@ -1054,6 +1079,7 @@
             this.btnDate6x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate6x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate6x4.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDate6x4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate6x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate6x4.Depth = 0;
             this.btnDate6x4.Icon = null;
@@ -1063,8 +1089,8 @@
             this.btnDate6x4.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate6x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate6x4.Name = "btnDate6x4";
-            this.btnDate6x4.Primary = false;
-            this.btnDate6x4.Size = new System.Drawing.Size(71, 40);
+            this.btnDate6x4.Primary = true;
+            this.btnDate6x4.Size = new System.Drawing.Size(63, 40);
             this.btnDate6x4.TabIndex = 37;
             this.btnDate6x4.Text = "28";
             this.btnDate6x4.UseFlatStyle = true;
@@ -1078,6 +1104,7 @@
             this.btnDate2x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate2x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate2x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate2x4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate2x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate2x4.Depth = 0;
             this.btnDate2x4.Icon = null;
@@ -1087,8 +1114,8 @@
             this.btnDate2x4.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate2x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate2x4.Name = "btnDate2x4";
-            this.btnDate2x4.Primary = false;
-            this.btnDate2x4.Size = new System.Drawing.Size(71, 40);
+            this.btnDate2x4.Primary = true;
+            this.btnDate2x4.Size = new System.Drawing.Size(63, 40);
             this.btnDate2x4.TabIndex = 36;
             this.btnDate2x4.Text = "24";
             this.btnDate2x4.UseFlatStyle = true;
@@ -1102,6 +1129,7 @@
             this.btnDate3x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate3x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate3x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate3x4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate3x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate3x4.Depth = 0;
             this.btnDate3x4.Icon = null;
@@ -1111,8 +1139,8 @@
             this.btnDate3x4.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate3x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate3x4.Name = "btnDate3x4";
-            this.btnDate3x4.Primary = false;
-            this.btnDate3x4.Size = new System.Drawing.Size(71, 40);
+            this.btnDate3x4.Primary = true;
+            this.btnDate3x4.Size = new System.Drawing.Size(63, 40);
             this.btnDate3x4.TabIndex = 35;
             this.btnDate3x4.Text = "25";
             this.btnDate3x4.UseFlatStyle = true;
@@ -1126,6 +1154,7 @@
             this.btnDate4x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate4x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate4x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate4x4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate4x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate4x4.Depth = 0;
             this.btnDate4x4.Icon = null;
@@ -1135,8 +1164,8 @@
             this.btnDate4x4.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate4x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate4x4.Name = "btnDate4x4";
-            this.btnDate4x4.Primary = false;
-            this.btnDate4x4.Size = new System.Drawing.Size(71, 40);
+            this.btnDate4x4.Primary = true;
+            this.btnDate4x4.Size = new System.Drawing.Size(63, 40);
             this.btnDate4x4.TabIndex = 34;
             this.btnDate4x4.Text = "26";
             this.btnDate4x4.UseFlatStyle = true;
@@ -1150,6 +1179,7 @@
             this.btnDate5x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate5x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate5x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate5x4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate5x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate5x4.Depth = 0;
             this.btnDate5x4.Icon = null;
@@ -1159,8 +1189,8 @@
             this.btnDate5x4.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate5x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate5x4.Name = "btnDate5x4";
-            this.btnDate5x4.Primary = false;
-            this.btnDate5x4.Size = new System.Drawing.Size(71, 40);
+            this.btnDate5x4.Primary = true;
+            this.btnDate5x4.Size = new System.Drawing.Size(63, 40);
             this.btnDate5x4.TabIndex = 33;
             this.btnDate5x4.Text = "27";
             this.btnDate5x4.UseFlatStyle = true;
@@ -1174,6 +1204,7 @@
             this.btnDate1x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate1x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate1x4.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate1x4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate1x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate1x4.Depth = 0;
             this.btnDate1x4.Icon = null;
@@ -1183,8 +1214,8 @@
             this.btnDate1x4.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate1x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate1x4.Name = "btnDate1x4";
-            this.btnDate1x4.Primary = false;
-            this.btnDate1x4.Size = new System.Drawing.Size(71, 40);
+            this.btnDate1x4.Primary = true;
+            this.btnDate1x4.Size = new System.Drawing.Size(63, 40);
             this.btnDate1x4.TabIndex = 32;
             this.btnDate1x4.Text = "23";
             this.btnDate1x4.UseFlatStyle = true;
@@ -1198,6 +1229,7 @@
             this.btnDate0x4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate0x4.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate0x4.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDate0x4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate0x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate0x4.Depth = 0;
             this.btnDate0x4.Icon = null;
@@ -1207,8 +1239,8 @@
             this.btnDate0x4.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate0x4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate0x4.Name = "btnDate0x4";
-            this.btnDate0x4.Primary = false;
-            this.btnDate0x4.Size = new System.Drawing.Size(71, 40);
+            this.btnDate0x4.Primary = true;
+            this.btnDate0x4.Size = new System.Drawing.Size(63, 40);
             this.btnDate0x4.TabIndex = 31;
             this.btnDate0x4.Text = "22";
             this.btnDate0x4.UseFlatStyle = true;
@@ -1222,6 +1254,7 @@
             this.btnDate6x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate6x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate6x3.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDate6x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate6x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate6x3.Depth = 0;
             this.btnDate6x3.Icon = null;
@@ -1231,8 +1264,8 @@
             this.btnDate6x3.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate6x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate6x3.Name = "btnDate6x3";
-            this.btnDate6x3.Primary = false;
-            this.btnDate6x3.Size = new System.Drawing.Size(71, 40);
+            this.btnDate6x3.Primary = true;
+            this.btnDate6x3.Size = new System.Drawing.Size(63, 40);
             this.btnDate6x3.TabIndex = 30;
             this.btnDate6x3.Text = "21";
             this.btnDate6x3.UseFlatStyle = true;
@@ -1246,6 +1279,7 @@
             this.btnDate2x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate2x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate2x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate2x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate2x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate2x3.Depth = 0;
             this.btnDate2x3.Icon = null;
@@ -1255,8 +1289,8 @@
             this.btnDate2x3.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate2x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate2x3.Name = "btnDate2x3";
-            this.btnDate2x3.Primary = false;
-            this.btnDate2x3.Size = new System.Drawing.Size(71, 40);
+            this.btnDate2x3.Primary = true;
+            this.btnDate2x3.Size = new System.Drawing.Size(63, 40);
             this.btnDate2x3.TabIndex = 29;
             this.btnDate2x3.Text = "17";
             this.btnDate2x3.UseFlatStyle = true;
@@ -1270,6 +1304,7 @@
             this.btnDate3x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate3x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate3x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate3x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate3x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate3x3.Depth = 0;
             this.btnDate3x3.Icon = null;
@@ -1279,8 +1314,8 @@
             this.btnDate3x3.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate3x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate3x3.Name = "btnDate3x3";
-            this.btnDate3x3.Primary = false;
-            this.btnDate3x3.Size = new System.Drawing.Size(71, 40);
+            this.btnDate3x3.Primary = true;
+            this.btnDate3x3.Size = new System.Drawing.Size(63, 40);
             this.btnDate3x3.TabIndex = 28;
             this.btnDate3x3.Text = "18";
             this.btnDate3x3.UseFlatStyle = true;
@@ -1294,6 +1329,7 @@
             this.btnDate4x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate4x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate4x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate4x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate4x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate4x3.Depth = 0;
             this.btnDate4x3.Icon = null;
@@ -1303,8 +1339,8 @@
             this.btnDate4x3.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate4x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate4x3.Name = "btnDate4x3";
-            this.btnDate4x3.Primary = false;
-            this.btnDate4x3.Size = new System.Drawing.Size(71, 40);
+            this.btnDate4x3.Primary = true;
+            this.btnDate4x3.Size = new System.Drawing.Size(63, 40);
             this.btnDate4x3.TabIndex = 27;
             this.btnDate4x3.Text = "19";
             this.btnDate4x3.UseFlatStyle = true;
@@ -1318,6 +1354,7 @@
             this.btnDate5x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate5x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate5x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate5x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate5x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate5x3.Depth = 0;
             this.btnDate5x3.Icon = null;
@@ -1327,8 +1364,8 @@
             this.btnDate5x3.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate5x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate5x3.Name = "btnDate5x3";
-            this.btnDate5x3.Primary = false;
-            this.btnDate5x3.Size = new System.Drawing.Size(71, 40);
+            this.btnDate5x3.Primary = true;
+            this.btnDate5x3.Size = new System.Drawing.Size(63, 40);
             this.btnDate5x3.TabIndex = 26;
             this.btnDate5x3.Text = "20";
             this.btnDate5x3.UseFlatStyle = true;
@@ -1342,6 +1379,7 @@
             this.btnDate1x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate1x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate1x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate1x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate1x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate1x3.Depth = 0;
             this.btnDate1x3.Icon = null;
@@ -1351,8 +1389,8 @@
             this.btnDate1x3.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate1x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate1x3.Name = "btnDate1x3";
-            this.btnDate1x3.Primary = false;
-            this.btnDate1x3.Size = new System.Drawing.Size(71, 40);
+            this.btnDate1x3.Primary = true;
+            this.btnDate1x3.Size = new System.Drawing.Size(63, 40);
             this.btnDate1x3.TabIndex = 25;
             this.btnDate1x3.Text = "16";
             this.btnDate1x3.UseFlatStyle = true;
@@ -1366,6 +1404,7 @@
             this.btnDate0x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate0x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate0x3.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDate0x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate0x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate0x3.Depth = 0;
             this.btnDate0x3.Icon = null;
@@ -1375,8 +1414,8 @@
             this.btnDate0x3.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate0x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate0x3.Name = "btnDate0x3";
-            this.btnDate0x3.Primary = false;
-            this.btnDate0x3.Size = new System.Drawing.Size(71, 40);
+            this.btnDate0x3.Primary = true;
+            this.btnDate0x3.Size = new System.Drawing.Size(63, 40);
             this.btnDate0x3.TabIndex = 24;
             this.btnDate0x3.Text = "15";
             this.btnDate0x3.UseFlatStyle = true;
@@ -1390,6 +1429,7 @@
             this.btnDate6x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate6x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate6x2.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDate6x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate6x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate6x2.Depth = 0;
             this.btnDate6x2.Icon = null;
@@ -1399,8 +1439,8 @@
             this.btnDate6x2.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate6x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate6x2.Name = "btnDate6x2";
-            this.btnDate6x2.Primary = false;
-            this.btnDate6x2.Size = new System.Drawing.Size(71, 40);
+            this.btnDate6x2.Primary = true;
+            this.btnDate6x2.Size = new System.Drawing.Size(63, 40);
             this.btnDate6x2.TabIndex = 23;
             this.btnDate6x2.Text = "14";
             this.btnDate6x2.UseFlatStyle = true;
@@ -1414,6 +1454,7 @@
             this.btnDate2x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate2x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate2x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate2x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate2x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate2x2.Depth = 0;
             this.btnDate2x2.Icon = null;
@@ -1423,8 +1464,8 @@
             this.btnDate2x2.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate2x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate2x2.Name = "btnDate2x2";
-            this.btnDate2x2.Primary = false;
-            this.btnDate2x2.Size = new System.Drawing.Size(71, 40);
+            this.btnDate2x2.Primary = true;
+            this.btnDate2x2.Size = new System.Drawing.Size(63, 40);
             this.btnDate2x2.TabIndex = 22;
             this.btnDate2x2.Text = "10";
             this.btnDate2x2.UseFlatStyle = true;
@@ -1438,6 +1479,7 @@
             this.btnDate3x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate3x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate3x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate3x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate3x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate3x2.Depth = 0;
             this.btnDate3x2.Icon = null;
@@ -1447,8 +1489,8 @@
             this.btnDate3x2.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate3x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate3x2.Name = "btnDate3x2";
-            this.btnDate3x2.Primary = false;
-            this.btnDate3x2.Size = new System.Drawing.Size(71, 40);
+            this.btnDate3x2.Primary = true;
+            this.btnDate3x2.Size = new System.Drawing.Size(63, 40);
             this.btnDate3x2.TabIndex = 21;
             this.btnDate3x2.Text = "11";
             this.btnDate3x2.UseFlatStyle = true;
@@ -1462,6 +1504,7 @@
             this.btnDate4x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate4x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate4x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate4x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate4x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate4x2.Depth = 0;
             this.btnDate4x2.Icon = null;
@@ -1471,8 +1514,8 @@
             this.btnDate4x2.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate4x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate4x2.Name = "btnDate4x2";
-            this.btnDate4x2.Primary = false;
-            this.btnDate4x2.Size = new System.Drawing.Size(71, 40);
+            this.btnDate4x2.Primary = true;
+            this.btnDate4x2.Size = new System.Drawing.Size(63, 40);
             this.btnDate4x2.TabIndex = 20;
             this.btnDate4x2.Text = "12";
             this.btnDate4x2.UseFlatStyle = true;
@@ -1486,6 +1529,7 @@
             this.btnDate5x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate5x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate5x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate5x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate5x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate5x2.Depth = 0;
             this.btnDate5x2.Icon = null;
@@ -1495,8 +1539,8 @@
             this.btnDate5x2.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate5x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate5x2.Name = "btnDate5x2";
-            this.btnDate5x2.Primary = false;
-            this.btnDate5x2.Size = new System.Drawing.Size(71, 40);
+            this.btnDate5x2.Primary = true;
+            this.btnDate5x2.Size = new System.Drawing.Size(63, 40);
             this.btnDate5x2.TabIndex = 19;
             this.btnDate5x2.Text = "13";
             this.btnDate5x2.UseFlatStyle = true;
@@ -1510,6 +1554,7 @@
             this.btnDate1x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate1x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate1x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate1x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate1x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate1x2.Depth = 0;
             this.btnDate1x2.Icon = null;
@@ -1519,8 +1564,8 @@
             this.btnDate1x2.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate1x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate1x2.Name = "btnDate1x2";
-            this.btnDate1x2.Primary = false;
-            this.btnDate1x2.Size = new System.Drawing.Size(59, 40);
+            this.btnDate1x2.Primary = true;
+            this.btnDate1x2.Size = new System.Drawing.Size(51, 40);
             this.btnDate1x2.TabIndex = 18;
             this.btnDate1x2.Text = "9";
             this.btnDate1x2.UseFlatStyle = true;
@@ -1534,6 +1579,7 @@
             this.btnDate0x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate0x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate0x2.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDate0x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate0x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate0x2.Depth = 0;
             this.btnDate0x2.Icon = null;
@@ -1543,8 +1589,8 @@
             this.btnDate0x2.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate0x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate0x2.Name = "btnDate0x2";
-            this.btnDate0x2.Primary = false;
-            this.btnDate0x2.Size = new System.Drawing.Size(59, 40);
+            this.btnDate0x2.Primary = true;
+            this.btnDate0x2.Size = new System.Drawing.Size(51, 40);
             this.btnDate0x2.TabIndex = 17;
             this.btnDate0x2.Text = "8";
             this.btnDate0x2.UseFlatStyle = true;
@@ -1558,6 +1604,7 @@
             this.btnDate6x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate6x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate6x1.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDate6x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate6x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate6x1.Depth = 0;
             this.btnDate6x1.Icon = null;
@@ -1567,8 +1614,8 @@
             this.btnDate6x1.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate6x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate6x1.Name = "btnDate6x1";
-            this.btnDate6x1.Primary = false;
-            this.btnDate6x1.Size = new System.Drawing.Size(59, 40);
+            this.btnDate6x1.Primary = true;
+            this.btnDate6x1.Size = new System.Drawing.Size(51, 40);
             this.btnDate6x1.TabIndex = 16;
             this.btnDate6x1.Text = "7";
             this.btnDate6x1.UseFlatStyle = true;
@@ -1582,6 +1629,7 @@
             this.btnDate2x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate2x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate2x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate2x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate2x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate2x1.Depth = 0;
             this.btnDate2x1.Icon = null;
@@ -1591,8 +1639,8 @@
             this.btnDate2x1.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate2x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate2x1.Name = "btnDate2x1";
-            this.btnDate2x1.Primary = false;
-            this.btnDate2x1.Size = new System.Drawing.Size(59, 40);
+            this.btnDate2x1.Primary = true;
+            this.btnDate2x1.Size = new System.Drawing.Size(51, 40);
             this.btnDate2x1.TabIndex = 15;
             this.btnDate2x1.Text = "3";
             this.btnDate2x1.UseFlatStyle = true;
@@ -1606,6 +1654,7 @@
             this.btnDate3x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate3x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate3x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate3x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate3x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate3x1.Depth = 0;
             this.btnDate3x1.Icon = null;
@@ -1615,8 +1664,8 @@
             this.btnDate3x1.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate3x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate3x1.Name = "btnDate3x1";
-            this.btnDate3x1.Primary = false;
-            this.btnDate3x1.Size = new System.Drawing.Size(59, 40);
+            this.btnDate3x1.Primary = true;
+            this.btnDate3x1.Size = new System.Drawing.Size(51, 40);
             this.btnDate3x1.TabIndex = 14;
             this.btnDate3x1.Text = "4";
             this.btnDate3x1.UseFlatStyle = true;
@@ -1630,6 +1679,7 @@
             this.btnDate4x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate4x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate4x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate4x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate4x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate4x1.Depth = 0;
             this.btnDate4x1.Icon = null;
@@ -1639,8 +1689,8 @@
             this.btnDate4x1.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate4x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate4x1.Name = "btnDate4x1";
-            this.btnDate4x1.Primary = false;
-            this.btnDate4x1.Size = new System.Drawing.Size(59, 40);
+            this.btnDate4x1.Primary = true;
+            this.btnDate4x1.Size = new System.Drawing.Size(51, 40);
             this.btnDate4x1.TabIndex = 13;
             this.btnDate4x1.Text = "5";
             this.btnDate4x1.UseFlatStyle = true;
@@ -1654,6 +1704,7 @@
             this.btnDate5x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate5x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate5x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate5x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate5x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate5x1.Depth = 0;
             this.btnDate5x1.Icon = null;
@@ -1663,8 +1714,8 @@
             this.btnDate5x1.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate5x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate5x1.Name = "btnDate5x1";
-            this.btnDate5x1.Primary = false;
-            this.btnDate5x1.Size = new System.Drawing.Size(59, 40);
+            this.btnDate5x1.Primary = true;
+            this.btnDate5x1.Size = new System.Drawing.Size(51, 40);
             this.btnDate5x1.TabIndex = 12;
             this.btnDate5x1.Text = "6";
             this.btnDate5x1.UseFlatStyle = true;
@@ -1678,6 +1729,7 @@
             this.btnDate1x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate1x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate1x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate1x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate1x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate1x1.Depth = 0;
             this.btnDate1x1.Icon = null;
@@ -1687,8 +1739,8 @@
             this.btnDate1x1.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate1x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate1x1.Name = "btnDate1x1";
-            this.btnDate1x1.Primary = false;
-            this.btnDate1x1.Size = new System.Drawing.Size(59, 40);
+            this.btnDate1x1.Primary = true;
+            this.btnDate1x1.Size = new System.Drawing.Size(51, 40);
             this.btnDate1x1.TabIndex = 11;
             this.btnDate1x1.Text = "2";
             this.btnDate1x1.UseFlatStyle = true;
@@ -1702,6 +1754,7 @@
             this.btnDate0x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate0x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate0x1.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDate0x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate0x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate0x1.Depth = 0;
             this.btnDate0x1.Icon = null;
@@ -1711,8 +1764,8 @@
             this.btnDate0x1.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate0x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate0x1.Name = "btnDate0x1";
-            this.btnDate0x1.Primary = false;
-            this.btnDate0x1.Size = new System.Drawing.Size(59, 40);
+            this.btnDate0x1.Primary = true;
+            this.btnDate0x1.Size = new System.Drawing.Size(51, 40);
             this.btnDate0x1.TabIndex = 10;
             this.btnDate0x1.Text = "1";
             this.btnDate0x1.UseFlatStyle = true;
@@ -1726,6 +1779,7 @@
             this.btnDate6x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate6x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate6x0.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDate6x0.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate6x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate6x0.Depth = 0;
             this.btnDate6x0.Enabled = false;
@@ -1736,8 +1790,8 @@
             this.btnDate6x0.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate6x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate6x0.Name = "btnDate6x0";
-            this.btnDate6x0.Primary = false;
-            this.btnDate6x0.Size = new System.Drawing.Size(86, 40);
+            this.btnDate6x0.Primary = true;
+            this.btnDate6x0.Size = new System.Drawing.Size(80, 40);
             this.btnDate6x0.TabIndex = 9;
             this.btnDate6x0.Text = "SAT";
             this.btnDate6x0.UseFlatStyle = true;
@@ -1750,6 +1804,7 @@
             this.btnDate2x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate2x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate2x0.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate2x0.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate2x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate2x0.Depth = 0;
             this.btnDate2x0.Enabled = false;
@@ -1760,8 +1815,8 @@
             this.btnDate2x0.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate2x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate2x0.Name = "btnDate2x0";
-            this.btnDate2x0.Primary = false;
-            this.btnDate2x0.Size = new System.Drawing.Size(85, 40);
+            this.btnDate2x0.Primary = true;
+            this.btnDate2x0.Size = new System.Drawing.Size(79, 40);
             this.btnDate2x0.TabIndex = 8;
             this.btnDate2x0.Text = "TUE";
             this.btnDate2x0.UseFlatStyle = true;
@@ -1774,6 +1829,7 @@
             this.btnDate3x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate3x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate3x0.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate3x0.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate3x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate3x0.Depth = 0;
             this.btnDate3x0.Enabled = false;
@@ -1784,8 +1840,8 @@
             this.btnDate3x0.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate3x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate3x0.Name = "btnDate3x0";
-            this.btnDate3x0.Primary = false;
-            this.btnDate3x0.Size = new System.Drawing.Size(90, 40);
+            this.btnDate3x0.Primary = true;
+            this.btnDate3x0.Size = new System.Drawing.Size(86, 40);
             this.btnDate3x0.TabIndex = 7;
             this.btnDate3x0.Text = "WED";
             this.btnDate3x0.UseFlatStyle = true;
@@ -1798,6 +1854,7 @@
             this.btnDate4x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate4x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate4x0.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate4x0.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate4x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate4x0.Depth = 0;
             this.btnDate4x0.Enabled = false;
@@ -1808,8 +1865,8 @@
             this.btnDate4x0.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate4x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate4x0.Name = "btnDate4x0";
-            this.btnDate4x0.Primary = false;
-            this.btnDate4x0.Size = new System.Drawing.Size(88, 40);
+            this.btnDate4x0.Primary = true;
+            this.btnDate4x0.Size = new System.Drawing.Size(82, 40);
             this.btnDate4x0.TabIndex = 6;
             this.btnDate4x0.Text = "THU";
             this.btnDate4x0.UseFlatStyle = true;
@@ -1822,6 +1879,7 @@
             this.btnDate5x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate5x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate5x0.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate5x0.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate5x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate5x0.Depth = 0;
             this.btnDate5x0.Enabled = false;
@@ -1832,8 +1890,8 @@
             this.btnDate5x0.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate5x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate5x0.Name = "btnDate5x0";
-            this.btnDate5x0.Primary = false;
-            this.btnDate5x0.Size = new System.Drawing.Size(77, 40);
+            this.btnDate5x0.Primary = true;
+            this.btnDate5x0.Size = new System.Drawing.Size(70, 40);
             this.btnDate5x0.TabIndex = 5;
             this.btnDate5x0.Text = "FRI";
             this.btnDate5x0.UseFlatStyle = true;
@@ -1846,6 +1904,7 @@
             this.btnDate1x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate1x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate1x0.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnDate1x0.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate1x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate1x0.Depth = 0;
             this.btnDate1x0.Enabled = false;
@@ -1856,8 +1915,8 @@
             this.btnDate1x0.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate1x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate1x0.Name = "btnDate1x0";
-            this.btnDate1x0.Primary = false;
-            this.btnDate1x0.Size = new System.Drawing.Size(94, 40);
+            this.btnDate1x0.Primary = true;
+            this.btnDate1x0.Size = new System.Drawing.Size(89, 40);
             this.btnDate1x0.TabIndex = 4;
             this.btnDate1x0.Text = "MON";
             this.btnDate1x0.UseFlatStyle = true;
@@ -1870,6 +1929,7 @@
             this.btnDate0x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDate0x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnDate0x0.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnDate0x0.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate0x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate0x0.Depth = 0;
             this.btnDate0x0.Enabled = false;
@@ -1880,8 +1940,8 @@
             this.btnDate0x0.Margin = new System.Windows.Forms.Padding(0);
             this.btnDate0x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDate0x0.Name = "btnDate0x0";
-            this.btnDate0x0.Primary = false;
-            this.btnDate0x0.Size = new System.Drawing.Size(88, 40);
+            this.btnDate0x0.Primary = true;
+            this.btnDate0x0.Size = new System.Drawing.Size(82, 40);
             this.btnDate0x0.TabIndex = 3;
             this.btnDate0x0.Text = "SUN";
             this.btnDate0x0.UseFlatStyle = true;
@@ -1907,10 +1967,10 @@
             this.pnlMonthYear.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMonthYear.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlMonthYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlMonthYear.Location = new System.Drawing.Point(2, 187);
+            this.pnlMonthYear.Location = new System.Drawing.Point(2, 188);
             this.pnlMonthYear.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlMonthYear.Name = "pnlMonthYear";
-            this.pnlMonthYear.Size = new System.Drawing.Size(981, 35);
+            this.pnlMonthYear.Size = new System.Drawing.Size(981, 32);
             this.pnlMonthYear.TabIndex = 8;
             // 
             // btnMonthYear2x3
@@ -1920,6 +1980,7 @@
             this.btnMonthYear2x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMonthYear2x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonthYear2x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMonthYear2x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear2x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear2x3.Depth = 0;
             this.btnMonthYear2x3.Icon = null;
@@ -1929,8 +1990,8 @@
             this.btnMonthYear2x3.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonthYear2x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear2x3.Name = "btnMonthYear2x3";
-            this.btnMonthYear2x3.Primary = false;
-            this.btnMonthYear2x3.Size = new System.Drawing.Size(153, 40);
+            this.btnMonthYear2x3.Primary = true;
+            this.btnMonthYear2x3.Size = new System.Drawing.Size(154, 40);
             this.btnMonthYear2x3.TabIndex = 16;
             this.btnMonthYear2x3.Text = "DECEMBER";
             this.btnMonthYear2x3.UseFlatStyle = true;
@@ -1944,6 +2005,7 @@
             this.btnMonthYear1x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMonthYear1x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonthYear1x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMonthYear1x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear1x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear1x3.Depth = 0;
             this.btnMonthYear1x3.Icon = null;
@@ -1953,8 +2015,8 @@
             this.btnMonthYear1x3.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonthYear1x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear1x3.Name = "btnMonthYear1x3";
-            this.btnMonthYear1x3.Primary = false;
-            this.btnMonthYear1x3.Size = new System.Drawing.Size(157, 40);
+            this.btnMonthYear1x3.Primary = true;
+            this.btnMonthYear1x3.Size = new System.Drawing.Size(158, 40);
             this.btnMonthYear1x3.TabIndex = 15;
             this.btnMonthYear1x3.Text = "NOVEMBER";
             this.btnMonthYear1x3.UseFlatStyle = true;
@@ -1968,6 +2030,7 @@
             this.btnMonthYear0x3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMonthYear0x3.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonthYear0x3.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMonthYear0x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear0x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear0x3.Depth = 0;
             this.btnMonthYear0x3.Icon = null;
@@ -1977,8 +2040,8 @@
             this.btnMonthYear0x3.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonthYear0x3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear0x3.Name = "btnMonthYear0x3";
-            this.btnMonthYear0x3.Primary = false;
-            this.btnMonthYear0x3.Size = new System.Drawing.Size(139, 40);
+            this.btnMonthYear0x3.Primary = true;
+            this.btnMonthYear0x3.Size = new System.Drawing.Size(138, 40);
             this.btnMonthYear0x3.TabIndex = 14;
             this.btnMonthYear0x3.Text = "OCTOBER";
             this.btnMonthYear0x3.UseFlatStyle = true;
@@ -1992,6 +2055,7 @@
             this.btnMonthYear2x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMonthYear2x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonthYear2x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMonthYear2x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear2x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear2x2.Depth = 0;
             this.btnMonthYear2x2.Icon = null;
@@ -2001,8 +2065,8 @@
             this.btnMonthYear2x2.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonthYear2x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear2x2.Name = "btnMonthYear2x2";
-            this.btnMonthYear2x2.Primary = false;
-            this.btnMonthYear2x2.Size = new System.Drawing.Size(164, 40);
+            this.btnMonthYear2x2.Primary = true;
+            this.btnMonthYear2x2.Size = new System.Drawing.Size(166, 40);
             this.btnMonthYear2x2.TabIndex = 13;
             this.btnMonthYear2x2.Text = "SEPTEMBER";
             this.btnMonthYear2x2.UseFlatStyle = true;
@@ -2016,6 +2080,7 @@
             this.btnMonthYear1x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMonthYear1x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonthYear1x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMonthYear1x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear1x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear1x2.Depth = 0;
             this.btnMonthYear1x2.Icon = null;
@@ -2025,8 +2090,8 @@
             this.btnMonthYear1x2.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonthYear1x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear1x2.Name = "btnMonthYear1x2";
-            this.btnMonthYear1x2.Primary = false;
-            this.btnMonthYear1x2.Size = new System.Drawing.Size(127, 40);
+            this.btnMonthYear1x2.Primary = true;
+            this.btnMonthYear1x2.Size = new System.Drawing.Size(124, 40);
             this.btnMonthYear1x2.TabIndex = 12;
             this.btnMonthYear1x2.Text = "AUGUST";
             this.btnMonthYear1x2.UseFlatStyle = true;
@@ -2040,6 +2105,7 @@
             this.btnMonthYear0x2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMonthYear0x2.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonthYear0x2.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMonthYear0x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear0x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear0x2.Depth = 0;
             this.btnMonthYear0x2.Icon = null;
@@ -2049,8 +2115,8 @@
             this.btnMonthYear0x2.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonthYear0x2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear0x2.Name = "btnMonthYear0x2";
-            this.btnMonthYear0x2.Primary = false;
-            this.btnMonthYear0x2.Size = new System.Drawing.Size(96, 40);
+            this.btnMonthYear0x2.Primary = true;
+            this.btnMonthYear0x2.Size = new System.Drawing.Size(91, 40);
             this.btnMonthYear0x2.TabIndex = 11;
             this.btnMonthYear0x2.Text = "JULY";
             this.btnMonthYear0x2.UseFlatStyle = true;
@@ -2064,6 +2130,7 @@
             this.btnMonthYear2x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMonthYear2x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonthYear2x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMonthYear2x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear2x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear2x1.Depth = 0;
             this.btnMonthYear2x1.Icon = null;
@@ -2073,8 +2140,8 @@
             this.btnMonthYear2x1.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonthYear2x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear2x1.Name = "btnMonthYear2x1";
-            this.btnMonthYear2x1.Primary = false;
-            this.btnMonthYear2x1.Size = new System.Drawing.Size(98, 40);
+            this.btnMonthYear2x1.Primary = true;
+            this.btnMonthYear2x1.Size = new System.Drawing.Size(94, 40);
             this.btnMonthYear2x1.TabIndex = 10;
             this.btnMonthYear2x1.Text = "JUNE";
             this.btnMonthYear2x1.UseFlatStyle = true;
@@ -2088,6 +2155,7 @@
             this.btnMonthYear1x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMonthYear1x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonthYear1x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMonthYear1x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear1x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear1x1.Depth = 0;
             this.btnMonthYear1x1.Icon = null;
@@ -2097,8 +2165,8 @@
             this.btnMonthYear1x1.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonthYear1x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear1x1.Name = "btnMonthYear1x1";
-            this.btnMonthYear1x1.Primary = false;
-            this.btnMonthYear1x1.Size = new System.Drawing.Size(91, 40);
+            this.btnMonthYear1x1.Primary = true;
+            this.btnMonthYear1x1.Size = new System.Drawing.Size(86, 40);
             this.btnMonthYear1x1.TabIndex = 9;
             this.btnMonthYear1x1.Text = "MAY";
             this.btnMonthYear1x1.UseFlatStyle = true;
@@ -2112,6 +2180,7 @@
             this.btnMonthYear0x1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMonthYear0x1.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonthYear0x1.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMonthYear0x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear0x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear0x1.Depth = 0;
             this.btnMonthYear0x1.Icon = null;
@@ -2121,8 +2190,8 @@
             this.btnMonthYear0x1.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonthYear0x1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear0x1.Name = "btnMonthYear0x1";
-            this.btnMonthYear0x1.Primary = false;
-            this.btnMonthYear0x1.Size = new System.Drawing.Size(104, 40);
+            this.btnMonthYear0x1.Primary = true;
+            this.btnMonthYear0x1.Size = new System.Drawing.Size(99, 40);
             this.btnMonthYear0x1.TabIndex = 8;
             this.btnMonthYear0x1.Text = "APRIl";
             this.btnMonthYear0x1.UseFlatStyle = true;
@@ -2136,6 +2205,7 @@
             this.btnMonthYear2x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMonthYear2x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonthYear2x0.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMonthYear2x0.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear2x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear2x0.Depth = 0;
             this.btnMonthYear2x0.Icon = null;
@@ -2145,8 +2215,8 @@
             this.btnMonthYear2x0.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonthYear2x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear2x0.Name = "btnMonthYear2x0";
-            this.btnMonthYear2x0.Primary = false;
-            this.btnMonthYear2x0.Size = new System.Drawing.Size(120, 40);
+            this.btnMonthYear2x0.Primary = true;
+            this.btnMonthYear2x0.Size = new System.Drawing.Size(117, 40);
             this.btnMonthYear2x0.TabIndex = 7;
             this.btnMonthYear2x0.Text = "MARCH";
             this.btnMonthYear2x0.UseFlatStyle = true;
@@ -2160,6 +2230,7 @@
             this.btnMonthYear1x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMonthYear1x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonthYear1x0.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMonthYear1x0.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear1x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear1x0.Depth = 0;
             this.btnMonthYear1x0.Icon = null;
@@ -2169,8 +2240,8 @@
             this.btnMonthYear1x0.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonthYear1x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear1x0.Name = "btnMonthYear1x0";
-            this.btnMonthYear1x0.Primary = false;
-            this.btnMonthYear1x0.Size = new System.Drawing.Size(149, 40);
+            this.btnMonthYear1x0.Primary = true;
+            this.btnMonthYear1x0.Size = new System.Drawing.Size(148, 40);
             this.btnMonthYear1x0.TabIndex = 6;
             this.btnMonthYear1x0.Text = "FEBRUARY";
             this.btnMonthYear1x0.UseFlatStyle = true;
@@ -2184,6 +2255,7 @@
             this.btnMonthYear0x0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMonthYear0x0.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMonthYear0x0.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMonthYear0x0.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear0x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear0x0.Depth = 0;
             this.btnMonthYear0x0.Icon = null;
@@ -2193,8 +2265,8 @@
             this.btnMonthYear0x0.Margin = new System.Windows.Forms.Padding(0);
             this.btnMonthYear0x0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMonthYear0x0.Name = "btnMonthYear0x0";
-            this.btnMonthYear0x0.Primary = false;
-            this.btnMonthYear0x0.Size = new System.Drawing.Size(139, 40);
+            this.btnMonthYear0x0.Primary = true;
+            this.btnMonthYear0x0.Size = new System.Drawing.Size(138, 40);
             this.btnMonthYear0x0.TabIndex = 5;
             this.btnMonthYear0x0.Text = "JANUARY";
             this.btnMonthYear0x0.UseFlatStyle = true;
@@ -2214,11 +2286,11 @@
             this.pnlTime.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTime.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlTime.Location = new System.Drawing.Point(2, 222);
+            this.pnlTime.Location = new System.Drawing.Point(2, 220);
             this.pnlTime.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlTime.Name = "pnlTime";
             this.pnlTime.Padding = new System.Windows.Forms.Padding(30, 0, 30, 0);
-            this.pnlTime.Size = new System.Drawing.Size(981, 299);
+            this.pnlTime.Size = new System.Drawing.Size(981, 258);
             this.pnlTime.TabIndex = 9;
             // 
             // pnlAMPM
@@ -2233,7 +2305,7 @@
             this.pnlAMPM.Location = new System.Drawing.Point(470, 0);
             this.pnlAMPM.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlAMPM.Name = "pnlAMPM";
-            this.pnlAMPM.Size = new System.Drawing.Size(481, 299);
+            this.pnlAMPM.Size = new System.Drawing.Size(481, 258);
             this.pnlAMPM.TabIndex = 5;
             // 
             // btnAMPM
@@ -2241,8 +2313,9 @@
             this.btnAMPM.Alignment = System.Drawing.StringAlignment.Center;
             this.btnAMPM.AutoSize = true;
             this.btnAMPM.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAMPM.BorderColorType = MaterialSkin.ColorType.PRIMARY;
-            this.btnAMPM.ColorStyle = MaterialSkin.ColorType.PRIMARY;
+            this.btnAMPM.BorderColorType = MaterialSkin.ColorType.DEFAULT;
+            this.btnAMPM.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnAMPM.ControlSize = MaterialSkin.ControlSize.LARGE;
             this.btnAMPM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAMPM.Depth = 0;
             this.btnAMPM.Icon = null;
@@ -2252,11 +2325,11 @@
             this.btnAMPM.Margin = new System.Windows.Forms.Padding(0);
             this.btnAMPM.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAMPM.Name = "btnAMPM";
-            this.btnAMPM.Primary = false;
-            this.btnAMPM.Size = new System.Drawing.Size(79, 40);
+            this.btnAMPM.Primary = true;
+            this.btnAMPM.Size = new System.Drawing.Size(114, 72);
             this.btnAMPM.TabIndex = 25;
             this.btnAMPM.Text = "AM";
-            this.btnAMPM.UseFlatStyle = true;
+            this.btnAMPM.UseFlatStyle = false;
             this.btnAMPM.UseVisualStyleBackColor = true;
             this.btnAMPM.Click += new System.EventHandler(this.btnAMPM_Click);
             // 
@@ -2272,11 +2345,12 @@
             this.pnlTimeSeparator2.Location = new System.Drawing.Point(450, 0);
             this.pnlTimeSeparator2.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlTimeSeparator2.Name = "pnlTimeSeparator2";
-            this.pnlTimeSeparator2.Size = new System.Drawing.Size(20, 299);
+            this.pnlTimeSeparator2.Size = new System.Drawing.Size(20, 258);
             this.pnlTimeSeparator2.TabIndex = 6;
             // 
             // materialLabel2
             // 
+            this.materialLabel2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
@@ -2284,7 +2358,7 @@
             this.materialLabel2.Location = new System.Drawing.Point(0, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(20, 299);
+            this.materialLabel2.Size = new System.Drawing.Size(20, 258);
             this.materialLabel2.TabIndex = 0;
             this.materialLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2304,7 +2378,7 @@
             this.pnlMin.Location = new System.Drawing.Point(250, 0);
             this.pnlMin.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlMin.Name = "pnlMin";
-            this.pnlMin.Size = new System.Drawing.Size(200, 299);
+            this.pnlMin.Size = new System.Drawing.Size(200, 258);
             this.pnlMin.TabIndex = 2;
             // 
             // btnMin
@@ -2312,8 +2386,9 @@
             this.btnMin.Alignment = System.Drawing.StringAlignment.Center;
             this.btnMin.AutoSize = true;
             this.btnMin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnMin.BorderColorType = MaterialSkin.ColorType.PRIMARY;
-            this.btnMin.ColorStyle = MaterialSkin.ColorType.PRIMARY;
+            this.btnMin.BorderColorType = MaterialSkin.ColorType.DEFAULT;
+            this.btnMin.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMin.ControlSize = MaterialSkin.ControlSize.LARGE;
             this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMin.Depth = 0;
             this.btnMin.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2324,11 +2399,11 @@
             this.btnMin.Margin = new System.Windows.Forms.Padding(0);
             this.btnMin.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMin.Name = "btnMin";
-            this.btnMin.Primary = false;
-            this.btnMin.Size = new System.Drawing.Size(200, 139);
+            this.btnMin.Primary = true;
+            this.btnMin.Size = new System.Drawing.Size(200, 98);
             this.btnMin.TabIndex = 24;
             this.btnMin.Text = "3";
-            this.btnMin.UseFlatStyle = true;
+            this.btnMin.UseFlatStyle = false;
             this.btnMin.UseVisualStyleBackColor = true;
             // 
             // btnMinNext
@@ -2338,17 +2413,18 @@
             this.btnMinNext.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMinNext.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMinNext.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMinNext.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMinNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinNext.Depth = 0;
             this.btnMinNext.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnMinNext.Icon = null;
             this.btnMinNext.IconType = MaterialSkin.IconType.NONE;
             this.btnMinNext.IsSelected = null;
-            this.btnMinNext.Location = new System.Drawing.Point(0, 219);
+            this.btnMinNext.Location = new System.Drawing.Point(0, 178);
             this.btnMinNext.Margin = new System.Windows.Forms.Padding(0);
             this.btnMinNext.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMinNext.Name = "btnMinNext";
-            this.btnMinNext.Primary = false;
+            this.btnMinNext.Primary = true;
             this.btnMinNext.Size = new System.Drawing.Size(200, 40);
             this.btnMinNext.TabIndex = 21;
             this.btnMinNext.Text = "5";
@@ -2363,6 +2439,7 @@
             this.btnMinPrev.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnMinPrev.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnMinPrev.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnMinPrev.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMinPrev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinPrev.Depth = 0;
             this.btnMinPrev.Dock = System.Windows.Forms.DockStyle.Top;
@@ -2373,7 +2450,7 @@
             this.btnMinPrev.Margin = new System.Windows.Forms.Padding(0);
             this.btnMinPrev.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMinPrev.Name = "btnMinPrev";
-            this.btnMinPrev.Primary = false;
+            this.btnMinPrev.Primary = true;
             this.btnMinPrev.Size = new System.Drawing.Size(200, 40);
             this.btnMinPrev.TabIndex = 20;
             this.btnMinPrev.Text = "1";
@@ -2388,17 +2465,18 @@
             this.btnNextMin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnNextMin.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnNextMin.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnNextMin.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnNextMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNextMin.Depth = 0;
             this.btnNextMin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnNextMin.Icon = ((System.Drawing.Image)(resources.GetObject("btnNextMin.Icon")));
             this.btnNextMin.IconType = MaterialSkin.IconType.EXPAND_MORE;
             this.btnNextMin.IsSelected = null;
-            this.btnNextMin.Location = new System.Drawing.Point(0, 259);
+            this.btnNextMin.Location = new System.Drawing.Point(0, 218);
             this.btnNextMin.Margin = new System.Windows.Forms.Padding(0);
             this.btnNextMin.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNextMin.Name = "btnNextMin";
-            this.btnNextMin.Primary = false;
+            this.btnNextMin.Primary = true;
             this.btnNextMin.Size = new System.Drawing.Size(200, 40);
             this.btnNextMin.TabIndex = 19;
             this.btnNextMin.Tag = "1";
@@ -2414,6 +2492,7 @@
             this.btnPrevMin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnPrevMin.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnPrevMin.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnPrevMin.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnPrevMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrevMin.Depth = 0;
             this.btnPrevMin.Dock = System.Windows.Forms.DockStyle.Top;
@@ -2424,7 +2503,7 @@
             this.btnPrevMin.Margin = new System.Windows.Forms.Padding(0);
             this.btnPrevMin.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPrevMin.Name = "btnPrevMin";
-            this.btnPrevMin.Primary = false;
+            this.btnPrevMin.Primary = true;
             this.btnPrevMin.Size = new System.Drawing.Size(200, 40);
             this.btnPrevMin.TabIndex = 18;
             this.btnPrevMin.Tag = "-1";
@@ -2445,11 +2524,12 @@
             this.pnlTimeSeparator1.Location = new System.Drawing.Point(230, 0);
             this.pnlTimeSeparator1.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlTimeSeparator1.Name = "pnlTimeSeparator1";
-            this.pnlTimeSeparator1.Size = new System.Drawing.Size(20, 299);
+            this.pnlTimeSeparator1.Size = new System.Drawing.Size(20, 258);
             this.pnlTimeSeparator1.TabIndex = 1;
             // 
             // materialLabel1
             // 
+            this.materialLabel1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
@@ -2457,7 +2537,7 @@
             this.materialLabel1.Location = new System.Drawing.Point(0, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(20, 299);
+            this.materialLabel1.Size = new System.Drawing.Size(20, 258);
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = ":";
             this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2478,7 +2558,7 @@
             this.pnlHour.Location = new System.Drawing.Point(30, 0);
             this.pnlHour.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlHour.Name = "pnlHour";
-            this.pnlHour.Size = new System.Drawing.Size(200, 299);
+            this.pnlHour.Size = new System.Drawing.Size(200, 258);
             this.pnlHour.TabIndex = 0;
             // 
             // btnHour
@@ -2486,8 +2566,9 @@
             this.btnHour.Alignment = System.Drawing.StringAlignment.Center;
             this.btnHour.AutoSize = true;
             this.btnHour.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnHour.BorderColorType = MaterialSkin.ColorType.PRIMARY;
-            this.btnHour.ColorStyle = MaterialSkin.ColorType.PRIMARY;
+            this.btnHour.BorderColorType = MaterialSkin.ColorType.DEFAULT;
+            this.btnHour.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnHour.ControlSize = MaterialSkin.ControlSize.LARGE;
             this.btnHour.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHour.Depth = 0;
             this.btnHour.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2498,11 +2579,11 @@
             this.btnHour.Margin = new System.Windows.Forms.Padding(0);
             this.btnHour.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnHour.Name = "btnHour";
-            this.btnHour.Primary = false;
-            this.btnHour.Size = new System.Drawing.Size(200, 139);
+            this.btnHour.Primary = true;
+            this.btnHour.Size = new System.Drawing.Size(200, 98);
             this.btnHour.TabIndex = 17;
             this.btnHour.Text = "3";
-            this.btnHour.UseFlatStyle = true;
+            this.btnHour.UseFlatStyle = false;
             this.btnHour.UseVisualStyleBackColor = true;
             // 
             // btnHourNext
@@ -2512,17 +2593,18 @@
             this.btnHourNext.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnHourNext.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnHourNext.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnHourNext.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnHourNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHourNext.Depth = 0;
             this.btnHourNext.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnHourNext.Icon = null;
             this.btnHourNext.IconType = MaterialSkin.IconType.NONE;
             this.btnHourNext.IsSelected = null;
-            this.btnHourNext.Location = new System.Drawing.Point(0, 219);
+            this.btnHourNext.Location = new System.Drawing.Point(0, 178);
             this.btnHourNext.Margin = new System.Windows.Forms.Padding(0);
             this.btnHourNext.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnHourNext.Name = "btnHourNext";
-            this.btnHourNext.Primary = false;
+            this.btnHourNext.Primary = true;
             this.btnHourNext.Size = new System.Drawing.Size(200, 40);
             this.btnHourNext.TabIndex = 14;
             this.btnHourNext.Text = "5";
@@ -2537,6 +2619,7 @@
             this.btnHourPrev.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnHourPrev.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnHourPrev.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnHourPrev.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnHourPrev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHourPrev.Depth = 0;
             this.btnHourPrev.Dock = System.Windows.Forms.DockStyle.Top;
@@ -2547,7 +2630,7 @@
             this.btnHourPrev.Margin = new System.Windows.Forms.Padding(0);
             this.btnHourPrev.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnHourPrev.Name = "btnHourPrev";
-            this.btnHourPrev.Primary = false;
+            this.btnHourPrev.Primary = true;
             this.btnHourPrev.Size = new System.Drawing.Size(200, 40);
             this.btnHourPrev.TabIndex = 13;
             this.btnHourPrev.Text = "1";
@@ -2562,17 +2645,18 @@
             this.btnNextHour.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnNextHour.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnNextHour.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnNextHour.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnNextHour.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNextHour.Depth = 0;
             this.btnNextHour.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnNextHour.Icon = ((System.Drawing.Image)(resources.GetObject("btnNextHour.Icon")));
             this.btnNextHour.IconType = MaterialSkin.IconType.EXPAND_MORE;
             this.btnNextHour.IsSelected = null;
-            this.btnNextHour.Location = new System.Drawing.Point(0, 259);
+            this.btnNextHour.Location = new System.Drawing.Point(0, 218);
             this.btnNextHour.Margin = new System.Windows.Forms.Padding(0);
             this.btnNextHour.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNextHour.Name = "btnNextHour";
-            this.btnNextHour.Primary = false;
+            this.btnNextHour.Primary = true;
             this.btnNextHour.Size = new System.Drawing.Size(200, 40);
             this.btnNextHour.TabIndex = 12;
             this.btnNextHour.Tag = "1";
@@ -2588,6 +2672,7 @@
             this.btnPrevHour.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnPrevHour.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnPrevHour.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnPrevHour.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnPrevHour.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrevHour.Depth = 0;
             this.btnPrevHour.Dock = System.Windows.Forms.DockStyle.Top;
@@ -2598,7 +2683,7 @@
             this.btnPrevHour.Margin = new System.Windows.Forms.Padding(0);
             this.btnPrevHour.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPrevHour.Name = "btnPrevHour";
-            this.btnPrevHour.Primary = false;
+            this.btnPrevHour.Primary = true;
             this.btnPrevHour.Size = new System.Drawing.Size(200, 40);
             this.btnPrevHour.TabIndex = 6;
             this.btnPrevHour.Tag = "-1";
@@ -2629,10 +2714,10 @@
             this.pnlDateRange.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDateRange.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlDateRange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlDateRange.Location = new System.Drawing.Point(2, 521);
+            this.pnlDateRange.Location = new System.Drawing.Point(2, 478);
             this.pnlDateRange.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlDateRange.Name = "pnlDateRange";
-            this.pnlDateRange.Size = new System.Drawing.Size(981, 79);
+            this.pnlDateRange.Size = new System.Drawing.Size(981, 122);
             this.pnlDateRange.TabIndex = 10;
             // 
             // btnLastMonth
@@ -2642,6 +2727,7 @@
             this.btnLastMonth.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnLastMonth.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnLastMonth.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnLastMonth.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnLastMonth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLastMonth.Depth = 0;
             this.btnLastMonth.Icon = null;
@@ -2651,8 +2737,8 @@
             this.btnLastMonth.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnLastMonth.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLastMonth.Name = "btnLastMonth";
-            this.btnLastMonth.Primary = false;
-            this.btnLastMonth.Size = new System.Drawing.Size(176, 40);
+            this.btnLastMonth.Primary = true;
+            this.btnLastMonth.Size = new System.Drawing.Size(179, 40);
             this.btnLastMonth.TabIndex = 13;
             this.btnLastMonth.Tag = "LASTMONTH";
             this.btnLastMonth.Text = "LAST MONTH";
@@ -2667,6 +2753,7 @@
             this.btnThisMonth.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnThisMonth.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnThisMonth.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnThisMonth.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnThisMonth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThisMonth.Depth = 0;
             this.btnThisMonth.Icon = null;
@@ -2676,8 +2763,8 @@
             this.btnThisMonth.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnThisMonth.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnThisMonth.Name = "btnThisMonth";
-            this.btnThisMonth.Primary = false;
-            this.btnThisMonth.Size = new System.Drawing.Size(172, 40);
+            this.btnThisMonth.Primary = true;
+            this.btnThisMonth.Size = new System.Drawing.Size(174, 40);
             this.btnThisMonth.TabIndex = 12;
             this.btnThisMonth.Tag = "THISMONTH";
             this.btnThisMonth.Text = "THIS MONTH";
@@ -2692,6 +2779,7 @@
             this.btnCustom.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCustom.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnCustom.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnCustom.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnCustom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCustom.Depth = 0;
             this.btnCustom.Icon = null;
@@ -2701,8 +2789,8 @@
             this.btnCustom.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnCustom.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCustom.Name = "btnCustom";
-            this.btnCustom.Primary = false;
-            this.btnCustom.Size = new System.Drawing.Size(131, 40);
+            this.btnCustom.Primary = true;
+            this.btnCustom.Size = new System.Drawing.Size(130, 40);
             this.btnCustom.TabIndex = 11;
             this.btnCustom.Tag = "CUSTOM";
             this.btnCustom.Text = "CUSTOM";
@@ -2717,6 +2805,7 @@
             this.btnLastYear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnLastYear.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnLastYear.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnLastYear.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnLastYear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLastYear.Depth = 0;
             this.btnLastYear.Icon = null;
@@ -2726,7 +2815,7 @@
             this.btnLastYear.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnLastYear.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLastYear.Name = "btnLastYear";
-            this.btnLastYear.Primary = false;
+            this.btnLastYear.Primary = true;
             this.btnLastYear.Size = new System.Drawing.Size(153, 40);
             this.btnLastYear.TabIndex = 10;
             this.btnLastYear.Tag = "LASTYEAR";
@@ -2742,6 +2831,7 @@
             this.btnThisYear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnThisYear.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnThisYear.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnThisYear.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnThisYear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThisYear.Depth = 0;
             this.btnThisYear.Icon = null;
@@ -2751,7 +2841,7 @@
             this.btnThisYear.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnThisYear.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnThisYear.Name = "btnThisYear";
-            this.btnThisYear.Primary = false;
+            this.btnThisYear.Primary = true;
             this.btnThisYear.Size = new System.Drawing.Size(148, 40);
             this.btnThisYear.TabIndex = 9;
             this.btnThisYear.Tag = "THISYEAR";
@@ -2767,6 +2857,7 @@
             this.btnLastWeek.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnLastWeek.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnLastWeek.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnLastWeek.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnLastWeek.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLastWeek.Depth = 0;
             this.btnLastWeek.Icon = null;
@@ -2776,8 +2867,8 @@
             this.btnLastWeek.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnLastWeek.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLastWeek.Name = "btnLastWeek";
-            this.btnLastWeek.Primary = false;
-            this.btnLastWeek.Size = new System.Drawing.Size(156, 40);
+            this.btnLastWeek.Primary = true;
+            this.btnLastWeek.Size = new System.Drawing.Size(157, 40);
             this.btnLastWeek.TabIndex = 8;
             this.btnLastWeek.Tag = "LASTWEEK";
             this.btnLastWeek.Text = "LAST WEEK";
@@ -2792,6 +2883,7 @@
             this.btnThisWeek.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnThisWeek.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnThisWeek.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnThisWeek.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnThisWeek.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThisWeek.Depth = 0;
             this.btnThisWeek.Icon = null;
@@ -2801,8 +2893,8 @@
             this.btnThisWeek.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnThisWeek.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnThisWeek.Name = "btnThisWeek";
-            this.btnThisWeek.Primary = false;
-            this.btnThisWeek.Size = new System.Drawing.Size(152, 40);
+            this.btnThisWeek.Primary = true;
+            this.btnThisWeek.Size = new System.Drawing.Size(153, 40);
             this.btnThisWeek.TabIndex = 7;
             this.btnThisWeek.Tag = "THISWEEK";
             this.btnThisWeek.Text = "THIS WEEK";
@@ -2817,6 +2909,7 @@
             this.btnYesterday.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnYesterday.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnYesterday.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnYesterday.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnYesterday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYesterday.Depth = 0;
             this.btnYesterday.Icon = null;
@@ -2826,7 +2919,7 @@
             this.btnYesterday.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnYesterday.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnYesterday.Name = "btnYesterday";
-            this.btnYesterday.Primary = false;
+            this.btnYesterday.Primary = true;
             this.btnYesterday.Size = new System.Drawing.Size(161, 40);
             this.btnYesterday.TabIndex = 6;
             this.btnYesterday.Tag = "YESTERDAY";
@@ -2842,6 +2935,7 @@
             this.btnToday.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnToday.BorderColorType = MaterialSkin.ColorType.DEFAULT;
             this.btnToday.ColorStyle = MaterialSkin.ColorType.DEFAULT;
+            this.btnToday.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnToday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnToday.Depth = 0;
             this.btnToday.Icon = null;
@@ -2851,8 +2945,8 @@
             this.btnToday.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnToday.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnToday.Name = "btnToday";
-            this.btnToday.Primary = false;
-            this.btnToday.Size = new System.Drawing.Size(114, 40);
+            this.btnToday.Primary = true;
+            this.btnToday.Size = new System.Drawing.Size(110, 40);
             this.btnToday.TabIndex = 5;
             this.btnToday.Tag = "TODAY";
             this.btnToday.Text = "TODAY";

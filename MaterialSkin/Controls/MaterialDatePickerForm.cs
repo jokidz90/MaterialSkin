@@ -173,6 +173,7 @@ namespace MaterialSkin.Controls
                 btn.Enabled = false;
                 btn.Text = "";
                 btn.Tag = null;
+                btn.UseFlatStyle = true;
                 btn.ColorStyle = (x == 0 || x == 6) ? ColorType.DANGER : ColorType.DEFAULT;
                 btn.BorderColorType = ColorType.DEFAULT;
             }
@@ -190,6 +191,7 @@ namespace MaterialSkin.Controls
                     btn.Text = startMonth.Day.ToString();
                     btn.Tag = startMonth.Date;
                     btn.Enabled = true;
+
                     if (startMonth.Date == DateTime.Now.Date)
                     {
                         btn.ColorStyle = ColorType.SUCCESS;
@@ -198,8 +200,9 @@ namespace MaterialSkin.Controls
 
                     if (startMonth.Date == _value.Date)
                     {
-                        btn.ColorStyle = ColorType.PRIMARY;
-                        btn.BorderColorType = ColorType.PRIMARY;
+                        //btn.ColorStyle = ColorType.PRIMARY;
+                        //btn.BorderColorType = ColorType.PRIMARY;
+                        btn.UseFlatStyle = false;
                         if (_selectedBtn == null)
                             _selectedBtn = btn;
                     }
@@ -228,11 +231,7 @@ namespace MaterialSkin.Controls
                     btn.Text = yearCount.ToString();
                     btn.ColorStyle = ColorType.DEFAULT;
                     btn.BorderColorType = ColorType.DEFAULT;
-                    if (yearCount == _value.Year)
-                    {
-                        btn.ColorStyle = ColorType.PRIMARY;
-                        btn.BorderColorType = ColorType.PRIMARY;
-                    }
+                    btn.UseFlatStyle = (yearCount != _value.Year);
                     yearCount++;
                 }
             }
@@ -251,11 +250,7 @@ namespace MaterialSkin.Controls
                     btn.Text = month.ToString("MMMM");
                     btn.ColorStyle = ColorType.DEFAULT;
                     btn.BorderColorType = ColorType.DEFAULT;
-                    if (month.Month == _value.Month)
-                    {
-                        btn.ColorStyle = ColorType.PRIMARY;
-                        btn.BorderColorType = ColorType.PRIMARY;
-                    }
+                    btn.UseFlatStyle = (month.Month != _value.Month);
                     month = month.AddMonths(1);
                 }
             }
@@ -377,13 +372,15 @@ namespace MaterialSkin.Controls
         {
             if (_selectedBtn != null && _selectedBtn.Tag != null)
             {
-                _selectedBtn.ColorStyle = (_value.DayOfWeek == DayOfWeek.Sunday || _value.DayOfWeek == DayOfWeek.Saturday) ? ColorType.DANGER : ColorType.DEFAULT;
-                _selectedBtn.BorderColorType = ((DateTime)_selectedBtn.Tag).Date == DateTime.Now.Date ? ColorType.SUCCESS : ColorType.DEFAULT;
+                //_selectedBtn.ColorStyle = (_value.DayOfWeek == DayOfWeek.Sunday || _value.DayOfWeek == DayOfWeek.Saturday) ? ColorType.DANGER : ColorType.DEFAULT;
+                //_selectedBtn.BorderColorType = ((DateTime)_selectedBtn.Tag).Date == DateTime.Now.Date ? ColorType.SUCCESS : ColorType.DEFAULT;
+                _selectedBtn.UseFlatStyle = true;
             }
 
             _selectedBtn = (MaterialButton)sender;
-            _selectedBtn.ColorStyle = ColorType.PRIMARY;
-            _selectedBtn.BorderColorType = ColorType.PRIMARY;
+            //_selectedBtn.ColorStyle = ColorType.PRIMARY;
+            //_selectedBtn.BorderColorType = ColorType.PRIMARY;
+            _selectedBtn.UseFlatStyle = false;
 
             var timeStr = btnTimeValue.Tag + "";
             if (string.IsNullOrEmpty(timeStr))

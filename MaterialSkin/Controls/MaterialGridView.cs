@@ -60,9 +60,9 @@ namespace MaterialSkin.Controls
 
             this.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             this.ColumnHeadersDefaultCellStyle.Padding = new Padding(_paddingAll);
-            this.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            this.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
 
-            this.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            this.DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
             this.DefaultCellStyle.Padding = new Padding(_paddingAll, _paddingAll - 5, _paddingAll, _paddingAll - 5);
             this.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }

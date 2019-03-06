@@ -80,6 +80,7 @@ namespace MaterialSkin.Controls
                 if (!HideEmptyValue)
                 {
                     var ctrlSelectNone = InitButton(-2, "NONE", "");
+                    ctrlSelectNone.IconType = IconType.EMPTY;
                     flpMain.Controls.Add(ctrlSelectNone);
                     ctrlSelectNone.Dock = DockStyle.Top;
                     ctrlSelectNone.BringToFront();
@@ -112,6 +113,7 @@ namespace MaterialSkin.Controls
         {
             MaterialButton ctrl = new MaterialButton();
             ctrl.Name = _id.ToString().ToUpper() + "_" + index;
+            ctrl.ColorStyle = materialSkinManager.ColorStyle;
             ctrl.IsSelected = _selectedIndices.Contains(index);
             ctrl.AutoSize = false;
             ctrl.Width = this.Width - 35;
