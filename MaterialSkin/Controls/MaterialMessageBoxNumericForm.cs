@@ -94,6 +94,8 @@ namespace MaterialSkin.Controls
             btnEqual.BorderColorType = SkinManager.ColorStyle;
             btnDot.ColorStyle = SkinManager.ColorStyle;
             btnDot.BorderColorType = SkinManager.ColorStyle;
+            btnOK.ColorStyle = SkinManager.ColorStyle;
+            btnCancel.ColorStyle = SkinManager.ColorStyle;
         }
 
         private void btnOKCANCEL_Click(object sender, EventArgs e)

@@ -71,11 +71,12 @@
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlFooter.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlFooter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlFooter.Location = new System.Drawing.Point(2, 245);
+            this.pnlFooter.Location = new System.Drawing.Point(2, 378);
+            this.pnlFooter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlFooter.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Padding = new System.Windows.Forms.Padding(3);
-            this.pnlFooter.Size = new System.Drawing.Size(402, 45);
+            this.pnlFooter.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlFooter.Size = new System.Drawing.Size(607, 69);
             this.pnlFooter.TabIndex = 1;
             // 
             // pnlAbort
@@ -87,12 +88,11 @@
             this.pnlAbort.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlAbort.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlAbort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlAbort.Location = new System.Drawing.Point(-532, 3);
-            this.pnlAbort.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlAbort.Location = new System.Drawing.Point(-797, 5);
             this.pnlAbort.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlAbort.Name = "pnlAbort";
-            this.pnlAbort.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.pnlAbort.Size = new System.Drawing.Size(133, 39);
+            this.pnlAbort.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.pnlAbort.Size = new System.Drawing.Size(200, 59);
             this.pnlAbort.TabIndex = 4;
             // 
             // btnAbort
@@ -101,7 +101,7 @@
             this.btnAbort.AutoSize = true;
             this.btnAbort.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAbort.BorderColorType = MaterialSkin.ColorType.DEFAULT;
-            this.btnAbort.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnAbort.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnAbort.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnAbort.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAbort.Depth = 0;
@@ -109,12 +109,12 @@
             this.btnAbort.Icon = null;
             this.btnAbort.IconType = MaterialSkin.IconType.NONE;
             this.btnAbort.IsSelected = false;
-            this.btnAbort.Location = new System.Drawing.Point(3, 0);
-            this.btnAbort.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnAbort.Location = new System.Drawing.Point(4, 0);
+            this.btnAbort.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnAbort.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAbort.Name = "btnAbort";
             this.btnAbort.Primary = true;
-            this.btnAbort.Size = new System.Drawing.Size(130, 39);
+            this.btnAbort.Size = new System.Drawing.Size(196, 59);
             this.btnAbort.TabIndex = 1;
             this.btnAbort.Tag = "ABORT";
             this.btnAbort.Text = "ABORT";
@@ -131,12 +131,11 @@
             this.pnlRetry.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlRetry.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlRetry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlRetry.Location = new System.Drawing.Point(-399, 3);
-            this.pnlRetry.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlRetry.Location = new System.Drawing.Point(-597, 5);
             this.pnlRetry.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlRetry.Name = "pnlRetry";
-            this.pnlRetry.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.pnlRetry.Size = new System.Drawing.Size(133, 39);
+            this.pnlRetry.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.pnlRetry.Size = new System.Drawing.Size(200, 59);
             this.pnlRetry.TabIndex = 3;
             // 
             // btnRetry
@@ -145,7 +144,7 @@
             this.btnRetry.AutoSize = true;
             this.btnRetry.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRetry.BorderColorType = MaterialSkin.ColorType.DEFAULT;
-            this.btnRetry.ColorStyle = MaterialSkin.ColorType.SUCCESS;
+            this.btnRetry.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnRetry.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnRetry.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRetry.Depth = 0;
@@ -153,12 +152,12 @@
             this.btnRetry.Icon = null;
             this.btnRetry.IconType = MaterialSkin.IconType.NONE;
             this.btnRetry.IsSelected = false;
-            this.btnRetry.Location = new System.Drawing.Point(3, 0);
-            this.btnRetry.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnRetry.Location = new System.Drawing.Point(4, 0);
+            this.btnRetry.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnRetry.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRetry.Name = "btnRetry";
             this.btnRetry.Primary = true;
-            this.btnRetry.Size = new System.Drawing.Size(130, 39);
+            this.btnRetry.Size = new System.Drawing.Size(196, 59);
             this.btnRetry.TabIndex = 1;
             this.btnRetry.Tag = "RETRY";
             this.btnRetry.Text = "RETRY";
@@ -175,12 +174,11 @@
             this.pnlIgnore.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlIgnore.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlIgnore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlIgnore.Location = new System.Drawing.Point(-266, 3);
-            this.pnlIgnore.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlIgnore.Location = new System.Drawing.Point(-397, 5);
             this.pnlIgnore.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlIgnore.Name = "pnlIgnore";
-            this.pnlIgnore.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.pnlIgnore.Size = new System.Drawing.Size(133, 39);
+            this.pnlIgnore.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.pnlIgnore.Size = new System.Drawing.Size(200, 59);
             this.pnlIgnore.TabIndex = 2;
             // 
             // btnIgnore
@@ -197,12 +195,12 @@
             this.btnIgnore.Icon = null;
             this.btnIgnore.IconType = MaterialSkin.IconType.NONE;
             this.btnIgnore.IsSelected = false;
-            this.btnIgnore.Location = new System.Drawing.Point(3, 0);
-            this.btnIgnore.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnIgnore.Location = new System.Drawing.Point(4, 0);
+            this.btnIgnore.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnIgnore.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnIgnore.Name = "btnIgnore";
             this.btnIgnore.Primary = true;
-            this.btnIgnore.Size = new System.Drawing.Size(130, 39);
+            this.btnIgnore.Size = new System.Drawing.Size(196, 59);
             this.btnIgnore.TabIndex = 1;
             this.btnIgnore.Tag = "IGNORE";
             this.btnIgnore.Text = "IGNORE";
@@ -219,12 +217,11 @@
             this.pnlCancel.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlCancel.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlCancel.Location = new System.Drawing.Point(-133, 3);
-            this.pnlCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlCancel.Location = new System.Drawing.Point(-197, 5);
             this.pnlCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlCancel.Name = "pnlCancel";
-            this.pnlCancel.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.pnlCancel.Size = new System.Drawing.Size(133, 39);
+            this.pnlCancel.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.pnlCancel.Size = new System.Drawing.Size(200, 59);
             this.pnlCancel.TabIndex = 1;
             // 
             // btnCancel
@@ -233,7 +230,7 @@
             this.btnCancel.AutoSize = true;
             this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCancel.BorderColorType = MaterialSkin.ColorType.DEFAULT;
-            this.btnCancel.ColorStyle = MaterialSkin.ColorType.WARNING;
+            this.btnCancel.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnCancel.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Depth = 0;
@@ -241,12 +238,12 @@
             this.btnCancel.Icon = null;
             this.btnCancel.IconType = MaterialSkin.IconType.NONE;
             this.btnCancel.IsSelected = false;
-            this.btnCancel.Location = new System.Drawing.Point(3, 0);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnCancel.Location = new System.Drawing.Point(4, 0);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Primary = true;
-            this.btnCancel.Size = new System.Drawing.Size(130, 39);
+            this.btnCancel.Size = new System.Drawing.Size(196, 59);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Tag = "CANCEL";
             this.btnCancel.Text = "CANCEL";
@@ -263,12 +260,11 @@
             this.pnlOk.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlOk.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlOk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlOk.Location = new System.Drawing.Point(0, 3);
-            this.pnlOk.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlOk.Location = new System.Drawing.Point(3, 5);
             this.pnlOk.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlOk.Name = "pnlOk";
-            this.pnlOk.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.pnlOk.Size = new System.Drawing.Size(133, 39);
+            this.pnlOk.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.pnlOk.Size = new System.Drawing.Size(200, 59);
             this.pnlOk.TabIndex = 0;
             // 
             // btnOK
@@ -285,12 +281,12 @@
             this.btnOK.Icon = null;
             this.btnOK.IconType = MaterialSkin.IconType.NONE;
             this.btnOK.IsSelected = false;
-            this.btnOK.Location = new System.Drawing.Point(3, 0);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnOK.Location = new System.Drawing.Point(4, 0);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnOK.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnOK.Name = "btnOK";
             this.btnOK.Primary = true;
-            this.btnOK.Size = new System.Drawing.Size(130, 39);
+            this.btnOK.Size = new System.Drawing.Size(196, 59);
             this.btnOK.TabIndex = 2;
             this.btnOK.Tag = "OK";
             this.btnOK.Text = "OK";
@@ -307,12 +303,11 @@
             this.pnlNo.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlNo.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlNo.Location = new System.Drawing.Point(133, 3);
-            this.pnlNo.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlNo.Location = new System.Drawing.Point(203, 5);
             this.pnlNo.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlNo.Name = "pnlNo";
-            this.pnlNo.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.pnlNo.Size = new System.Drawing.Size(133, 39);
+            this.pnlNo.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.pnlNo.Size = new System.Drawing.Size(200, 59);
             this.pnlNo.TabIndex = 6;
             // 
             // btnNo
@@ -321,7 +316,7 @@
             this.btnNo.AutoSize = true;
             this.btnNo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnNo.BorderColorType = MaterialSkin.ColorType.DEFAULT;
-            this.btnNo.ColorStyle = MaterialSkin.ColorType.DANGER;
+            this.btnNo.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnNo.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnNo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNo.Depth = 0;
@@ -329,12 +324,12 @@
             this.btnNo.Icon = null;
             this.btnNo.IconType = MaterialSkin.IconType.NONE;
             this.btnNo.IsSelected = false;
-            this.btnNo.Location = new System.Drawing.Point(3, 0);
-            this.btnNo.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnNo.Location = new System.Drawing.Point(4, 0);
+            this.btnNo.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnNo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNo.Name = "btnNo";
             this.btnNo.Primary = true;
-            this.btnNo.Size = new System.Drawing.Size(130, 39);
+            this.btnNo.Size = new System.Drawing.Size(196, 59);
             this.btnNo.TabIndex = 2;
             this.btnNo.Tag = "NO";
             this.btnNo.Text = "NO";
@@ -351,12 +346,11 @@
             this.pnlYes.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlYes.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlYes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlYes.Location = new System.Drawing.Point(266, 3);
-            this.pnlYes.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlYes.Location = new System.Drawing.Point(403, 5);
             this.pnlYes.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlYes.Name = "pnlYes";
-            this.pnlYes.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.pnlYes.Size = new System.Drawing.Size(133, 39);
+            this.pnlYes.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.pnlYes.Size = new System.Drawing.Size(200, 59);
             this.pnlYes.TabIndex = 5;
             // 
             // btnYes
@@ -373,12 +367,12 @@
             this.btnYes.Icon = null;
             this.btnYes.IconType = MaterialSkin.IconType.NONE;
             this.btnYes.IsSelected = false;
-            this.btnYes.Location = new System.Drawing.Point(3, 0);
-            this.btnYes.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnYes.Location = new System.Drawing.Point(4, 0);
+            this.btnYes.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnYes.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnYes.Name = "btnYes";
             this.btnYes.Primary = true;
-            this.btnYes.Size = new System.Drawing.Size(130, 39);
+            this.btnYes.Size = new System.Drawing.Size(196, 59);
             this.btnYes.TabIndex = 2;
             this.btnYes.Tag = "YES";
             this.btnYes.Text = "YES";
@@ -396,10 +390,9 @@
             this.materialPanel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.materialPanel1.Location = new System.Drawing.Point(2, 40);
-            this.materialPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.materialPanel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel1.Name = "materialPanel1";
-            this.materialPanel1.Size = new System.Drawing.Size(402, 205);
+            this.materialPanel1.Size = new System.Drawing.Size(607, 338);
             this.materialPanel1.TabIndex = 3;
             // 
             // lblMessage
@@ -410,22 +403,20 @@
             this.lblMessage.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.lblMessage.Location = new System.Drawing.Point(0, 0);
-            this.lblMessage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMessage.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(402, 205);
+            this.lblMessage.Size = new System.Drawing.Size(607, 338);
             this.lblMessage.TabIndex = 2;
             this.lblMessage.Text = "Message";
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MaterialMessageBoxForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 292);
+            this.ClientSize = new System.Drawing.Size(611, 449);
             this.Controls.Add(this.materialPanel1);
             this.Controls.Add(this.pnlFooter);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MaterialMessageBoxForm";
             this.Padding = new System.Windows.Forms.Padding(2, 40, 2, 2);
             this.Sizable = false;

@@ -66,6 +66,8 @@ namespace MaterialSkin.Controls
             btnBackspace.BorderColorType = SkinManager.ColorStyle;
             btnSign.ColorStyle = SkinManager.ColorStyle;
             btnSign.BorderColorType = SkinManager.ColorStyle;
+            btnOK.ColorStyle = SkinManager.ColorStyle;
+            btnCancel.ColorStyle = SkinManager.ColorStyle;
         }
 
         private void btnOKCANCEL_Click(object sender, EventArgs e)

@@ -122,7 +122,7 @@
             this.btnCancel.AutoSize = true;
             this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCancel.BorderColorType = MaterialSkin.ColorType.DEFAULT;
-            this.btnCancel.ColorStyle = MaterialSkin.ColorType.WARNING;
+            this.btnCancel.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnCancel.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Depth = 0;
@@ -134,7 +134,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(0);
             this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Primary = true;
+            this.btnCancel.Primary = false;
             this.btnCancel.Size = new System.Drawing.Size(215, 59);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.TabStop = false;
@@ -167,7 +167,7 @@
             this.btnOK.AutoSize = true;
             this.btnOK.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnOK.BorderColorType = MaterialSkin.ColorType.DEFAULT;
-            this.btnOK.ColorStyle = MaterialSkin.ColorType.PRIMARY;
+            this.btnOK.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnOK.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.Depth = 0;

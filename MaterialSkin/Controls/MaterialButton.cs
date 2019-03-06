@@ -203,9 +203,9 @@ namespace MaterialSkin.Controls
 
         private void DrawFlatButton(PaintEventArgs pevent)
         {
-            var frontBrush = Enabled ? SkinManager.GetPrimaryTextBrush() : SkinManager.GetFlatButtonDisabledTextBrush();
-            if (_colorStyle != ColorType.DEFAULT)
-                frontBrush = Enabled ? ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].LightPrimaryBrush;
+            //var frontBrush = Enabled ? SkinManager.GetPrimaryTextBrush() : SkinManager.GetFlatButtonDisabledTextBrush();
+            //if (_colorStyle != ColorType.DEFAULT)
+            var frontBrush = Enabled ? ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].LightPrimaryBrush;
             var frontColor = frontBrush.GetColor();
 
             var g = pevent.Graphics;

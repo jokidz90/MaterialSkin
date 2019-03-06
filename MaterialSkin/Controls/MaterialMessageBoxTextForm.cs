@@ -12,6 +12,9 @@ namespace MaterialSkin.Controls
 {
     public partial class MaterialMessageBoxTextForm : MaterialFormDialog
     {
+        [Browsable(false)]
+        public MaterialSkinManager SkinManager => MaterialSkinManager.Instance;
+
         public string Value
         {
             get
@@ -34,6 +37,8 @@ namespace MaterialSkin.Controls
             txtSingleLine.Visible = !isMultiline;
             txtMultilines.Visible = isMultiline;
             this.Height = isMultiline ? 250 : 150;
+            btnOK.ColorStyle = SkinManager.ColorStyle;
+            btnCancel.ColorStyle = SkinManager.ColorStyle;
         }
 
         private void btnOKCANCEL_Click(object sender, EventArgs e)

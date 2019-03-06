@@ -12,6 +12,8 @@ namespace MaterialSkin.Controls
 {
     public partial class MaterialMessageBoxForm : MaterialFormDialog
     {
+        [Browsable(false)]
+        public MaterialSkinManager SkinManager => MaterialSkinManager.Instance;
         private ControlSize _controlSize = ControlSize.NORMAL;
         private MessageBoxButtons _buttons = MessageBoxButtons.OK;
 
@@ -64,6 +66,7 @@ namespace MaterialSkin.Controls
                 pnlCancel.Visible = true;
             }
 
+            
             if (icon == MessageBoxIcon.Error)
             {
                 this.ColorStyle = ColorType.DANGER;
@@ -84,6 +87,14 @@ namespace MaterialSkin.Controls
                 this.ColorStyle = ColorType.DEFAULT;
                 this.IconType = IconType.INFO_OUTLINE;
             }
+
+            btnAbort.ColorStyle = this.ColorStyle;
+            btnCancel.ColorStyle = this.ColorStyle;
+            btnIgnore.ColorStyle = this.ColorStyle;
+            btnNo.ColorStyle = this.ColorStyle;
+            btnOK.ColorStyle = this.ColorStyle;
+            btnRetry.ColorStyle = this.ColorStyle;
+            btnYes.ColorStyle = this.ColorStyle;
         }
 
         private void btn_Click(object sender, EventArgs e)

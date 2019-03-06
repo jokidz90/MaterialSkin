@@ -70,12 +70,12 @@
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlFooter.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlFooter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlFooter.Location = new System.Drawing.Point(2, 403);
+            this.pnlFooter.Location = new System.Drawing.Point(2, 621);
             this.pnlFooter.Margin = new System.Windows.Forms.Padding(0);
             this.pnlFooter.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.pnlFooter.Size = new System.Drawing.Size(296, 45);
+            this.pnlFooter.Padding = new System.Windows.Forms.Padding(8, 5, 8, 5);
+            this.pnlFooter.Size = new System.Drawing.Size(446, 69);
             this.pnlFooter.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -86,12 +86,12 @@
             this.tableLayoutPanel2.Controls.Add(this.pnlCancel, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.pnlOk, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 5);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(286, 39);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(430, 59);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // pnlCancel
@@ -107,7 +107,7 @@
             this.pnlCancel.Margin = new System.Windows.Forms.Padding(0);
             this.pnlCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlCancel.Name = "pnlCancel";
-            this.pnlCancel.Size = new System.Drawing.Size(143, 39);
+            this.pnlCancel.Size = new System.Drawing.Size(215, 59);
             this.pnlCancel.TabIndex = 1;
             // 
             // btnCancel
@@ -116,7 +116,7 @@
             this.btnCancel.AutoSize = true;
             this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCancel.BorderColorType = MaterialSkin.ColorType.DEFAULT;
-            this.btnCancel.ColorStyle = MaterialSkin.ColorType.WARNING;
+            this.btnCancel.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.btnCancel.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Depth = 0;
@@ -129,7 +129,7 @@
             this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Primary = true;
-            this.btnCancel.Size = new System.Drawing.Size(143, 39);
+            this.btnCancel.Size = new System.Drawing.Size(215, 59);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.TabStop = false;
             this.btnCancel.Tag = "CANCEL";
@@ -147,12 +147,12 @@
             this.pnlOk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlOk.Font = new System.Drawing.Font("Roboto", 11F);
             this.pnlOk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.pnlOk.Location = new System.Drawing.Point(143, 0);
+            this.pnlOk.Location = new System.Drawing.Point(215, 0);
             this.pnlOk.Margin = new System.Windows.Forms.Padding(0);
             this.pnlOk.MouseState = MaterialSkin.MouseState.HOVER;
             this.pnlOk.Name = "pnlOk";
-            this.pnlOk.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.pnlOk.Size = new System.Drawing.Size(143, 39);
+            this.pnlOk.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.pnlOk.Size = new System.Drawing.Size(215, 59);
             this.pnlOk.TabIndex = 0;
             // 
             // btnOK
@@ -169,12 +169,12 @@
             this.btnOK.Icon = null;
             this.btnOK.IconType = MaterialSkin.IconType.NONE;
             this.btnOK.IsSelected = false;
-            this.btnOK.Location = new System.Drawing.Point(5, 0);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnOK.Location = new System.Drawing.Point(8, 0);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.btnOK.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnOK.Name = "btnOK";
             this.btnOK.Primary = true;
-            this.btnOK.Size = new System.Drawing.Size(138, 39);
+            this.btnOK.Size = new System.Drawing.Size(207, 59);
             this.btnOK.TabIndex = 2;
             this.btnOK.TabStop = false;
             this.btnOK.Tag = "OK";
@@ -192,12 +192,11 @@
             this.materialPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel1.Location = new System.Drawing.Point(2, 104);
-            this.materialPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.materialPanel1.Location = new System.Drawing.Point(2, 138);
             this.materialPanel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel1.Name = "materialPanel1";
-            this.materialPanel1.Padding = new System.Windows.Forms.Padding(5, 5, 0, 5);
-            this.materialPanel1.Size = new System.Drawing.Size(296, 299);
+            this.materialPanel1.Padding = new System.Windows.Forms.Padding(8, 8, 0, 8);
+            this.materialPanel1.Size = new System.Drawing.Size(446, 483);
             this.materialPanel1.TabIndex = 3;
             // 
             // tblMain
@@ -220,7 +219,7 @@
             this.tblMain.Controls.Add(this.btnSign, 0, 4);
             this.tblMain.Controls.Add(this.btn0, 1, 4);
             this.tblMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblMain.Location = new System.Drawing.Point(5, 5);
+            this.tblMain.Location = new System.Drawing.Point(8, 8);
             this.tblMain.Margin = new System.Windows.Forms.Padding(0);
             this.tblMain.Name = "tblMain";
             this.tblMain.RowCount = 5;
@@ -229,8 +228,8 @@
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblMain.Size = new System.Drawing.Size(291, 289);
+            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tblMain.Size = new System.Drawing.Size(438, 467);
             this.tblMain.TabIndex = 0;
             // 
             // btn1
@@ -247,12 +246,12 @@
             this.btn1.Icon = null;
             this.btn1.IconType = MaterialSkin.IconType.NONE;
             this.btn1.IsSelected = false;
-            this.btn1.Location = new System.Drawing.Point(0, 171);
-            this.btn1.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.btn1.Location = new System.Drawing.Point(0, 279);
+            this.btn1.Margin = new System.Windows.Forms.Padding(0, 0, 4, 5);
             this.btn1.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn1.Name = "btn1";
             this.btn1.Primary = true;
-            this.btn1.Size = new System.Drawing.Size(94, 54);
+            this.btn1.Size = new System.Drawing.Size(142, 88);
             this.btn1.TabIndex = 11;
             this.btn1.TabStop = false;
             this.btn1.Tag = "1";
@@ -275,12 +274,12 @@
             this.btn2.Icon = null;
             this.btn2.IconType = MaterialSkin.IconType.NONE;
             this.btn2.IsSelected = false;
-            this.btn2.Location = new System.Drawing.Point(97, 171);
-            this.btn2.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.btn2.Location = new System.Drawing.Point(146, 279);
+            this.btn2.Margin = new System.Windows.Forms.Padding(0, 0, 4, 5);
             this.btn2.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn2.Name = "btn2";
             this.btn2.Primary = true;
-            this.btn2.Size = new System.Drawing.Size(94, 54);
+            this.btn2.Size = new System.Drawing.Size(142, 88);
             this.btn2.TabIndex = 12;
             this.btn2.TabStop = false;
             this.btn2.Tag = "2";
@@ -303,12 +302,12 @@
             this.btn3.Icon = null;
             this.btn3.IconType = MaterialSkin.IconType.NONE;
             this.btn3.IsSelected = false;
-            this.btn3.Location = new System.Drawing.Point(194, 171);
-            this.btn3.Margin = new System.Windows.Forms.Padding(0, 0, 5, 3);
+            this.btn3.Location = new System.Drawing.Point(292, 279);
+            this.btn3.Margin = new System.Windows.Forms.Padding(0, 0, 8, 5);
             this.btn3.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn3.Name = "btn3";
             this.btn3.Primary = true;
-            this.btn3.Size = new System.Drawing.Size(92, 54);
+            this.btn3.Size = new System.Drawing.Size(138, 88);
             this.btn3.TabIndex = 13;
             this.btn3.TabStop = false;
             this.btn3.Tag = "3";
@@ -331,12 +330,12 @@
             this.btn4.Icon = null;
             this.btn4.IconType = MaterialSkin.IconType.NONE;
             this.btn4.IsSelected = false;
-            this.btn4.Location = new System.Drawing.Point(0, 114);
-            this.btn4.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.btn4.Location = new System.Drawing.Point(0, 186);
+            this.btn4.Margin = new System.Windows.Forms.Padding(0, 0, 4, 5);
             this.btn4.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn4.Name = "btn4";
             this.btn4.Primary = true;
-            this.btn4.Size = new System.Drawing.Size(94, 54);
+            this.btn4.Size = new System.Drawing.Size(142, 88);
             this.btn4.TabIndex = 7;
             this.btn4.TabStop = false;
             this.btn4.Tag = "4";
@@ -359,12 +358,12 @@
             this.btn6.Icon = null;
             this.btn6.IconType = MaterialSkin.IconType.NONE;
             this.btn6.IsSelected = false;
-            this.btn6.Location = new System.Drawing.Point(194, 114);
-            this.btn6.Margin = new System.Windows.Forms.Padding(0, 0, 5, 3);
+            this.btn6.Location = new System.Drawing.Point(292, 186);
+            this.btn6.Margin = new System.Windows.Forms.Padding(0, 0, 8, 5);
             this.btn6.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn6.Name = "btn6";
             this.btn6.Primary = true;
-            this.btn6.Size = new System.Drawing.Size(92, 54);
+            this.btn6.Size = new System.Drawing.Size(138, 88);
             this.btn6.TabIndex = 9;
             this.btn6.TabStop = false;
             this.btn6.Tag = "6";
@@ -387,12 +386,12 @@
             this.btn7.Icon = null;
             this.btn7.IconType = MaterialSkin.IconType.NONE;
             this.btn7.IsSelected = false;
-            this.btn7.Location = new System.Drawing.Point(0, 57);
-            this.btn7.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.btn7.Location = new System.Drawing.Point(0, 93);
+            this.btn7.Margin = new System.Windows.Forms.Padding(0, 0, 4, 5);
             this.btn7.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn7.Name = "btn7";
             this.btn7.Primary = true;
-            this.btn7.Size = new System.Drawing.Size(94, 54);
+            this.btn7.Size = new System.Drawing.Size(142, 88);
             this.btn7.TabIndex = 3;
             this.btn7.TabStop = false;
             this.btn7.Tag = "7";
@@ -415,12 +414,12 @@
             this.btn8.Icon = null;
             this.btn8.IconType = MaterialSkin.IconType.NONE;
             this.btn8.IsSelected = false;
-            this.btn8.Location = new System.Drawing.Point(97, 57);
-            this.btn8.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.btn8.Location = new System.Drawing.Point(146, 93);
+            this.btn8.Margin = new System.Windows.Forms.Padding(0, 0, 4, 5);
             this.btn8.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn8.Name = "btn8";
             this.btn8.Primary = true;
-            this.btn8.Size = new System.Drawing.Size(94, 54);
+            this.btn8.Size = new System.Drawing.Size(142, 88);
             this.btn8.TabIndex = 4;
             this.btn8.TabStop = false;
             this.btn8.Tag = "8";
@@ -443,12 +442,12 @@
             this.btn9.Icon = null;
             this.btn9.IconType = MaterialSkin.IconType.NONE;
             this.btn9.IsSelected = false;
-            this.btn9.Location = new System.Drawing.Point(194, 57);
-            this.btn9.Margin = new System.Windows.Forms.Padding(0, 0, 5, 3);
+            this.btn9.Location = new System.Drawing.Point(292, 93);
+            this.btn9.Margin = new System.Windows.Forms.Padding(0, 0, 8, 5);
             this.btn9.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn9.Name = "btn9";
             this.btn9.Primary = true;
-            this.btn9.Size = new System.Drawing.Size(92, 54);
+            this.btn9.Size = new System.Drawing.Size(138, 88);
             this.btn9.TabIndex = 5;
             this.btn9.TabStop = false;
             this.btn9.Tag = "9";
@@ -471,12 +470,12 @@
             this.btnBackspace.Icon = ((System.Drawing.Image)(resources.GetObject("btnBackspace.Icon")));
             this.btnBackspace.IconType = MaterialSkin.IconType.ARROW_BACK;
             this.btnBackspace.IsSelected = false;
-            this.btnBackspace.Location = new System.Drawing.Point(194, 0);
-            this.btnBackspace.Margin = new System.Windows.Forms.Padding(0, 0, 5, 3);
+            this.btnBackspace.Location = new System.Drawing.Point(292, 0);
+            this.btnBackspace.Margin = new System.Windows.Forms.Padding(0, 0, 8, 5);
             this.btnBackspace.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBackspace.Name = "btnBackspace";
             this.btnBackspace.Primary = true;
-            this.btnBackspace.Size = new System.Drawing.Size(92, 54);
+            this.btnBackspace.Size = new System.Drawing.Size(138, 88);
             this.btnBackspace.TabIndex = 14;
             this.btnBackspace.TabStop = false;
             this.btnBackspace.Tag = "-";
@@ -498,12 +497,12 @@
             this.btn5.Icon = null;
             this.btn5.IconType = MaterialSkin.IconType.NONE;
             this.btn5.IsSelected = false;
-            this.btn5.Location = new System.Drawing.Point(97, 114);
-            this.btn5.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.btn5.Location = new System.Drawing.Point(146, 186);
+            this.btn5.Margin = new System.Windows.Forms.Padding(0, 0, 4, 5);
             this.btn5.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn5.Name = "btn5";
             this.btn5.Primary = true;
-            this.btn5.Size = new System.Drawing.Size(94, 54);
+            this.btn5.Size = new System.Drawing.Size(142, 88);
             this.btn5.TabIndex = 8;
             this.btn5.TabStop = false;
             this.btn5.Tag = "5";
@@ -528,11 +527,11 @@
             this.btnClear.IconType = MaterialSkin.IconType.NONE;
             this.btnClear.IsSelected = false;
             this.btnClear.Location = new System.Drawing.Point(0, 0);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(0, 0, 5, 3);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(0, 0, 8, 5);
             this.btnClear.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnClear.Name = "btnClear";
             this.btnClear.Primary = true;
-            this.btnClear.Size = new System.Drawing.Size(189, 54);
+            this.btnClear.Size = new System.Drawing.Size(284, 88);
             this.btnClear.TabIndex = 19;
             this.btnClear.TabStop = false;
             this.btnClear.Tag = "CLEAR";
@@ -555,12 +554,12 @@
             this.btnSign.Icon = null;
             this.btnSign.IconType = MaterialSkin.IconType.NONE;
             this.btnSign.IsSelected = false;
-            this.btnSign.Location = new System.Drawing.Point(0, 228);
-            this.btnSign.Margin = new System.Windows.Forms.Padding(0, 0, 3, 3);
+            this.btnSign.Location = new System.Drawing.Point(0, 372);
+            this.btnSign.Margin = new System.Windows.Forms.Padding(0, 0, 4, 5);
             this.btnSign.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSign.Name = "btnSign";
             this.btnSign.Primary = true;
-            this.btnSign.Size = new System.Drawing.Size(94, 58);
+            this.btnSign.Size = new System.Drawing.Size(142, 90);
             this.btnSign.TabIndex = 18;
             this.btnSign.TabStop = false;
             this.btnSign.Tag = "±";
@@ -584,12 +583,12 @@
             this.btn0.Icon = null;
             this.btn0.IconType = MaterialSkin.IconType.NONE;
             this.btn0.IsSelected = false;
-            this.btn0.Location = new System.Drawing.Point(97, 228);
-            this.btn0.Margin = new System.Windows.Forms.Padding(0, 0, 5, 3);
+            this.btn0.Location = new System.Drawing.Point(146, 372);
+            this.btn0.Margin = new System.Windows.Forms.Padding(0, 0, 8, 5);
             this.btn0.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn0.Name = "btn0";
             this.btn0.Primary = true;
-            this.btn0.Size = new System.Drawing.Size(189, 58);
+            this.btn0.Size = new System.Drawing.Size(284, 90);
             this.btn0.TabIndex = 15;
             this.btn0.TabStop = false;
             this.btn0.Tag = "0";
@@ -608,10 +607,11 @@
             this.materialPanel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.materialPanel2.Location = new System.Drawing.Point(2, 40);
+            this.materialPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialPanel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel2.Name = "materialPanel2";
-            this.materialPanel2.Padding = new System.Windows.Forms.Padding(8, 20, 8, 10);
-            this.materialPanel2.Size = new System.Drawing.Size(296, 64);
+            this.materialPanel2.Padding = new System.Windows.Forms.Padding(12, 31, 12, 15);
+            this.materialPanel2.Size = new System.Drawing.Size(446, 98);
             this.materialPanel2.TabIndex = 0;
             // 
             // txtNumber
@@ -621,7 +621,8 @@
             this.txtNumber.Depth = 0;
             this.txtNumber.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNumber.Hint = null;
-            this.txtNumber.Location = new System.Drawing.Point(8, 20);
+            this.txtNumber.Location = new System.Drawing.Point(12, 31);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNumber.MaxLength = 32767;
             this.txtNumber.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtNumber.Name = "txtNumber";
@@ -630,7 +631,7 @@
             this.txtNumber.SelectedText = "";
             this.txtNumber.SelectionLength = 0;
             this.txtNumber.SelectionStart = 0;
-            this.txtNumber.Size = new System.Drawing.Size(280, 31);
+            this.txtNumber.Size = new System.Drawing.Size(422, 44);
             this.txtNumber.TabIndex = 0;
             this.txtNumber.TabStop = false;
             this.txtNumber.Text = "1234";
@@ -639,13 +640,12 @@
             // 
             // MaterialMessageBoxIntegerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 450);
+            this.ClientSize = new System.Drawing.Size(450, 692);
             this.Controls.Add(this.materialPanel1);
             this.Controls.Add(this.materialPanel2);
             this.Controls.Add(this.pnlFooter);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MaterialMessageBoxIntegerForm";
             this.Padding = new System.Windows.Forms.Padding(2, 40, 2, 2);
             this.Sizable = false;
