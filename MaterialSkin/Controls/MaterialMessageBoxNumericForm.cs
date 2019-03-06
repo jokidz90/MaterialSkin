@@ -101,18 +101,31 @@ namespace MaterialSkin.Controls
             string tagStr = ((Control)sender).Tag + "";
             var dlgResult = DialogResult.None;
             Enum.TryParse(tagStr, out dlgResult);
+            if (dlgResult == DialogResult.OK && !string.IsNullOrEmpty(_calculationMode))
+                btnEqual_Click(btnEqual, new EventArgs());
+
             this.DialogResult = dlgResult;
             this.Close();
         }
 
         private void btn_Click(object sender, EventArgs e)
         {
+            if (_needToClear)
+            {
+                txtNumber.Text = "0";
+                _needToClear = false;
+            }
             string currentVal = txtNumber.Text + ((Control)sender).Tag + "";
             txtNumber.Text = currentVal.GetDecimalValue().ToString();
         }
 
         private void btnSign_Click(object sender, EventArgs e)
         {
+            if (_needToClear)
+            {
+                txtNumber.Text = "0";
+                _needToClear = false;
+            }
             string currentVal = txtNumber.Text;
             txtNumber.Text = (-1 * currentVal.GetDecimalValue()).ToString();
         }
@@ -125,6 +138,11 @@ namespace MaterialSkin.Controls
 
         private void btnDot_Click(object sender, EventArgs e)
         {
+            if (_needToClear)
+            {
+                txtNumber.Text = "0";
+                _needToClear = false;
+            }
             if (txtNumber.Text.Contains("."))
                 return;
             if (txtNumber.Text.Length == 0)
@@ -145,17 +163,20 @@ namespace MaterialSkin.Controls
             txtNumber.Text = txtNumber.Text.Substring(0, txtNumber.Text.Length - 1);
         }
 
+        bool _needToClear = false;
         private void btnCalc_Click(object sender, EventArgs e)
         {
             CalculationMode = ((Control)sender).Tag + "";
             _prevValue = txtNumber.Text.GetDecimalValue();
-            txtNumber.Text = "0";
+            _needToClear = true;
+            //txtNumber.Text = "0";
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
             try
             {
+                _needToClear = false;
                 if (_calculationMode == "ADD")
                     txtNumber.Text = (_prevValue + txtNumber.Text.GetDecimalValue()).ToString();
                 else if (_calculationMode == "SUBTRACT")
