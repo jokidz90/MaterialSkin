@@ -135,6 +135,8 @@ namespace MaterialSkinExample
             this.materialPanel1 = new MaterialSkin.Controls.MaterialPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.materialSelectableButton2 = new MaterialSkin.Controls.MaterialSelectableButton();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.flpColorScheme = new System.Windows.Forms.FlowLayoutPanel();
             this.materialTabControl1.SuspendLayout();
             this.tpControls.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -169,6 +171,7 @@ namespace MaterialSkinExample
             this.materialContextMenuStrip1.SuspendLayout();
             this.materialPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialDivider1
@@ -205,6 +208,7 @@ namespace MaterialSkinExample
             this.materialTabControl1.Controls.Add(this.tabPage2);
             this.materialTabControl1.Controls.Add(this.tabPage3);
             this.materialTabControl1.Controls.Add(this.tabPage4);
+            this.materialTabControl1.Controls.Add(this.tabPage5);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.Location = new System.Drawing.Point(0, 142);
@@ -272,7 +276,7 @@ namespace MaterialSkinExample
             this.materialFormGroup7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialFormGroup7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFormGroup7.Name = "materialFormGroup7";
-            this.materialFormGroup7.Padding = new System.Windows.Forms.Padding(4, 9, 4, 5);
+            this.materialFormGroup7.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.materialFormGroup7.Size = new System.Drawing.Size(1076, 100);
             this.materialFormGroup7.TabIndex = 8;
             this.materialFormGroup7.TabStop = false;
@@ -290,12 +294,12 @@ namespace MaterialSkinExample
             this.materialDateRangePicker2.DropDownWidth = -1;
             this.materialDateRangePicker2.EndValue = new System.DateTime(2019, 2, 15, 16, 11, 11, 911);
             this.materialDateRangePicker2.Hint = null;
-            this.materialDateRangePicker2.Location = new System.Drawing.Point(4, 34);
+            this.materialDateRangePicker2.Location = new System.Drawing.Point(3, 31);
             this.materialDateRangePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialDateRangePicker2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDateRangePicker2.Name = "materialDateRangePicker2";
             this.materialDateRangePicker2.ShowTime = true;
-            this.materialDateRangePicker2.Size = new System.Drawing.Size(1068, 32);
+            this.materialDateRangePicker2.Size = new System.Drawing.Size(1070, 32);
             this.materialDateRangePicker2.StartValue = new System.DateTime(2019, 2, 15, 16, 11, 11, 911);
             this.materialDateRangePicker2.TabIndex = 0;
             this.materialDateRangePicker2.TabStop = false;
@@ -315,7 +319,7 @@ namespace MaterialSkinExample
             this.materialFormGroup3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialFormGroup3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFormGroup3.Name = "materialFormGroup3";
-            this.materialFormGroup3.Padding = new System.Windows.Forms.Padding(4, 9, 4, 5);
+            this.materialFormGroup3.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.materialFormGroup3.Size = new System.Drawing.Size(1076, 100);
             this.materialFormGroup3.TabIndex = 7;
             this.materialFormGroup3.TabStop = false;
@@ -333,12 +337,12 @@ namespace MaterialSkinExample
             this.materialDateRangePicker1.DropDownWidth = -1;
             this.materialDateRangePicker1.EndValue = new System.DateTime(2019, 2, 15, 16, 11, 11, 911);
             this.materialDateRangePicker1.Hint = null;
-            this.materialDateRangePicker1.Location = new System.Drawing.Point(4, 34);
+            this.materialDateRangePicker1.Location = new System.Drawing.Point(3, 31);
             this.materialDateRangePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialDateRangePicker1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDateRangePicker1.Name = "materialDateRangePicker1";
             this.materialDateRangePicker1.ShowTime = false;
-            this.materialDateRangePicker1.Size = new System.Drawing.Size(1068, 32);
+            this.materialDateRangePicker1.Size = new System.Drawing.Size(1070, 32);
             this.materialDateRangePicker1.StartValue = new System.DateTime(2019, 2, 15, 16, 11, 11, 911);
             this.materialDateRangePicker1.TabIndex = 0;
             this.materialDateRangePicker1.TabStop = false;
@@ -358,7 +362,7 @@ namespace MaterialSkinExample
             this.materialFormGroup6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialFormGroup6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFormGroup6.Name = "materialFormGroup6";
-            this.materialFormGroup6.Padding = new System.Windows.Forms.Padding(4, 9, 4, 5);
+            this.materialFormGroup6.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.materialFormGroup6.Size = new System.Drawing.Size(1076, 100);
             this.materialFormGroup6.TabIndex = 6;
             this.materialFormGroup6.TabStop = false;
@@ -374,12 +378,12 @@ namespace MaterialSkinExample
             this.materialDatePicker2.DropDownHeight = 300;
             this.materialDatePicker2.DropDownWidth = -1;
             this.materialDatePicker2.Hint = null;
-            this.materialDatePicker2.Location = new System.Drawing.Point(4, 34);
+            this.materialDatePicker2.Location = new System.Drawing.Point(3, 31);
             this.materialDatePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialDatePicker2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDatePicker2.Name = "materialDatePicker2";
             this.materialDatePicker2.ShowTime = true;
-            this.materialDatePicker2.Size = new System.Drawing.Size(1068, 32);
+            this.materialDatePicker2.Size = new System.Drawing.Size(1070, 32);
             this.materialDatePicker2.TabIndex = 0;
             this.materialDatePicker2.TabStop = false;
             this.materialDatePicker2.Text = "materialDatePicker2";
@@ -399,7 +403,7 @@ namespace MaterialSkinExample
             this.frmDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.frmDate.MouseState = MaterialSkin.MouseState.HOVER;
             this.frmDate.Name = "frmDate";
-            this.frmDate.Padding = new System.Windows.Forms.Padding(4, 9, 4, 5);
+            this.frmDate.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.frmDate.Size = new System.Drawing.Size(1076, 100);
             this.frmDate.TabIndex = 5;
             this.frmDate.TabStop = false;
@@ -415,12 +419,12 @@ namespace MaterialSkinExample
             this.materialDatePicker1.DropDownHeight = 300;
             this.materialDatePicker1.DropDownWidth = -1;
             this.materialDatePicker1.Hint = null;
-            this.materialDatePicker1.Location = new System.Drawing.Point(4, 34);
+            this.materialDatePicker1.Location = new System.Drawing.Point(3, 31);
             this.materialDatePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialDatePicker1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDatePicker1.Name = "materialDatePicker1";
             this.materialDatePicker1.ShowTime = false;
-            this.materialDatePicker1.Size = new System.Drawing.Size(1068, 32);
+            this.materialDatePicker1.Size = new System.Drawing.Size(1070, 32);
             this.materialDatePicker1.TabIndex = 0;
             this.materialDatePicker1.TabStop = false;
             this.materialDatePicker1.Text = "materialDatePicker1";
@@ -440,7 +444,7 @@ namespace MaterialSkinExample
             this.formDropwDown2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.formDropwDown2.MouseState = MaterialSkin.MouseState.HOVER;
             this.formDropwDown2.Name = "formDropwDown2";
-            this.formDropwDown2.Padding = new System.Windows.Forms.Padding(4, 9, 4, 5);
+            this.formDropwDown2.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.formDropwDown2.Size = new System.Drawing.Size(1076, 100);
             this.formDropwDown2.TabIndex = 3;
             this.formDropwDown2.TabStop = false;
@@ -461,14 +465,14 @@ namespace MaterialSkinExample
             this.dropDown2.Hint = "Multi Select Drop Down";
             this.dropDown2.IsMultiSelect = true;
             this.dropDown2.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("dropDown2.Items")));
-            this.dropDown2.Location = new System.Drawing.Point(4, 34);
+            this.dropDown2.Location = new System.Drawing.Point(3, 31);
             this.dropDown2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dropDown2.MouseState = MaterialSkin.MouseState.HOVER;
             this.dropDown2.Name = "dropDown2";
             this.dropDown2.SelectedIndex = -1;
             this.dropDown2.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("dropDown2.SelectedIndices")));
             this.dropDown2.SelectedValue = ((object)(resources.GetObject("dropDown2.SelectedValue")));
-            this.dropDown2.Size = new System.Drawing.Size(1068, 32);
+            this.dropDown2.Size = new System.Drawing.Size(1070, 32);
             this.dropDown2.TabIndex = 1;
             this.dropDown2.TabStop = false;
             this.dropDown2.ValueMember = "CategoryID";
@@ -488,7 +492,7 @@ namespace MaterialSkinExample
             this.grpDisabledDropDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpDisabledDropDown.MouseState = MaterialSkin.MouseState.HOVER;
             this.grpDisabledDropDown.Name = "grpDisabledDropDown";
-            this.grpDisabledDropDown.Padding = new System.Windows.Forms.Padding(4, 9, 4, 5);
+            this.grpDisabledDropDown.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.grpDisabledDropDown.Size = new System.Drawing.Size(1076, 100);
             this.grpDisabledDropDown.TabIndex = 4;
             this.grpDisabledDropDown.TabStop = false;
@@ -509,14 +513,14 @@ namespace MaterialSkinExample
             this.dropDown3.Hint = "Drop Down";
             this.dropDown3.IsMultiSelect = false;
             this.dropDown3.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("dropDown3.Items")));
-            this.dropDown3.Location = new System.Drawing.Point(4, 34);
+            this.dropDown3.Location = new System.Drawing.Point(3, 31);
             this.dropDown3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dropDown3.MouseState = MaterialSkin.MouseState.HOVER;
             this.dropDown3.Name = "dropDown3";
             this.dropDown3.SelectedIndex = -1;
             this.dropDown3.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("dropDown3.SelectedIndices")));
             this.dropDown3.SelectedValue = null;
-            this.dropDown3.Size = new System.Drawing.Size(1068, 32);
+            this.dropDown3.Size = new System.Drawing.Size(1070, 32);
             this.dropDown3.TabIndex = 1;
             this.dropDown3.TabStop = false;
             this.dropDown3.ValueMember = "";
@@ -535,7 +539,7 @@ namespace MaterialSkinExample
             this.formDropwDown1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.formDropwDown1.MouseState = MaterialSkin.MouseState.HOVER;
             this.formDropwDown1.Name = "formDropwDown1";
-            this.formDropwDown1.Padding = new System.Windows.Forms.Padding(4, 9, 4, 5);
+            this.formDropwDown1.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.formDropwDown1.Size = new System.Drawing.Size(1076, 100);
             this.formDropwDown1.TabIndex = 1;
             this.formDropwDown1.TabStop = false;
@@ -556,14 +560,14 @@ namespace MaterialSkinExample
             this.dropDown1.Hint = "Drop Down";
             this.dropDown1.IsMultiSelect = false;
             this.dropDown1.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("dropDown1.Items")));
-            this.dropDown1.Location = new System.Drawing.Point(4, 34);
+            this.dropDown1.Location = new System.Drawing.Point(3, 31);
             this.dropDown1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dropDown1.MouseState = MaterialSkin.MouseState.HOVER;
             this.dropDown1.Name = "dropDown1";
             this.dropDown1.SelectedIndex = -1;
             this.dropDown1.SelectedIndices = ((System.Collections.Generic.List<int>)(resources.GetObject("dropDown1.SelectedIndices")));
             this.dropDown1.SelectedValue = null;
-            this.dropDown1.Size = new System.Drawing.Size(1068, 32);
+            this.dropDown1.Size = new System.Drawing.Size(1070, 32);
             this.dropDown1.TabIndex = 1;
             this.dropDown1.TabStop = false;
             this.dropDown1.ValueMember = "ItemID";
@@ -599,7 +603,7 @@ namespace MaterialSkinExample
             this.frmMultiLine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.frmMultiLine.MouseState = MaterialSkin.MouseState.HOVER;
             this.frmMultiLine.Name = "frmMultiLine";
-            this.frmMultiLine.Padding = new System.Windows.Forms.Padding(4, 9, 4, 5);
+            this.frmMultiLine.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.frmMultiLine.Size = new System.Drawing.Size(1076, 208);
             this.frmMultiLine.TabIndex = 9;
             this.frmMultiLine.TabStop = false;
@@ -612,7 +616,7 @@ namespace MaterialSkinExample
             this.materialRichText1.Depth = 0;
             this.materialRichText1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialRichText1.Hint = "Multi Line Text";
-            this.materialRichText1.Location = new System.Drawing.Point(4, 34);
+            this.materialRichText1.Location = new System.Drawing.Point(3, 31);
             this.materialRichText1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialRichText1.MaxLength = 2147483647;
             this.materialRichText1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -620,7 +624,7 @@ namespace MaterialSkinExample
             this.materialRichText1.SelectedText = "";
             this.materialRichText1.SelectionLength = 0;
             this.materialRichText1.SelectionStart = 0;
-            this.materialRichText1.Size = new System.Drawing.Size(1068, 169);
+            this.materialRichText1.Size = new System.Drawing.Size(1070, 174);
             this.materialRichText1.TabIndex = 0;
             this.materialRichText1.TabStop = false;
             // 
@@ -639,7 +643,7 @@ namespace MaterialSkinExample
             this.materialFormGroup5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialFormGroup5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFormGroup5.Name = "materialFormGroup5";
-            this.materialFormGroup5.Padding = new System.Windows.Forms.Padding(4, 9, 4, 5);
+            this.materialFormGroup5.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.materialFormGroup5.Size = new System.Drawing.Size(1076, 143);
             this.materialFormGroup5.TabIndex = 5;
             this.materialFormGroup5.TabStop = false;
@@ -652,13 +656,13 @@ namespace MaterialSkinExample
             this.materialRadioButton7.Depth = 0;
             this.materialRadioButton7.Dock = System.Windows.Forms.DockStyle.Top;
             this.materialRadioButton7.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton7.Location = new System.Drawing.Point(4, 64);
+            this.materialRadioButton7.Location = new System.Drawing.Point(3, 61);
             this.materialRadioButton7.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton7.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRadioButton7.Name = "materialRadioButton7";
             this.materialRadioButton7.Ripple = true;
-            this.materialRadioButton7.Size = new System.Drawing.Size(1068, 30);
+            this.materialRadioButton7.Size = new System.Drawing.Size(1070, 30);
             this.materialRadioButton7.TabIndex = 13;
             this.materialRadioButton7.Text = "Selection 3";
             this.materialRadioButton7.UseVisualStyleBackColor = true;
@@ -671,13 +675,13 @@ namespace MaterialSkinExample
             this.materialRadioButton6.Depth = 0;
             this.materialRadioButton6.Dock = System.Windows.Forms.DockStyle.Top;
             this.materialRadioButton6.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton6.Location = new System.Drawing.Point(4, 34);
+            this.materialRadioButton6.Location = new System.Drawing.Point(3, 31);
             this.materialRadioButton6.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton6.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRadioButton6.Name = "materialRadioButton6";
             this.materialRadioButton6.Ripple = true;
-            this.materialRadioButton6.Size = new System.Drawing.Size(1068, 30);
+            this.materialRadioButton6.Size = new System.Drawing.Size(1070, 30);
             this.materialRadioButton6.TabIndex = 12;
             this.materialRadioButton6.TabStop = true;
             this.materialRadioButton6.Text = "Selection 1";
@@ -698,7 +702,7 @@ namespace MaterialSkinExample
             this.materialFormGroup4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialFormGroup4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFormGroup4.Name = "materialFormGroup4";
-            this.materialFormGroup4.Padding = new System.Windows.Forms.Padding(4, 9, 4, 5);
+            this.materialFormGroup4.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.materialFormGroup4.Size = new System.Drawing.Size(1076, 100);
             this.materialFormGroup4.TabIndex = 4;
             this.materialFormGroup4.TabStop = false;
@@ -714,13 +718,13 @@ namespace MaterialSkinExample
             this.materialCheckBox8.Depth = 0;
             this.materialCheckBox8.Dock = System.Windows.Forms.DockStyle.Top;
             this.materialCheckBox8.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox8.Location = new System.Drawing.Point(4, 34);
+            this.materialCheckBox8.Location = new System.Drawing.Point(3, 31);
             this.materialCheckBox8.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckBox8.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckBox8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCheckBox8.Name = "materialCheckBox8";
             this.materialCheckBox8.Ripple = true;
-            this.materialCheckBox8.Size = new System.Drawing.Size(1068, 30);
+            this.materialCheckBox8.Size = new System.Drawing.Size(1070, 30);
             this.materialCheckBox8.TabIndex = 5;
             this.materialCheckBox8.Text = "Check Box";
             this.materialCheckBox8.UseVisualStyleBackColor = true;
@@ -739,7 +743,7 @@ namespace MaterialSkinExample
             this.materialFormGroup2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialFormGroup2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFormGroup2.Name = "materialFormGroup2";
-            this.materialFormGroup2.Padding = new System.Windows.Forms.Padding(4, 9, 4, 5);
+            this.materialFormGroup2.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.materialFormGroup2.Size = new System.Drawing.Size(1076, 100);
             this.materialFormGroup2.TabIndex = 3;
             this.materialFormGroup2.TabStop = false;
@@ -755,13 +759,13 @@ namespace MaterialSkinExample
             this.materialCheckBox7.Depth = 0;
             this.materialCheckBox7.Dock = System.Windows.Forms.DockStyle.Top;
             this.materialCheckBox7.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox7.Location = new System.Drawing.Point(4, 34);
+            this.materialCheckBox7.Location = new System.Drawing.Point(3, 31);
             this.materialCheckBox7.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckBox7.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckBox7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCheckBox7.Name = "materialCheckBox7";
             this.materialCheckBox7.Ripple = true;
-            this.materialCheckBox7.Size = new System.Drawing.Size(1068, 30);
+            this.materialCheckBox7.Size = new System.Drawing.Size(1070, 30);
             this.materialCheckBox7.TabIndex = 5;
             this.materialCheckBox7.Text = "Check Box";
             this.materialCheckBox7.UseVisualStyleBackColor = true;
@@ -781,7 +785,7 @@ namespace MaterialSkinExample
             this.grpDisabled.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpDisabled.MouseState = MaterialSkin.MouseState.HOVER;
             this.grpDisabled.Name = "grpDisabled";
-            this.grpDisabled.Padding = new System.Windows.Forms.Padding(4, 9, 4, 5);
+            this.grpDisabled.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.grpDisabled.Size = new System.Drawing.Size(1076, 100);
             this.grpDisabled.TabIndex = 2;
             this.grpDisabled.TabStop = false;
@@ -795,7 +799,7 @@ namespace MaterialSkinExample
             this.materialSingleLineTextField1.Dock = System.Windows.Forms.DockStyle.Top;
             this.materialSingleLineTextField1.ForeColor = System.Drawing.Color.Gray;
             this.materialSingleLineTextField1.Hint = "Disabled Text Box";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(4, 34);
+            this.materialSingleLineTextField1.Location = new System.Drawing.Point(3, 31);
             this.materialSingleLineTextField1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialSingleLineTextField1.MaxLength = 32767;
             this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -804,7 +808,7 @@ namespace MaterialSkinExample
             this.materialSingleLineTextField1.SelectedText = "";
             this.materialSingleLineTextField1.SelectionLength = 0;
             this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(1068, 32);
+            this.materialSingleLineTextField1.Size = new System.Drawing.Size(1070, 32);
             this.materialSingleLineTextField1.TabIndex = 1;
             this.materialSingleLineTextField1.TabStop = false;
             this.materialSingleLineTextField1.UseSystemPasswordChar = false;
@@ -823,7 +827,7 @@ namespace MaterialSkinExample
             this.materialFormGroup1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialFormGroup1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFormGroup1.Name = "materialFormGroup1";
-            this.materialFormGroup1.Padding = new System.Windows.Forms.Padding(4, 9, 4, 5);
+            this.materialFormGroup1.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.materialFormGroup1.Size = new System.Drawing.Size(1076, 100);
             this.materialFormGroup1.TabIndex = 0;
             this.materialFormGroup1.TabStop = false;
@@ -837,7 +841,7 @@ namespace MaterialSkinExample
             this.materialSingleLineTextField4.Dock = System.Windows.Forms.DockStyle.Top;
             this.materialSingleLineTextField4.ForeColor = System.Drawing.Color.Gray;
             this.materialSingleLineTextField4.Hint = "Normal Text Box";
-            this.materialSingleLineTextField4.Location = new System.Drawing.Point(4, 34);
+            this.materialSingleLineTextField4.Location = new System.Drawing.Point(3, 31);
             this.materialSingleLineTextField4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.materialSingleLineTextField4.MaxLength = 32767;
             this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -846,7 +850,7 @@ namespace MaterialSkinExample
             this.materialSingleLineTextField4.SelectedText = "";
             this.materialSingleLineTextField4.SelectionLength = 0;
             this.materialSingleLineTextField4.SelectionStart = 0;
-            this.materialSingleLineTextField4.Size = new System.Drawing.Size(1068, 32);
+            this.materialSingleLineTextField4.Size = new System.Drawing.Size(1070, 32);
             this.materialSingleLineTextField4.TabIndex = 0;
             this.materialSingleLineTextField4.TabStop = false;
             this.materialSingleLineTextField4.UseSystemPasswordChar = false;
@@ -857,7 +861,7 @@ namespace MaterialSkinExample
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(2041, 810);
+            this.tabPage1.Size = new System.Drawing.Size(2152, 1105);
             this.tabPage1.TabIndex = 6;
             this.tabPage1.Text = "Icons List";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -871,7 +875,7 @@ namespace MaterialSkinExample
             this.flpIcon.Location = new System.Drawing.Point(0, 0);
             this.flpIcon.Margin = new System.Windows.Forms.Padding(0);
             this.flpIcon.Name = "flpIcon";
-            this.flpIcon.Size = new System.Drawing.Size(2041, 810);
+            this.flpIcon.Size = new System.Drawing.Size(2152, 1105);
             this.flpIcon.TabIndex = 0;
             // 
             // tabPage2
@@ -880,7 +884,7 @@ namespace MaterialSkinExample
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(2041, 810);
+            this.tabPage2.Size = new System.Drawing.Size(2152, 1105);
             this.tabPage2.TabIndex = 7;
             this.tabPage2.Text = "Grid View";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -897,7 +901,7 @@ namespace MaterialSkinExample
             this.gView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gView.ColorStyle = MaterialSkin.ColorType.DEFAULT;
             this.gView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(128)))), ((int)(((byte)(231)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 11F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -913,7 +917,7 @@ namespace MaterialSkinExample
             this.Qty,
             this.Price,
             this.Amount});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
@@ -944,7 +948,7 @@ namespace MaterialSkinExample
             this.gView.RowHeadersVisible = false;
             this.gView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gView.Size = new System.Drawing.Size(2041, 810);
+            this.gView.Size = new System.Drawing.Size(2152, 1105);
             this.gView.TabIndex = 0;
             // 
             // No
@@ -988,7 +992,7 @@ namespace MaterialSkinExample
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(2041, 810);
+            this.tabPage3.Size = new System.Drawing.Size(2152, 1105);
             this.tabPage3.TabIndex = 8;
             this.tabPage3.Text = "Button";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1006,7 +1010,7 @@ namespace MaterialSkinExample
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(2041, 810);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(2152, 1105);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // materialPanel3
@@ -1019,11 +1023,11 @@ namespace MaterialSkinExample
             this.materialPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialPanel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialPanel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.materialPanel3.Location = new System.Drawing.Point(1020, 0);
+            this.materialPanel3.Location = new System.Drawing.Point(1076, 0);
             this.materialPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel3.Name = "materialPanel3";
-            this.materialPanel3.Size = new System.Drawing.Size(1021, 810);
+            this.materialPanel3.Size = new System.Drawing.Size(1076, 1105);
             this.materialPanel3.TabIndex = 1;
             // 
             // flowLayoutPanel3
@@ -1035,7 +1039,7 @@ namespace MaterialSkinExample
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 27);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(1021, 783);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(1076, 1078);
             this.flowLayoutPanel3.TabIndex = 2;
             // 
             // materialFlatButton1
@@ -1141,7 +1145,7 @@ namespace MaterialSkinExample
             this.materialPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.materialPanel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialPanel2.Name = "materialPanel2";
-            this.materialPanel2.Size = new System.Drawing.Size(1020, 810);
+            this.materialPanel2.Size = new System.Drawing.Size(1076, 1105);
             this.materialPanel2.TabIndex = 0;
             // 
             // flowLayoutPanel4
@@ -1156,7 +1160,7 @@ namespace MaterialSkinExample
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 222);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(1020, 588);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(1076, 883);
             this.flowLayoutPanel4.TabIndex = 2;
             // 
             // materialButton2
@@ -1320,7 +1324,7 @@ namespace MaterialSkinExample
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 27);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1020, 195);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1076, 195);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // materialRaisedButton2
@@ -1610,8 +1614,8 @@ namespace MaterialSkinExample
             this.tabPage4.Controls.Add(this.flowLayoutPanel5);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage4.Size = new System.Drawing.Size(2041, 810);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(2152, 1105);
             this.tabPage4.TabIndex = 9;
             this.tabPage4.Text = "Dialog";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1624,7 +1628,7 @@ namespace MaterialSkinExample
             this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 232);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(2035, 229);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(2146, 229);
             this.flowLayoutPanel6.TabIndex = 1;
             // 
             // btnSelectable1
@@ -1751,7 +1755,7 @@ namespace MaterialSkinExample
             this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(2035, 229);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(2146, 229);
             this.flowLayoutPanel5.TabIndex = 0;
             // 
             // btnDlgMessage
@@ -2114,6 +2118,25 @@ namespace MaterialSkinExample
             this.materialSelectableButton2.ValueMember = null;
             this.materialSelectableButton2.Click += new System.EventHandler(this.materialSelectableButton2_Click);
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.flpColorScheme);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(2152, 1105);
+            this.tabPage5.TabIndex = 10;
+            this.tabPage5.Text = "Color Scheme";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // flpColorScheme
+            // 
+            this.flpColorScheme.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpColorScheme.Location = new System.Drawing.Point(3, 3);
+            this.flpColorScheme.Name = "flpColorScheme";
+            this.flpColorScheme.Size = new System.Drawing.Size(2146, 1099);
+            this.flpColorScheme.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2179,6 +2202,7 @@ namespace MaterialSkinExample
             this.materialPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2282,5 +2306,7 @@ namespace MaterialSkinExample
         private MaterialSelectableButton materialSelectableButton2;
         private MaterialButton materialButton1;
         private MaterialButton materialButton9;
+        private TabPage tabPage5;
+        private FlowLayoutPanel flpColorScheme;
     }
 }

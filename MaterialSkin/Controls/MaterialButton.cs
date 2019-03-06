@@ -204,7 +204,7 @@ namespace MaterialSkin.Controls
         private void DrawFlatButton(PaintEventArgs pevent)
         {
             var frontBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.PrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].PrimaryBrush;
-            if(!Enabled)
+            if (!Enabled)
                 frontBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.LightPrimaryBrush : ColorScheme.ColorSwatches[_colorStyle].LightPrimaryBrush;
             var frontColor = frontBrush.GetColor();
 

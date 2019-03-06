@@ -93,7 +93,7 @@ namespace MaterialSkin.Controls
         private const int TEXT_OFFSET = 22;
         protected override void OnPaint(PaintEventArgs pevent)
         {
-            var backBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.AccentColor : ColorScheme.ColorSwatches[_colorStyle].AccentColor;
+            var backBrush = _colorStyle == ColorType.DEFAULT ? SkinManager.ColorScheme.DarkPrimaryColor : ColorScheme.ColorSwatches[_colorStyle].DarkPrimaryColor;
 
             var g = pevent.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;

@@ -84,8 +84,7 @@ namespace MaterialSkin
                     _swatches.Add(ColorType.PINK, new ColorScheme(Primary.PINKNormal, Primary.PINKDark, Primary.PINKLight, Accent.PINK));
                     _swatches.Add(ColorType.PURPLE, new ColorScheme(Primary.PURPLENormal, Primary.PURPLEDark, Primary.PURPLELight, Accent.PURPLE));
                     _swatches.Add(ColorType.YELLOW, new ColorScheme(Primary.YELLOWNormal, Primary.YELLOWDark, Primary.YELLOWLight, Accent.YELLOW, TextShade.BLACK));
-                    _swatches.Add(ColorType.GREY, new ColorScheme(Primary.Grey500, Primary.Grey200, Primary.Grey50, Accent.INVERSE, TextShade.BLACK));
-
+                    _swatches.Add(ColorType.GREY, new ColorScheme(Primary.GREYNormal, Primary.GREYDark, Primary.GREYLight, Accent.GREY, TextShade.BLACK));
                 }
 
                 return _swatches;
@@ -359,9 +358,12 @@ namespace MaterialSkin
         WARNINGDark = 0xF77600,
         WARNINGLight = 0xFFAB5E,
         WARNINGNormal = 0xFF902B,
-        YELLOWDark = 0xF3CA06,
-        YELLOWLight = 0xFBE164,
-        YELLOWNormal = 0xFAD732,
+        YELLOWDark = 0xcfaa19,
+        YELLOWLight = 0xffde59,
+        YELLOWNormal = 0xFFCC00,
+        GREYDark = 0x7d7d7d,
+        GREYLight = 0xc1c1c1,
+        GREYNormal = 0x9e9e9e,
     }
 
     public enum Accent
@@ -431,16 +433,17 @@ namespace MaterialSkin
         DeepOrange400 = 0xFF3D00,
         DeepOrange700 = 0xDD2C00,
 
-        PRIMARY = 0x2F80E7,
-        SUCCESS = 0x1E983B,
-        INFO = 0x1797BE,
-        WARNING = 0xF77600,
-        DANGER = 0xEC2121,
-        INVERSE = 0x020304,
-        GREEN = 0x2B957A,
-        PINK = 0xE90BD6,
-        PURPLE = 0x564AA3,
-        YELLOW = 0xF3CA06,
+        PRIMARY = 0xE7A72F,
+        SUCCESS = 0xC22733,
+        INFO = 0xE58423,
+        WARNING = 0x2BD6FF,
+        DANGER = 0x50F07D,
+        INVERSE = 0x725222,
+        GREEN = 0xBC5737,
+        PINK = 0x6BF532,
+        PURPLE = 0xBAAF66,
+        YELLOW = 0x4F3AB5,
+        GREY = 0x415146
     }
 
     public enum ColorType

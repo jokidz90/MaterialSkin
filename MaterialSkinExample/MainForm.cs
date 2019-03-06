@@ -137,7 +137,77 @@ namespace MaterialSkinExample
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
+            for (int i = 0; i < ColorScheme.ColorSwatches.Count; i++)
+            {
+                var colType = ((ColorType)i);
+                if (colType == ColorType.DEFAULT)
+                    continue;
+                var pnl = new Panel();
+                pnl.Name = "pnlColor" + colType.ToString();
+                pnl.Width = 150;
 
+                var lbl = new Label();
+                lbl.Font = SkinManager.ROBOTO_MEDIUM_12;
+                lbl.Name = "lbl" + colType.ToString();
+                lbl.Text = colType.ToString();
+                lbl.AutoSize = false;
+                lbl.Height = 30;
+                pnl.Controls.Add(lbl);
+                lbl.Dock = DockStyle.Top;
+                lbl.BringToFront();
+
+                var lblPrimary = new Label();
+                lblPrimary.ForeColor = Color.White;
+                lblPrimary.Font = SkinManager.ROBOTO_MEDIUM_12;
+                lblPrimary.Name = "lbl"+ colType.ToString() + "PrimaryColor";
+                lblPrimary.Text = "PrimaryColor";
+                lblPrimary.BackColor = ColorScheme.ColorSwatches[colType].PrimaryColor;
+                lblPrimary.AutoSize = false;
+                lblPrimary.Height = 30;
+                pnl.Controls.Add(lblPrimary);
+                lblPrimary.Dock = DockStyle.Top;
+                lblPrimary.BringToFront();
+
+                var lblDarkPrimary = new Label();
+                lblDarkPrimary.ForeColor = Color.White;
+                lblDarkPrimary.Font = SkinManager.ROBOTO_MEDIUM_12;
+                lblDarkPrimary.Name = "lbl" + colType.ToString() + "DarkPrimary";
+                lblDarkPrimary.Text = "DarkPrimaryColor";
+                lblDarkPrimary.BackColor = ColorScheme.ColorSwatches[colType].DarkPrimaryColor;
+                lblDarkPrimary.AutoSize = false;
+                lblDarkPrimary.Height = 30;
+                pnl.Controls.Add(lblDarkPrimary);
+                lblDarkPrimary.Dock = DockStyle.Top;
+                lblDarkPrimary.BringToFront();
+
+                var lblLightPrimary = new Label();
+                lblLightPrimary.ForeColor = Color.White;
+                lblLightPrimary.Font = SkinManager.ROBOTO_MEDIUM_12;
+                lblLightPrimary.Name = "lbl" + colType.ToString() + "LightPrimary";
+                lblLightPrimary.Text = "LightPrimaryColor";
+                lblLightPrimary.BackColor = ColorScheme.ColorSwatches[colType].LightPrimaryColor;
+                lblLightPrimary.AutoSize = false;
+                lblLightPrimary.Height = 30;
+                pnl.Controls.Add(lblLightPrimary);
+                lblLightPrimary.Dock = DockStyle.Top;
+                lblLightPrimary.BringToFront();
+
+                var lblAccent = new Label();
+                lblAccent.ForeColor = Color.White;
+                lblAccent.Font = SkinManager.ROBOTO_MEDIUM_12;
+                lblAccent.Name = "lbl" + colType.ToString() + "Accent";
+                lblAccent.Text = "Accent";
+                lblAccent.BackColor = ColorScheme.ColorSwatches[colType].AccentColor;
+                lblAccent.AutoSize = false;
+                lblAccent.Height = 30;
+                pnl.Controls.Add(lblAccent);
+                lblAccent.Dock = DockStyle.Top;
+                lblAccent.BringToFront();
+
+                pnl.Height = lbl.Height * 5;
+
+                flpColorScheme.Controls.Add(pnl);
+            }
         }
 
         private void dropDown1_ValueChanged(object sender, ItemSelectArgs e)

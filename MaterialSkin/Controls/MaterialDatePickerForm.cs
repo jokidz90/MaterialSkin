@@ -194,8 +194,8 @@ namespace MaterialSkin.Controls
 
                     if (startMonth.Date == DateTime.Now.Date)
                     {
-                        btn.ColorStyle = ColorType.SUCCESS;
-                        btn.BorderColorType = ColorType.SUCCESS;
+                        //btn.ColorStyle = ColorType.SUCCESS;
+                        btn.BorderColorType = SkinManager.ColorStyle;
                     }
 
                     if (startMonth.Date == _value.Date)
