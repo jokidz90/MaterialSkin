@@ -87,7 +87,6 @@
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Depth = 0;
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCancel.Icon = null;
             this.btnCancel.IconType = MaterialSkin.IconType.NONE;
             this.btnCancel.IsSelected = false;
             this.btnCancel.Location = new System.Drawing.Point(0, 0);
@@ -132,7 +131,6 @@
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.Depth = 0;
             this.btnOK.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnOK.Icon = null;
             this.btnOK.IconType = MaterialSkin.IconType.NONE;
             this.btnOK.IsSelected = false;
             this.btnOK.Location = new System.Drawing.Point(8, 0);

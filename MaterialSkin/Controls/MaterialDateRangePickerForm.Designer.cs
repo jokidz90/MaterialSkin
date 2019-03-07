@@ -213,8 +213,7 @@
             this.btnSelectDateRange.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectDateRange.Depth = 0;
             this.btnSelectDateRange.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSelectDateRange.Icon = ((System.Drawing.Image)(resources.GetObject("btnSelectDateRange.Icon")));
-            this.btnSelectDateRange.IconType = MaterialSkin.IconType.EVENT;
+            this.btnSelectDateRange.IconType = MaterialSkin.IconType.ACTION_EVENT;
             this.btnSelectDateRange.IsSelected = null;
             this.btnSelectDateRange.Location = new System.Drawing.Point(0, 0);
             this.btnSelectDateRange.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
@@ -255,7 +254,6 @@
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Depth = 0;
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCancel.Icon = null;
             this.btnCancel.IconType = MaterialSkin.IconType.NONE;
             this.btnCancel.IsSelected = false;
             this.btnCancel.Location = new System.Drawing.Point(4, 0);
@@ -297,7 +295,7 @@
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.Depth = 0;
             this.btnOK.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnOK.Icon = null;
+
             this.btnOK.IconType = MaterialSkin.IconType.NONE;
             this.btnOK.IsSelected = false;
             this.btnOK.Location = new System.Drawing.Point(4, 0);
@@ -357,7 +355,7 @@
             this.btnShowYear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowYear.Depth = 0;
             this.btnShowYear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnShowYear.Icon = null;
+
             this.btnShowYear.IconType = MaterialSkin.IconType.NONE;
             this.btnShowYear.IsSelected = null;
             this.btnShowYear.Location = new System.Drawing.Point(450, 0);
@@ -383,7 +381,7 @@
             this.btnShowMonth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowMonth.Depth = 0;
             this.btnShowMonth.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnShowMonth.Icon = null;
+
             this.btnShowMonth.IconType = MaterialSkin.IconType.NONE;
             this.btnShowMonth.IsSelected = null;
             this.btnShowMonth.Location = new System.Drawing.Point(0, 0);
@@ -409,8 +407,8 @@
             this.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrev.Depth = 0;
             this.btnPrev.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnPrev.Icon = ((System.Drawing.Image)(resources.GetObject("btnPrev.Icon")));
-            this.btnPrev.IconType = MaterialSkin.IconType.KEYBOARD_ARROW_LEFT;
+
+            this.btnPrev.IconType = MaterialSkin.IconType.HARDWARE_KEYBOARD_ARROW_LEFT;
             this.btnPrev.IsSelected = null;
             this.btnPrev.Location = new System.Drawing.Point(0, 0);
             this.btnPrev.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
@@ -434,8 +432,8 @@
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.Depth = 0;
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnNext.Icon = ((System.Drawing.Image)(resources.GetObject("btnNext.Icon")));
-            this.btnNext.IconType = MaterialSkin.IconType.KEYBOARD_ARROW_RIGHT;
+
+            this.btnNext.IconType = MaterialSkin.IconType.HARDWARE_KEYBOARD_ARROW_RIGHT;
             this.btnNext.IsSelected = null;
             this.btnNext.Location = new System.Drawing.Point(941, 0);
             this.btnNext.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
@@ -528,8 +526,8 @@
             this.btnEndDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEndDate.Depth = 0;
             this.btnEndDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEndDate.Icon = ((System.Drawing.Image)(resources.GetObject("btnEndDate.Icon")));
-            this.btnEndDate.IconType = MaterialSkin.IconType.EVENT_NOTE;
+
+            this.btnEndDate.IconType = MaterialSkin.IconType.NOTIFICATION_EVENT_NOTE;
             this.btnEndDate.IsSelected = null;
             this.btnEndDate.Location = new System.Drawing.Point(0, 0);
             this.btnEndDate.Margin = new System.Windows.Forms.Padding(0);
@@ -554,8 +552,8 @@
             this.btnEndTime.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEndTime.Depth = 0;
             this.btnEndTime.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnEndTime.Icon = ((System.Drawing.Image)(resources.GetObject("btnEndTime.Icon")));
-            this.btnEndTime.IconType = MaterialSkin.IconType.ACCESS_TIME;
+
+            this.btnEndTime.IconType = MaterialSkin.IconType.DEVICE_ACCESS_TIME;
             this.btnEndTime.IsSelected = null;
             this.btnEndTime.Location = new System.Drawing.Point(228, 0);
             this.btnEndTime.Margin = new System.Windows.Forms.Padding(0);
@@ -618,8 +616,8 @@
             this.btnStartDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStartDate.Depth = 0;
             this.btnStartDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnStartDate.Icon = ((System.Drawing.Image)(resources.GetObject("btnStartDate.Icon")));
-            this.btnStartDate.IconType = MaterialSkin.IconType.EVENT_NOTE;
+
+            this.btnStartDate.IconType = MaterialSkin.IconType.NOTIFICATION_EVENT_NOTE;
             this.btnStartDate.IsSelected = null;
             this.btnStartDate.Location = new System.Drawing.Point(0, 0);
             this.btnStartDate.Margin = new System.Windows.Forms.Padding(0);
@@ -644,8 +642,8 @@
             this.btnStartTime.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStartTime.Depth = 0;
             this.btnStartTime.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnStartTime.Icon = ((System.Drawing.Image)(resources.GetObject("btnStartTime.Icon")));
-            this.btnStartTime.IconType = MaterialSkin.IconType.ACCESS_TIME;
+
+            this.btnStartTime.IconType = MaterialSkin.IconType.DEVICE_ACCESS_TIME;
             this.btnStartTime.IsSelected = null;
             this.btnStartTime.Location = new System.Drawing.Point(274, 0);
             this.btnStartTime.Margin = new System.Windows.Forms.Padding(0);
@@ -732,7 +730,7 @@
             this.btnDate6x6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate6x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate6x6.Depth = 0;
-            this.btnDate6x6.Icon = null;
+
             this.btnDate6x6.IconType = MaterialSkin.IconType.NONE;
             this.btnDate6x6.IsSelected = null;
             this.btnDate6x6.Location = new System.Drawing.Point(600, 360);
@@ -757,7 +755,7 @@
             this.btnDate2x6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate2x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate2x6.Depth = 0;
-            this.btnDate2x6.Icon = null;
+
             this.btnDate2x6.IconType = MaterialSkin.IconType.NONE;
             this.btnDate2x6.IsSelected = null;
             this.btnDate2x6.Location = new System.Drawing.Point(200, 360);
@@ -782,7 +780,7 @@
             this.btnDate3x6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate3x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate3x6.Depth = 0;
-            this.btnDate3x6.Icon = null;
+
             this.btnDate3x6.IconType = MaterialSkin.IconType.NONE;
             this.btnDate3x6.IsSelected = null;
             this.btnDate3x6.Location = new System.Drawing.Point(300, 360);
@@ -807,7 +805,7 @@
             this.btnDate4x6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate4x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate4x6.Depth = 0;
-            this.btnDate4x6.Icon = null;
+
             this.btnDate4x6.IconType = MaterialSkin.IconType.NONE;
             this.btnDate4x6.IsSelected = null;
             this.btnDate4x6.Location = new System.Drawing.Point(400, 360);
@@ -832,7 +830,7 @@
             this.btnDate5x6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate5x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate5x6.Depth = 0;
-            this.btnDate5x6.Icon = null;
+
             this.btnDate5x6.IconType = MaterialSkin.IconType.NONE;
             this.btnDate5x6.IsSelected = null;
             this.btnDate5x6.Location = new System.Drawing.Point(500, 360);
@@ -857,7 +855,7 @@
             this.btnDate1x6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate1x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate1x6.Depth = 0;
-            this.btnDate1x6.Icon = null;
+
             this.btnDate1x6.IconType = MaterialSkin.IconType.NONE;
             this.btnDate1x6.IsSelected = null;
             this.btnDate1x6.Location = new System.Drawing.Point(100, 360);
@@ -882,7 +880,7 @@
             this.btnDate0x6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate0x6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate0x6.Depth = 0;
-            this.btnDate0x6.Icon = null;
+
             this.btnDate0x6.IconType = MaterialSkin.IconType.NONE;
             this.btnDate0x6.IsSelected = null;
             this.btnDate0x6.Location = new System.Drawing.Point(0, 360);
@@ -907,7 +905,7 @@
             this.btnDate6x5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate6x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate6x5.Depth = 0;
-            this.btnDate6x5.Icon = null;
+
             this.btnDate6x5.IconType = MaterialSkin.IconType.NONE;
             this.btnDate6x5.IsSelected = null;
             this.btnDate6x5.Location = new System.Drawing.Point(600, 300);
@@ -932,7 +930,7 @@
             this.btnDate2x5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate2x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate2x5.Depth = 0;
-            this.btnDate2x5.Icon = null;
+
             this.btnDate2x5.IconType = MaterialSkin.IconType.NONE;
             this.btnDate2x5.IsSelected = null;
             this.btnDate2x5.Location = new System.Drawing.Point(200, 300);
@@ -957,7 +955,7 @@
             this.btnDate3x5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate3x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate3x5.Depth = 0;
-            this.btnDate3x5.Icon = null;
+
             this.btnDate3x5.IconType = MaterialSkin.IconType.NONE;
             this.btnDate3x5.IsSelected = null;
             this.btnDate3x5.Location = new System.Drawing.Point(300, 300);
@@ -982,7 +980,7 @@
             this.btnDate4x5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate4x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate4x5.Depth = 0;
-            this.btnDate4x5.Icon = null;
+
             this.btnDate4x5.IconType = MaterialSkin.IconType.NONE;
             this.btnDate4x5.IsSelected = null;
             this.btnDate4x5.Location = new System.Drawing.Point(400, 300);
@@ -1007,7 +1005,7 @@
             this.btnDate5x5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate5x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate5x5.Depth = 0;
-            this.btnDate5x5.Icon = null;
+
             this.btnDate5x5.IconType = MaterialSkin.IconType.NONE;
             this.btnDate5x5.IsSelected = null;
             this.btnDate5x5.Location = new System.Drawing.Point(500, 300);
@@ -1032,7 +1030,7 @@
             this.btnDate1x5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate1x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate1x5.Depth = 0;
-            this.btnDate1x5.Icon = null;
+
             this.btnDate1x5.IconType = MaterialSkin.IconType.NONE;
             this.btnDate1x5.IsSelected = null;
             this.btnDate1x5.Location = new System.Drawing.Point(100, 300);
@@ -1057,7 +1055,7 @@
             this.btnDate0x5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate0x5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate0x5.Depth = 0;
-            this.btnDate0x5.Icon = null;
+
             this.btnDate0x5.IconType = MaterialSkin.IconType.NONE;
             this.btnDate0x5.IsSelected = null;
             this.btnDate0x5.Location = new System.Drawing.Point(0, 300);
@@ -1082,7 +1080,7 @@
             this.btnDate6x4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate6x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate6x4.Depth = 0;
-            this.btnDate6x4.Icon = null;
+
             this.btnDate6x4.IconType = MaterialSkin.IconType.NONE;
             this.btnDate6x4.IsSelected = null;
             this.btnDate6x4.Location = new System.Drawing.Point(600, 240);
@@ -1107,7 +1105,7 @@
             this.btnDate2x4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate2x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate2x4.Depth = 0;
-            this.btnDate2x4.Icon = null;
+
             this.btnDate2x4.IconType = MaterialSkin.IconType.NONE;
             this.btnDate2x4.IsSelected = null;
             this.btnDate2x4.Location = new System.Drawing.Point(200, 240);
@@ -1132,7 +1130,7 @@
             this.btnDate3x4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate3x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate3x4.Depth = 0;
-            this.btnDate3x4.Icon = null;
+
             this.btnDate3x4.IconType = MaterialSkin.IconType.NONE;
             this.btnDate3x4.IsSelected = null;
             this.btnDate3x4.Location = new System.Drawing.Point(300, 240);
@@ -1157,7 +1155,7 @@
             this.btnDate4x4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate4x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate4x4.Depth = 0;
-            this.btnDate4x4.Icon = null;
+
             this.btnDate4x4.IconType = MaterialSkin.IconType.NONE;
             this.btnDate4x4.IsSelected = null;
             this.btnDate4x4.Location = new System.Drawing.Point(400, 240);
@@ -1182,7 +1180,7 @@
             this.btnDate5x4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate5x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate5x4.Depth = 0;
-            this.btnDate5x4.Icon = null;
+
             this.btnDate5x4.IconType = MaterialSkin.IconType.NONE;
             this.btnDate5x4.IsSelected = null;
             this.btnDate5x4.Location = new System.Drawing.Point(500, 240);
@@ -1207,7 +1205,7 @@
             this.btnDate1x4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate1x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate1x4.Depth = 0;
-            this.btnDate1x4.Icon = null;
+
             this.btnDate1x4.IconType = MaterialSkin.IconType.NONE;
             this.btnDate1x4.IsSelected = null;
             this.btnDate1x4.Location = new System.Drawing.Point(100, 240);
@@ -1232,7 +1230,7 @@
             this.btnDate0x4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate0x4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate0x4.Depth = 0;
-            this.btnDate0x4.Icon = null;
+
             this.btnDate0x4.IconType = MaterialSkin.IconType.NONE;
             this.btnDate0x4.IsSelected = null;
             this.btnDate0x4.Location = new System.Drawing.Point(0, 240);
@@ -1257,7 +1255,7 @@
             this.btnDate6x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate6x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate6x3.Depth = 0;
-            this.btnDate6x3.Icon = null;
+
             this.btnDate6x3.IconType = MaterialSkin.IconType.NONE;
             this.btnDate6x3.IsSelected = null;
             this.btnDate6x3.Location = new System.Drawing.Point(600, 180);
@@ -1282,7 +1280,7 @@
             this.btnDate2x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate2x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate2x3.Depth = 0;
-            this.btnDate2x3.Icon = null;
+
             this.btnDate2x3.IconType = MaterialSkin.IconType.NONE;
             this.btnDate2x3.IsSelected = null;
             this.btnDate2x3.Location = new System.Drawing.Point(200, 180);
@@ -1307,7 +1305,7 @@
             this.btnDate3x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate3x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate3x3.Depth = 0;
-            this.btnDate3x3.Icon = null;
+
             this.btnDate3x3.IconType = MaterialSkin.IconType.NONE;
             this.btnDate3x3.IsSelected = null;
             this.btnDate3x3.Location = new System.Drawing.Point(300, 180);
@@ -1332,7 +1330,7 @@
             this.btnDate4x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate4x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate4x3.Depth = 0;
-            this.btnDate4x3.Icon = null;
+
             this.btnDate4x3.IconType = MaterialSkin.IconType.NONE;
             this.btnDate4x3.IsSelected = null;
             this.btnDate4x3.Location = new System.Drawing.Point(400, 180);
@@ -1357,7 +1355,7 @@
             this.btnDate5x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate5x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate5x3.Depth = 0;
-            this.btnDate5x3.Icon = null;
+
             this.btnDate5x3.IconType = MaterialSkin.IconType.NONE;
             this.btnDate5x3.IsSelected = null;
             this.btnDate5x3.Location = new System.Drawing.Point(500, 180);
@@ -1382,7 +1380,7 @@
             this.btnDate1x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate1x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate1x3.Depth = 0;
-            this.btnDate1x3.Icon = null;
+
             this.btnDate1x3.IconType = MaterialSkin.IconType.NONE;
             this.btnDate1x3.IsSelected = null;
             this.btnDate1x3.Location = new System.Drawing.Point(100, 180);
@@ -1407,7 +1405,7 @@
             this.btnDate0x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate0x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate0x3.Depth = 0;
-            this.btnDate0x3.Icon = null;
+
             this.btnDate0x3.IconType = MaterialSkin.IconType.NONE;
             this.btnDate0x3.IsSelected = null;
             this.btnDate0x3.Location = new System.Drawing.Point(0, 180);
@@ -1432,7 +1430,7 @@
             this.btnDate6x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate6x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate6x2.Depth = 0;
-            this.btnDate6x2.Icon = null;
+
             this.btnDate6x2.IconType = MaterialSkin.IconType.NONE;
             this.btnDate6x2.IsSelected = null;
             this.btnDate6x2.Location = new System.Drawing.Point(600, 120);
@@ -1457,7 +1455,7 @@
             this.btnDate2x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate2x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate2x2.Depth = 0;
-            this.btnDate2x2.Icon = null;
+
             this.btnDate2x2.IconType = MaterialSkin.IconType.NONE;
             this.btnDate2x2.IsSelected = null;
             this.btnDate2x2.Location = new System.Drawing.Point(200, 120);
@@ -1482,7 +1480,7 @@
             this.btnDate3x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate3x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate3x2.Depth = 0;
-            this.btnDate3x2.Icon = null;
+
             this.btnDate3x2.IconType = MaterialSkin.IconType.NONE;
             this.btnDate3x2.IsSelected = null;
             this.btnDate3x2.Location = new System.Drawing.Point(300, 120);
@@ -1507,7 +1505,7 @@
             this.btnDate4x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate4x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate4x2.Depth = 0;
-            this.btnDate4x2.Icon = null;
+
             this.btnDate4x2.IconType = MaterialSkin.IconType.NONE;
             this.btnDate4x2.IsSelected = null;
             this.btnDate4x2.Location = new System.Drawing.Point(400, 120);
@@ -1532,7 +1530,7 @@
             this.btnDate5x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate5x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate5x2.Depth = 0;
-            this.btnDate5x2.Icon = null;
+
             this.btnDate5x2.IconType = MaterialSkin.IconType.NONE;
             this.btnDate5x2.IsSelected = null;
             this.btnDate5x2.Location = new System.Drawing.Point(500, 120);
@@ -1557,7 +1555,7 @@
             this.btnDate1x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate1x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate1x2.Depth = 0;
-            this.btnDate1x2.Icon = null;
+
             this.btnDate1x2.IconType = MaterialSkin.IconType.NONE;
             this.btnDate1x2.IsSelected = null;
             this.btnDate1x2.Location = new System.Drawing.Point(100, 120);
@@ -1582,7 +1580,7 @@
             this.btnDate0x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate0x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate0x2.Depth = 0;
-            this.btnDate0x2.Icon = null;
+
             this.btnDate0x2.IconType = MaterialSkin.IconType.NONE;
             this.btnDate0x2.IsSelected = null;
             this.btnDate0x2.Location = new System.Drawing.Point(0, 120);
@@ -1607,7 +1605,6 @@
             this.btnDate6x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate6x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate6x1.Depth = 0;
-            this.btnDate6x1.Icon = null;
             this.btnDate6x1.IconType = MaterialSkin.IconType.NONE;
             this.btnDate6x1.IsSelected = null;
             this.btnDate6x1.Location = new System.Drawing.Point(600, 60);
@@ -1632,7 +1629,7 @@
             this.btnDate2x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate2x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate2x1.Depth = 0;
-            this.btnDate2x1.Icon = null;
+
             this.btnDate2x1.IconType = MaterialSkin.IconType.NONE;
             this.btnDate2x1.IsSelected = null;
             this.btnDate2x1.Location = new System.Drawing.Point(200, 60);
@@ -1657,7 +1654,7 @@
             this.btnDate3x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate3x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate3x1.Depth = 0;
-            this.btnDate3x1.Icon = null;
+
             this.btnDate3x1.IconType = MaterialSkin.IconType.NONE;
             this.btnDate3x1.IsSelected = null;
             this.btnDate3x1.Location = new System.Drawing.Point(300, 60);
@@ -1682,7 +1679,7 @@
             this.btnDate4x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate4x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate4x1.Depth = 0;
-            this.btnDate4x1.Icon = null;
+
             this.btnDate4x1.IconType = MaterialSkin.IconType.NONE;
             this.btnDate4x1.IsSelected = null;
             this.btnDate4x1.Location = new System.Drawing.Point(400, 60);
@@ -1707,7 +1704,7 @@
             this.btnDate5x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate5x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate5x1.Depth = 0;
-            this.btnDate5x1.Icon = null;
+
             this.btnDate5x1.IconType = MaterialSkin.IconType.NONE;
             this.btnDate5x1.IsSelected = null;
             this.btnDate5x1.Location = new System.Drawing.Point(500, 60);
@@ -1732,7 +1729,7 @@
             this.btnDate1x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate1x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate1x1.Depth = 0;
-            this.btnDate1x1.Icon = null;
+
             this.btnDate1x1.IconType = MaterialSkin.IconType.NONE;
             this.btnDate1x1.IsSelected = null;
             this.btnDate1x1.Location = new System.Drawing.Point(100, 60);
@@ -1757,7 +1754,7 @@
             this.btnDate0x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDate0x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate0x1.Depth = 0;
-            this.btnDate0x1.Icon = null;
+
             this.btnDate0x1.IconType = MaterialSkin.IconType.NONE;
             this.btnDate0x1.IsSelected = null;
             this.btnDate0x1.Location = new System.Drawing.Point(0, 60);
@@ -1783,7 +1780,7 @@
             this.btnDate6x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate6x0.Depth = 0;
             this.btnDate6x0.Enabled = false;
-            this.btnDate6x0.Icon = null;
+
             this.btnDate6x0.IconType = MaterialSkin.IconType.NONE;
             this.btnDate6x0.IsSelected = null;
             this.btnDate6x0.Location = new System.Drawing.Point(600, 0);
@@ -1808,7 +1805,7 @@
             this.btnDate2x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate2x0.Depth = 0;
             this.btnDate2x0.Enabled = false;
-            this.btnDate2x0.Icon = null;
+
             this.btnDate2x0.IconType = MaterialSkin.IconType.NONE;
             this.btnDate2x0.IsSelected = null;
             this.btnDate2x0.Location = new System.Drawing.Point(200, 0);
@@ -1833,7 +1830,7 @@
             this.btnDate3x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate3x0.Depth = 0;
             this.btnDate3x0.Enabled = false;
-            this.btnDate3x0.Icon = null;
+
             this.btnDate3x0.IconType = MaterialSkin.IconType.NONE;
             this.btnDate3x0.IsSelected = null;
             this.btnDate3x0.Location = new System.Drawing.Point(300, 0);
@@ -1858,7 +1855,7 @@
             this.btnDate4x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate4x0.Depth = 0;
             this.btnDate4x0.Enabled = false;
-            this.btnDate4x0.Icon = null;
+
             this.btnDate4x0.IconType = MaterialSkin.IconType.NONE;
             this.btnDate4x0.IsSelected = null;
             this.btnDate4x0.Location = new System.Drawing.Point(400, 0);
@@ -1883,7 +1880,7 @@
             this.btnDate5x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate5x0.Depth = 0;
             this.btnDate5x0.Enabled = false;
-            this.btnDate5x0.Icon = null;
+
             this.btnDate5x0.IconType = MaterialSkin.IconType.NONE;
             this.btnDate5x0.IsSelected = null;
             this.btnDate5x0.Location = new System.Drawing.Point(500, 0);
@@ -1908,7 +1905,7 @@
             this.btnDate1x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate1x0.Depth = 0;
             this.btnDate1x0.Enabled = false;
-            this.btnDate1x0.Icon = null;
+
             this.btnDate1x0.IconType = MaterialSkin.IconType.NONE;
             this.btnDate1x0.IsSelected = null;
             this.btnDate1x0.Location = new System.Drawing.Point(100, 0);
@@ -1933,7 +1930,7 @@
             this.btnDate0x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDate0x0.Depth = 0;
             this.btnDate0x0.Enabled = false;
-            this.btnDate0x0.Icon = null;
+
             this.btnDate0x0.IconType = MaterialSkin.IconType.NONE;
             this.btnDate0x0.IsSelected = null;
             this.btnDate0x0.Location = new System.Drawing.Point(0, 0);
@@ -1983,7 +1980,7 @@
             this.btnMonthYear2x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear2x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear2x3.Depth = 0;
-            this.btnMonthYear2x3.Icon = null;
+
             this.btnMonthYear2x3.IconType = MaterialSkin.IconType.NONE;
             this.btnMonthYear2x3.IsSelected = null;
             this.btnMonthYear2x3.Location = new System.Drawing.Point(542, 172);
@@ -2008,7 +2005,7 @@
             this.btnMonthYear1x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear1x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear1x3.Depth = 0;
-            this.btnMonthYear1x3.Icon = null;
+
             this.btnMonthYear1x3.IconType = MaterialSkin.IconType.NONE;
             this.btnMonthYear1x3.IsSelected = null;
             this.btnMonthYear1x3.Location = new System.Drawing.Point(285, 172);
@@ -2033,7 +2030,7 @@
             this.btnMonthYear0x3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear0x3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear0x3.Depth = 0;
-            this.btnMonthYear0x3.Icon = null;
+
             this.btnMonthYear0x3.IconType = MaterialSkin.IconType.NONE;
             this.btnMonthYear0x3.IsSelected = null;
             this.btnMonthYear0x3.Location = new System.Drawing.Point(20, 172);
@@ -2058,7 +2055,7 @@
             this.btnMonthYear2x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear2x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear2x2.Depth = 0;
-            this.btnMonthYear2x2.Icon = null;
+
             this.btnMonthYear2x2.IconType = MaterialSkin.IconType.NONE;
             this.btnMonthYear2x2.IsSelected = null;
             this.btnMonthYear2x2.Location = new System.Drawing.Point(548, 112);
@@ -2083,7 +2080,7 @@
             this.btnMonthYear1x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear1x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear1x2.Depth = 0;
-            this.btnMonthYear1x2.Icon = null;
+
             this.btnMonthYear1x2.IconType = MaterialSkin.IconType.NONE;
             this.btnMonthYear1x2.IsSelected = null;
             this.btnMonthYear1x2.Location = new System.Drawing.Point(300, 112);
@@ -2108,7 +2105,7 @@
             this.btnMonthYear0x2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear0x2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear0x2.Depth = 0;
-            this.btnMonthYear0x2.Icon = null;
+
             this.btnMonthYear0x2.IconType = MaterialSkin.IconType.NONE;
             this.btnMonthYear0x2.IsSelected = null;
             this.btnMonthYear0x2.Location = new System.Drawing.Point(20, 112);
@@ -2133,7 +2130,7 @@
             this.btnMonthYear2x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear2x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear2x1.Depth = 0;
-            this.btnMonthYear2x1.Icon = null;
+
             this.btnMonthYear2x1.IconType = MaterialSkin.IconType.NONE;
             this.btnMonthYear2x1.IsSelected = null;
             this.btnMonthYear2x1.Location = new System.Drawing.Point(542, 52);
@@ -2158,7 +2155,7 @@
             this.btnMonthYear1x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear1x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear1x1.Depth = 0;
-            this.btnMonthYear1x1.Icon = null;
+
             this.btnMonthYear1x1.IconType = MaterialSkin.IconType.NONE;
             this.btnMonthYear1x1.IsSelected = null;
             this.btnMonthYear1x1.Location = new System.Drawing.Point(296, 52);
@@ -2183,7 +2180,7 @@
             this.btnMonthYear0x1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear0x1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear0x1.Depth = 0;
-            this.btnMonthYear0x1.Icon = null;
+
             this.btnMonthYear0x1.IconType = MaterialSkin.IconType.NONE;
             this.btnMonthYear0x1.IsSelected = null;
             this.btnMonthYear0x1.Location = new System.Drawing.Point(15, 52);
@@ -2208,7 +2205,7 @@
             this.btnMonthYear2x0.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear2x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear2x0.Depth = 0;
-            this.btnMonthYear2x0.Icon = null;
+
             this.btnMonthYear2x0.IconType = MaterialSkin.IconType.NONE;
             this.btnMonthYear2x0.IsSelected = null;
             this.btnMonthYear2x0.Location = new System.Drawing.Point(532, 3);
@@ -2233,7 +2230,7 @@
             this.btnMonthYear1x0.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear1x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear1x0.Depth = 0;
-            this.btnMonthYear1x0.Icon = null;
+
             this.btnMonthYear1x0.IconType = MaterialSkin.IconType.NONE;
             this.btnMonthYear1x0.IsSelected = null;
             this.btnMonthYear1x0.Location = new System.Drawing.Point(285, 3);
@@ -2258,7 +2255,7 @@
             this.btnMonthYear0x0.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnMonthYear0x0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMonthYear0x0.Depth = 0;
-            this.btnMonthYear0x0.Icon = null;
+
             this.btnMonthYear0x0.IconType = MaterialSkin.IconType.NONE;
             this.btnMonthYear0x0.IsSelected = null;
             this.btnMonthYear0x0.Location = new System.Drawing.Point(4, 5);
@@ -2318,7 +2315,7 @@
             this.btnAMPM.ControlSize = MaterialSkin.ControlSize.LARGE;
             this.btnAMPM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAMPM.Depth = 0;
-            this.btnAMPM.Icon = null;
+
             this.btnAMPM.IconType = MaterialSkin.IconType.NONE;
             this.btnAMPM.IsSelected = null;
             this.btnAMPM.Location = new System.Drawing.Point(0, 0);
@@ -2392,7 +2389,7 @@
             this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMin.Depth = 0;
             this.btnMin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMin.Icon = null;
+
             this.btnMin.IconType = MaterialSkin.IconType.NONE;
             this.btnMin.IsSelected = null;
             this.btnMin.Location = new System.Drawing.Point(0, 80);
@@ -2417,7 +2414,7 @@
             this.btnMinNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinNext.Depth = 0;
             this.btnMinNext.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnMinNext.Icon = null;
+
             this.btnMinNext.IconType = MaterialSkin.IconType.NONE;
             this.btnMinNext.IsSelected = null;
             this.btnMinNext.Location = new System.Drawing.Point(0, 178);
@@ -2443,7 +2440,7 @@
             this.btnMinPrev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinPrev.Depth = 0;
             this.btnMinPrev.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMinPrev.Icon = null;
+
             this.btnMinPrev.IconType = MaterialSkin.IconType.NONE;
             this.btnMinPrev.IsSelected = null;
             this.btnMinPrev.Location = new System.Drawing.Point(0, 40);
@@ -2469,8 +2466,8 @@
             this.btnNextMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNextMin.Depth = 0;
             this.btnNextMin.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnNextMin.Icon = ((System.Drawing.Image)(resources.GetObject("btnNextMin.Icon")));
-            this.btnNextMin.IconType = MaterialSkin.IconType.EXPAND_MORE;
+
+            this.btnNextMin.IconType = MaterialSkin.IconType.NAVIGATION_EXPAND_MORE;
             this.btnNextMin.IsSelected = null;
             this.btnNextMin.Location = new System.Drawing.Point(0, 218);
             this.btnNextMin.Margin = new System.Windows.Forms.Padding(0);
@@ -2496,8 +2493,8 @@
             this.btnPrevMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrevMin.Depth = 0;
             this.btnPrevMin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPrevMin.Icon = ((System.Drawing.Image)(resources.GetObject("btnPrevMin.Icon")));
-            this.btnPrevMin.IconType = MaterialSkin.IconType.EXPAND_LESS;
+
+            this.btnPrevMin.IconType = MaterialSkin.IconType.NAVIGATION_EXPAND_LESS;
             this.btnPrevMin.IsSelected = null;
             this.btnPrevMin.Location = new System.Drawing.Point(0, 0);
             this.btnPrevMin.Margin = new System.Windows.Forms.Padding(0);
@@ -2572,7 +2569,7 @@
             this.btnHour.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHour.Depth = 0;
             this.btnHour.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHour.Icon = null;
+
             this.btnHour.IconType = MaterialSkin.IconType.NONE;
             this.btnHour.IsSelected = null;
             this.btnHour.Location = new System.Drawing.Point(0, 80);
@@ -2597,7 +2594,7 @@
             this.btnHourNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHourNext.Depth = 0;
             this.btnHourNext.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnHourNext.Icon = null;
+
             this.btnHourNext.IconType = MaterialSkin.IconType.NONE;
             this.btnHourNext.IsSelected = null;
             this.btnHourNext.Location = new System.Drawing.Point(0, 178);
@@ -2623,7 +2620,7 @@
             this.btnHourPrev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHourPrev.Depth = 0;
             this.btnHourPrev.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHourPrev.Icon = null;
+
             this.btnHourPrev.IconType = MaterialSkin.IconType.NONE;
             this.btnHourPrev.IsSelected = null;
             this.btnHourPrev.Location = new System.Drawing.Point(0, 40);
@@ -2649,8 +2646,8 @@
             this.btnNextHour.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNextHour.Depth = 0;
             this.btnNextHour.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnNextHour.Icon = ((System.Drawing.Image)(resources.GetObject("btnNextHour.Icon")));
-            this.btnNextHour.IconType = MaterialSkin.IconType.EXPAND_MORE;
+
+            this.btnNextHour.IconType = MaterialSkin.IconType.NAVIGATION_EXPAND_MORE;
             this.btnNextHour.IsSelected = null;
             this.btnNextHour.Location = new System.Drawing.Point(0, 218);
             this.btnNextHour.Margin = new System.Windows.Forms.Padding(0);
@@ -2676,8 +2673,8 @@
             this.btnPrevHour.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrevHour.Depth = 0;
             this.btnPrevHour.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPrevHour.Icon = ((System.Drawing.Image)(resources.GetObject("btnPrevHour.Icon")));
-            this.btnPrevHour.IconType = MaterialSkin.IconType.EXPAND_LESS;
+
+            this.btnPrevHour.IconType = MaterialSkin.IconType.NAVIGATION_EXPAND_LESS;
             this.btnPrevHour.IsSelected = null;
             this.btnPrevHour.Location = new System.Drawing.Point(0, 0);
             this.btnPrevHour.Margin = new System.Windows.Forms.Padding(0);
@@ -2730,7 +2727,7 @@
             this.btnLastMonth.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnLastMonth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLastMonth.Depth = 0;
-            this.btnLastMonth.Icon = null;
+
             this.btnLastMonth.IconType = MaterialSkin.IconType.NONE;
             this.btnLastMonth.IsSelected = null;
             this.btnLastMonth.Location = new System.Drawing.Point(190, 82);
@@ -2756,7 +2753,7 @@
             this.btnThisMonth.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnThisMonth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThisMonth.Depth = 0;
-            this.btnThisMonth.Icon = null;
+
             this.btnThisMonth.IconType = MaterialSkin.IconType.NONE;
             this.btnThisMonth.IsSelected = null;
             this.btnThisMonth.Location = new System.Drawing.Point(20, 82);
@@ -2782,7 +2779,7 @@
             this.btnCustom.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnCustom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCustom.Depth = 0;
-            this.btnCustom.Icon = null;
+
             this.btnCustom.IconType = MaterialSkin.IconType.NONE;
             this.btnCustom.IsSelected = null;
             this.btnCustom.Location = new System.Drawing.Point(532, 86);
@@ -2808,7 +2805,7 @@
             this.btnLastYear.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnLastYear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLastYear.Depth = 0;
-            this.btnLastYear.Icon = null;
+
             this.btnLastYear.IconType = MaterialSkin.IconType.NONE;
             this.btnLastYear.IsSelected = null;
             this.btnLastYear.Location = new System.Drawing.Point(250, 119);
@@ -2834,7 +2831,7 @@
             this.btnThisYear.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnThisYear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThisYear.Depth = 0;
-            this.btnThisYear.Icon = null;
+
             this.btnThisYear.IconType = MaterialSkin.IconType.NONE;
             this.btnThisYear.IsSelected = null;
             this.btnThisYear.Location = new System.Drawing.Point(81, 119);
@@ -2860,7 +2857,7 @@
             this.btnLastWeek.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnLastWeek.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLastWeek.Depth = 0;
-            this.btnLastWeek.Icon = null;
+
             this.btnLastWeek.IconType = MaterialSkin.IconType.NONE;
             this.btnLastWeek.IsSelected = null;
             this.btnLastWeek.Location = new System.Drawing.Point(185, 46);
@@ -2886,7 +2883,7 @@
             this.btnThisWeek.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnThisWeek.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThisWeek.Depth = 0;
-            this.btnThisWeek.Icon = null;
+
             this.btnThisWeek.IconType = MaterialSkin.IconType.NONE;
             this.btnThisWeek.IsSelected = null;
             this.btnThisWeek.Location = new System.Drawing.Point(15, 46);
@@ -2912,7 +2909,7 @@
             this.btnYesterday.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnYesterday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYesterday.Depth = 0;
-            this.btnYesterday.Icon = null;
+
             this.btnYesterday.IconType = MaterialSkin.IconType.NONE;
             this.btnYesterday.IsSelected = null;
             this.btnYesterday.Location = new System.Drawing.Point(185, 5);
@@ -2938,7 +2935,7 @@
             this.btnToday.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnToday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnToday.Depth = 0;
-            this.btnToday.Icon = null;
+
             this.btnToday.IconType = MaterialSkin.IconType.NONE;
             this.btnToday.IsSelected = null;
             this.btnToday.Location = new System.Drawing.Point(15, 5);

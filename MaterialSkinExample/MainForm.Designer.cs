@@ -1052,7 +1052,6 @@ namespace MaterialSkinExample
             this.materialFlatButton1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Icon = null;
             this.materialFlatButton1.IconType = MaterialSkin.IconType.NONE;
             this.materialFlatButton1.IsSelected = false;
             this.materialFlatButton1.Location = new System.Drawing.Point(6, 9);
@@ -1076,7 +1075,7 @@ namespace MaterialSkinExample
             this.materialFlatButton2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton2.Depth = 0;
-            this.materialFlatButton2.Icon = null;
+
             this.materialFlatButton2.IconType = MaterialSkin.IconType.NONE;
             this.materialFlatButton2.IsSelected = false;
             this.materialFlatButton2.Location = new System.Drawing.Point(151, 9);
@@ -1100,7 +1099,7 @@ namespace MaterialSkinExample
             this.materialFlatButton3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatButton3.Depth = 0;
-            this.materialFlatButton3.Icon = null;
+
             this.materialFlatButton3.IconType = MaterialSkin.IconType.NONE;
             this.materialFlatButton3.IsSelected = false;
             this.materialFlatButton3.Location = new System.Drawing.Point(297, 9);
@@ -1173,8 +1172,7 @@ namespace MaterialSkinExample
             this.materialButton2.ControlSize = MaterialSkin.ControlSize.SMALL;
             this.materialButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton2.Depth = 0;
-            this.materialButton2.Icon = ((System.Drawing.Image)(resources.GetObject("materialButton2.Icon")));
-            this.materialButton2.IconType = MaterialSkin.IconType.APPS;
+            this.materialButton2.IconType = MaterialSkin.IconType.NAVIGATION_APPS;
             this.materialButton2.IsSelected = false;
             this.materialButton2.Location = new System.Drawing.Point(6, 9);
             this.materialButton2.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
@@ -1197,8 +1195,8 @@ namespace MaterialSkinExample
             this.materialButton3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton3.Depth = 0;
-            this.materialButton3.Icon = ((System.Drawing.Image)(resources.GetObject("materialButton3.Icon")));
-            this.materialButton3.IconType = MaterialSkin.IconType.APPS;
+
+            this.materialButton3.IconType = MaterialSkin.IconType.NAVIGATION_APPS;
             this.materialButton3.IsSelected = false;
             this.materialButton3.Location = new System.Drawing.Point(6, 51);
             this.materialButton3.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
@@ -1221,8 +1219,8 @@ namespace MaterialSkinExample
             this.materialButton4.ControlSize = MaterialSkin.ControlSize.LARGE;
             this.materialButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton4.Depth = 0;
-            this.materialButton4.Icon = ((System.Drawing.Image)(resources.GetObject("materialButton4.Icon")));
-            this.materialButton4.IconType = MaterialSkin.IconType.APPS;
+
+            this.materialButton4.IconType = MaterialSkin.IconType.NAVIGATION_APPS;
             this.materialButton4.IsSelected = false;
             this.materialButton4.Location = new System.Drawing.Point(6, 109);
             this.materialButton4.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
@@ -1245,7 +1243,7 @@ namespace MaterialSkinExample
             this.materialButton5.ControlSize = MaterialSkin.ControlSize.SMALL;
             this.materialButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton5.Depth = 0;
-            this.materialButton5.Icon = null;
+
             this.materialButton5.IconType = MaterialSkin.IconType.NONE;
             this.materialButton5.IsSelected = false;
             this.materialButton5.Location = new System.Drawing.Point(6, 199);
@@ -1269,7 +1267,7 @@ namespace MaterialSkinExample
             this.materialButton6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialButton6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton6.Depth = 0;
-            this.materialButton6.Icon = null;
+
             this.materialButton6.IconType = MaterialSkin.IconType.NONE;
             this.materialButton6.IsSelected = false;
             this.materialButton6.Location = new System.Drawing.Point(6, 241);
@@ -1293,7 +1291,7 @@ namespace MaterialSkinExample
             this.materialButton7.ControlSize = MaterialSkin.ControlSize.LARGE;
             this.materialButton7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton7.Depth = 0;
-            this.materialButton7.Icon = null;
+
             this.materialButton7.IconType = MaterialSkin.IconType.NONE;
             this.materialButton7.IsSelected = false;
             this.materialButton7.Location = new System.Drawing.Point(6, 299);
@@ -1337,7 +1335,7 @@ namespace MaterialSkinExample
             this.materialRaisedButton2.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialRaisedButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Icon = null;
+
             this.materialRaisedButton2.IconType = MaterialSkin.IconType.NONE;
             this.materialRaisedButton2.IsSelected = false;
             this.materialRaisedButton2.Location = new System.Drawing.Point(6, 9);
@@ -1361,7 +1359,7 @@ namespace MaterialSkinExample
             this.materialRaisedButton3.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialRaisedButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Icon = null;
+
             this.materialRaisedButton3.IconType = MaterialSkin.IconType.NONE;
             this.materialRaisedButton3.IsSelected = false;
             this.materialRaisedButton3.Location = new System.Drawing.Point(151, 9);
@@ -1385,8 +1383,8 @@ namespace MaterialSkinExample
             this.materialRaisedButton4.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialRaisedButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton4.Depth = 0;
-            this.materialRaisedButton4.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton4.Icon")));
-            this.materialRaisedButton4.IconType = MaterialSkin.IconType.DONE_ALL;
+
+            this.materialRaisedButton4.IconType = MaterialSkin.IconType.ACTION_DONE_ALL;
             this.materialRaisedButton4.IsSelected = false;
             this.materialRaisedButton4.Location = new System.Drawing.Point(297, 9);
             this.materialRaisedButton4.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
@@ -1409,8 +1407,8 @@ namespace MaterialSkinExample
             this.materialRaisedButton5.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialRaisedButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton5.Depth = 0;
-            this.materialRaisedButton5.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton5.Icon")));
-            this.materialRaisedButton5.IconType = MaterialSkin.IconType.INFO;
+
+            this.materialRaisedButton5.IconType = MaterialSkin.IconType.ACTION_INFO;
             this.materialRaisedButton5.IsSelected = false;
             this.materialRaisedButton5.Location = new System.Drawing.Point(476, 9);
             this.materialRaisedButton5.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
@@ -1433,8 +1431,8 @@ namespace MaterialSkinExample
             this.materialRaisedButton6.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialRaisedButton6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton6.Depth = 0;
-            this.materialRaisedButton6.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton6.Icon")));
-            this.materialRaisedButton6.IconType = MaterialSkin.IconType.WARNING;
+
+            this.materialRaisedButton6.IconType = MaterialSkin.IconType.NONE;
             this.materialRaisedButton6.IsSelected = false;
             this.materialRaisedButton6.Location = new System.Drawing.Point(608, 9);
             this.materialRaisedButton6.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
@@ -1457,8 +1455,8 @@ namespace MaterialSkinExample
             this.materialRaisedButton7.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialRaisedButton7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton7.Depth = 0;
-            this.materialRaisedButton7.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton7.Icon")));
-            this.materialRaisedButton7.IconType = MaterialSkin.IconType.DO_NOT_DISTURB;
+
+            this.materialRaisedButton7.IconType = MaterialSkin.IconType.NONE;
             this.materialRaisedButton7.IsSelected = false;
             this.materialRaisedButton7.Location = new System.Drawing.Point(793, 9);
             this.materialRaisedButton7.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
@@ -1481,7 +1479,7 @@ namespace MaterialSkinExample
             this.materialRaisedButton8.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialRaisedButton8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton8.Depth = 0;
-            this.materialRaisedButton8.Icon = null;
+
             this.materialRaisedButton8.IconType = MaterialSkin.IconType.NONE;
             this.materialRaisedButton8.IsSelected = false;
             this.materialRaisedButton8.Location = new System.Drawing.Point(6, 67);
@@ -1505,7 +1503,7 @@ namespace MaterialSkinExample
             this.materialRaisedButton9.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialRaisedButton9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton9.Depth = 0;
-            this.materialRaisedButton9.Icon = null;
+
             this.materialRaisedButton9.IconType = MaterialSkin.IconType.NONE;
             this.materialRaisedButton9.IsSelected = false;
             this.materialRaisedButton9.Location = new System.Drawing.Point(146, 67);
@@ -1529,7 +1527,7 @@ namespace MaterialSkinExample
             this.materialRaisedButton10.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialRaisedButton10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton10.Depth = 0;
-            this.materialRaisedButton10.Icon = null;
+
             this.materialRaisedButton10.IconType = MaterialSkin.IconType.NONE;
             this.materialRaisedButton10.IsSelected = false;
             this.materialRaisedButton10.Location = new System.Drawing.Point(267, 67);
@@ -1553,7 +1551,7 @@ namespace MaterialSkinExample
             this.materialRaisedButton11.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialRaisedButton11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton11.Depth = 0;
-            this.materialRaisedButton11.Icon = null;
+
             this.materialRaisedButton11.IconType = MaterialSkin.IconType.NONE;
             this.materialRaisedButton11.IsSelected = false;
             this.materialRaisedButton11.Location = new System.Drawing.Point(368, 67);
@@ -1577,7 +1575,7 @@ namespace MaterialSkinExample
             this.materialRaisedButton12.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialRaisedButton12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton12.Depth = 0;
-            this.materialRaisedButton12.Icon = null;
+
             this.materialRaisedButton12.IconType = MaterialSkin.IconType.NONE;
             this.materialRaisedButton12.IsSelected = false;
             this.materialRaisedButton12.Location = new System.Drawing.Point(500, 67);
@@ -1646,7 +1644,7 @@ namespace MaterialSkinExample
             this.btnSelectable1.DisplayMember = "ItemName";
             this.btnSelectable1.HideCaption = false;
             this.btnSelectable1.HideEmptyValue = false;
-            this.btnSelectable1.Icon = null;
+
             this.btnSelectable1.IconType = MaterialSkin.IconType.NONE;
             this.btnSelectable1.IsMultiSelect = true;
             this.btnSelectable1.IsSelected = false;
@@ -1683,7 +1681,7 @@ namespace MaterialSkinExample
             this.btnDineInTakeAway.DisplayMember = null;
             this.btnDineInTakeAway.HideCaption = true;
             this.btnDineInTakeAway.HideEmptyValue = false;
-            this.btnDineInTakeAway.Icon = null;
+
             this.btnDineInTakeAway.IconType = MaterialSkin.IconType.NONE;
             this.btnDineInTakeAway.IsMultiSelect = false;
             this.btnDineInTakeAway.IsSelected = false;
@@ -1720,7 +1718,7 @@ namespace MaterialSkinExample
             this.materialSelectableButton1.DisplayMember = null;
             this.materialSelectableButton1.HideCaption = true;
             this.materialSelectableButton1.HideEmptyValue = true;
-            this.materialSelectableButton1.Icon = null;
+
             this.materialSelectableButton1.IconType = MaterialSkin.IconType.NONE;
             this.materialSelectableButton1.IsMultiSelect = false;
             this.materialSelectableButton1.IsSelected = false;
@@ -1768,7 +1766,7 @@ namespace MaterialSkinExample
             this.btnDlgMessage.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDlgMessage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDlgMessage.Depth = 0;
-            this.btnDlgMessage.Icon = null;
+
             this.btnDlgMessage.IconType = MaterialSkin.IconType.NONE;
             this.btnDlgMessage.IsSelected = false;
             this.btnDlgMessage.Location = new System.Drawing.Point(6, 9);
@@ -1793,7 +1791,7 @@ namespace MaterialSkinExample
             this.btnDlgMsgWithHeader.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDlgMsgWithHeader.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDlgMsgWithHeader.Depth = 0;
-            this.btnDlgMsgWithHeader.Icon = null;
+
             this.btnDlgMsgWithHeader.IconType = MaterialSkin.IconType.NONE;
             this.btnDlgMsgWithHeader.IsSelected = false;
             this.btnDlgMsgWithHeader.Location = new System.Drawing.Point(158, 9);
@@ -1818,7 +1816,7 @@ namespace MaterialSkinExample
             this.btnDlgInformation.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDlgInformation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDlgInformation.Depth = 0;
-            this.btnDlgInformation.Icon = null;
+
             this.btnDlgInformation.IconType = MaterialSkin.IconType.NONE;
             this.btnDlgInformation.IsSelected = false;
             this.btnDlgInformation.Location = new System.Drawing.Point(463, 9);
@@ -1843,7 +1841,7 @@ namespace MaterialSkinExample
             this.btnDlgWarning.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDlgWarning.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDlgWarning.Depth = 0;
-            this.btnDlgWarning.Icon = null;
+
             this.btnDlgWarning.IconType = MaterialSkin.IconType.NONE;
             this.btnDlgWarning.IsSelected = false;
             this.btnDlgWarning.Location = new System.Drawing.Point(663, 9);
@@ -1868,7 +1866,6 @@ namespace MaterialSkinExample
             this.btnDlgError.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.btnDlgError.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDlgError.Depth = 0;
-            this.btnDlgError.Icon = null;
             this.btnDlgError.IconType = MaterialSkin.IconType.NONE;
             this.btnDlgError.IsSelected = false;
             this.btnDlgError.Location = new System.Drawing.Point(816, 9);
@@ -1893,7 +1890,7 @@ namespace MaterialSkinExample
             this.materialButton8.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialButton8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton8.Depth = 0;
-            this.materialButton8.Icon = null;
+
             this.materialButton8.IconType = MaterialSkin.IconType.NONE;
             this.materialButton8.IsSelected = false;
             this.materialButton8.Location = new System.Drawing.Point(936, 9);
@@ -1918,7 +1915,6 @@ namespace MaterialSkinExample
             this.materialButton1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton1.Depth = 0;
-            this.materialButton1.Icon = null;
             this.materialButton1.IconType = MaterialSkin.IconType.NONE;
             this.materialButton1.IsSelected = false;
             this.materialButton1.Location = new System.Drawing.Point(1123, 9);
@@ -1943,7 +1939,7 @@ namespace MaterialSkinExample
             this.materialButton9.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialButton9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton9.Depth = 0;
-            this.materialButton9.Icon = null;
+
             this.materialButton9.IconType = MaterialSkin.IconType.NONE;
             this.materialButton9.IsSelected = false;
             this.materialButton9.Location = new System.Drawing.Point(1291, 9);
@@ -1969,8 +1965,8 @@ namespace MaterialSkinExample
             this.materialRaisedButton1.ControlSize = MaterialSkin.ControlSize.NORMAL;
             this.materialRaisedButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton1.Icon")));
-            this.materialRaisedButton1.IconType = MaterialSkin.IconType.COLOR_LENS;
+
+            this.materialRaisedButton1.IconType = MaterialSkin.IconType.NONE;
             this.materialRaisedButton1.IsSelected = false;
             this.materialRaisedButton1.Location = new System.Drawing.Point(1821, 14);
             this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
@@ -2095,8 +2091,8 @@ namespace MaterialSkinExample
             this.materialSelectableButton2.DisplayMember = null;
             this.materialSelectableButton2.HideCaption = false;
             this.materialSelectableButton2.HideEmptyValue = true;
-            this.materialSelectableButton2.Icon = ((System.Drawing.Image)(resources.GetObject("materialSelectableButton2.Icon")));
-            this.materialSelectableButton2.IconType = MaterialSkin.IconType.BRIGHTNESS_6;
+
+            this.materialSelectableButton2.IconType = MaterialSkin.IconType.ACTION_SETTINGS_BRIGHTNESS;
             this.materialSelectableButton2.IsMultiSelect = false;
             this.materialSelectableButton2.IsSelected = false;
             this.materialSelectableButton2.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("materialSelectableButton2.Items")));

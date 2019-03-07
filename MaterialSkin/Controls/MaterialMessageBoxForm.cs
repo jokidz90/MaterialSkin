@@ -70,22 +70,22 @@ namespace MaterialSkin.Controls
             if (icon == MessageBoxIcon.Error)
             {
                 this.ColorStyle = ColorType.DANGER;
-                this.IconType = IconType.ERROR;
+                this.IconType = IconType.ALERT_ERROR;
             }
             else if (icon == MessageBoxIcon.Information)
             {
                 this.ColorStyle = ColorType.INFO;
-                this.IconType = IconType.INFO;
+                this.IconType = IconType.ACTION_INFO;
             }
             else if (icon == MessageBoxIcon.Warning)
             {
                 this.ColorStyle = ColorType.WARNING;
-                this.IconType = IconType.WARNING;
+                this.IconType = IconType.ALERT_WARNING;
             }
             else
             {
                 this.ColorStyle = ColorType.DEFAULT;
-                this.IconType = IconType.INFO_OUTLINE;
+                this.IconType = IconType.ACTION_INFO_OUTLINE;
             }
 
             btnAbort.ColorStyle = this.ColorStyle;

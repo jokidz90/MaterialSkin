@@ -1045,7 +1045,7 @@ namespace MaterialSkin.Controls
             var lineHeightNormal = 2f;
             bool isFocused = _baseTextBox.Focused || _isSelectorShown;
 
-            g.DrawImage((Image)Properties.Resources.date.ReplaceColor(Color.Black, (isFocused ? backColorColored : backColorNormal)), _baseTextBox.Width, _baseTextBox.Top, _dropDownArrowWidth, _dropDownArrowWidth);
+            g.DrawImage((Image)Properties.Resources.ACTION_EVENT.ReplaceColor(Color.Black, (isFocused ? backColorColored : backColorNormal)), _baseTextBox.Width, _baseTextBox.Top, _dropDownArrowWidth, _dropDownArrowWidth);
             if (!_animationManager.IsAnimating())
             {
                 //No animation

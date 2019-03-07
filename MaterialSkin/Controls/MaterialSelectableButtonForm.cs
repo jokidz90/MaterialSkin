@@ -91,7 +91,7 @@ namespace MaterialSkin.Controls
                 var ctrlSelectAll = InitButton(-1, "SELECT ALL", "SELECT ALL");
                 ctrlSelectAll.UseFlatStyle = true;
                 ctrlSelectAll.IsSelected = null;
-                ctrlSelectAll.IconType = IconType.DONE_ALL;
+                ctrlSelectAll.IconType = IconType.ACTION_DONE_ALL;
                 ctrlSelectAll.Alignment = System.Drawing.StringAlignment.Center;
                 flpMain.Controls.Add(ctrlSelectAll);
                 ctrlSelectAll.Dock = DockStyle.Top;
@@ -101,7 +101,7 @@ namespace MaterialSkin.Controls
                 ctrlSelectNone.UseFlatStyle = true;
                 ctrlSelectNone.Alignment = System.Drawing.StringAlignment.Center;
                 ctrlSelectNone.IsSelected = null;
-                ctrlSelectNone.IconType = IconType.REMOVE;
+                ctrlSelectNone.IconType = IconType.CONTENT_REMOVE;
                 flpMain.Controls.Add(ctrlSelectNone);
                 ctrlSelectNone.Dock = DockStyle.Top;
                 ctrlSelectNone.BringToFront();
@@ -230,9 +230,9 @@ namespace MaterialSkin.Controls
                 if (ctrlIndex < 0)
                     continue;
                 if (IsMultiSelect)
-                    btn.IconType = btn.IsSelected.GetValueOrDefault(false) ? IconType.CHECK_BOX : IconType.CHECK_BOX_OUTLINE_BLANK;
+                    btn.IconType = btn.IsSelected.GetValueOrDefault(false) ? IconType.TOGGLE_CHECK_BOX : IconType.TOGGLE_CHECK_BOX_OUTLINE_BLANK;
                 else
-                    btn.IconType = btn.IsSelected.GetValueOrDefault(false) ? IconType.CHECK_BOX : IconType.NONE;
+                    btn.IconType = btn.IsSelected.GetValueOrDefault(false) ? IconType.TOGGLE_CHECK_BOX : IconType.NONE;
             }
         }
 

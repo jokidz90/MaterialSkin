@@ -121,7 +121,7 @@
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Depth = 0;
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCancel.Icon = null;
+
             this.btnCancel.IconType = MaterialSkin.IconType.NONE;
             this.btnCancel.IsSelected = false;
             this.btnCancel.Location = new System.Drawing.Point(0, 0);
@@ -166,7 +166,7 @@
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.Depth = 0;
             this.btnOK.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnOK.Icon = null;
+
             this.btnOK.IconType = MaterialSkin.IconType.NONE;
             this.btnOK.IsSelected = false;
             this.btnOK.Location = new System.Drawing.Point(8, 0);
@@ -243,7 +243,7 @@
             this.btn1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1.Depth = 0;
             this.btn1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn1.Icon = null;
+
             this.btn1.IconType = MaterialSkin.IconType.NONE;
             this.btn1.IsSelected = false;
             this.btn1.Location = new System.Drawing.Point(0, 279);
@@ -271,7 +271,7 @@
             this.btn2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2.Depth = 0;
             this.btn2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn2.Icon = null;
+
             this.btn2.IconType = MaterialSkin.IconType.NONE;
             this.btn2.IsSelected = false;
             this.btn2.Location = new System.Drawing.Point(146, 279);
@@ -299,7 +299,7 @@
             this.btn3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3.Depth = 0;
             this.btn3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn3.Icon = null;
+
             this.btn3.IconType = MaterialSkin.IconType.NONE;
             this.btn3.IsSelected = false;
             this.btn3.Location = new System.Drawing.Point(292, 279);
@@ -327,7 +327,7 @@
             this.btn4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4.Depth = 0;
             this.btn4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn4.Icon = null;
+
             this.btn4.IconType = MaterialSkin.IconType.NONE;
             this.btn4.IsSelected = false;
             this.btn4.Location = new System.Drawing.Point(0, 186);
@@ -355,7 +355,7 @@
             this.btn6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn6.Depth = 0;
             this.btn6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn6.Icon = null;
+
             this.btn6.IconType = MaterialSkin.IconType.NONE;
             this.btn6.IsSelected = false;
             this.btn6.Location = new System.Drawing.Point(292, 186);
@@ -383,7 +383,7 @@
             this.btn7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn7.Depth = 0;
             this.btn7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn7.Icon = null;
+
             this.btn7.IconType = MaterialSkin.IconType.NONE;
             this.btn7.IsSelected = false;
             this.btn7.Location = new System.Drawing.Point(0, 93);
@@ -411,7 +411,7 @@
             this.btn8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn8.Depth = 0;
             this.btn8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn8.Icon = null;
+
             this.btn8.IconType = MaterialSkin.IconType.NONE;
             this.btn8.IsSelected = false;
             this.btn8.Location = new System.Drawing.Point(146, 93);
@@ -439,7 +439,7 @@
             this.btn9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn9.Depth = 0;
             this.btn9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn9.Icon = null;
+
             this.btn9.IconType = MaterialSkin.IconType.NONE;
             this.btn9.IsSelected = false;
             this.btn9.Location = new System.Drawing.Point(292, 93);
@@ -467,8 +467,7 @@
             this.btnBackspace.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBackspace.Depth = 0;
             this.btnBackspace.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnBackspace.Icon = ((System.Drawing.Image)(resources.GetObject("btnBackspace.Icon")));
-            this.btnBackspace.IconType = MaterialSkin.IconType.ARROW_BACK;
+            this.btnBackspace.IconType = MaterialSkin.IconType.NAVIGATION_ARROW_BACK;
             this.btnBackspace.IsSelected = false;
             this.btnBackspace.Location = new System.Drawing.Point(292, 0);
             this.btnBackspace.Margin = new System.Windows.Forms.Padding(0, 0, 8, 5);
@@ -494,7 +493,7 @@
             this.btn5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5.Depth = 0;
             this.btn5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn5.Icon = null;
+
             this.btn5.IconType = MaterialSkin.IconType.NONE;
             this.btn5.IsSelected = false;
             this.btn5.Location = new System.Drawing.Point(146, 186);
@@ -523,7 +522,7 @@
             this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClear.Depth = 0;
             this.btnClear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnClear.Icon = null;
+
             this.btnClear.IconType = MaterialSkin.IconType.NONE;
             this.btnClear.IsSelected = false;
             this.btnClear.Location = new System.Drawing.Point(0, 0);
@@ -551,7 +550,7 @@
             this.btnSign.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSign.Depth = 0;
             this.btnSign.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSign.Icon = null;
+
             this.btnSign.IconType = MaterialSkin.IconType.NONE;
             this.btnSign.IsSelected = false;
             this.btnSign.Location = new System.Drawing.Point(0, 372);
@@ -580,7 +579,7 @@
             this.btn0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0.Depth = 0;
             this.btn0.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn0.Icon = null;
+
             this.btn0.IconType = MaterialSkin.IconType.NONE;
             this.btn0.IsSelected = false;
             this.btn0.Location = new System.Drawing.Point(146, 372);

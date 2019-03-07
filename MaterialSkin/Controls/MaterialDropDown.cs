@@ -1225,7 +1225,7 @@ namespace MaterialSkin.Controls
             bool isFocused = _baseTextBox.Focused || _isSelectorShown;
 
             //g.DrawString("▼", Font, isFocused ? backBrushColored : backBrushNormal, new Point(_baseTextBox.Width, _baseTextBox.Top));
-            g.DrawImage((Image)Properties.Resources.expand.ReplaceColor(Color.Black, (isFocused ? backColorColored : backColorNormal)), _baseTextBox.Width, _baseTextBox.Top, _dropDownArrowWidth, _dropDownArrowWidth);
+            g.DrawImage((Image)Properties.Resources.NAVIGATION_EXPAND_MORE.ReplaceColor(Color.Black, (isFocused ? backColorColored : backColorNormal)), _baseTextBox.Width, _baseTextBox.Top, _dropDownArrowWidth, _dropDownArrowWidth);
             if (!_animationManager.IsAnimating())
             {
                 //No animation

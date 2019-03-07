@@ -80,6 +80,7 @@ namespace MaterialSkin.Controls
             }
         }
 
+        private Image _iconSrc;
         private IconType _iconType = IconType.NONE;
         public IconType IconType
         {
@@ -88,19 +89,9 @@ namespace MaterialSkin.Controls
             {
                 _iconType = value;
                 if (_iconType == IconType.NONE)
-                    Icon = null;
+                    _iconSrc = null;
                 else
-                    Icon = IconManager.Settings[_iconType];
-            }
-        }
-
-        private Image _icon;
-        public Image Icon
-        {
-            get { return _icon; }
-            set
-            {
-                _icon = value;
+                    _iconSrc = IconManager.Settings[_iconType];
                 if (AutoSize)
                     Size = GetPreferredSize();
                 Invalidate();
@@ -252,13 +243,13 @@ namespace MaterialSkin.Controls
             if (string.IsNullOrEmpty(Text))
                 iconX = (this.Width - _iconSize) / 2;
             var iconRect = new Rectangle(iconX, iconY, _iconSize, _iconSize);
-            if (Icon != null)
-                g.DrawImage(Icon.ReplaceColor(Color.Black, frontColor), iconRect);
+            if (_iconSrc != null)
+                g.DrawImage(_iconSrc.ReplaceColor(Color.Black, frontColor), iconRect);
 
             //Text
             var textRect = ClientRectangle;
 
-            if (Icon != null)
+            if (_iconSrc != null)
             {
                 textRect.Width -= _padding + _iconSize + (_padding / 2) + _padding;
 
@@ -309,13 +300,13 @@ namespace MaterialSkin.Controls
             if (string.IsNullOrEmpty(Text))
                 iconX = (this.Width - _iconSize) / 2;
             var iconRect = new Rectangle(iconX, iconY, _iconSize, _iconSize);
-            if (Icon != null)
-                g.DrawImage(Icon.ReplaceColor(Color.Black, frontColor), iconRect);
+            if (_iconSrc != null)
+                g.DrawImage(_iconSrc.ReplaceColor(Color.Black, frontColor), iconRect);
 
             //Text
             var textRect = ClientRectangle;
 
-            if (Icon != null)
+            if (_iconSrc != null)
             {
                 textRect.Width -= _padding + _iconSize + (_padding / 2) + _padding;
 
@@ -338,7 +329,7 @@ namespace MaterialSkin.Controls
             if (!string.IsNullOrEmpty(Text))
             {
                 defaultWidth = (int)Math.Ceiling(TextSize.Width) + _extraSpace;
-                if (Icon != null)
+                if (_iconSrc != null)
                 {
                     var iconY = (_defaultHeight - _iconSize) / 2;
                     defaultWidth = defaultWidth + (iconY) + _iconSize;
