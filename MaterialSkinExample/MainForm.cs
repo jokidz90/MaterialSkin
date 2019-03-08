@@ -59,11 +59,33 @@ namespace MaterialSkinExample
             btnDineInTakeAway.DataSource = new string[] { "DINE IN", "TAKE AWAY", "DELIVERY" };
             btnDineInTakeAway.SetItemColor(0, ColorType.GREEN);
             btnDineInTakeAway.SetItemColor(1, ColorType.SUCCESS);
+
+            string iconGroup = "";
             foreach (IconType ico in Enum.GetValues(typeof(IconType)))
             {
+                if (!ico.ToString().Contains("_"))
+                    continue;
+                var grp = ico.ToString().Split('_')[0];
+
+                if (iconGroup != grp)
+                {
+                    iconGroup = grp;
+                    var btnGrp = new MaterialButton();
+                    btnGrp.Name = iconGroup;
+                    btnGrp.Text = iconGroup;
+                    btnGrp.AutoSize = false;
+                    btnGrp.Width = flpIcon.Width - (3 * (btnGrp.Margin.Left + btnGrp.Margin.Right));
+                    btnGrp.ColorStyle = ColorType.GREEN;
+                    btnGrp.ControlSize = ControlSize.NORMAL;
+                    flpIcon.Controls.Add(btnGrp);
+                }
+
                 var btn = new MaterialButton();
                 btn.Name = ico.ToString();
-                //btn.Text = ico.ToString();
+                btn.ControlSize = ControlSize.NORMAL;
+                btn.Text = ico.ToString().Replace(iconGroup + "_", "").Replace("_", " ");
+                btn.AutoSize = false;
+                btn.Width = 250;
                 btn.IconType = ico;
                 flpIcon.Controls.Add(btn);
             }

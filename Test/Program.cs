@@ -26,31 +26,31 @@ namespace Test
 
             //    Debug.WriteLine(Path.GetFileNameWithoutExtension(fileName) + ",");
             //}
-            string sourceDirectory = @"C:\Users\Mandala\Downloads\material-design-icons-master";
-            string destDirectory = @"D:\Icon\";
-            var allSubDir = Directory.GetDirectories(sourceDirectory);
-            foreach (var subDir in allSubDir)
-            {
-                if (!subDir.ToLower().EndsWith("toggle"))
-                    continue;
-                var iconPath = subDir + @"\1x_web";
-                if (!Directory.Exists(iconPath))
-                    continue;
-                var allIcons = Directory.GetFiles(iconPath);
-                foreach (var icon in allIcons)
-                {
-                    if (!icon.ToLower().EndsWith("_black_24dp.png"))
-                        continue;
+            //string sourceDirectory = @"C:\Users\Mandala\Downloads\material-design-icons-master";
+            //string destDirectory = @"D:\Icon\";
+            //var allSubDir = Directory.GetDirectories(sourceDirectory);
+            //foreach (var subDir in allSubDir)
+            //{
+            //    if (!subDir.ToLower().EndsWith("toggle"))
+            //        continue;
+            //    var iconPath = subDir + @"\1x_web";
+            //    if (!Directory.Exists(iconPath))
+            //        continue;
+            //    var allIcons = Directory.GetFiles(iconPath);
+            //    foreach (var icon in allIcons)
+            //    {
+            //        if (!icon.ToLower().EndsWith("_black_24dp.png"))
+            //            continue;
 
-                    string iconName = icon.Replace(iconPath, "").Replace("ic_", "").Replace("_black_24dp.png", "").Replace("\\", "").ToUpper();
-                    string subDirName = subDir.Replace(sourceDirectory, "").Replace("\\", "").ToUpper();
-                    iconName = subDirName + "_" + iconName;
-                    Debug.WriteLine(iconName);
-                    Console.WriteLine(iconName);
-                    iconName = iconName + ".png";
-                    File.Copy(icon, destDirectory + iconName);
-                }
-            }
+            //        string iconName = icon.Replace(iconPath, "").Replace("ic_", "").Replace("_black_24dp.png", "").Replace("\\", "").ToUpper();
+            //        string subDirName = subDir.Replace(sourceDirectory, "").Replace("\\", "").ToUpper();
+            //        iconName = subDirName + "_" + iconName;
+            //        Debug.WriteLine(iconName);
+            //        Console.WriteLine(iconName);
+            //        iconName = iconName + ".png";
+            //        File.Copy(icon, destDirectory + iconName);
+            //    }
+            //}
         }
     }
 }
